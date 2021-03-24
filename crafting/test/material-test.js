@@ -18,7 +18,7 @@ describe("Material", function() {
     assert.equal(fabric.units, 'yards');
   })
 
-  it.skip('should be able to use material', function() {
+  it('should be able to use material', function() {
     var fabric = new Material('fabric', 4, 3, 'yards');
 
     assert.equal(fabric.amount, 3);
