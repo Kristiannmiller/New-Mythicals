@@ -28,7 +28,7 @@ describe("Craft", function() {
     assert.equal(drawing.completed, false);
   })
 
-  it.skip('should be able to complete craft', function() {
+  it('should be able to complete craft', function() {
     var fabric = new Material('fabric', 4, .5, 'yards');
     var thread = new Material('thread', .25, 10, 'spools');
     var embroidery = new Craft({ type: 'embroidery', materials: [ fabric, thread ]});
