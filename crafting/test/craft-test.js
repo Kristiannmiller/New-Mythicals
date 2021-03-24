@@ -20,7 +20,7 @@ describe("Craft", function() {
     assert.deepEqual(painting.materials, [ canvas, paint ]);
   })
 
-  it.skip('should start as incomplete', function() {
+  it('should start as incomplete', function() {
     var ink = new Material('ink', 9, 2, 'bottles');
     var paper = new Material('paper', .25, 10, 'sheets');
     var drawing = new Craft({ type: 'drawing', materials: [ ink, paper ]});
