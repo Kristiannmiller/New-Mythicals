@@ -29,7 +29,7 @@ describe("Material", function() {
     assert.equal(usedFabric, `You now have 1 yards of fabric left.`)
   })
 
-  it.skip('should be able to use a different material', function() {
+  it('should be able to use a different material', function() {
     var thread = new Material('thread', .25, 8, 'spools');
 
     assert.equal(thread.amount, 8);
@@ -40,7 +40,7 @@ describe("Material", function() {
     assert.equal(usedThread, `You now have 2 spools of thread left.`)
   })
 
-  it.skip('should not be able to use more material than available', function() {
+  it('should not be able to use more material than available', function() {
     var paint = new Material('acrylic paint', 5, 7, 'bottles');
     var canvas = new Material('canvas', 15, 2, 'sheets');
 
