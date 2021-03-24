@@ -12,6 +12,9 @@ class Material {
     this.amount -= amount
     return `You now have ${this.amount} ${this.units} of ${this.name} left.`
   }
+  calculateMaterialCost() {
+    return this.amount * this.price
+  }
 }
 
 module.exports = Material;

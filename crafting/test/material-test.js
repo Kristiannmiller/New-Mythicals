@@ -48,7 +48,7 @@ describe("Material", function() {
     assert.equal(canvas.useMaterial(4), 'You don\'t have enough canvas! Try using 2 sheets or less.');
   })
 
-  it.skip('should be able to calculate total cost of materials', function() {
+  it('should be able to calculate total cost of materials', function() {
     var paint = new Material('acrylic paint', 5, 7, 'bottles');
     var canvas = new Material('canvas', 15, 2, 'sheets');
 
