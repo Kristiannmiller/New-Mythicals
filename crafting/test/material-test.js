@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 describe("Material", function() {
 
-  it.skip('should have a name, price per unit, amount, and units', function() {
+  it('should have a name, price per unit, amount, and units', function() {
     var thread = new Material('thread', .25, 8, 'spools');
     var fabric = new Material('fabric', 4, 3, 'yards');
 
