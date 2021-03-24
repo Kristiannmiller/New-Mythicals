@@ -12,7 +12,7 @@ describe("Craft", function() {
     assert.equal(macrame.name, 'macrame');
   })
 
-  it.skip('should have a list of materials', function() {
+  it('should have a list of materials', function() {
     var canvas = new Material('canvas', 15, 1, 'sheets');
     var paint = new Material('paint', 4, 3, 'bottles');
     var painting = new Craft({ type: 'painting', materials: [ canvas, paint ]});
