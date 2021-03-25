@@ -9,7 +9,7 @@ describe("Human", function () {
     assert.equal(human.name, "Kayla");
   });
 
-  it.skip('should want to build a snowman', function () {
+  it('should want to build a snowman', function () {
     var human = new Human('Hannah');
 
     assert.equal(human.wantsToBuildASnowman, true);
