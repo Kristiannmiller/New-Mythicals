@@ -3,7 +3,7 @@ var Human = require("../src/Human");
 var Snowman = require("../src/Snowman");
 
 describe("Human", function () {
-  it.skip('should have a name', function () {
+  it('should have a name', function () {
     var human = new Human('Kayla');
 
     assert.equal(human.name, "Kayla");
@@ -73,9 +73,9 @@ describe("Human", function () {
     human.gatherMaterials('snowballs', 5);
 
     var snowman = human.buildASnowman();
-    
+
     snowman.canWearMagicHat();
-    
+
     human.placeMagicHat();
 
     assert.equal(snowman.magicHat, true);
