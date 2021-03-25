@@ -27,7 +27,7 @@ describe("Human", function () {
     assert.deepEqual(human.materials, materials);
   });
 
-  it.skip('should be able to gather materials', function() {
+  it('should be able to gather materials', function() {
     var human = new Human('Pam');
 
     human.gatherMaterials('carrots', 1);

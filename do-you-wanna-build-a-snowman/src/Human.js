@@ -11,6 +11,9 @@ class Human {
       carrots: 0
     }
   }
+  gatherMaterials(material, amount) {
+    this.materials[material] += amount
+  }
 }
 
 module.exports = Human;
