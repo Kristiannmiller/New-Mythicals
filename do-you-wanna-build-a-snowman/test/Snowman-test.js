@@ -58,7 +58,7 @@ describe("Snowman", function () {
     assert.equal(snowman.magicHat, true);
   });
 
-  it.skip('should fail to wear a magic hat if it has less than 2 coal eyes', function() {
+  it('should fail to wear a magic hat if it has less than 2 coal eyes', function() {
     var snowmanDetails = {
       carrots: 1,
       coal: 1,
