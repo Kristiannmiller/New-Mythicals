@@ -37,7 +37,7 @@ describe("Human", function () {
     assert.deepEqual(human.materials.buttons, 5);
   });
 
-  it.skip('should be able to add to existing materials', function () {
+  it('should be able to add to existing materials', function () {
     var human = new Human('Jeff');
 
     human.gatherMaterials('coal', 1);
@@ -48,7 +48,7 @@ describe("Human", function () {
     assert.deepEqual(human.materials.carrots, 1);
   });
 
-  it.skip('should be able to use gathered materials to build a snowman', function() {
+  it('should be able to use gathered materials to build a snowman', function() {
     var human = new Human('Leta');
 
     human.gatherMaterials('coal', 4);

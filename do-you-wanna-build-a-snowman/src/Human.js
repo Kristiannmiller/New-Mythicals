@@ -14,6 +14,10 @@ class Human {
   gatherMaterials(material, amount) {
     this.materials[material] += amount
   }
+  buildASnowman() {
+    return new Snowman(this.materials)
+
+  }
 }
 
 module.exports = Human;
