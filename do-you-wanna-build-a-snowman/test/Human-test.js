@@ -15,7 +15,7 @@ describe("Human", function () {
     assert.equal(human.wantsToBuildASnowman, true);
   });
 
-  it.skip('should have no coal, snowballs, carrot or buttons to start', function () {
+  it('should have no coal, snowballs, carrot or buttons to start', function () {
     var human = new Human('Scott');
     var materials = {
       snowballs: 0,
