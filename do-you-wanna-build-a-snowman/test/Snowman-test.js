@@ -31,7 +31,7 @@ describe("Snowman", function () {
     assert.equal(snowman2.snowballs, 3);
   });
 
-  it.skip('should start out without a magic hat', function() {
+  it('should start out without a magic hat', function() {
     var snowmanDetails = {
       carrots: 1,
       coal: 2,

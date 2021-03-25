@@ -4,6 +4,7 @@ class Snowman {
     this.coal = materials.coal
     this.buttons = materials.buttons
     this.snowballs = materials.snowballs
+    this.magicHat = false
   }
 }
 
