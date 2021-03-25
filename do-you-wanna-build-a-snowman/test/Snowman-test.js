@@ -44,7 +44,7 @@ describe("Snowman", function () {
     assert.equal(snowman.magicHat, false);
   });
 
-  it.skip('should be able to wear a magic hat', function() {
+  it('should be able to wear a magic hat', function() {
     var snowmanDetails = {
       carrots: 1,
       coal: 2,

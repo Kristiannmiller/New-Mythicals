@@ -6,6 +6,9 @@ class Snowman {
     this.snowballs = materials.snowballs
     this.magicHat = false
   }
+  canWearMagicHat() {
+    this.magicHat = true
+  }
 }
 
 module.exports = Snowman;
