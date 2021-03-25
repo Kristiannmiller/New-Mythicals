@@ -82,7 +82,7 @@ describe("Human", function () {
     assert.equal(human.placeMagicHat(), 'Woah, this snowman is coming to life!')
   });
 
-  it.skip('should be able to fail at putting a magic hat on the snowman', function () {
+  it('should be able to fail at putting a magic hat on the snowman', function () {
     var human = new Human('scott');
 
     human.gatherMaterials('coal', 0);
