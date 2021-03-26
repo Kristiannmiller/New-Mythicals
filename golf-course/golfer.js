@@ -7,6 +7,9 @@ class Golfer {
   calculateAvg(par) {
     return `I usually shoot a ${par + this.handicap} on average.`
   }
+  playRound(course) {
+    course.difficulty === 'hard' ? this.frustration += 500 : this.frustration += 100
+  }
 
 
 }
