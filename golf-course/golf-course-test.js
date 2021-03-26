@@ -116,7 +116,7 @@ describe('Golfer', function () {
     }
   }
 
-  it.skip('should gain confidence after more practice', function () {
+  it('should gain confidence after more practice', function () {
     var golfer1 = new Golfer({ name: 'Mark', handicap: 10 });
     assert.equal(golfer1.confidence, 0);
     golfer1.hitTheRange();
