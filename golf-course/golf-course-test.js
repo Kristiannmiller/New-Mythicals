@@ -25,7 +25,7 @@ describe('Golf Course', function () {
 
   // PASS GOLFER TESTS BELOW BEFORE FINISHING REMAINING GOLF COURSE TESTS
 
-  it.skip('should accept golfers if there is room available', function () {
+  it('should accept golfers if there is room available', function () {
     var golfCourse = new GolfCourse('Bear Dance', 'hard', 8, ['bear shaped green, views']);
     var golfer1 = new Golfer({ name: 'Pat', handicap: 11 });
     var golfer2 = new Golfer({ name: 'Ted', handicap: 13 });
