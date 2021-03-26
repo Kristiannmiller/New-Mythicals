@@ -17,6 +17,21 @@ class Golfer {
   marvel(course) {
     return `I love the ${course.features[0]} and ${course.features[1]} on this course!`
   }
+  whatYaShoot(score) {
+    if(score <= 0) {
+      let anger = (score - 1) * 10
+      this.frustration += anger
+    } else {
+      this.frustration += 20
+    }
+    if(this.frustration === 0) {
+      return 'I AM THE GREATEST GOLFER ALIVE!'
+    } else if(this.frustration === 10) {
+      return 'Booyah!'
+    } else {
+      return 'Doh!'
+    }
+  }
 }
 
 module.exports = Golfer;
