@@ -86,7 +86,7 @@ describe('Golfer', function () {
     assert.equal(golfer.frustration, 0);
   });
 
-  it.skip('should be able to calculate their average score by adding the given par to their handicap', function () {
+  it('should be able to calculate their average score by adding the given par to their handicap', function () {
     var golfer1 = new Golfer({ name: 'Kyle', handicap: 4 });
     var golfer2 = new Golfer({ name: 'Michelle', handicap: 10 });
 
