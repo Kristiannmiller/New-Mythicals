@@ -47,7 +47,7 @@ describe('Golf Course', function () {
     assert.deepEqual(golfCourse.currentlyPlaying, ['Bridget', 'Joanna', 'Kevin', 'Ted', 'Pat']);
   });
 
-  it.skip('should not accept golfers if there is no room available', function () {
+  it('should not accept golfers if there is no room available', function () {
     var golfCourse = new GolfCourse('Bear Dance', 'hard', 4, ['bear shaped green, views']);
     var golfer1 = new Golfer({ name: 'Pat', handicap: 11 });
     var golfer2 = new Golfer({ name: 'Ted', handicap: 13 });
