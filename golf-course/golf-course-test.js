@@ -9,7 +9,7 @@ describe('Golf Course', function () {
     assert.equal(golfCourse.difficulty, 'moderate');
   });
 
-  it.skip('should have a total number of openings for the day', function () {
+  it('should have a total number of openings for the day', function () {
     var golfCourse1 = new GolfCourse('Harvard Gulch', 'moderate', 25);
     var golfCourse2 = new GolfCourse('Todd Crick', 'hard', 11);
     assert.equal(golfCourse1.openings, 25);
