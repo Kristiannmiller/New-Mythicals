@@ -127,7 +127,7 @@ describe('Golfer', function () {
     assert.equal(golfer1.confidence, 70);
   });
 
-  it.skip('should be able to marvel at the features of a golf course', function () {
+  it('should be able to marvel at the features of a golf course', function () {
     var golfer4 = new Golfer({ name: 'Khalid', handicap: 6 });
     var golfCourse1 = new GolfCourse('Arrowhead', 'hard', 42, ['great views', 'wildlife'])
     var golfer5 = new Golfer({ name: 'Amy', handicap: 3 });
