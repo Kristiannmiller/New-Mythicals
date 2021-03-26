@@ -16,7 +16,7 @@ describe('Golf Course', function () {
     assert.equal(golfCourse2.openings, 11);
   });
 
-  it.skip('should have some unique features', function () {
+  it('should have some unique features', function () {
     var golfCourse1 = new GolfCourse('Arrowhead', 'hard', 42, ['great views', 'wildlife']);
     var golfCourse2 = new GolfCourse('Bay Hill', 'hard', 11, ['water', 'Arnies Place']);
     assert.deepEqual(golfCourse1.features, ['great views', 'wildlife']);
