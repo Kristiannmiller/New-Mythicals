@@ -74,7 +74,7 @@ describe('Golf Course', function () {
 // GOLFER TESTS
 
 describe('Golfer', function () {
-  it.skip('should have a name and handicap', function () {
+  it('should have a name and handicap', function () {
     var golfer = new Golfer({ name: 'Will', handicap: 21 });
     assert.equal(golfer.name, 'Will');
     assert.equal(golfer.handicap, 21);
