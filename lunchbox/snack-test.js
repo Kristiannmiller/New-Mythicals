@@ -29,7 +29,7 @@ describe('Snack', function() {
     assert.equal(pistachio.isInLunchBox, false);
   });
 
-  it.skip('should see stock decrease after eaten', function() {
+  it('should see stock decrease after eaten', function() {
     var pistachio = new Snack("Pistachio");
 
     pistachio.getEaten();
