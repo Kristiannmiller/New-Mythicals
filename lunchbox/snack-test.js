@@ -9,7 +9,7 @@ describe('Snack', function() {
     assert.equal(pistachio.deliciousLevel, "extra");
   });
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var pistachio = new Snack("Pistachio");
     var fruitSnack = new Snack("Fruit Snack");
 
