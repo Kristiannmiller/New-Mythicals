@@ -4,7 +4,7 @@ var LunchBox = require('./lunchbox');
 
 describe('Lunchbox', function() {
 
-  it.skip('should have an owner', function() {
+  it('should have an owner', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var khalidsBox = new LunchBox({ owner: "Khalid", madeOf: "plastic", shape: "rectangular prism", color: "clear" });
 
