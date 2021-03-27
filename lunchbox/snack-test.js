@@ -38,7 +38,7 @@ describe('Snack', function() {
     assert.equal(pistachio.amount, 70);
   });
 
-  it.skip('should be cutting it close if 20% or less remaining', function() {
+  it('should be cutting it close if 20% or less remaining', function() {
     var pistachio = new Snack("Pistachio");
 
     pistachio.getEaten();
