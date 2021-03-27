@@ -4,6 +4,7 @@ class LunchBox {
     this.material = data.madeOf
     this.shape = data.shape
     this.color = data.color
+    this.snacks = []
   }
 }
 

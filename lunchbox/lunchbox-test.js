@@ -31,7 +31,7 @@ describe('Lunchbox', function() {
     assert.equal(hannahsBox.color, "red and white");
   });
 
-  it.skip('should be empty by default', function() {
+  it('should be empty by default', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
 
     assert.deepEqual(willsBox.snacks, []);
