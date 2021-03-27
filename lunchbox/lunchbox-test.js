@@ -53,7 +53,7 @@ describe('Lunchbox', function() {
     assert.equal(fruitSnack.isInLunchBox, true)
   });
 
-  it.skip('should be able to acquire multiple snacks', function() {
+  it('should be able to acquire multiple snacks', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var fruitSnack = new Snack("Fruit Snack");
     var peaches = new Snack("Peaches");
@@ -67,7 +67,7 @@ describe('Lunchbox', function() {
     assert.deepEqual(willsBox.snacks, [fruitSnack, peaches, natureValley]);
   });
 
-  it.skip('should be able to identify all healthy snacks', function() {
+  it('should be able to identify all healthy snacks', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var water = new Snack("Water");
     var mixedFruit = new Snack("Mixed fruit");
