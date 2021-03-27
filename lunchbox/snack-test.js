@@ -23,7 +23,7 @@ describe('Snack', function() {
     assert.equal(pistachio.amount, 100);
   });
 
-  it.skip('should start NOT inside of a lunch box', function() {
+  it('should start NOT inside of a lunch box', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.isInLunchBox, false);
