@@ -3,7 +3,7 @@ var Snack = require('./snack');
 
 describe('Snack', function() {
 
-  it.skip('should be extra delicious', function() {
+  it('should be extra delicious', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.deliciousLevel, "extra");
