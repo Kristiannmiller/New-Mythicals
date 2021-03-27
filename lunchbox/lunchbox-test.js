@@ -20,7 +20,7 @@ describe('Lunchbox', function() {
     assert.equal(khalidsBox.material, "plastic");
   });
 
-  it.skip('should have a shape and color', function() {
+  it('should have a shape and color', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var hannahsBox = new LunchBox({ owner: "Hannah", madeOf: "fabric", shape: "oval", color: "red and white" });
 
