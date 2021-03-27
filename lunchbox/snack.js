@@ -10,6 +10,9 @@ class Snack {
     this.amount -= 10
     if(this.amount <= 20) this.cuttingItClose = true
   }
+  checkForHealthy() {
+    return this.type.toLowerCase().includes("fruit")
+  }
 }
 
 module.exports = Snack;
