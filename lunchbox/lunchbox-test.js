@@ -45,7 +45,7 @@ describe('Lunchbox', function() {
     assert.deepEqual(willsBox.snacks, [fruitSnack]);
   });
 
-  it.skip('should be able to change a snacks state', function() {
+  it('should be able to change a snacks state', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var fruitSnack = new Snack("Fruit Snack");
 

@@ -8,6 +8,7 @@ class LunchBox {
   }
   acquireSnack(snack) {
     this.snacks.push(snack)
+    snack.isInLunchBox = true
   }
 }
 
