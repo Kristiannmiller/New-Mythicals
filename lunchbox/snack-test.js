@@ -17,7 +17,7 @@ describe('Snack', function() {
     assert.equal(fruitSnack.type, "Fruit Snack");
   });
 
-  it.skip('should start fully stocked', function() {
+  it('should start fully stocked', function() {
     var pistachio = new Snack("Pistachio");
 
     assert.equal(pistachio.amount, 100);
