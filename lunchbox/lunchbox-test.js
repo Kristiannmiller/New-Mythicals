@@ -37,7 +37,7 @@ describe('Lunchbox', function() {
     assert.deepEqual(willsBox.snacks, []);
   });
 
-  it.skip('should be able to acquire a snack', function() {
+  it('should be able to acquire a snack', function() {
     var willsBox = new LunchBox({ owner: "Will", madeOf: "metal", shape: "rectangular prism", color: "multi" });
     var fruitSnack = new Snack("Fruit Snack");
 
