@@ -33,7 +33,7 @@ describe('Centaur', function() {
     assert.equal(soundEffect, 'Clop clop clop clop!!!');
   });
 
-  it.skip('should not be cranky when first created', function() {
+  it('should not be cranky when first created', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.cranky, false);
