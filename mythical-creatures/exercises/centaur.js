@@ -22,6 +22,8 @@ class Centaur {
   sleep() {
     if(this.standing) {
       return 'NO!'
+    } else {
+      return 'ZZZZ'
     }
   }
   layDown() {
