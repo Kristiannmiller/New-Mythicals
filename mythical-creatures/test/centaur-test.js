@@ -7,14 +7,10 @@ describe('Centaur', function() {
     assert.isFunction(Centaur);
   });
 
-  it.skip('should have a name', function() {
-    // instantiate a Centaur object with an object as an argument. The object should have a key of name and value of your name
-    // instantiate another Centaur object with a different name
+  it('should have a name', function() {
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
-    // assert that the first centaur's name is your name
-    // assert that the second centaur's name is the other name
-
-    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
+    assert.equal(centaur.name, 'Georgiana');
   });
 
   it.skip('should have a breed', function() {

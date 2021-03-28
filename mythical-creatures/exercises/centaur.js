@@ -1,6 +1,6 @@
 class Centaur {
-  constructor() {
-
+  constructor(stats) {
+    this.name = stats.name
   }
 }
 module.exports = Centaur
