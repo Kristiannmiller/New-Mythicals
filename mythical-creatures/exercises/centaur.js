@@ -9,11 +9,11 @@ class Centaur {
   }
   shootBow() {
     this.adjustCrankyness()
-    return this.cranky ? 'NO!' : 'Twang!!!'
+    return this.cranky || this.layingDown ? 'NO!' : 'Twang!!!'
   }
   run() {
     this.adjustCrankyness()
-    return this.cranky ? 'NO!' : 'Clop clop clop clop!!!'
+    return this.cranky || this.layingDown ? 'NO!' : 'Clop clop clop clop!!!'
   }
   adjustCrankyness() {
     this.crankyCount++
