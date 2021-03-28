@@ -79,7 +79,7 @@ describe('Centaur', function() {
     assert.equal(centaur.shootBow(), 'NO!');
   });
 
-  it.skip('should not run when cranky', function() {
+  it('should not run when cranky', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.shootBow();
@@ -89,7 +89,7 @@ describe('Centaur', function() {
     assert.equal(centaur.run(), 'NO!');
   });
 
-  it.skip('should not sleep while standing', function() {
+  it('should not sleep while standing', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.sleep(), 'NO!');

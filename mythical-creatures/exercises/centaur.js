@@ -18,5 +18,10 @@ class Centaur {
     this.crankyCount++
     if(this.crankyCount > 2) this.cranky = true
   }
+  sleep() {
+    if(this.standing) {
+      return 'NO!'
+    }
+  }
 }
 module.exports = Centaur
