@@ -129,7 +129,7 @@ describe('Centaur', function() {
     assert.equal(centaur.sleep(), 'ZZZZ');
   });
 
-  it.skip('should not be cranky after sleeping', function() {
+  it('should not be cranky after sleeping', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.run();

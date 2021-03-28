@@ -23,6 +23,8 @@ class Centaur {
     if(this.standing) {
       return 'NO!'
     } else {
+      this.cranky = false
+      this.crankyCount = 0
       return 'ZZZZ'
     }
   }
