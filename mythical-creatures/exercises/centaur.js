@@ -3,6 +3,7 @@ class Centaur {
     this.name = stats.name
     this.breed = stats.type
     this.cranky = false
+    this.standing = true
   }
   shootBow() {
     return 'Twang!!!'
