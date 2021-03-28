@@ -6,5 +6,8 @@ class Centaur {
   shootBow() {
     return 'Twang!!!'
   }
+  run() {
+    return 'Clop clop clop clop!!!'
+  }
 }
 module.exports = Centaur
