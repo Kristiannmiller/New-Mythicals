@@ -95,7 +95,7 @@ describe('Centaur', function() {
     assert.equal(centaur.sleep(), 'NO!');
   });
 
-  it.skip('after laying down it is not standing', function() {
+  it('after laying down it is not standing', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.standing, true);
