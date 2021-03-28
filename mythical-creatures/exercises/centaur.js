@@ -3,5 +3,8 @@ class Centaur {
     this.name = stats.name
     this.breed = stats.type
   }
+  shootBow() {
+    return 'Twang!!!'
+  }
 }
 module.exports = Centaur

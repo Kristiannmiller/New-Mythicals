@@ -19,7 +19,7 @@ describe('Centaur', function() {
     assert.equal(centaur.breed, 'Palomino');
   });
 
-  it.skip('should have excellent bow skills', function() {
+  it('should have excellent bow skills', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.shootBow(), 'Twang!!!');
