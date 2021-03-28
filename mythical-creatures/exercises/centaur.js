@@ -37,8 +37,12 @@ class Centaur {
     this.layingDown = false
   }
   drinkPotion() {
-    this.cranky = false
-    this.crankyCount = 0
+    if(this.standing) {
+      this.cranky = false
+      this.crankyCount = 0
+    } else {
+      return 'Not while I\'m laying down!'
+    }
   }
 }
 module.exports = Centaur

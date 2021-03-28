@@ -160,7 +160,7 @@ describe('Centaur', function() {
     assert.equal(centaur.cranky, false)
   });
 
-  it.skip('should only drink potion while standing', function() {
+  it('should only drink potion while standing', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.layDown();
