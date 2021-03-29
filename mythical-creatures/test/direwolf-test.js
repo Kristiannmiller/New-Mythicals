@@ -13,7 +13,7 @@ describe('Direwolf', function() {
     assert.isObject(direwolf);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     const direwolf = new Direwolf('Nymeria');
     assert.equal(direwolf.name, 'Nymeria');
   });
