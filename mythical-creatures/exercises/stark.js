@@ -1,7 +1,7 @@
 class Stark {
-  constructor(data) {
-    this.name = data ? data.name : null
-    this.location = 'Winterfell'
+  constructor(data = {name: 'Larry', area: 'Winterfell'}) {
+    this.name = data.name
+    this.location = data.area || 'Winterfell'
   }
 }
 module.exports = Stark

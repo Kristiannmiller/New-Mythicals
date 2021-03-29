@@ -64,7 +64,7 @@ describe('Direwolf', function() {
     assert.equal(stark.location, 'Winterfell');
   });
 
-  it.skip('should be able to have different locations', function() {
+  it('should be able to have different locations', function() {
     const stark = new Stark({name: 'Eddard', area: 'King\'s Landing'})
 
     assert.equal(stark.name, 'Eddard')
