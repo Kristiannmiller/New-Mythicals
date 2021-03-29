@@ -25,7 +25,7 @@ describe('Direwolf', function() {
     assert.equal(direwolf.home, 'Beyond the Wall');
   });
 
-  it.skip('should be able to have other homes', function() {
+  it('should be able to have other homes', function() {
     const direwolf = new Direwolf('Ghost', 'Winterfell');
 
     assert.equal(direwolf.home, 'Winterfell');

@@ -1,7 +1,7 @@
 class Direwolf {
-  constructor(name) {
+  constructor(name, home) {
     this.name = name
-    this.home = 'Beyond the Wall'
+    this.home = home || 'Beyond the Wall'
   }
 }
 module.exports = Direwolf
