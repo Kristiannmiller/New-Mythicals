@@ -130,7 +130,7 @@ describe('Direwolf', function() {
     assert.equal(stark.safe, false);
   });
 
-  it.skip('should know their house words', function() {
+  it('should know their house words', function() {
     const stark = new Stark ({name: 'Benjen'})
 
     assert.equal(stark.sayHouseWords(), 'Winter is Coming')
