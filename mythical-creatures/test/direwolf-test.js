@@ -31,7 +31,7 @@ describe('Direwolf', function() {
     assert.equal(direwolf.home, 'Winterfell');
   });
 
-  it.skip('should have a default size of massive', function() {
+  it('should have a default size of massive', function() {
     const direwolf = new Direwolf('Ghost');
 
     assert.equal(direwolf.size, 'Massive');
