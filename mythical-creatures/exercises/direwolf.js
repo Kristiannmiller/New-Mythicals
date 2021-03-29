@@ -13,5 +13,9 @@ class Direwolf {
       this.huntsWhiteWalkers = false
     }
   }
+  leave(starkToLeave) {
+    starkToLeave.safe = false
+    this.starksToProtect = this.starksToProtect.filter(stark => stark.name !== starkToLeave.name)
+  }
 }
 module.exports = Direwolf
