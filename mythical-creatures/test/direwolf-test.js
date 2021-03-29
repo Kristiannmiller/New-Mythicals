@@ -71,7 +71,7 @@ describe('Direwolf', function() {
     assert.equal(stark.location, 'King\'s Landing')
   })
 
-  it.skip('should start with no Starks to protect', function() {
+  it('should start with no Starks to protect', function() {
     const direwolf = new Direwolf('Nymeria');
     const stark = new Stark({name: 'Arya'});
 
