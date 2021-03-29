@@ -1,6 +1,6 @@
 class Stark {
-  constructor() {
-
+  constructor(data) {
+    this.name = data ? data.name : null
   }
 }
 module.exports = Stark

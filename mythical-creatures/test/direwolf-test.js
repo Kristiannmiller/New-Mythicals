@@ -51,7 +51,7 @@ describe('Direwolf', function() {
     assert.isObject(stark);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     const stark = new Stark({name:'Bran'});
 
     assert.equal(stark.name, 'Bran');
