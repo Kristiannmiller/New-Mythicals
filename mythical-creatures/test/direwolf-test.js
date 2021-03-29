@@ -45,7 +45,7 @@ describe('Direwolf', function() {
     assert.equal(direwolf.size, 'Smol Pupper');
   });
 
-  it.skip('should instantiate our good friend, Stark', function() {
+  it('should instantiate our good friend, Stark', function() {
     const stark = new Stark();
 
     assert.isObject(stark);
