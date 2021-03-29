@@ -6,7 +6,9 @@ class Direwolf {
     this.starksToProtect = []
   }
   protect(stark) {
-    this.starksToProtect.push(stark)
+    if(stark.location === this.home) {
+      this.starksToProtect.push(stark)
+    }
   }
 }
 module.exports = Direwolf
