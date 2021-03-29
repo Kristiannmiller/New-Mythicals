@@ -1,8 +1,8 @@
 class Direwolf {
-  constructor(name, home) {
+  constructor(name, home, size) {
     this.name = name
     this.home = home || 'Beyond the Wall'
-    this.size = 'Massive'
+    this.size = size || 'Massive'
   }
 }
 module.exports = Direwolf
