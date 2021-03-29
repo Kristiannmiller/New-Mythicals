@@ -8,6 +8,7 @@ class Direwolf {
   protect(stark) {
     if(stark.location === this.home && this.starksToProtect.length < 2) {
       this.starksToProtect.push(stark)
+      stark.safe = true
     }
   }
 }

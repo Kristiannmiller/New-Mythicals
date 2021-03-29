@@ -136,7 +136,7 @@ describe('Direwolf', function() {
     assert.equal(stark.sayHouseWords(), 'Winter is Coming')
   })
 
-  it.skip('should change house words once protected', function() {
+  it('should change house words once protected', function() {
     const direwolf = new Direwolf('Nymeria', 'Dorne');
     const stark1 = new Stark({name: 'Arya', area: 'Dorne'});
     const stark2 = new Stark({name: 'Sansa', area: 'Dorne'});

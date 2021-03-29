@@ -5,7 +5,7 @@ class Stark {
     this.safe = false
   }
   sayHouseWords() {
-    return 'Winter is Coming'
+    return this.safe ? 'The North Remembers' : 'Winter is Coming'
   }
 }
 module.exports = Stark
