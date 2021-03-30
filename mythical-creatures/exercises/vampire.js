@@ -1,6 +1,6 @@
 class Vampire {
-  constructor() {
-
+  constructor(name) {
+    this.name = name
   }
 }
 module.exports = Vampire
