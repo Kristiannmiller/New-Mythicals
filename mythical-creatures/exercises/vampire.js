@@ -4,5 +4,8 @@ class Vampire {
     this.pet = pet || 'bat'
     this.thirsty = true
   }
+  drink(){
+    this.thirsty = false
+  }
 }
 module.exports = Vampire
