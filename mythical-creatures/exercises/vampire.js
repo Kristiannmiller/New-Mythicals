@@ -1,7 +1,7 @@
 class Vampire {
-  constructor(name) {
+  constructor(name, pet) {
     this.name = name
-    this.pet = 'bat'
+    this.pet = pet || 'bat'
   }
 }
 module.exports = Vampire
