@@ -1,7 +1,7 @@
 
 class Dragon {
-  constructor() {
-
+  constructor(name) {
+    this.name = name
   }
 }
 module.exports = Dragon
