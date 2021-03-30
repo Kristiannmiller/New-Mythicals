@@ -6,6 +6,7 @@ class Vampire {
     this.ouncesDrank = 0
   }
   drink(){
+    this.ouncesDrank += 10
     this.thirsty = false
   }
 }
