@@ -35,7 +35,7 @@ describe('Fairy', () => {
     assert.equal(difference, 1);
   });
 
-  it.skip('should get a lot of fairy dust from believeing in herself', () => {
+  it('should get a lot of fairy dust from believeing in herself', () => {
     const fairy = new Fairy('Tinkerbell');
     const dustBefore = fairy.dust;
 
