@@ -18,7 +18,7 @@ describe('Fairy', () => {
     assert.equal(fairy.name, 'Mab');
   });
 
-  it.skip('should have some fairy dust by default', () => {
+  it('should have some fairy dust by default', () => {
     const fairy = new Fairy('Mab');
 
     assert.equal(fairy.dust, 10);
