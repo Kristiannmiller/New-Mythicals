@@ -25,6 +25,9 @@ class Fairy {
       this.humanWards.push(infant)
       infant.disposition = 'Malicious'
     }
+    if(this.humanWards.length === 3) {
+      this.disposition = 'Good natured'
+    }
     return infant
   }
 }
