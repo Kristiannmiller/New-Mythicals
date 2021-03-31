@@ -3,6 +3,7 @@ class Fairy {
     this.name = name
     this.dust = 10
     this.clothes = {dresses: ['Iris']}
+    this.disposition = 'Good natured'
   }
   receiveBelief() {
     this.dust++
