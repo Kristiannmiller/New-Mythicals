@@ -12,14 +12,10 @@ describe('Fairy', () => {
     assert.isObject(fairy);
   });
 
-  it.skip('should have a name', () => {
-    // instantiate a Fairy object with your name as an argument
-    // instantiate another Fairy object with someone else's name as an argument
+  it('should have a name', () => {
+    const fairy = new Fairy('Mab');
 
-    // assert that the first fairy's name is your name
-    // assert that the second fairy's name is the other name
-
-    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
+    assert.equal(fairy.name, 'Mab');
   });
 
   it.skip('should have some fairy dust by default', () => {
