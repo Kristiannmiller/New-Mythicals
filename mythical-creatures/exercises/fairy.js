@@ -16,5 +16,8 @@ class Fairy {
       this.clothes.dresses.push(flowers[i])
     }
   }
+  becomeProvoked() {
+    this.disposition = 'Vengeful'
+  }
 }
 module.exports = Fairy
