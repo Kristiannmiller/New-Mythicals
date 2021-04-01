@@ -9,6 +9,7 @@ class Magician {
     return `${phrase.toUpperCase()}!`
   }
   performTrick() {
+    this.confidencePercentage += 10
     if(this.favoriteAccessory === 'top hat') {
       return 'PULL RABBIT FROM TOP HAT'
     } else {

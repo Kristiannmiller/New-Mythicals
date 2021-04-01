@@ -74,7 +74,7 @@ describe('Magician', function() {
     assert.equal(magician.confidencePercentage, 10);
   });
 
-  it.skip('should gain confidence after performing spells', function() {
+  it('should gain confidence after performing spells', function() {
     var magician = new Magician({ name: 'Leta' });
 
     magician.performTrick();
