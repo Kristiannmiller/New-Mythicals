@@ -7,5 +7,10 @@ class Magician {
   performIncantation(phrase) {
     return `${phrase.toUpperCase()}!`
   }
+  performTrick() {
+    if(this.favoriteAccessory === 'top hat') {
+      return 'PULL RABBIT FROM TOP HAT'
+    }
+  }
 }
 module.exports = Magician
