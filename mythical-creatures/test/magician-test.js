@@ -88,7 +88,7 @@ describe('Magician', function() {
     assert.equal(magician.confidencePercentage, 50);
   });
 
-  it.skip('should not be able to saw someone in half unless they\'re 100% confident', function() {
+  it('should not be able to saw someone in half unless they\'re 100% confident', function() {
     var magician = new Magician({ name: 'Scott', assistant: true });
 
     assert.equal(magician.performShowStopper(), 'Oh no, this trick is not ready!');
