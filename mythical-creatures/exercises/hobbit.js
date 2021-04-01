@@ -3,5 +3,8 @@ class Hobbit {
     this.name = data.name
     this.age = 0
   }
+  celebrateBirthday() {
+    this.age++
+  }
 }
 module.exports = Hobbit
