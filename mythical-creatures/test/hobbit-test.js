@@ -7,7 +7,7 @@ describe('Hobbit', function() {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var bilbo = new Hobbit({ name: 'Bilbo' });
     var mark = new Hobbit({ name: 'Mark' });
 
