@@ -3,6 +3,7 @@ class Magician {
     this.name = `The Great ${data.name}`
     this.assistant = data.assistant
     this.favoriteAccessory = data.clothing || 'top hat'
+    this.confidencePercentage = 10
   }
   performIncantation(phrase) {
     return `${phrase.toUpperCase()}!`

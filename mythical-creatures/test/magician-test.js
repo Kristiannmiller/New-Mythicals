@@ -68,7 +68,7 @@ describe('Magician', function() {
     assert.equal(spell, 'PULL DOVE FROM SLEEVE');
   });
 
-  it.skip('should start not very confident', function() {
+  it('should start not very confident', function() {
     var magician = new Magician({ name: 'Leta' });
 
     assert.equal(magician.confidencePercentage, 10);
