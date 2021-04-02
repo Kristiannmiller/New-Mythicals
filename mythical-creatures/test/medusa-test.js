@@ -15,14 +15,10 @@ describe('Medusa', function() {
     assert.instanceOf(medusa, Medusa);
   });
 
-  it.skip('should have a name', function() {
-    // instantiate a Medusa object with your name as an argument
-    // instantiate another Medusa object with someone else's name as an argument
+  it('should have a name', function() {
+    var medusa = new Medusa('Amy');
 
-    // assert that the first medusa's name is your name
-    // assert that the second medusa's name is the other name
-
-    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
+    assert.equal(medusa.name, 'Amy');
   });
 
   it.skip('should start with no statues', function() {
