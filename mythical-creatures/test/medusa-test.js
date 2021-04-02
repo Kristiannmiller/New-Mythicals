@@ -142,7 +142,7 @@ describe('Person', function() {
     assert.equal(eric.name, 'Eric');
   });
 
-  it.skip('should feel frightened', function() {
+  it('should feel frightened', function() {
     var hannah = new Person('Hannah');
 
     assert.equal(hannah.mood, 'frightened');
