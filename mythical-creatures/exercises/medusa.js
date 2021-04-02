@@ -8,10 +8,13 @@ class Medusa {
   }
   gazeAtVictim(victim) {
     let newStatue = new Statue(victim.name)
+    let freedPerson
     if(this.statues.length > 2) {
-      this.statues.shift()
+      let personToFree = this.statues.shift()
+      freedPerson = new Person(personToFree.name)
     }
     this.statues.push(newStatue)
+    return freedPerson
   }
 }
 module.exports = Medusa
