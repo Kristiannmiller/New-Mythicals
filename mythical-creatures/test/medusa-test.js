@@ -104,7 +104,7 @@ describe('Medusa', function() {
     assert.equal(person.name, 'Pam');
   });
 
-  it.skip('should be relieved when returned to Person form', function () {
+  it('should be relieved when returned to Person form', function () {
     var medusa = new Medusa('Pam');
     var victim1 = new Person('Travis');
     var victim2 = new Person('Kayla');

@@ -11,7 +11,7 @@ class Medusa {
     let freedPerson
     if(this.statues.length > 2) {
       let personToFree = this.statues.shift()
-      freedPerson = new Person(personToFree.name)
+      freedPerson = new Person(personToFree.name, 'relieved')
     }
     this.statues.push(newStatue)
     return freedPerson

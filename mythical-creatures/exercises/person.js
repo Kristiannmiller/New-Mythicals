@@ -1,7 +1,7 @@
 class Person {
-  constructor(name) {
+  constructor(name, mood) {
     this.name = name
-    this.mood = 'frightened'
+    this.mood = mood || 'frightened'
   }
 }
 module.exports = Person
