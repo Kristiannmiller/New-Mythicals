@@ -160,7 +160,7 @@ describe('Statue', function () {
     assert.instanceOf(statue, Statue);
   });
 
-  it.skip('should have the name of its former self', function () {
+  it('should have the name of its former self', function () {
     var kayla = new Statue('Kayla');
     var hannah = new Statue('Hannah');
 

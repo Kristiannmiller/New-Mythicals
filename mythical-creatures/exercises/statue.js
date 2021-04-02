@@ -1,6 +1,6 @@
 class Statue {
-  constructor() {
-
+  constructor(name) {
+    this.name = name
   }
 }
 module.exports = Statue
