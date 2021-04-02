@@ -150,11 +150,11 @@ describe('Person', function() {
 });
 
 describe('Statue', function () {
-  it.skip('should be a function', function () {
+  it('should be a function', function () {
     assert.isFunction(Statue);
   });
 
-  it.skip('should instantiate a Statue', function () {
+  it('should instantiate a Statue', function () {
     var statue = new Statue();
 
     assert.instanceOf(statue, Statue);
