@@ -1,7 +1,7 @@
 class Ogre {
   constructor(data) {
     this.name = data.name
-    this.home = 'Swamp'
+    this.home = data.abode || 'Swamp'
   }
 }
 module.exports = Ogre
