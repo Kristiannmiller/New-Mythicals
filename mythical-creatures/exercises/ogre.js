@@ -8,6 +8,7 @@ class Ogre {
     human.encounterCounter++
     if(human.noticesOgre()) {
       this.swingAt(human)
+      this.swings % 2 === 0 ? human.knockedOut = true : human.knockedOut = false
     }
   }
   swingAt(human) {
