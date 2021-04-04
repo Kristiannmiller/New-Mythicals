@@ -4,7 +4,11 @@ class Human {
     this.encounterCounter = 0
   }
   noticesOgre() {
-    return this.encounterCounter % 3 === 0 ? true : false
+    if(this.encounterCounter > 0) {
+      return this.encounterCounter % 3 === 0 ? true : false
+    } else {
+      return false
+    }
   }
 }
 module.exports = Human
