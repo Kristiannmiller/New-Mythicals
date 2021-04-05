@@ -9,7 +9,7 @@ describe('Pirate', function() {
     assert.instanceOf(dreadPirateRoberts, Pirate);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var blackbeard = new Pirate('Blackbeard');
     var chengISao = new Pirate('Cheng I Sao');
 
