@@ -32,7 +32,7 @@ describe('Pirate', function() {
     assert.equal(pam.job, 'captain');
   });
 
-  it.skip('should not be cursed by default', function() {
+  it('should not be cursed by default', function() {
     var pirate = new Pirate('Mary Read', 'cook');
 
     assert.equal(pirate.cursed, false);
