@@ -4,5 +4,8 @@ class Pirate {
     this.job = job || 'scallywag'
     this.cursed = false
   }
+  robShip() {
+    return 'YAARRR!'
+  }
 }
 module.exports = Pirate
