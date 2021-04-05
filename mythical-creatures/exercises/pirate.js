@@ -1,7 +1,7 @@
 class Pirate {
-  constructor(name) {
+  constructor(name, job) {
     this.name = name
-    this.job = 'scallywag'
+    this.job = job || 'scallywag'
   }
 }
 module.exports = Pirate
