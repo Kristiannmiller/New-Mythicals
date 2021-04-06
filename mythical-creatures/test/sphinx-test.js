@@ -70,7 +70,7 @@ describe('Sphinx', () => {
     assert.deepEqual(sphinx.riddles, []);
   });
 
-  it.skip('should accept answers in any order', () => {
+  it('should accept answers in any order', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
@@ -93,7 +93,7 @@ describe('Sphinx', () => {
     assert.deepEqual(sphinx.riddles, [riddle1, riddle2]);
   });
 
-  it.skip('should mock heroes when they get the answer right', () => {
+  it('should mock heroes when they get the answer right', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
