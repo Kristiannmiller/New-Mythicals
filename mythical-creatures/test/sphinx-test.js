@@ -30,7 +30,7 @@ describe('Sphinx', () => {
     assert.deepEqual(sphinx.riddles, [riddle]);
   });
 
-  it.skip('should collect only three riddles', () => {
+  it('should collect only three riddles', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',

@@ -4,6 +4,9 @@ class Sphinx {
     this.riddles = []
   }
   collectRiddle(riddle) {
+    if(this.riddles.length > 2) {
+      this.riddles.shift()
+    }
     this.riddles.push(riddle)
   }
 }
