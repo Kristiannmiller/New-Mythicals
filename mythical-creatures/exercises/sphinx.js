@@ -14,9 +14,10 @@ class Sphinx {
     for(let i=0; i < this.riddles.length; i++) {
       if(this.riddles[i].answer === answer) {
         this.riddles.splice(i, 1)
-        return 'That wasn\'t that hard, I bet you don\'t get the next one'
+        return this.riddles.length ? 'That wasn\'t that hard, I bet you don\'t get the next one' : `PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS "${answer}"???`
       }
     }
+    this.heroesEaten++
   }
 }
 module.exports = Sphinx
