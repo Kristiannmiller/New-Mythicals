@@ -160,7 +160,7 @@ describe('Sphinx', () => {
     assert.equal(rage, 'PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS \"Halfway, after that it\'s running out.\"???');
   });
 
-  it.skip('should scream specifically about the last riddle to be answered', () => {
+  it('should scream specifically about the last riddle to be answered', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
