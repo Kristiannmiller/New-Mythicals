@@ -6,12 +6,11 @@ describe('Sphinx', () => {
     assert.isFunction(Sphinx);
   });
 
-  it.skip('should have no name', () => {
-    // instantiate a Sphinx object with no arguments
+  it('should have no name', () => {
+    const sphinx = new Sphinx();
 
-    // assert that the spinx's name is null
+    assert.deepEqual(sphinx.name, null);
 
-    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
   it.skip('should start with no riddles', () => {
