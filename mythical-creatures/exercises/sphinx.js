@@ -2,6 +2,7 @@ class Sphinx {
   constructor() {
     this.name = null
     this.riddles = []
+    this.heroesEaten = 0
   }
   collectRiddle(riddle) {
     if(this.riddles.length > 2) {
