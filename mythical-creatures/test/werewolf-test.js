@@ -145,7 +145,7 @@ describe('Victim', function() {
     assert.equal(victim.name, 'Leta');
   });
 
-  it.skip('should be alive', function () {
+  it('should be alive', function () {
     var victim = new Victim('Leta');
 
     assert.equal(victim.alive, true);
