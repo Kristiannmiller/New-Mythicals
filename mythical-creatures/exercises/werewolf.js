@@ -5,12 +5,12 @@ class Werewolf {
     this.hungry = false
   }
   completeTransformation() {
+    this.hungry = !this.hungry
     if(this.form === 'wolf') {
       this.form = 'human'
       return 'Where are I?'
     } else {
       this.form = 'wolf'
-      this.hungry = true
       return 'Aaa-Woooo!'
     }
   }

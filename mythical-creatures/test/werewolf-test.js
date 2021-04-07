@@ -81,7 +81,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.hungry, true);
   });
 
-  it.skip('should not be hungry after changing back to human form', function () {
+  it('should not be hungry after changing back to human form', function () {
     var werewolf = new Werewolf('Pep');
 
     werewolf.completeTransformation();
