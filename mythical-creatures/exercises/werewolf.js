@@ -14,5 +14,9 @@ class Werewolf {
       return 'Aaa-Woooo!'
     }
   }
+  eatVictim(victim) {
+    victim.alive = false
+    return `Yum, ${victim.name} was delicious.`
+  }
 }
 module.exports = Werewolf
