@@ -114,7 +114,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'human');
   });
 
-  it.skip('should not be able to eat a victim while in human form', function() {
+  it('should not be able to eat a victim while in human form', function() {
     var werewolf = new Werewolf('Scott');
     var victim = new Victim('Baby');
 

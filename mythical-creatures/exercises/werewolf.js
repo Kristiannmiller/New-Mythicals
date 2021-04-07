@@ -15,10 +15,13 @@ class Werewolf {
     }
   }
   eatVictim(victim) {
-    victim.alive = false
-    this.form = 'human'
-    this.hungry = false
-    return `Yum, ${victim.name} was delicious.`
+    if(this.form === 'wolf') {
+      victim.alive = false
+      this.form = 'human'
+      this.hungry = false
+      return `Yum, ${victim.name} was delicious.`
+    }
+    return `No way am I eating ${victim.name}, I'd like a burger!`
   }
 }
 module.exports = Werewolf
