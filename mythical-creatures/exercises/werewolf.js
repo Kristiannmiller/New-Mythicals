@@ -2,6 +2,7 @@ class Werewolf {
   constructor(name) {
     this.name = name
     this.form = 'human'
+    this.hungry = false
   }
   completeTransformation() {
     if(this.form === 'wolf') {

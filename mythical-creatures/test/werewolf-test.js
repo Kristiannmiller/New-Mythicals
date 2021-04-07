@@ -51,7 +51,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'human');
   });
 
-  it.skip('should show what form its in', function() {
+  it('should show what form its in', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.form, 'human');
@@ -66,7 +66,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'wolf');
   });
 
-  it.skip('should start off not hungry', function() {
+  it('should start off not hungry', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.hungry, false);
