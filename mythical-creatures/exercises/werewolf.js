@@ -16,6 +16,8 @@ class Werewolf {
   }
   eatVictim(victim) {
     victim.alive = false
+    this.form = 'human'
+    this.hungry = false
     return `Yum, ${victim.name} was delicious.`
   }
 }
