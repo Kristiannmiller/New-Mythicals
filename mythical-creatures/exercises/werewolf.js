@@ -10,6 +10,7 @@ class Werewolf {
       return 'Where are I?'
     } else {
       this.form = 'wolf'
+      this.hungry = true
       return 'Aaa-Woooo!'
     }
   }
