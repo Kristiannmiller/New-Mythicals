@@ -10,7 +10,7 @@ describe('Settler', function() {
     assert.equal(hannah.name, 'Hannah');
   });
 
-  it.skip('should have an age', function() {
+  it('should have an age', function() {
     var will = new Settler({ name: 'Will', age: 33 });
     var hannah = new Settler({ name: 'Hannah', age: 30 });
 
