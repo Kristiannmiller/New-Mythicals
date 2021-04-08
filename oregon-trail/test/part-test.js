@@ -10,7 +10,7 @@ describe('Part', function() {
     assert.equal(yoke.type, 'yoke');
   });
 
-  it.skip('should not be broken by default', function() {
+  it('should not be broken by default', function() {
     var wheel = new Part('wheel');
     var yoke = new Part('yoke');
 
