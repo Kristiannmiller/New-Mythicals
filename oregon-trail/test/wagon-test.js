@@ -27,7 +27,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
-  it.skip('should have no axles by default', function() {
+  it('should have no axles by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.axles, []);
