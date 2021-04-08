@@ -36,7 +36,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'healthy');
   });
 
-  it.skip('should have no ailments by default', function() {
+  it('should have no ailments by default', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     assert.deepEqual(traveler.ailments, []);
