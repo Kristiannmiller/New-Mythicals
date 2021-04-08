@@ -9,5 +9,10 @@ class Wagon {
     this.ammunition = data.ammunition
     this.clothes = data.clothes
   }
+  addPart(part) {
+    if(part.type === 'wheel') {
+      this.wheels.push(part)
+    }
+  }
 }
 module.exports = Wagon
