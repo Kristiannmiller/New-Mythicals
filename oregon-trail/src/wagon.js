@@ -28,7 +28,8 @@ class Wagon {
       this.oxen.length > 1,
       this.yokes.length > 0,
       this.settlers.length > 0,
-      this.partsAreValid()
+      this.partsAreValid(),
+      this.yokes.length >= this.oxen.length / 2
       ]
     return !checkpoints.includes(false)
   }
