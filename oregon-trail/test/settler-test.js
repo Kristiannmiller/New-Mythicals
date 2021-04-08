@@ -84,7 +84,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   });
 
-  it.skip('should be able to be healed', function() {
+  it('should be able to be healed', function() {
     var will = new Settler({ name: 'Will', age: 21, nationality: 'English' });
     var hannah = new Settler({ name: 'Hannah', age: 30, nationality: 'English' });
 

@@ -10,13 +10,17 @@ class Settler {
     if(this.status !== 'dead') {
       this.ailments.push(issue)
     }
-    if(this.ailments.length === 1) {
+    if(this.status === 'healthy') {
       this.status = 'fair'
-    } else if(this.ailments.length === 2) {
+    } else if(this.status === 'fair') {
       this.status = 'poor'
     } else {
       this.status = 'dead'
     }
+  }
+  heal() {
+    this.ailments = []
+    this.status = 'healthy'
   }
 }
 module.exports = Settler
