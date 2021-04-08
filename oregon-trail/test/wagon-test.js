@@ -47,7 +47,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.oxen, []);
   });
 
-  it.skip('should be able to be constructed with oxen', function() {
+  it('should be able to be constructed with oxen', function() {
     var ox1 = new Part('ox');
     var ox2 = new Part('ox');
     var wagon = new Wagon({ name: 'New Horizons', oxen: [ox1, ox2] });
