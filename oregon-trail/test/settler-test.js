@@ -30,7 +30,7 @@ describe('Settler', function() {
     assert.equal(traveler.nationality, 'English');
   });
 
-  it.skip('should be healthy by default', function() {
+  it('should be healthy by default', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     assert.equal(traveler.status, 'healthy');
