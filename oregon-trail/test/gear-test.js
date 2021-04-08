@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Gear = require('../src/gear.js');
 
 describe('Gear', function() {
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var food = new Gear('food');
     var ammunition = new Gear('ammunition');
 
