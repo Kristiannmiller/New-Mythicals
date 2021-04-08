@@ -24,7 +24,7 @@ describe('Settler', function() {
     assert.equal(traveler.nationality, 'unknown');
   });
 
-  it.skip('should be able to have a nationality', function() {
+  it('should be able to have a nationality', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     assert.equal(traveler.nationality, 'English');
