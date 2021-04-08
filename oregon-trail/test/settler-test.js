@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Settler = require('../src/settler.js');
 
 describe('Settler', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var will = new Settler({ name: 'Will' });
     var hannah = new Settler({ name: 'Hannah' });
 
