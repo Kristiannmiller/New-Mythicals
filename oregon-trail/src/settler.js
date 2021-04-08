@@ -6,5 +6,11 @@ class Settler {
     this.status = 'healthy'
     this.ailments = []
   }
+  experienceDistress(issue) {
+    this.ailments.push(issue)
+    if(this.ailments.length === 1) {
+      this.status = 'fair'
+    }
+  }
 }
 module.exports = Settler

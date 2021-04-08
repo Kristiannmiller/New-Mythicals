@@ -42,7 +42,7 @@ describe('Settler', function() {
     assert.deepEqual(traveler.ailments, []);
   });
 
-  it.skip('should be able to experience distress', function() {
+  it('should be able to experience distress', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
