@@ -13,7 +13,7 @@ describe('Wagon', function() {
     assert.equal(newHorizons.title, 'New Horizons');
   });
 
-  it.skip('should have no wheels by default', function() {
+  it('should have no wheels by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.wheels, []);
