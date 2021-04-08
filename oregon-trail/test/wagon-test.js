@@ -131,7 +131,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.oxen, [ox]);
   });
 
-  it.skip('should be able to add a yoke', function() {
+  it('should be able to add a yoke', function() {
     var yoke = new Part('yoke');
     var wagon = new Wagon({ name: 'Voyager' });
 
