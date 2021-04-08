@@ -51,7 +51,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'fair');
   });
 
-  it.skip('should be able to become more distressed', function() {
+  it('should be able to become more distressed', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
