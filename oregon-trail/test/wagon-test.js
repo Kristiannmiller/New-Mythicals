@@ -5,7 +5,7 @@ var Gear = require('../src/gear.js');
 var Settler = require('../src/settler.js');
 
 describe('Wagon', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var voyager = new Wagon({ name: 'Voyager' });
     var newHorizons = new Wagon({ name: 'New Horizons' });
 
