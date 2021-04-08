@@ -14,6 +14,8 @@ class Wagon {
       this.wheels.push(part)
     } else if(part.type === 'axle') {
       this.axles.push(part)
+    } else if(part.type === 'ox') {
+      this.oxen.push(part)
     }
   }
 }
