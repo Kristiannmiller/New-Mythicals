@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Part = require('../src/part.js');
 
 describe('Part', function() {
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var wheel = new Part('wheel');
     var yoke = new Part('yoke');
 
