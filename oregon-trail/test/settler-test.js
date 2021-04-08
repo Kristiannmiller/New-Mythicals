@@ -18,7 +18,7 @@ describe('Settler', function() {
     assert.equal(hannah.age, 30);
   });
 
-  it.skip('should have an unknown nationality by default', function() {
+  it('should have an unknown nationality by default', function() {
     var traveler = new Settler({ name: 'Will', age: 21 });
 
     assert.equal(traveler.nationality, 'unknown');
