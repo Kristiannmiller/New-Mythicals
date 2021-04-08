@@ -22,13 +22,23 @@ class Wagon {
     }
   }
   canTravel() {
-    var checkpoints = []
-    this.wheels.length > 3 ? checkpoints.push(true) : checkpoints.push(false)
-    this.axles.length > 1 ? checkpoints.push(true) : checkpoints.push(false)
-    this.oxen.length > 1 ? checkpoints.push(true) : checkpoints.push(false)
-    this.yokes.length > 0 ? checkpoints.push(true) : checkpoints.push(false)
-    this.settlers.length > 0 ? checkpoints.push(true) : checkpoints.push(false)
+    var checkpoints = [
+      this.wheels.length > 3,
+      this.axles.length > 1,
+      this.oxen.length > 1,
+      this.yokes.length > 0,
+      this.settlers.length > 0,
+      this.wheelsAreValid()
+      ]
     return !checkpoints.includes(false)
+  }
+  wheelsAreValid() {
+    for(var i=0; i<this.wheels.length; i++) {
+      if(this.wheels[i].broken) {
+        return false
+      }
+    }
+    return true
   }
 }
 module.exports = Wagon

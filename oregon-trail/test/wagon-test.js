@@ -225,7 +225,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel without four working wheels', function() {
+  it('should not be able to travel without four working wheels', function() {
     var wagon = makeValidWagon();
 
     wagon.wheels[0].break();
