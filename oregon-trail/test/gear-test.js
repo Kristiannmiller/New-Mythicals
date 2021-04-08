@@ -19,7 +19,7 @@ describe('Gear', function() {
   });
 
   // valid types are food, ammunition, and clothes
-  it.skip('should not be able to have an invalid type', function() {
+  it('should not be able to have an invalid type', function() {
     var ammunition = new Gear('ammunition');
     var food = new Gear('food');
     var clothes = new Gear('clothes');
