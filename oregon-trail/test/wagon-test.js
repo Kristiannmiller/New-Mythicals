@@ -146,7 +146,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.settlers, []);
   });
 
-  it.skip('should be able to be constructed with settlers', function() {
+  it('should be able to be constructed with settlers', function() {
     var settler = new Settler({ name: 'Will', age: 33, nationality: 'Irish' });
     var wagon = new Wagon({ name: 'Voyager', settlers: [settler] });
 

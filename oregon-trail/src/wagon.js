@@ -8,7 +8,7 @@ class Wagon {
     this.food = data.food
     this.ammunition = data.ammunition
     this.clothes = data.clothes
-    this.settlers = []
+    this.settlers = data.settlers || []
   }
   addPart(part) {
     if(part.type === 'wheel') {
