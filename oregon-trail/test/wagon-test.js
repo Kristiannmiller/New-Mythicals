@@ -140,7 +140,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.yokes, [yoke]);
   });
 
-  it.skip('should have no settlers by default', function() {
+  it('should have no settlers by default', function() {
     var wagon = new Wagon({ name: 'Voyager' });
 
     assert.deepEqual(wagon.settlers, []);
