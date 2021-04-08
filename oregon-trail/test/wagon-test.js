@@ -113,7 +113,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
-  it.skip('should be able to add an axle', function() {
+  it('should be able to add an axle', function() {
     var axle = new Part('axle');
     var wagon = new Wagon({ name: 'Voyager' });
 
