@@ -12,6 +12,8 @@ class Settler {
       this.status = 'fair'
     } else if(this.ailments.length === 2) {
       this.status = 'poor'
+    } else {
+      this.status = 'dead'
     }
   }
 }
