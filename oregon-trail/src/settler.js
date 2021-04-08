@@ -7,7 +7,9 @@ class Settler {
     this.ailments = []
   }
   experienceDistress(issue) {
-    this.ailments.push(issue)
+    if(this.status !== 'dead') {
+      this.ailments.push(issue)
+    }
     if(this.ailments.length === 1) {
       this.status = 'fair'
     } else if(this.ailments.length === 2) {

@@ -72,7 +72,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   });
 
-  it.skip('should not be able to experience distress after death', function() {
+  it('should not be able to experience distress after death', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm');
