@@ -19,12 +19,12 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.wheels, []);
   });
 
-  it.skip('should be able to be constructed with wheels', function() {
+  it('should be able to be constructed with wheels', function() {
     var wheel1 = new Part('wheel');
     var wheel2 = new Part('wheel');
     var wagon = new Wagon({ name: 'New Horizons', wheels: [wheel1, wheel2] });
 
-    assert.deepEqual(wagon.wheels, [wheel, wheel2]);
+    assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
   it.skip('should have no axles by default', function() {
