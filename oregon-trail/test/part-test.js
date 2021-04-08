@@ -38,7 +38,7 @@ describe('Part', function() {
     assert.equal(yoke.broken, false);
   });
 
-  it.skip('should not be able to be repaired if it is broken a second time', function() {
+  it('should not be able to be repaired if it is broken a second time', function() {
     var yoke = new Part('yoke');
     var wheel = new Part('wheel');
 
