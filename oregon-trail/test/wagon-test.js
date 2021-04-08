@@ -68,7 +68,7 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.yokes, [yoke]);
   });
 
-  it.skip('should be able to have food', function() {
+  it('should be able to have food', function() {
     var food = new Gear('food', 10);
     var wagon = new Wagon({ name: 'New Horizons', food: food });
 
