@@ -4,7 +4,7 @@ class Wagon {
     this.wheels = data.wheels || []
     this.axles = data.axles || []
     this.oxen = data.oxen || []
-    this.yokes = []
+    this.yokes = data.yokes || []
   }
 }
 module.exports = Wagon
