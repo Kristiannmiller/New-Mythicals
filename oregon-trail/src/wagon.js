@@ -28,13 +28,14 @@ class Wagon {
       this.oxen.length > 1,
       this.yokes.length > 0,
       this.settlers.length > 0,
-      this.wheelsAreValid()
+      this.partsAreValid()
       ]
     return !checkpoints.includes(false)
   }
-  wheelsAreValid() {
-    for(var i=0; i<this.wheels.length; i++) {
-      if(this.wheels[i].broken) {
+  partsAreValid() {
+    var allParts = [...this.wheels, ...this.yokes, ...this.axles, ...this.oxen]
+    for(var i=0; i<allParts.length; i++) {
+      if(allParts[i].broken) {
         return false
       }
     }

@@ -233,7 +233,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel without two working axles', function() {
+  it('should not be able to travel without two working axles', function() {
     var wagon = makeValidWagon();
 
     wagon.axles[0].break();
