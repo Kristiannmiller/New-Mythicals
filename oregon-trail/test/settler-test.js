@@ -102,7 +102,7 @@ describe('Settler', function() {
     assert.equal(hannah.status, 'healthy');
   });
 
-  it.skip('should not be able to be healed if dead', function() {
+  it('should not be able to be healed if dead', function() {
     var traveler = new Settler({ name: 'Will', age: 21, nationality: 'English' });
 
     traveler.experienceDistress('broken arm');
