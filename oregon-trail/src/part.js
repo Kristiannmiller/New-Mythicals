@@ -6,6 +6,9 @@ class Part {
   break() {
     this.broken = true
   }
+  repair() {
+    this.broken = false
+  }
 }
 
 module.exports = Part;
