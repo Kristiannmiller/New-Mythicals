@@ -10,7 +10,7 @@ describe('Gear', function() {
     assert.equal(ammunition.type, 'ammunition');
   });
 
-  it.skip('should be able to have a quantity', function () {
+  it('should be able to have a quantity', function () {
     var food = new Gear('food', 10);
     var clothes = new Gear('clothes', 12);
 

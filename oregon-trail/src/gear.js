@@ -1,6 +1,7 @@
 class Gear {
-  constructor(type) {
+  constructor(type, quantity) {
     this.type = type
+    this.quantity = quantity
   }
 }
 
