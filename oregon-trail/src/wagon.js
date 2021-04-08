@@ -21,5 +21,14 @@ class Wagon {
       this.yokes.push(part)
     }
   }
+  canTravel() {
+    var checkpoints = []
+    this.wheels.length > 3 ? checkpoints.push(true) : checkpoints.push(false)
+    this.axles.length > 1 ? checkpoints.push(true) : checkpoints.push(false)
+    this.oxen.length > 1 ? checkpoints.push(true) : checkpoints.push(false)
+    this.yokes.length > 0 ? checkpoints.push(true) : checkpoints.push(false)
+    this.settlers.length > 0 ? checkpoints.push(true) : checkpoints.push(false)
+    return !checkpoints.includes(false)
+  }
 }
 module.exports = Wagon
