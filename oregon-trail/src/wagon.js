@@ -29,6 +29,7 @@ class Wagon {
       this.yokes.length > 0,
       this.settlers.length > 0,
       this.partsAreValid(),
+      this.settlersAreLiving(),
       this.yokes.length >= this.oxen.length / 2
       ]
     return !checkpoints.includes(false)
@@ -37,6 +38,14 @@ class Wagon {
     var allParts = [...this.wheels, ...this.yokes, ...this.axles, ...this.oxen]
     for(var i=0; i<allParts.length; i++) {
       if(allParts[i].broken) {
+        return false
+      }
+    }
+    return true
+  }
+  settlersAreLiving() {
+    for(var i=0; i<this.settlers.length; i++) {
+      if(this.settlers[i].status === 'dead') {
         return false
       }
     }

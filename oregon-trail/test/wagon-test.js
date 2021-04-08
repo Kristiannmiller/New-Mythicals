@@ -260,7 +260,7 @@ describe('Wagon', function() {
     assert.isFalse(wagon.canTravel());
   });
 
-  it.skip('can travel with extra oxen if it has extra yokes', function() {
+  it('can travel with extra oxen if it has extra yokes', function() {
     var wagon = makeValidWagon();
     var ox3 = new Part('ox');
     var ox4 = new Part('ox');
@@ -273,7 +273,7 @@ describe('Wagon', function() {
     assert.isTrue(wagon.canTravel());
   });
 
-  it.skip('should not be able to travel without at least one living settler', function() {
+  it('should not be able to travel without at least one living settler', function() {
     var wagon = makeValidWagon();
 
     wagon.settlers[0].status = 'dead';
