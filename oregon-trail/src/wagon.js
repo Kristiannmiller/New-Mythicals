@@ -6,6 +6,7 @@ class Wagon {
     this.oxen = data.oxen || []
     this.yokes = data.yokes || []
     this.food = data.food
+    this.ammunition = data.ammunition
   }
 }
 module.exports = Wagon

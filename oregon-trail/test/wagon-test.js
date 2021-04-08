@@ -75,7 +75,7 @@ describe('Wagon', function() {
     assert.equal(wagon.food, food);
   });
 
-  it.skip('should be able to have ammunition', function() {
+  it('should be able to have ammunition', function() {
     var ammunition = new Gear('ammunition', 1000);
     var wagon = new Wagon({ name: 'New Horizons', ammunition: ammunition });
 
