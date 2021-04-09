@@ -93,7 +93,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.cost, 12)
   });
 
-  it.skip('should be able to keep track of its occupants', function() {
+  it('should be able to keep track of its occupants', function() {
     var skatePark = new SkatePark({
       name: 'Major Taylor',
       year: 1999,

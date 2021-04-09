@@ -6,6 +6,7 @@ class SkatePark {
     this.features = data.features
     this.isPrivate = data.isPrivate || false
     this.cost = data.price || 0
+    this.occupants = []
   }
 }
 module.exports = SkatePark
