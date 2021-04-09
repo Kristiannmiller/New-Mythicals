@@ -233,7 +233,7 @@ describe('Skate Park', function() {
 })
 
 describe('Skater', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var skater = new Skater({name: 'Scott'});
     var skater2 = new Skater({name: 'Nora'})
 
