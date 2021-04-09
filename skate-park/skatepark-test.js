@@ -321,7 +321,7 @@ describe('Skater', function() {
     assert.equal(skater.frustration, 0)
   })
 
-  it.skip('should increase frustration by 1 when practicing tricks they dont know', function() {
+  it('should increase frustration by 1 when practicing tricks they dont know', function() {
     var tricks = {
       kickflip: true,
       treflip: false,

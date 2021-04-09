@@ -6,5 +6,11 @@ class Skater {
     this.money = data.cash
     this.frustration = 0
   }
+  practice(trick) {
+    if(!this.tricks[trick]) {
+      this.frustration++
+    }
+
+  }
 }
 module.exports = Skater
