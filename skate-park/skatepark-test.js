@@ -14,7 +14,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.name, 'Woodward');
   })
 
-  it.skip('should have the year it was built', function() {
+  it('should have the year it was built', function() {
     var skatePark1 = new SkatePark({name: 'Burnside', year: 1990});
     var skatePark2 = new SkatePark({name: 'Woodward', year: 1970});
     assert.equal(skatePark1.yearFounded, 1990);
