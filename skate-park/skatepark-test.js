@@ -241,7 +241,7 @@ describe('Skater', function() {
     assert.equal(skater2.name, 'Nora');
   })
 
-  it.skip('should have a skill level', function() {
+  it('should have a skill level', function() {
     var skater = new Skater({name: 'Scott', skill: 'Intermediate'});
     var skater2 = new Skater({name: 'Nora', skill: 'Advanced'});
 
