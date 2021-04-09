@@ -276,7 +276,7 @@ describe('Skater', function() {
     assert.equal(skater2.tricks.treflip, true)
   })
 
-  it.skip('should have some money', function() {
+  it('should have some money', function() {
     var tricks = {
       kickflip: true,
       treflip: false,
