@@ -9,9 +9,12 @@ class SkatePark {
     this.occupants = []
   }
   admit(skater) {
-    skater.money -= this.cost
-    this.occupants.push(skater)
-    return this.isPrivate ? `Welcome to ${this.name}, the cost will be $${this.cost}.00.` : `Welcome to the free ${this.name} Skatepark!`
+    if(skater.money > this.cost) {
+      skater.money -= this.cost
+      this.occupants.push(skater)
+      return this.isPrivate ? `Welcome to ${this.name}, the cost will be $${this.cost}.00.` : `Welcome to the free ${this.name} Skatepark!`
+    }
+    return `Sorry, you don't have enough money.`
   }
 }
 module.exports = SkatePark

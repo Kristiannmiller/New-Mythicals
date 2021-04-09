@@ -148,7 +148,7 @@ describe('Skate Park', function() {
     assert.deepEqual(skatePark2.occupants, [skater])
   })
 
-  it.skip('should only admit skaters to a private park if they can pay', function() {
+  it('should only admit skaters to a private park if they can pay', function() {
     var skatePark = new SkatePark({
       name: 'Curbside',
       year: 2018,
