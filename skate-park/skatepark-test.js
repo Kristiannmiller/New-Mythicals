@@ -21,7 +21,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.yearFounded, 1970);
   })
 
-  it.skip('should have a style', function() {
+  it('should have a style', function() {
     var skatePark1 = new SkatePark({name: 'Burnside', year: 1990, type: 'transition'});
     var skatePark2 = new SkatePark({name: 'Woodward', year: 1970, type: 'flow'});
 
