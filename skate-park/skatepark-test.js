@@ -52,7 +52,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.features, features2);
   })
 
-  it.skip('should default to being a public park', function() {
+  it('should default to being a public park', function() {
     var skatePark1 = new SkatePark({
       name: 'Louisville Extreme Park',
       year: 2002,
