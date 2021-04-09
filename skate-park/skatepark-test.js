@@ -249,7 +249,7 @@ describe('Skater', function() {
     assert.equal(skater2.skill, 'Advanced');
   })
 
-  it.skip('should know some tricks', function() {
+  it('should know some tricks', function() {
     var tricks = {
       kickflip: true,
       treflip: false,
