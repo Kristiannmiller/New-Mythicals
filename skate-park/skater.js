@@ -12,6 +12,7 @@ class Skater {
     }
     if(this.frustration > 2) {
       this.tricks[trick] = true
+      this.frustration = 0
       return `I just learned to ${trick}!!!`
     }
 
