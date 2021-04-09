@@ -110,7 +110,7 @@ describe('Skate Park', function() {
   // Scroll down a bit and finish the Skater tests (line 235)
   // before completing the rest of these Skatepark tests
 
-  it.skip('should take payment from the skater only if it is a private park', function() {
+  it('should take payment from the skater only if it is a private park', function() {
     var tricks = {
       kickflip: true,
       treflip: false,
