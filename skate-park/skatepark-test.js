@@ -183,7 +183,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark.admit(skater), `Sorry, you don't have enough money.`)
   })
 
-  it.skip('should only allow 3 skaters at a time for social distancing', function() {
+  it('should only allow 3 skaters at a time for social distancing', function() {
     var tricks = {
       kickflip: true,
       treflip: true,

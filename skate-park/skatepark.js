@@ -9,7 +9,10 @@ class SkatePark {
     this.occupants = []
   }
   admit(skater) {
-    if(skater.money > this.cost) {
+    if(this.occupants.length === 3) {
+      return `Sorry, we are at max capacity. Thank you for understanding.`
+    }
+    if(skater.money >= this.cost) {
       skater.money -= this.cost
       this.occupants.push(skater)
       return this.isPrivate ? `Welcome to ${this.name}, the cost will be $${this.cost}.00.` : `Welcome to the free ${this.name} Skatepark!`
