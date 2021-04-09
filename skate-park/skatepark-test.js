@@ -29,7 +29,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.style, 'flow');
   })
 
-  it.skip('should have some unique features', function() {
+  it('should have some unique features', function() {
     var features1 = ['pyramid', 'concrete coping', 'pools'];
 
     var skatePark1 = new SkatePark({
