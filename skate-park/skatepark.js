@@ -5,6 +5,7 @@ class SkatePark {
     this.style = data.type
     this.features = data.features
     this.isPrivate = data.isPrivate || false
+    this.cost = data.price || 0
   }
 }
 module.exports = SkatePark

@@ -72,7 +72,7 @@ describe('Skate Park', function() {
     assert.equal(skatePark2.isPrivate, true);
   })
 
-  it.skip('should defaut to being free', function() {
+  it('should defaut to being free', function() {
     var skatePark1 = new SkatePark({
       name: 'Louisville Extreme Park',
       year: 2002,
