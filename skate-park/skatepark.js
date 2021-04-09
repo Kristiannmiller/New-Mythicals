@@ -1,6 +1,6 @@
 class SkatePark {
-  constructor() {
-
+  constructor(data) {
+    this.name = data.name
   }
 }
 module.exports = SkatePark

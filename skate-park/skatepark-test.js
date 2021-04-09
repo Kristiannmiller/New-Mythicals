@@ -7,7 +7,7 @@ describe('Skate Park', function() {
     assert.isFunction(SkatePark);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var skatePark1 = new SkatePark({name:'Burnside'});
     var skatePark2 = new SkatePark({name:'Woodward'});
     assert.equal(skatePark1.name, 'Burnside');
