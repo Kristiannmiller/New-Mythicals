@@ -4,6 +4,7 @@ class Skater {
     this.skill = data.skill
     this.tricks = data.tricks
     this.money = data.cash
+    this.frustration = 0
   }
 }
 module.exports = Skater

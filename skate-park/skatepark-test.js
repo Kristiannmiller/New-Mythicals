@@ -305,7 +305,7 @@ describe('Skater', function() {
     assert.equal(skater2.money, 200)
   })
 
-  it.skip('should start off with no frustration', function() {
+  it('should start off with no frustration', function() {
     var tricks = {
       kickflip: true,
       treflip: false,
