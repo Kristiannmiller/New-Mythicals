@@ -27,7 +27,7 @@ describe("Ski Lift", function () {
     assert.deepEqual(lift.skiers, []);
   });
 
-  it.skip('should have the bar lifted up by default', function() {
+  it('should have the bar lifted up by default', function() {
     var lift = new Lift(2);
 
     assert.deepEqual(lift.safetyBar, 'up');

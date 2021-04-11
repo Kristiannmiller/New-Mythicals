@@ -5,6 +5,7 @@ class Lift {
     this.inService = true
     this.limit = limit
     this.skiers = []
+    this.safetyBar = 'up'
   }
 }
 
