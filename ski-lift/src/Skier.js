@@ -7,8 +7,15 @@ class Skier {
   }
   takeLesson() {
     this.skillLevel++
-    if(this.skillLevel > 2) {
+    this.pickSlope()
+  }
+  pickSlope() {
+    if(this.skillLevel > 4) {
+      this.nextSlope = 'black diamond'
+    } else if(this.skillLevel > 2) {
       this.nextSlope = 'blue square'
+    } else {
+      this.nextSlope = 'green circle'
     }
   }
 }
