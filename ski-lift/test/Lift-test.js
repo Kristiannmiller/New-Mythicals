@@ -71,7 +71,7 @@ describe("Ski Lift", function () {
     assert.equal(admit, 'Sorry, Hannah. You need a lift ticket!')
   });
 
-  it.skip('should lower the safety bar once all skier positions are filled', function() {
+  it('should lower the safety bar once all skier positions are filled', function() {
     var lift = new Lift(4);
 
     lift.admitSkier('Hannah', false);

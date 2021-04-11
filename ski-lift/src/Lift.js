@@ -15,6 +15,9 @@ class Lift {
       return ticket ? `Sorry, ${name}. Please wait for the next lift!` : `Sorry, ${name}. You need a lift ticket!`
     }
   }
+  startLift() {
+    this.skiers.length === this.limit ? this.safetyBar = 'down' : this.safetyBar = 'up'
+  }
 }
 
 module.exports = Lift;
