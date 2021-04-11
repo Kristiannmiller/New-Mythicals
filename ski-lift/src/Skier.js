@@ -1,6 +1,7 @@
 class Skier {
-  constructor(name) {
+  constructor(name, ticket) {
     this.name = name
+    this.hasLiftTicket = ticket
   }
 }
 

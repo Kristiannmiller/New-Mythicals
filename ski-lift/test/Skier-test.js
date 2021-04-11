@@ -14,7 +14,7 @@ describe("Skier", function () {
     assert.equal(skier.name, 'Hannah');
   });
 
-  it.skip('should be able to have a lift ticket', function() {
+  it('should be able to have a lift ticket', function() {
     var skier = new Skier('Scott', true);
 
     assert.equal(skier.hasLiftTicket, true);
