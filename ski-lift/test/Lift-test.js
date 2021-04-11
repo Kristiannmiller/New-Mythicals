@@ -3,13 +3,13 @@ var Skier = require("../src/Skier");
 var Lift = require("../src/Lift");
 
 describe("Ski Lift", function () {
-  it.skip('should instantiate a ski-lift object', function () {
+  it('should instantiate a ski-lift object', function () {
     var lift = new Lift();
 
     assert.instanceOf(lift, Lift);
   });
 
-  it.skip('should be in service', function () {
+  it('should be in service', function () {
     var lift = new Lift();
 
     assert.equal(lift.inService, true);
@@ -35,10 +35,10 @@ describe("Ski Lift", function () {
 
   it.skip('should seat skiers', function() {
     var lift = new Lift(3);
-  
-    lift.admitSkier('Pam', true); 
-    lift.admitSkier('Jeff', true); 
-    
+
+    lift.admitSkier('Pam', true);
+    lift.admitSkier('Jeff', true);
+
     assert.deepEqual(lift.skiers.length, 2);
     assert.deepEqual(lift.skiers[1].name, 'Jeff');
     assert.instanceOf(lift.skiers[1], Skier);
@@ -48,8 +48,8 @@ describe("Ski Lift", function () {
     var lift = new Lift(2);
 
     lift.admitSkier('Hannah', true);
-    lift.admitSkier('Scott', true); 
-    var admit = lift.admitSkier('Kayla', true); 
+    lift.admitSkier('Scott', true);
+    var admit = lift.admitSkier('Kayla', true);
 
     assert.deepEqual(lift.skiers.length, 2);
     assert.deepEqual(lift.skiers[1].name, 'Scott');
@@ -79,7 +79,7 @@ describe("Ski Lift", function () {
     lift.admitSkier('Will', true);
     lift.admitSkier('Eric', true);
     lift.admitSkier('Leta', true);
-    
+
     lift.startLift();
 
     assert.deepEqual(lift.skiers.length, 4);
