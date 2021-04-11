@@ -58,7 +58,7 @@ describe("Ski Lift", function () {
     assert.equal(admit, 'Sorry, Kayla. Please wait for the next lift!')
   });
 
-  it.skip('should only seat skiers that have lift tickets', function () {
+  it('should only seat skiers that have lift tickets', function () {
     var lift = new Lift(1);
 
     var admit = lift.admitSkier('Hannah', false);
