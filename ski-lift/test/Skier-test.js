@@ -20,7 +20,7 @@ describe("Skier", function () {
     assert.equal(skier.hasLiftTicket, true);
   });
 
-  it.skip('should start out as a beginner', function () {
+  it('should start out as a beginner', function () {
     var skier = new Skier('Kayla', true);
 
     assert.equal(skier.skillLevel, 1);
