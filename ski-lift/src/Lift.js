@@ -7,6 +7,10 @@ class Lift {
     this.skiers = []
     this.safetyBar = 'up'
   }
+  admitSkier(name, ticket) {
+    let skierToAdd = new Skier(name, ticket)
+    this.skiers.push(skierToAdd)
+  }
 }
 
 module.exports = Lift;

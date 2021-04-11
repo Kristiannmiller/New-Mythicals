@@ -33,7 +33,7 @@ describe("Ski Lift", function () {
     assert.deepEqual(lift.safetyBar, 'up');
   })
 
-  it.skip('should seat skiers', function() {
+  it('should seat skiers', function() {
     var lift = new Lift(3);
 
     lift.admitSkier('Pam', true);
