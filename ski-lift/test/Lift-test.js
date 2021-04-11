@@ -44,7 +44,7 @@ describe("Ski Lift", function () {
     assert.instanceOf(lift.skiers[1], Skier);
   });
 
-  it.skip('should only seat skiers if there are enough spots', function() {
+  it('should only seat skiers if there are enough spots', function() {
     var lift = new Lift(2);
 
     lift.admitSkier('Hannah', true);

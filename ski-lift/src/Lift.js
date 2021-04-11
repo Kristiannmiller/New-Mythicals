@@ -8,8 +8,12 @@ class Lift {
     this.safetyBar = 'up'
   }
   admitSkier(name, ticket) {
-    let skierToAdd = new Skier(name, ticket)
-    this.skiers.push(skierToAdd)
+    if(this.skiers.length < this.limit) {
+      let skierToAdd = new Skier(name, ticket)
+      this.skiers.push(skierToAdd)
+    } else {
+      return `Sorry, ${name}. Please wait for the next lift!`
+    }
   }
 }
 
