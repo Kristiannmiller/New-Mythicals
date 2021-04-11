@@ -26,7 +26,7 @@ describe("Skier", function () {
     assert.equal(skier.skillLevel, 1);
   });
 
-  it.skip('should decide its next slope to be beginner level', function () {
+  it('should decide its next slope to be beginner level', function () {
     var skier = new Skier('Kayla', true);
 
     assert.equal(skier.nextSlope, 'green circle');
