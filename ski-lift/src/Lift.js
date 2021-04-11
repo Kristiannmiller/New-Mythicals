@@ -16,7 +16,12 @@ class Lift {
     }
   }
   startLift() {
-    this.skiers.length === this.limit ? this.safetyBar = 'down' : this.safetyBar = 'up'
+    if(this.skiers.length === this.limit) {
+      this.safetyBar = 'down'
+    } else {
+      var diff = this.limit - this.skiers.length
+      return diff > 1 ? `We still need ${diff} more skiers!` : `We still need ${diff} more skier!`
+    }
   }
 }
 

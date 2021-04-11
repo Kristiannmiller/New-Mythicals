@@ -86,7 +86,7 @@ describe("Ski Lift", function () {
     assert.equal(lift.safetyBar, 'down');
   });
 
-  it.skip('should not lower the safety bar until all skier positions are filled', function () {
+  it('should not lower the safety bar until all skier positions are filled', function () {
     var lift1 = new Lift(4);
     var lift2 = new Lift(3)
 
@@ -109,7 +109,7 @@ describe("Ski Lift", function () {
     assert.equal(lift2.safetyBar, 'up');
   });
 
-  it.skip('should know how many skiers are needed before starting', function () {
+  it('should know how many skiers are needed before starting', function () {
     var lift1 = new Lift(4);
     var lift2 = new Lift(3);
 
