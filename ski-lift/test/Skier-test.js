@@ -32,7 +32,7 @@ describe("Skier", function () {
     assert.equal(skier.nextSlope, 'green circle');
   });
 
-  it.skip('should increase skill level with lessons', function () {
+  it('should increase skill level with lessons', function () {
     var skier = new Skier('Pam', true);
 
     skier.takeLesson();
