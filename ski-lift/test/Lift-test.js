@@ -21,7 +21,7 @@ describe("Ski Lift", function () {
     assert.equal(lift.limit, 3);
   });
 
-  it.skip('should start out without any skiiers', function () {
+  it('should start out without any skiiers', function () {
     var lift = new Lift(3);
 
     assert.deepEqual(lift.skiers, []);
