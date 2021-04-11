@@ -15,7 +15,7 @@ describe("Ski Lift", function () {
     assert.equal(lift.inService, true);
   });
 
-  it.skip('should have an amount of people it can take per chair', function() {
+  it('should have an amount of people it can take per chair', function() {
     var lift = new Lift(3);
 
     assert.equal(lift.limit, 3);

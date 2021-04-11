@@ -1,8 +1,9 @@
 var Skier = require('./Skier');
 
 class Lift {
-  constructor() {
+  constructor(limit) {
     this.inService = true
+    this.limit = limit
   }
 }
 
