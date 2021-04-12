@@ -28,7 +28,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), computer);
   });
 
-  it.skip('should be able to add another piece of inventory', function() {
+  it('should be able to add another piece of inventory', function() {
     var hyperdrive = new Part({ name: 'Z1', type: 'hyperdrive', value: 200 });
     var newShop = new Shop({ name: 'Conogo' });
 
@@ -37,7 +37,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), hyperdrive);
   });
 
-  it.skip('can add multiple pieces of inventory', function() {
+  it('can add multiple pieces of inventory', function() {
     var computer = new Part({ name: 'comp', type: 'computer', value: 200 });
     var hyperdrive = new Part({ name: 'hyperdrive', type: 'hyperdrive', value: 200 });
     var newShop = new Shop({ name: 'Conogo' });
@@ -51,7 +51,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), hyperdrive);
   });
 
-  it.skip('should only be able to add parts and food to the inventory', function() {
+  it('should only be able to add parts and food to the inventory', function() {
     var thing = { name: 'something', type: 'anything' };
     var otherThing = { name: 'else', quantity: 100 };
     var newShop = new Shop({ name: 'Conogo' });
