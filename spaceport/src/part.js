@@ -8,7 +8,7 @@ class Part {
     this.checkForValidity = this.checkForValidity()
   }
   checkForValidity() {
-    if(this.name && this.type) {
+    if(this.name && this.type && this.value) {
       this.isValid = true
     } else if(!this.name) {
       this.isValid = false
@@ -16,6 +16,9 @@ class Part {
     } else if(!this.type) {
       this.isValid = false
       return 'This part needs a type!'
+    } else if(!this.value) {
+      this.isValid = false
+      return 'This part needs a value!'
     }
   }
 }
