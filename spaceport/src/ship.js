@@ -6,6 +6,7 @@ class Ship {
     this.odometer = data.odometer || 0
     this.fuelCapacity = data.fuelCapacity || 10
     this.fuel = 0
+    this.captain = data.captain
   }
 }
 module.exports = Ship

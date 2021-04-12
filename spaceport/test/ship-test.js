@@ -100,7 +100,7 @@ describe('Ship', function() {
     assert.equal(fighter.fuel, 0);
   });
 
-  it.skip('should have a captain', function() {
+  it('should have a captain', function() {
     var captain = new Being('Will', 'human');
     var fighter = new Ship(
       {
