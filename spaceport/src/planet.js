@@ -18,8 +18,13 @@ class Planet {
     ship.fuel = ship.fuelCapacity
   }
   giveClearance(otherPlanet) {
-    if(this.currentShip.fuel < this.currentShip.fuelCapacity) {
+    if(this.currentShip.fuel < 1) {
       return "Clearance denied: Cannot fly without fuel"
+    } else {
+      this.currentShip.fuel = 0
+      otherPlanet.landShip(this.currentShip)
+      this.currentShip = undefined
+      return `Clearance granted: Enjoy your trip to ${otherPlanet.name}`
     }
   }
 }

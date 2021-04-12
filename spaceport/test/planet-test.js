@@ -154,6 +154,7 @@ describe('Planet', function() {
       }
     );
     fighter.fuel = 2;
+    planet.landShip(fighter)
     planet.currentShip = fighter;
 
     var result = planet.giveClearance(otherPlanet)
