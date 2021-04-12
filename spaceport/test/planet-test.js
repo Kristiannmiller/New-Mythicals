@@ -14,7 +14,7 @@ describe('Planet', function() {
     assert.equal(planetF.name, 'F2');
   });
 
-  it.skip('should be able to have a shop', function() {
+  it('should be able to have a shop', function() {
     var shop = new Shop({ name: 'EZ-mart' });
     var planet = new Planet({ name: 'F2', shop: shop });
 
