@@ -74,7 +74,7 @@ describe('Planet', function() {
     assert.deepEqual(planet.calculateDistance(otherPlanet), Math.sqrt(300));
   });
 
-  it.skip('should be able to calculate the distance between itself and different planet', function() {
+  it('should be able to calculate the distance between itself and different planet', function() {
     var initCoords = { x: 0, y: 0, z: 0 };
     var newCoords = { x: 5, y: 5, z: 5 };
     var planet = new Planet({ name: 'F2', coordinates: initCoords });
@@ -83,7 +83,7 @@ describe('Planet', function() {
     assert.deepEqual(planet.calculateDistance(otherPlanet), Math.sqrt(75));
   });
 
-  it.skip('should be able to refuel a ship', function() {
+  it('should be able to refuel a ship', function() {
     var planet = new Planet({ name: 'F2' });
     var captian = new Being('Will', 'human');
     var fighter = new Ship(
@@ -95,6 +95,7 @@ describe('Planet', function() {
         odometer: 3340,
       }
     );
+    planet.landShip(fighter)
     planet.currentShip = fighter;
 
     assert.equal(fighter.fuel, 0);

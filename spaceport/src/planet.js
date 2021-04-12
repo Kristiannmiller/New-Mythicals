@@ -14,5 +14,8 @@ class Planet {
     var zDiff = Math.pow(otherPlanet.coordinates.z - this.coordinates.z, 2)
     return Math.sqrt(xDiff + yDiff + zDiff)
   }
+  refuel(ship) {
+    ship.fuel = ship.fuelCapacity
+  }
 }
 module.exports = Planet
