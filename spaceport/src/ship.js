@@ -1,3 +1,6 @@
+
+var Being = require('../src/being');
+
 class Ship {
   constructor(data) {
     this.name = data.name
@@ -11,7 +14,7 @@ class Ship {
   }
   addCrew(members) {
     for(let i=0; i<members.length; i++) {
-      if(this.crew.length < this.maxCrew) {
+      if(this.crew.length < this.maxCrew && members[i] instanceof Being) {
         this.crew.push(members[i])
       }
     }

@@ -193,7 +193,7 @@ describe('Ship', function() {
     assert.equal(fighter.crew.length, 2);
   });
 
-  it.skip('should not be able to add something other than a being into the crew', function() {
+  it('should not be able to add something other than a being into the crew', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
