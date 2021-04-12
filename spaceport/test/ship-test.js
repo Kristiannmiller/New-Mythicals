@@ -87,7 +87,7 @@ describe('Ship', function() {
     assert.equal(fighter.fuelCapacity, 2000);
   });
 
-  it.skip('should not have any fuel by defualt', function() {
+  it('should not have any fuel by defualt', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
