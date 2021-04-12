@@ -64,7 +64,7 @@ describe('Planet', function() {
     assert.deepEqual(planet2.coordinates, coordinates2);
   });
 
-  it.skip('should be able calculate the distance between itself and another planet', function() {
+  it('should be able calculate the distance between itself and another planet', function() {
     var initCoords = { x: 0, y: 0, z: 0 };
     var newCoords = { x: 10, y: 10, z: 10 };
     var planet = new Planet({ name: 'F2', coordinates: initCoords });
