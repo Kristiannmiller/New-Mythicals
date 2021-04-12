@@ -3,6 +3,7 @@ class Being {
     this.name = name
     this.isAlive = true
     this.species = species
+    this.credits = 0
   }
 }
 

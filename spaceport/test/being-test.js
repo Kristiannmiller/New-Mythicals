@@ -24,7 +24,7 @@ describe('Being', function() {
     assert.equal(captain.species, 'canine');
   });
 
-  it.skip('should have 0 credits by default', function() {
+  it('should have 0 credits by default', function() {
     var krill = new Being('Scott', 'krill');
 
     assert.equal(krill.credits, 0);
