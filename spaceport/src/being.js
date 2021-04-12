@@ -8,6 +8,9 @@ class Being {
   addCredits(amount) {
     this.credits += amount
   }
+  updateCredits(amount) {
+    this.credits += amount
+  }
 }
 
 module.exports = Being;

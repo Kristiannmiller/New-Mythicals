@@ -38,7 +38,7 @@ describe('Being', function() {
     assert.equal(baby.credits, 2000);
   });
 
-  it.skip('should be able to add even more credits', function() {
+  it('should be able to add even more credits', function() {
     var krill = new Being('Scott', 'krill');
 
     krill.updateCredits(2000);
