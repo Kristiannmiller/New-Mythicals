@@ -5,7 +5,7 @@ var Being = require('../src/being');
 var Ship = require('../src/ship');
 
 describe('Shop', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var shop1 = new Shop({ name: 'EZ-way' });
     var shop2 = new Shop({ name: 'Conogo' });
 
@@ -13,7 +13,7 @@ describe('Shop', function() {
     assert.equal(shop2.name, 'Conogo');
   });
 
-  it.skip('should have no inventory by default', function() {
+  it('should have no inventory by default', function() {
     var newShop = new Shop({ name: 'Conogo' });
 
     assert.deepEqual(newShop.inventory, {});
@@ -64,7 +64,7 @@ describe('Shop', function() {
 
   it.skip('cannot outfit a ship without a captian', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -84,7 +84,7 @@ describe('Shop', function() {
     var captian = new Being('Will', 'human');
 
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -106,7 +106,7 @@ describe('Shop', function() {
     captian.credits = 1000;
 
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
