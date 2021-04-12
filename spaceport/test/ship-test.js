@@ -20,7 +20,7 @@ describe('Ship', function() {
     assert.equal(shuttle2.type, 'cargo');
   });
 
-  it.skip('should be able to have a max number of crew members', function() {
+  it('should be able to have a max number of crew members', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
