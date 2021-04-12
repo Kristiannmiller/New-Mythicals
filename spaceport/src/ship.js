@@ -26,5 +26,8 @@ class Ship {
     if(cargo instanceof Part)
     this.cargo.push(cargo)
   }
+  updatePart(part) {
+    this.parts[part.type] = part
+  }
 }
 module.exports = Ship

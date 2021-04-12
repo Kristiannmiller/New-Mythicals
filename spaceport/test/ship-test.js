@@ -289,7 +289,7 @@ describe('Ship', function() {
     assert.deepEqual(fighter.parts, parts);
   });
 
-  it.skip('should be able to add a new part', function() {
+  it('should be able to add a new part', function() {
     var parts = {
       shell: new Part({ name: 'XC-Wing', type: 'shell', value: 8000 }),
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),
