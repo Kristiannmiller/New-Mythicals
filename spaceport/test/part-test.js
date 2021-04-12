@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Part = require('../src/part');
 
 describe('Part', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var fighterShell = new Part({ name: 'X1-shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity' });
 
@@ -35,8 +35,8 @@ describe('Part', function() {
   it.skip('should be able to have a value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 200
       }
     );
@@ -47,8 +47,8 @@ describe('Part', function() {
   it.skip('should be able to have a different value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -59,8 +59,8 @@ describe('Part', function() {
   it.skip('should be not broken by default', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -83,7 +83,7 @@ describe('Part', function() {
   it.skip('should have a type to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         value: 300,
       }
     );
@@ -95,7 +95,7 @@ describe('Part', function() {
   it.skip('should have a value to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
       }
     );
@@ -107,7 +107,7 @@ describe('Part', function() {
   it.skip('should be considered valid if it has a name, type and value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
         value: 300,
       }
