@@ -8,7 +8,7 @@ describe('Being', function() {
     assert.isTrue(scott.isAlive);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var kayla = new Being('Kayla');
     var hannah = new Being('Hannah');
 
