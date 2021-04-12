@@ -54,7 +54,7 @@ describe('Planet', function() {
     assert.deepEqual(planet.currentShip, fighter);
   });
 
-  it.skip('should be able to have coordinates', function() {
+  it('should be able to have coordinates', function() {
     var coordinates1 = { x: 0, y: 0, z: 0 };
     var coordinates2 = { x: 10, y: 10, z: 0 };
     var planet1 = new Planet({name: 'F2', coordinates: coordinates1});
