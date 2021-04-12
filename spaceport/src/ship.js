@@ -1,5 +1,6 @@
 
 var Being = require('../src/being');
+var Part = require('../src/part');
 
 class Ship {
   constructor(data) {
@@ -11,6 +12,7 @@ class Ship {
     this.fuel = 0
     this.captain = data.captain
     this.crew = []
+    this.cargo = []
   }
   addCrew(members) {
     for(let i=0; i<members.length; i++) {
@@ -18,6 +20,10 @@ class Ship {
         this.crew.push(members[i])
       }
     }
+  }
+  loadCargo(cargo) {
+    if(cargo instanceof Part)
+    this.cargo.push(cargo)
   }
 }
 module.exports = Ship

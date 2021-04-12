@@ -209,7 +209,7 @@ describe('Ship', function() {
     assert.deepEqual(fighter.crew, []);
   });
 
-  it.skip('should not have any cargo by default', function() {
+  it('should not have any cargo by default', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
@@ -222,7 +222,7 @@ describe('Ship', function() {
     assert.deepEqual(fighter.cargo, []);
   });
 
-  it.skip('should be able to load cargo', function() {
+  it('should be able to load cargo', function() {
     var partCargo = new Part({ name: 'Dell', type: 'computer', value: 100 });
     var fighter = new Ship(
       {
@@ -239,7 +239,7 @@ describe('Ship', function() {
     assert.equal(fighter.cargo.length, 1);
   });
 
-  it.skip('should only be able to load cargo that is a Part', function() {
+  it('should only be able to load cargo that is a Part', function() {
     var partCargo = new Part({ name: 'Dell', type: 'computer', value: 100 });
     var fighter = new Ship(
       {
