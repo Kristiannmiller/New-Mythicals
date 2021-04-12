@@ -30,7 +30,7 @@ describe('Being', function() {
     assert.equal(krill.credits, 0);
   });
 
-  it.skip('should be able to add credits', function() {
+  it('should be able to add credits', function() {
     var baby = new Being('Baby', 'feline');
 
     baby.addCredits(2000);
