@@ -19,7 +19,7 @@ describe('Shop', function() {
     assert.deepEqual(newShop.inventory, {});
   });
 
-  it.skip('should be able to add a piece of inventory', function() {
+  it('should be able to add a piece of inventory', function() {
     var computer = new Part({ name: 'comp', type: 'computer', value: 200 });
     var newShop = new Shop( {name: 'Conogo' });
 
