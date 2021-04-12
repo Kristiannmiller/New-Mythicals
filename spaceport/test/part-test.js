@@ -44,7 +44,7 @@ describe('Part', function() {
     assert.equal(computer.value, 200);
   });
 
-  it.skip('should be able to have a different value', function() {
+  it('should be able to have a different value', function() {
     var computer = new Part(
       {
         name: 'Alienware 550x',
@@ -56,7 +56,7 @@ describe('Part', function() {
     assert.equal(computer.value, 300);
   });
 
-  it.skip('should be not broken by default', function() {
+  it('should be not broken by default', function() {
     var computer = new Part(
       {
         name: 'Alienware 550x',
@@ -68,7 +68,7 @@ describe('Part', function() {
     assert.equal(computer.broken, false);
   });
 
-  it.skip('should have a name to be considered valid', function() {
+  it('should have a name to be considered valid', function() {
     var computer = new Part(
       {
         type: 'computer',
