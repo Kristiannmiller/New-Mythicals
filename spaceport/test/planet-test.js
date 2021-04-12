@@ -21,14 +21,14 @@ describe('Planet', function() {
     assert.equal(planet.shop.name, 'EZ-mart');
   });
 
-  it.skip('should be able to have a different shop', function() {
+  it('should be able to have a different shop', function() {
     var shop = new Shop({ name: 'Walmart' });
     var planet = new Planet({ name: 'F2', shop: shop });
 
     assert.equal(planet.shop.name, 'Walmart');
   });
 
-  it.skip('should allow a ship to land', function() {
+  it('should allow a ship to land', function() {
     var planet = new Planet({ name: 'F2' });
     var captian = new Being('Will', 'human');
     var parts = {
