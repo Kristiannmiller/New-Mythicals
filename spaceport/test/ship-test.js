@@ -32,7 +32,7 @@ describe('Ship', function() {
     assert.equal(fighter.maxCrew, 2);
   });
 
-  it.skip('should have an odemeter reading of zero by default', function() {
+  it('should have an odemeter reading of zero by default', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
