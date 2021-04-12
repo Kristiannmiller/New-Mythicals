@@ -10,7 +10,7 @@ describe('Part', function() {
     assert.equal(hyperdrive.name, 'CV90-infinity');
   });
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var fighterShell = new Part({ name: 'X1-shell', type: 'shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity', type: 'hyperdrive' });
 
