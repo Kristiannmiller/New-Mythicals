@@ -14,6 +14,7 @@ class Ship {
     this.crew = []
     this.cargo = []
     this.parts = data.parts || {}
+    this.readyToFly = false
   }
   addCrew(members) {
     for(let i=0; i<members.length; i++) {
@@ -33,6 +34,21 @@ class Ship {
       var diff = this.parts[part.type].value - part.value
       this.parts[part.type] = part
       return diff
+    }
+  }
+  checkReadiness() {
+    if(!this.captain) {
+      this.readyToFly = false
+      return 'Cannot fly without a captain'
+    } else if(this.fuel < 1) {
+      this.readyToFly = false
+      return 'Cannot fly without fuel'
+    } else if(Object.keys(this.parts).length === 0) {
+      this.readyToFly = false
+      return 'Cannot fly without parts'
+    } else {
+      this.readyToFly = true
+      return 'Good to go!'
     }
   }
 }
