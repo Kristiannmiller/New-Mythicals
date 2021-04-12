@@ -27,7 +27,13 @@ class Ship {
     this.cargo.push(cargo)
   }
   updatePart(part) {
-    this.parts[part.type] = part
+    if(!this.parts[part.type]) {
+      this.parts[part.type] = part
+    } else {
+      var diff = this.parts[part.type].value - part.value
+      this.parts[part.type] = part
+      return diff
+    }
   }
 }
 module.exports = Ship
