@@ -44,7 +44,7 @@ describe('Ship', function() {
     assert.equal(fighter.odometer, 0);
   });
 
-  it.skip('should be able to have a different odometer reading', function() {
+  it('should be able to have a different odometer reading', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
