@@ -6,7 +6,7 @@ class Being {
     this.credits = 0
   }
   addCredits(amount) {
-    this.credits += amount
+    this.updateCredits(amount)
   }
   updateCredits(amount) {
     this.credits += amount
