@@ -80,7 +80,7 @@ describe('Part', function() {
     assert.equal(computer.isValid, false);
   });
 
-  it.skip('should have a type to be considered valid', function() {
+  it('should have a type to be considered valid', function() {
     var computer = new Part(
       {
         name: 'Alienware 550x',
