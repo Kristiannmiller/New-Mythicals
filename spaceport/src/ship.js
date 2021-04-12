@@ -13,6 +13,7 @@ class Ship {
     this.captain = data.captain
     this.crew = []
     this.cargo = []
+    this.parts = data.parts || {}
   }
   addCrew(members) {
     for(let i=0; i<members.length; i++) {
