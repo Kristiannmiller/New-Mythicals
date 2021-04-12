@@ -17,5 +17,10 @@ class Planet {
   refuel(ship) {
     ship.fuel = ship.fuelCapacity
   }
+  giveClearance(otherPlanet) {
+    if(this.currentShip.fuel < this.currentShip.fuelCapacity) {
+      return "Clearance denied: Cannot fly without fuel"
+    }
+  }
 }
 module.exports = Planet
