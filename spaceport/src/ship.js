@@ -7,6 +7,7 @@ class Ship {
     this.fuelCapacity = data.fuelCapacity || 10
     this.fuel = 0
     this.captain = data.captain
+    this.crew = []
   }
 }
 module.exports = Ship

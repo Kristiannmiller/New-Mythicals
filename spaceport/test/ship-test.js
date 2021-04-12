@@ -117,7 +117,7 @@ describe('Ship', function() {
     assert.instanceOf(fighter.captain, Being);
   });
 
-  it.skip('should not have anyone on the crew by default', function() {
+  it('should not have anyone on the crew by default', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
@@ -130,7 +130,7 @@ describe('Ship', function() {
     assert.deepEqual(fighter.crew, []);
   });
 
-  it.skip('should be able to add multiple crew members', function() {
+  it('should be able to add multiple crew members', function() {
     var crewmember = new Being('Zot', 'krill');
     var droid = new Being('R2-D2', 'droid');
     var fighter = new Ship(
