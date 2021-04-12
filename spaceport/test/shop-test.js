@@ -62,7 +62,7 @@ describe('Shop', function() {
     assert.deepEqual(newShop.inventory, {});
   });
 
-  it.skip('cannot outfit a ship without a captian', function() {
+  it('cannot outfit a ship without a captian', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
