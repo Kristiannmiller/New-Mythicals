@@ -6,9 +6,9 @@ var Part = require('../src/part');
 var Shop = require('../src/shop');
 
 describe('Planet', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var planetD = new Planet({ name: 'D1' });
-    var planetF = new Planet({ name: 'D1' });
+    var planetF = new Planet({ name: 'F2' });
 
     assert.equal(planetD.name, 'D1');
     assert.equal(planetF.name, 'F2');
@@ -39,7 +39,7 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -87,7 +87,7 @@ describe('Planet', function() {
     var planet = new Planet({ name: 'F2' });
     var captian = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -114,7 +114,7 @@ describe('Planet', function() {
       landingGear: new Part({ name: 'Legs-2', type: 'landingGear', value: 100 }),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
@@ -142,7 +142,7 @@ describe('Planet', function() {
       landingGear: new Part({ name: 'Legs-2', type: 'landingGear', value: 100 }),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captian: captian,
