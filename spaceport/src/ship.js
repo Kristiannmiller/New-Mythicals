@@ -9,5 +9,10 @@ class Ship {
     this.captain = data.captain
     this.crew = []
   }
+  addCrew(members) {
+    for(let i=0; i<members.length; i++) {
+      this.crew.push(members[i])
+    }
+  }
 }
 module.exports = Ship
