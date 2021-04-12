@@ -16,7 +16,7 @@ describe('Being', function() {
     assert.equal(hannah.name, 'Hannah');
   });
 
-  it.skip('should have a species', function() {
+  it('should have a species', function() {
     var clementine = new Being('Clem', 'feline');
     var captain = new Being('Cap', 'canine');
 
