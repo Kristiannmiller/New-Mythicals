@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Being = require('../src/being');
 
 describe('Being', function() {
-  it.skip('should be alive by default', function() {
+  it('should be alive by default', function() {
     var scott = new Being('Scott');
 
     assert.isTrue(scott.isAlive);
