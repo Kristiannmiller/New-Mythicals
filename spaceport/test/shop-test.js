@@ -77,17 +77,17 @@ describe('Shop', function() {
     newShop.addInventory(shell);
     var result = newShop.outfitShip(fighter, 'shell');
 
-    assert.equal(result, `cannot outfit a ship without a captian`);
+    assert.equal(result, `cannot outfit a ship without a captain`);
   });
 
-  it.skip('should not be able to outfit a ship if the captian is broke', function() {
-    var captian = new Being('Will', 'human');
+  it('should not be able to outfit a ship if the captian is broke', function() {
+    var captain = new Being('Will', 'human');
 
     var fighter = new Ship(
       {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
