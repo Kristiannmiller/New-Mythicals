@@ -12,7 +12,7 @@ describe('Ship', function() {
     assert.equal(shuttle2.name, 'Atlantis');
   });
 
-  it.skip('should be able to have a type', function() {
+  it('should be able to have a type', function() {
     var shuttle1 = new Ship({name: 'Atlantis', type: 'passenger'});
     var shuttle2 = new Ship({ name: 'Atlantis', type: 'cargo' });
 
