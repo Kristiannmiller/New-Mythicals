@@ -104,7 +104,7 @@ describe('Part', function() {
     assert.equal(computer.isValid, false);
   });
 
-  it.skip('should be considered valid if it has a name, type and value', function() {
+  it('should be considered valid if it has a name, type and value', function() {
     var computer = new Part(
       {
         name: 'Alienware 550x',
