@@ -16,6 +16,11 @@ class Shop {
     } else if(ship.captain.credits < this.inventory[part].value) {
       var diff = this.inventory[part].value - ship.captain.credits
       return `you require ${diff} more credits to make this purchase`
+    } else {
+      ship.captain.credits -= this.inventory[part].value
+      ship.parts[part] = this.inventory[part]
+      this.inventory[part] = undefined
+      return `${part} added to ship`
     }
   }
 }
