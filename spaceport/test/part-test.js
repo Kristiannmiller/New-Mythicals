@@ -18,7 +18,7 @@ describe('Part', function() {
     assert.equal(hyperdrive.type, 'hyperdrive');
   });
 
-  it.skip('should be able to have different types', function() {
+  it('should be able to have different types', function() {
     var fighterShell = new Part({ name: 'X1-shell', type: 'shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity', type: 'hyperdrive' });
     var computer = new Part({ name: 'Alienware 550x', type: 'computer' });
@@ -32,7 +32,7 @@ describe('Part', function() {
     assert.equal(landing.type, 'landing gear');
   });
 
-  it.skip('should be able to have a value', function() {
+  it('should be able to have a value', function() {
     var computer = new Part(
       {
         name: 'Alienware 550x',
