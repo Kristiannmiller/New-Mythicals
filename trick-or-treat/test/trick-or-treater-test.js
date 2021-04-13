@@ -31,7 +31,7 @@ describe('TrickOrTreater', function () {
     assert.deepEqual(trickOrTreater.bag.candies, []);
   });
 
-  it.skip('should have a bag with no candy', function () {
+  it('should have a bag with no candy', function () {
     var costume = new Costume('Knight');
     var trickOrTreater = new TrickOrTreater(costume);
     assert.equal(trickOrTreater.hasCandy, false);
