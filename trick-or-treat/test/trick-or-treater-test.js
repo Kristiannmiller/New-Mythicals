@@ -10,7 +10,7 @@ describe('TrickOrTreater', function () {
     assert.isFunction(TrickOrTreater);
   });
 
-  it.skip('should wear a costume', function () {
+  it('should wear a costume', function () {
 
     var costume = new Costume('Cowboy');
     var trickOrTreater = new TrickOrTreater(costume);
