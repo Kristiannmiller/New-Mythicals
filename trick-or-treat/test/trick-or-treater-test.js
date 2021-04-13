@@ -58,7 +58,7 @@ describe('TrickOrTreater', function () {
   });
 
 
-  it.skip('should count candies', function () {
+  it('should count candies', function () {
     var costume = new Costume('Spaceship Mechanic');
     var bag = new Bag();
     var trickOrTreater = new TrickOrTreater(costume, bag);
