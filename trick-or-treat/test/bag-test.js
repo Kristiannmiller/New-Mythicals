@@ -35,7 +35,7 @@ describe('Bag', function () {
     assert.deepEqual(bag.candies, [candy]);
   });
 
-  it.skip('should count the candies in the bag', function() {
+  it('should count the candies in the bag', function() {
     var bag = new Bag();
     var candy = new Candy('Turkish Delight');
 

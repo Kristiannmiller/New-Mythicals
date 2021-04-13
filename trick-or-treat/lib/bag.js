@@ -5,6 +5,7 @@ class Bag {
     this.candies = []
   }
   fill(candy) {
+    this.count++
     this.candies.push(candy)
   }
 }
