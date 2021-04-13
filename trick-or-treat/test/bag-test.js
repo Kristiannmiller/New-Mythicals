@@ -14,7 +14,7 @@ describe('Bag', function () {
     assert.equal(bag.empty, true);
   })
 
-  it.skip('should count candies in an empty bag', function () {
+  it('should count candies in an empty bag', function () {
     var bag = new Bag();
 
     assert.equal(bag.count, 0);
