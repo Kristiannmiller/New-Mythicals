@@ -1,6 +1,6 @@
 class Candy {
-  constructor() {
-
+  constructor(type) {
+    this.type = type
   }
 }
 module.exports = Candy
