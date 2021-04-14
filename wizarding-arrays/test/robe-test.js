@@ -14,7 +14,7 @@ describe('A wizard\'s robe', () => {
     }
   });
 
-  it.skip('can put things in the pockets', () => {
+  it('can put things in the pockets', () => {
     const robe = new Robe();
 
     robe.addToPocket('youth elixir potion');
