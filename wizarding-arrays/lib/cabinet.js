@@ -24,5 +24,14 @@ class Cabinet {
       }
     }
   }
+  count(potion) {
+    let count = 0
+    for(let i=0; i<this.potions.length; i++) {
+      if(this.potions[i].name === potion) {
+        count++
+      }
+    }
+    return count
+  }
 }
 module.exports = Cabinet

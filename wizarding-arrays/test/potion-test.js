@@ -102,7 +102,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(cabinet.potions.length, 3);
     });
 
-    it.skip('is possible to have duplicate potions in the cabinet', () => {
+    it('is possible to have duplicate potions in the cabinet', () => {
       const cabinet = new Cabinet();
 
       const potion1 = new Potion('truth serum', 12);
