@@ -23,7 +23,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(potion.rareness, 0);
     });
 
-    it.skip('indicates whether or not it is rare', () => {
+    it('indicates whether or not it is rare', () => {
       // note: potions with a `rareness` score above 7 count as rare potions.
       const potion1 = new Potion('truth serum', 0);
       assert.equal(potion1.isRare(), false);
