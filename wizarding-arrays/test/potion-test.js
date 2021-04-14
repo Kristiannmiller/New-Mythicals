@@ -46,7 +46,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.deepEqual(cabinet.potions, []);
     });
 
-    it.skip('is empty if nothing is put in it', () => {
+    it('is empty if nothing is put in it', () => {
       const cabinet = new Cabinet();
       assert.equal(cabinet.isEmpty(), true);
     });
