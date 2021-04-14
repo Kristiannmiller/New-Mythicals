@@ -80,7 +80,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(retrievedPotion, potion1);
     });
 
-    it.skip('is possible to take potions out by name', () => {
+    it('is possible to take potions out by name', () => {
       const cabinet = new Cabinet();
 
       const potion1 = new Potion('truth serum', 12);

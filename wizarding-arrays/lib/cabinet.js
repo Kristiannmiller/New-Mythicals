@@ -17,5 +17,12 @@ class Cabinet {
   takeFirstPotion() {
     return this.potions.shift()
   }
+  takePotionWithName(potion) {
+    for(let i=0; i<this.potions.length; i++) {
+      if(this.potions[i].name === potion) {
+        return this.potions.splice(i, 1)[0]
+      }
+    }
+  }
 }
 module.exports = Cabinet
