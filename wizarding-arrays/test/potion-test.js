@@ -41,7 +41,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
 
   describe('A potion cabinet', () => {
 
-    it.skip('keeps all potions', () => {
+    it('keeps all potions', () => {
       const cabinet = new Cabinet();
       assert.deepEqual(cabinet.potions, []);
     });
