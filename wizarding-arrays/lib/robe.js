@@ -18,5 +18,8 @@ class Robe {
       }
     }
   }
+  emptyAllPockets() {
+    this.pockets = [[],[],[],[],[],[],[],[],[],[]]
+  }
 }
 module.exports = Robe

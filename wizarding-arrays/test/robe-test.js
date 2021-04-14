@@ -60,7 +60,7 @@ describe('A wizard\'s robe', () => {
     assert.deepEqual(robe.pockets[0], []);
   });
 
-  it.skip('can empty all pockets', () => {
+  it('can empty all pockets', () => {
     const robe = new Robe();
     const cats = ['1 cat', '2 cat', '3 cat', '4 cat', '5 cat', '6 cat', '7 cat', '8 cat', '9 cat', '10 cat'];
 
