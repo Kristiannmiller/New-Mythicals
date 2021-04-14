@@ -51,7 +51,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(cabinet.isEmpty(), true);
     });
 
-    it.skip('is possible to put things in the cabinet', () => {
+    it('is possible to put things in the cabinet', () => {
       const cabinet = new Cabinet();
       const potion = new Potion('truth serum', 12);
 
