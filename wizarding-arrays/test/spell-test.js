@@ -9,7 +9,7 @@ describe('Wizard spells', () => {
     assert.equal(spell.description, 'makes things levitate');
   });
 
-  it.skip('can be executed', () => {
+  it('can be executed', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
     const target = "book";
 
