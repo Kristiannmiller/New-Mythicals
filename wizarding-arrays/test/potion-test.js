@@ -17,7 +17,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(potion.rareness, 5);
     });
 
-    it.skip('is not rare by default', () => {
+    it('is not rare by default', () => {
       const potion = new Potion('truth serum');
 
       assert.equal(potion.rareness, 0);
