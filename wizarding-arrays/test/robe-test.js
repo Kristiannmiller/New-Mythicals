@@ -3,7 +3,7 @@ const Robe = require('../lib/robe');
 
 describe('A wizard\'s robe', () => {
 
-  it.skip('has a lot of pockets and initially all are empty', () => {
+  it('has a lot of pockets and initially all are empty', () => {
     const robe = new Robe();
 
     assert.equal(robe.pockets.length, 10);
