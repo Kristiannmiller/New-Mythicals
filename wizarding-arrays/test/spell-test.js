@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const Spell = require('../lib/spell');
 
 describe('Wizard spells', () => {
-  it.skip('should have a name and a description', () => {
+  it('should have a name and a description', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     assert.equal(spell.name, 'wingardium leviosa');
