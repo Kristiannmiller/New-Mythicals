@@ -28,7 +28,7 @@ describe('Wizard spells', () => {
     assert.equal(spell.execute(targets), "Success! You've cast a spell on the book. Success! You've cast a spell on the table. Success! You've cast a spell on the bowl.");
   });
 
-  it.skip('saves all its targets in execution history', () => {
+  it('saves all its targets in execution history', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     const target1 = "book";
