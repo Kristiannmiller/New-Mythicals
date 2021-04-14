@@ -48,7 +48,7 @@ describe('Wizard spells', () => {
     assert.equal(spell.executionHistory[2], target3);
   });
 
-  it.skip('can clear its execution history', () => {
+  it('can clear its execution history', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     const target1 = "book";

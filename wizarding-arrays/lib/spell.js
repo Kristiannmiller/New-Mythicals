@@ -17,5 +17,8 @@ class Spell {
     }
     return phrase.join(" ")
   }
+  clearExecutionHistory() {
+    this.executionHistory = []
+  }
 }
 module.exports = Spell
