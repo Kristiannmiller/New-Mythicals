@@ -5,7 +5,7 @@ const Wizard = require('../lib/wizard')
 
 describe('Wizard', () => {
 
-  it.skip('should have a name', () => {
+  it('should have a name', () => {
     const hermyown = new Wizard({ name: 'Hermione'});
     const wonwon = new Wizard({name: 'Ron'});
 
