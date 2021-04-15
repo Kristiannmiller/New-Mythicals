@@ -13,7 +13,7 @@ describe('Wand', () => {
     assert.equal(wand.type, 'Elm');
   });
 
-  it.skip('should have a size', () => {
+  it('should have a size', () => {
     const wand = new Wand('Elm', 12);
 
     assert.equal(wand.size, 12);

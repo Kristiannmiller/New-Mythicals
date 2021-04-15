@@ -1,6 +1,7 @@
 class Wand {
-  constructor(type) {
+  constructor(type, size) {
     this.type = type
+    this.size = size
   }
 }
 module.exports = Wand
