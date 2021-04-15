@@ -13,7 +13,7 @@ describe('Wizard', () => {
     assert.equal(wonwon.name, 'Ron');
   });
 
-  it.skip('should have a pet', () => {
+  it('should have a pet', () => {
     const wizard = new Wizard({name: 'Hermione'});
     const pet = new Pet('Crookshanks', 'cat');
 
@@ -23,7 +23,7 @@ describe('Wizard', () => {
     assert.equal(wizard.pets[0], pet);
   });
 
-  it.skip('should be able to have many pets', () => {
+  it('should be able to have many pets', () => {
     const wizard = new Wizard({name: 'Hermione'});
 
     const pet1 = new Pet('Crookshanks', 'cat');
