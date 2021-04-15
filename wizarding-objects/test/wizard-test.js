@@ -51,7 +51,7 @@ describe('Wizard', () => {
     assert.equal(hermionesPets, "A cat named Crookshanks; An owl named Hedwig.");
   });
 
-  it.skip('should have a wand', () => {
+  it('should have a wand', () => {
     const wizard = new Wizard({name: 'Hermione'});
     const wand = new Wand("Cherry", 12, "Unicorn Hair");
 

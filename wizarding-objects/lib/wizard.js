@@ -3,6 +3,7 @@ class Wizard {
     this.name = data.name
     this.petsCount = 0
     this.pets = []
+    this.wand = {}
   }
   adoptPet(pet) {
     this.petsCount++
@@ -25,6 +26,9 @@ class Wizard {
       return true
     }
     return false
+  }
+  getWand(wand) {
+    this.wand = wand
   }
 }
 module.exports = Wizard
