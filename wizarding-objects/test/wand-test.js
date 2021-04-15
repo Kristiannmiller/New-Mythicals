@@ -19,7 +19,7 @@ describe('Wand', () => {
     assert.equal(wand.size, 12);
   });
 
-  it.skip('should have a core', () => {
+  it('should have a core', () => {
     const wand = new Wand('Elm', 12, 'Unicorn Hair');
 
     assert.equal(wand.core, 'Unicorn Hair');
