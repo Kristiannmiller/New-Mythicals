@@ -37,7 +37,7 @@ describe('Wizard', () => {
     assert.equal(wizard.pets[1], pet2);
   });
 
-  it.skip('should list pets as a string', () => {
+  it('should list pets as a string', () => {
     const wizard = new Wizard({name: 'Hermione'});
 
     const pet1 = new Pet('Crookshanks', 'cat');
