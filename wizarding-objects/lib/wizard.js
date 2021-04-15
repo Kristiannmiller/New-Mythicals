@@ -30,5 +30,8 @@ class Wizard {
   getWand(wand) {
     this.wand = wand
   }
+  castSpell(spell) {
+    return this.wand.cast(spell)
+  }
 }
 module.exports = Wizard

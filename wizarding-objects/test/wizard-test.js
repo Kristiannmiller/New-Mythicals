@@ -60,7 +60,7 @@ describe('Wizard', () => {
     assert.equal(wizard.wand, wand);
   });
 
-  it.skip('should cast a spell', () => {
+  it('should cast a spell', () => {
     const wizard = new Wizard({name: 'Hermione'});
     const wand = new Wand("Cherry", 12, "Unicorn Hair");
 
