@@ -72,21 +72,10 @@ const modPrompts = {
 // DATASET: cakes from ./datasets/cakes
 const cakePrompts = {
   stockPerCake() {
-    // Return an array of objects that include just the flavor of the cake and how
-    // much of that cake is in stock e.g.
-    // [
-    //    { flavor: 'dark chocolate', inStock: 15 },
-    //    { flavor: 'yellow', inStock: 14 },
-    //    ..etc
-    // ]
-
     const result = cakes.map(cake => {
       return {flavor: cake.cakeFlavor, inStock: cake.inStock}
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   onlyInStock() {
