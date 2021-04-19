@@ -84,14 +84,11 @@ const cakePrompts = {
   },
 
   totalInventory() {
-    // Return the total amount of cakes in stock e.g.
-    // 59
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.reduce((total, cake) => {
+      total += cake.inStock
+      return total
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   allToppings() {
