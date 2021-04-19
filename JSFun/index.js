@@ -55,34 +55,15 @@ const clubPrompts = {
   }
 };
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: mods from ./datasets/mods
 const modPrompts = {
   studentsPerMod() {
-    // Return an array of objects where the keys are mod (the number of the module)
-    // and studentsPerInstructor (how many students per instructor there are for that mod) e.g.
-    // [
-    //   { mod: 1, studentsPerInstructor: 9 },
-    //   { mod: 2, studentsPerInstructor: 11 },
-    //   { mod: 3, studentsPerInstructor: 10 },
-    //   { mod: 4, studentsPerInstructor: 8 }
-    // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = mods.map(course => {
+      return {mod: course.mod, studentsPerInstructor: Math.round(course.students / course.instructors)}
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
