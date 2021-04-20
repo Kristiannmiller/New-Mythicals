@@ -11,7 +11,7 @@ describe("Roadrace", function() {
     assert.equal(race.location, "Las Vegas");
   })
 
-  it('should be able to set the race distance in miles', function() {
+  it.skip('should be able to set the race distance in miles', function() {
     var race1 = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var race2 = new Roadrace({title: 'City Park Marathon', city: "Denver"});
 
@@ -25,13 +25,13 @@ describe("Roadrace", function() {
     assert.equal(race2Distance, `The City Park Marathon in Denver is a 26.2 mile race.`);
   })
 
-  it('should start with no participants', function() {
+  it.skip('should start with no participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
 
     assert.deepEqual(race.participants, []);
   })
 
-  it('should be able to register participants', function() {
+  it.skip('should be able to register participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
@@ -46,7 +46,7 @@ describe("Roadrace", function() {
     assert.equal(race.participants[1].name, 'Pam');
   })
 
-  it('should add race to each participant\'s completed races when race is completed', function() {
+  it.skip('should add race to each participant\'s completed races when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
@@ -66,7 +66,7 @@ describe("Roadrace", function() {
     // hint, is there a method in the Runner class you can use?
   })
 
-  it('should update each participant\'s miles and fitness when race is completed', function() {
+  it.skip('should update each participant\'s miles and fitness when race is completed', function() {
     // hint, are you using a method from the Runner class?
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
