@@ -14,7 +14,7 @@ describe("Runner", function() {
     assert.equal(pam.age, 33);
   })
 
-  it.skip('should start without having run any miles', function() {
+  it('should start without having run any miles', function() {
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
 
