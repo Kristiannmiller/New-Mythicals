@@ -104,21 +104,17 @@ const cakePrompts = {
   },
 
   groceryList() {
-    // I need to make a grocery list. Please give me an object where the keys are
-    // each topping, and the values are the amount of that topping I need to buy e.g.
-    // {
-    //    'dutch process cocoa': 1,
-    //    'toasted sugar': 3,
-    //    'smoked sea salt': 3,
-    //    'berries': 2,
-    //    ...etc
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cakes.reduce((list, cake) => {
+      cake.toppings.forEach(topping => {
+        if(list[topping]) {
+          list[topping]++
+        } else {
+          list[topping] = 1
+        }
+      })
+      return list
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
