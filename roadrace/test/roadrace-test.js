@@ -31,7 +31,7 @@ describe("Roadrace", function() {
     assert.deepEqual(race.participants, []);
   })
 
-  it.skip('should be able to register participants', function() {
+  it('should be able to register participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
