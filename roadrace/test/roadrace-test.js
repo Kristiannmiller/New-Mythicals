@@ -46,7 +46,7 @@ describe("Roadrace", function() {
     assert.equal(race.participants[1].name, 'Pam');
   })
 
-  it.skip('should add race to each participant\'s completed races when race is completed', function() {
+  it('should add race to each participant\'s completed races when race is completed', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
