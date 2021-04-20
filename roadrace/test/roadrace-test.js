@@ -66,7 +66,7 @@ describe("Roadrace", function() {
     // hint, is there a method in the Runner class you can use?
   })
 
-  it.skip('should update each participant\'s miles and fitness when race is completed', function() {
+  it('should update each participant\'s miles and fitness when race is completed', function() {
     // hint, are you using a method from the Runner class?
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
