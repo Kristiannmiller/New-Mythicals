@@ -7,6 +7,7 @@ class Runner {
   }
   runSomeMiles(miles) {
     this.milesRun += miles
+    this.fitness += miles
   }
 }
 
