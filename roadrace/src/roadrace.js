@@ -3,6 +3,7 @@ class Roadrace {
     this.name = data.title
     this.location = data.city
     this.distance = 0
+    this.participants = []
   }
   setDistance(distance) {
     this.distance = distance

@@ -25,7 +25,7 @@ describe("Roadrace", function() {
     assert.equal(race2Distance, `The City Park Marathon in Denver is a 26.2 mile race.`);
   })
 
-  it.skip('should start with no participants', function() {
+  it('should start with no participants', function() {
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
 
     assert.deepEqual(race.participants, []);
