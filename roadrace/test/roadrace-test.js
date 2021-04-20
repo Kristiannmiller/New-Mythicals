@@ -11,7 +11,7 @@ describe("Roadrace", function() {
     assert.equal(race.location, "Las Vegas");
   })
 
-  it.skip('should be able to set the race distance in miles', function() {
+  it('should be able to set the race distance in miles', function() {
     var race1 = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     var race2 = new Roadrace({title: 'City Park Marathon', city: "Denver"});
 
