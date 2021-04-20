@@ -80,7 +80,7 @@ describe("Runner", function() {
     assert.equal(pam.fitness, 28);
   })
 
-  it.skip('should gain .5 fitness for every stretching session', function() {
+  it('should gain .5 fitness for every stretching session', function() {
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
 

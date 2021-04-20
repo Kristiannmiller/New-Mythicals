@@ -9,6 +9,9 @@ class Runner {
     this.milesRun += miles
     this.fitness += miles
   }
+  stretch() {
+    this.fitness += .5
+  }
 }
 
 module.exports = Runner;
