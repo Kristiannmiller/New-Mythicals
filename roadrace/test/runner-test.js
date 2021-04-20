@@ -33,7 +33,7 @@ describe("Runner", function() {
     assert.equal(pam.milesRun, 10);
   })
 
-  it.skip('should be able to keep running and logging miles', function() {
+  it('should be able to keep running and logging miles', function() {
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
 
@@ -49,7 +49,7 @@ describe("Runner", function() {
     assert.equal(pam.milesRun, 22);
   })
 
-  it.skip('should start with fitness of 25 percent', function() {
+  it('should start with fitness of 25 percent', function() {
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
 
