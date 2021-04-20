@@ -22,7 +22,7 @@ describe("Runner", function() {
     assert.equal(pam.milesRun, 0);
   })
 
-  it.skip('should be able to run and log miles', function() {
+  it('should be able to run and log miles', function() {
     var mike = new Runner('Mike', 36);
     var pam = new Runner('Pam', 33);
 

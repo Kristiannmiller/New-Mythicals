@@ -4,7 +4,9 @@ class Runner {
     this.age = age
     this.milesRun = 0
   }
-
+  runSomeMiles(miles) {
+    this.milesRun += miles
+  }
 }
 
 module.exports = Runner;
