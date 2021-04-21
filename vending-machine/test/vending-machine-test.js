@@ -15,7 +15,7 @@ describe("VendingMachine", function() {
     assert.equal(machine2.isBroken, false);
   })
 
-  it.skip('should start with no snacks', function() {
+  it('should start with no snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
 
     assert.deepEqual(machine.snacks, []);
