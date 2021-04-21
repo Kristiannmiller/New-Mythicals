@@ -37,7 +37,7 @@ describe("VendingMachine", function() {
   })
 
   // Things are about to get SPICY. The following tests are much more complex than any assessment will be. Only move on if you have completed the other test suites and you'd like exposure to complex logic.
-  it.skip('should not be able to add snacks with the same name more than once', function() {
+  it('should not be able to add snacks with the same name more than once', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar1 = new Snack('hersey\'s milk chocolate', 0.75);
     var candyBar2 = new Snack('hersey\'s milk chocolate', 0.75);
