@@ -14,7 +14,7 @@ describe("Snack", function() {
     assert.equal(chips.price, 1.00);
   })
 
-  it.skip('should not start with any items in stock', function() {
+  it('should not start with any items in stock', function() {
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 
