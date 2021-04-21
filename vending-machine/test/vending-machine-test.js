@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("VendingMachine", function() {
 
-  it.skip('should have an id and broken status', function() {
+  it('should have an id and broken status', function() {
     var machine1 = new VendingMachine({ id: 123, isBroken: true });
     var machine2 = new VendingMachine({ id: 456, isBroken: false });
 
