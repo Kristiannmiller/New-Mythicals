@@ -33,7 +33,7 @@ describe("Snack", function() {
     assert.equal(chips.itemsInStock, 3);
   })
 
-  it.skip('should be able to keep adding to stock', function() {
+  it('should be able to keep adding to stock', function() {
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 
@@ -46,7 +46,7 @@ describe("Snack", function() {
     assert.equal(chips.itemsInStock, 15);
   })
 
-  it.skip('should be able to remove one item at a time from stock', function() {
+  it('should be able to remove one item at a time from stock', function() {
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 

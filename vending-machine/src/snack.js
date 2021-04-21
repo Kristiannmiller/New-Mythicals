@@ -7,6 +7,10 @@ class Snack {
   stockItems(amount) {
     this.itemsInStock += amount
   }
+  removeItem() {
+    this.itemsInStock--
+    return `Item taken! There are now ${this.itemsInStock} items left.`
+  }
 }
 
 module.exports = Snack;
