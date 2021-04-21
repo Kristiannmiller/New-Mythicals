@@ -65,7 +65,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 2);
   })
 
-  it.skip('should be able to give change back after a customer purchases an item', function() {
+  it('should be able to give change back after a customer purchases an item', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
@@ -78,7 +78,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 4);
   })
 
-  it.skip('should be able to purchase the correct item, based on the name', function() {
+  it('should be able to purchase the correct item, based on the name', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
@@ -94,7 +94,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[1].itemsInStock, 2);
   })
 
-  it.skip('should not be able to purchase a snack if it is out of stock', function() {
+  it('should not be able to purchase a snack if it is out of stock', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
