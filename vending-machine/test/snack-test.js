@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 describe("Snack", function() {
 
-  it.skip('should have a name and price per unit', function() {
+  it('should have a name and price per unit', function() {
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 
