@@ -60,7 +60,7 @@ describe("Snack", function() {
     assert.equal(chips.itemsInStock, 2);
   })
 
-  it.skip('should not be able to remove anything from stock if none left', function() {
+  it('should not be able to remove anything from stock if none left', function() {
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 

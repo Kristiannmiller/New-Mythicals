@@ -8,8 +8,11 @@ class Snack {
     this.itemsInStock += amount
   }
   removeItem() {
-    this.itemsInStock--
-    return `Item taken! There are now ${this.itemsInStock} items left.`
+    if(this.itemsInStock !== 0) {
+      this.itemsInStock--
+      return `Item taken! There are now ${this.itemsInStock} items left.`
+    }
+    return `Sorry, no ${this.name} left in stock!`
   }
 }
 
