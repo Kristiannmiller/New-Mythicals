@@ -18,15 +18,17 @@ class VendingMachine {
       if(this.snacks[i].name === snackName && !error) {
         this.snacks[i].removeItem()
         return `Success! Here is $${paidAmount-this.snacks[i].price} back!`
+      } else if(error) {
+        return error
       }
     }
-    return error
   }
   checkForSnackError(snack, pricePaid) {
-    if(snack.itemsInStock > 0 && snack.price <= pricePaid) {
-      return
-    } else {
-      return snack.itemsInStock > 0 ? `Sorry, not enough payment. Please add more money.` : `Sorry, no items in stock. Try another item.`
+    if(snack.itemsInStock === 0) {
+      return `Sorry, no items in stock. Try another item.`
+    }
+    if(snack.price > pricePaid) {
+      return `Sorry, not enough payment. Please add more money.`
     }
   }
 }

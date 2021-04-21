@@ -106,7 +106,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 0);
   })
 
-  it.skip('should not be able to purchase a snack if payment is not enough', function() {
+  it('should not be able to purchase a snack if payment is not enough', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 
