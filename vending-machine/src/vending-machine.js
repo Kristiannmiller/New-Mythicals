@@ -12,6 +12,13 @@ class VendingMachine {
     }
     this.snacks.push(snack)
   }
+  purchaseSnack(snackName, paidAmount) {
+    for(var i=0; i<this.snacks.length; i++) {
+      if(this.snacks[i].name === snackName) {
+        this.snacks[i].removeItem()
+      }
+    }
+  }
 }
 
 module.exports = VendingMachine;

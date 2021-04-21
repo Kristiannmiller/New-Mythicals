@@ -51,7 +51,7 @@ describe("VendingMachine", function() {
     assert.equal(sencondStock, 'Sorry, that snack is already stocked! Try adding a different snack.');
   })
 
-  it.skip('should be able to purchase a snack by selecting snack name and paying money', function() {
+  it('should be able to purchase a snack by selecting snack name and paying money', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
