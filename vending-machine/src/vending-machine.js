@@ -4,6 +4,9 @@ class VendingMachine {
     this.isBroken = data.isBroken
     this.snacks = []
   }
+  addSnacks(snack) {
+    this.snacks.push(snack)
+  }
 }
 
 module.exports = VendingMachine;

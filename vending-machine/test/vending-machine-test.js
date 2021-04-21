@@ -21,7 +21,7 @@ describe("VendingMachine", function() {
     assert.deepEqual(machine.snacks, []);
   })
 
-  it.skip('should be able to add snacks', function() {
+  it('should be able to add snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
