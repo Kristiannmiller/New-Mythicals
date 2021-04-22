@@ -130,21 +130,11 @@ const classPrompts = {
   },
 
   totalCapacities() {
-    // Create an object where the keys are 'feCapacity' and 'beCapacity',
-    // and the values are the total capacity for all classrooms in each program e.g.
-    // {
-    //   feCapacity: 110,
-    //   beCapacity: 96
-    // }
-
     const result = classrooms.reduce((capacities, room) => {
       room.program === 'FE' ? capacities.feCapacity += room.capacity : capacities.beCapacity += room.capacity
       return capacities
     }, {feCapacity: 0, beCapacity: 0});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   sortByCapacity() {
