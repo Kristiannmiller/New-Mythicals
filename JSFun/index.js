@@ -131,7 +131,9 @@ const classPrompts = {
     //   { roomLetter: 'G', program: 'FE', capacity: 29 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = classrooms.filter(room => {
+      return room.program === 'FE'
+    });
     return result;
 
     // Annotation:
