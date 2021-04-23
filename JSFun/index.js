@@ -160,8 +160,12 @@ const bookPrompts = {
     // [{ title: 'Harry Potter and the Sorcerer\'s Stone', year: 1997 },
     //  { title: 'Life of Pi', year: 2001 },
     //  { title: 'The Curious Incident of the Dog in the Night-Time', year: 2003 }]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const millenialBooks = books.filter(book => {
+      return book.published > 1989 && book.published < 2010
+    })
+    const result = millenialBooks.map(book => {
+      return {title: book.title, year: book.published}
+    });
     return result;
 
     // Annotation:
