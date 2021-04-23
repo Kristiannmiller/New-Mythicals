@@ -157,8 +157,8 @@ const bookPrompts = {
     //   'The Curious Incident of the Dog in the Night - Time', 'The Bell Jar',
     //   'Catch-22', 'Treasure Island']
 
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const scaryFilter = books.filter(book => book.genre !== 'Horror' && book.genre !== 'True Crime')
+    const result = scaryFilter.map(book => book.title)
     return result;
 
     // Annotation:
