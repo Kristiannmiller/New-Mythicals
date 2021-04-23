@@ -149,21 +149,9 @@ const classPrompts = {
 
 const bookPrompts = {
   removeViolence() {
-    // return an array of all book titles that are not horror or true crime. Eg:
-
-    //  ['1984', 'The Great Gatsby', 'Lord of the Flies', 'Harry Potter and the Sorcerer\'s Stone',
-    //   'The Hitchhiker\'s Guide to the Galaxy', 'Flowers for Algernon', 'Slaughterhouse-Five',
-    //   'The Handmaid\'s Tale', 'The Metamorphosis', 'Brave New World', 'Life of Pi',
-    //   'The Curious Incident of the Dog in the Night - Time', 'The Bell Jar',
-    //   'Catch-22', 'Treasure Island']
-
     const scaryFilter = books.filter(book => book.genre !== 'Horror' && book.genre !== 'True Crime')
     const result = scaryFilter.map(book => book.title)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
-
   },
   getNewBooks() {
     // return an array of objects containing all books that were
