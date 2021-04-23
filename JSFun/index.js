@@ -143,47 +143,25 @@ const classPrompts = {
   }
 };
 
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// =================================================================
 
 // DATASET: books from './datasets/books
 
 const bookPrompts = {
   removeViolence() {
-    // return an array of all book titles that are not horror or true crime. Eg:
-
-    //  ['1984', 'The Great Gatsby', 'Lord of the Flies', 'Harry Potter and the Sorcerer\'s Stone',
-    //   'The Hitchhiker\'s Guide to the Galaxy', 'Flowers for Algernon', 'Slaughterhouse-Five',
-    //   'The Handmaid\'s Tale', 'The Metamorphosis', 'Brave New World', 'Life of Pi',
-    //   'The Curious Incident of the Dog in the Night - Time', 'The Bell Jar',
-    //   'Catch-22', 'Treasure Island']
-
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const scaryFilter = books.filter(book => book.genre !== 'Horror' && book.genre !== 'True Crime')
+    const result = scaryFilter.map(book => book.title)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
-
   },
   getNewBooks() {
-    // return an array of objects containing all books that were
-    // published in the 90's and 00's. Inlucde the title and the year Eg:
-
-    // [{ title: 'Harry Potter and the Sorcerer\'s Stone', year: 1997 },
-    //  { title: 'Life of Pi', year: 2001 },
-    //  { title: 'The Curious Incident of the Dog in the Night-Time', year: 2003 }]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const millenialBooks = books.filter(book => {
+      return book.published > 1989 && book.published < 2010
+    })
+    const result = millenialBooks.map(book => {
+      return {title: book.title, year: book.published}
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
-
 };
 
 
