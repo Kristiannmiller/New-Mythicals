@@ -154,12 +154,6 @@ const bookPrompts = {
     return result;
   },
   getNewBooks() {
-    // return an array of objects containing all books that were
-    // published in the 90's and 00's. Inlucde the title and the year Eg:
-
-    // [{ title: 'Harry Potter and the Sorcerer\'s Stone', year: 1997 },
-    //  { title: 'Life of Pi', year: 2001 },
-    //  { title: 'The Curious Incident of the Dog in the Night-Time', year: 2003 }]
     const millenialBooks = books.filter(book => {
       return book.published > 1989 && book.published < 2010
     })
@@ -167,11 +161,7 @@ const bookPrompts = {
       return {title: book.title, year: book.published}
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
-
 };
 
 
