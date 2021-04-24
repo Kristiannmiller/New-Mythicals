@@ -184,7 +184,12 @@ const weatherPrompts = {
     // 'New Orleans, Louisiana is sunny.',
     // 'Raleigh, North Carolina is mostly sunny.' ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = weather.reduce((sunnyPhrases, place) => {
+      if(place.type === 'sunny' || place.type === 'mostly sunny') {
+        sunnyPhrases.push(`${place.location} is ${place.type}.`)
+      }
+      return sunnyPhrases
+    }, []);
     return result;
 
     // Annotation:
