@@ -164,56 +164,31 @@ const bookPrompts = {
   }
 };
 
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
+// =================================================================
 
 // DATASET: weather from './datasets/weather
 
 const weatherPrompts = {
   getAverageTemps() {
-    // return an array of all the average temperatures. Eg:
-    // [ 40, 40, 44.5, 43.5, 57, 35, 65.5, 62, 14, 46.5 ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = weather.reduce((avgs, curr) => {
+      let avg = (curr.temperature.high + curr.temperature.low) / 2
+      avgs.push(avg)
+      return avgs
+    }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   findSunnySpots() {
-    // Return an array of sentences of the locations that are sunny
-    // and mostly sunny. Include the location and weather type. Eg:
-    // [ 'Atlanta, Georgia is sunny.',
-    // 'New Orleans, Louisiana is sunny.',
-    // 'Raleigh, North Carolina is mostly sunny.' ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = weather.reduce((sunnyPhrases, place) => {
+      if(place.type === 'sunny' || place.type === 'mostly sunny') {
+        sunnyPhrases.push(`${place.location} is ${place.type}.`)
+      }
+      return sunnyPhrases
+    }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   findHighestHumidity() {
-    // Return the location with the highest humidity. Eg:
-    // {
-    //   location: 'Portland, Oregon',
-    //   type: 'cloudy',
-    //   humidity: 84,
-    //   temperature: { high: 49, low: 38 }
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = weather.sort((a, b) => b.humidity - a.humidity)[0];
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
-
   }
 };
 
