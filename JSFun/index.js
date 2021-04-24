@@ -173,7 +173,11 @@ const weatherPrompts = {
     // return an array of all the average temperatures. Eg:
     // [ 40, 40, 44.5, 43.5, 57, 35, 65.5, 62, 14, 46.5 ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = weather.reduce((avgs, curr) => {
+      let avg = (curr.temperature.high + curr.temperature.low) / 2
+      avgs.push(avg)
+      return avgs
+    }, []);
     return result;
 
     // Annotation:
