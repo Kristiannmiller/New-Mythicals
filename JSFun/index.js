@@ -170,20 +170,13 @@ const bookPrompts = {
 
 const weatherPrompts = {
   getAverageTemps() {
-    // return an array of all the average temperatures. Eg:
-    // [ 40, 40, 44.5, 43.5, 57, 35, 65.5, 62, 14, 46.5 ]
-
     const result = weather.reduce((avgs, curr) => {
       let avg = (curr.temperature.high + curr.temperature.low) / 2
       avgs.push(avg)
       return avgs
     }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   findSunnySpots() {
     // Return an array of sentences of the locations that are sunny
     // and mostly sunny. Include the location and weather type. Eg:
