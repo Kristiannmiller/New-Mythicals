@@ -198,23 +198,12 @@ const weatherPrompts = {
 
 const nationalParksPrompts = {
   getParkVisitList() {
-    /// Return an object containing the names of which parks I need to visit
-    // and the ones I have already visited eg:
-    // {
-    //   parksToVisit: ["Yellowstone", "Glacier", "Everglades"],
-    //   parksVisited: ["Rocky Mountain", "Acadia", "Zion"]
-    //}
-
     const result = nationalParks.reduce((parkStatus, park) => {
       park.visited ? parkStatus.parksVisited.push(park.name) : parkStatus.parksToVisit.push(park.name)
       return parkStatus
     }, {parksToVisit: [], parksVisited: []});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   getParkInEachState() {
     // Return an array of objects where the key is the state and the value is its National Park
     // eg: [ { Colorado: 'Rocky Mountain' },
