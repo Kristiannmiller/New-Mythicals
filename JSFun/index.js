@@ -214,7 +214,10 @@ const nationalParksPrompts = {
     // { Florida: 'Everglades' } ]
 
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = nationalParks.reduce((stateParks, park) => {
+      stateParks.push({[park.location]: park.name})
+      return stateParks
+    }, []);
     return result;
 
     // Annotation:
