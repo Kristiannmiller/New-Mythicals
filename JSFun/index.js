@@ -230,19 +230,12 @@ const nationalParksPrompts = {
 // DATASET: breweries from ./datasets/breweries
 const breweryPrompts = {
   getBeerCount() {
-    // Return the total beer count of all beers for every brewery e.g.
-    // 40
-
     const result = breweries.reduce((totalBeers, brewery) => {
       totalBeers += brewery.beers.length
       return totalBeers
     }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   getBreweryBeerCount() {
     // Return an array of objects where each object has the name of a brewery
     // and the count of the beers that brewery has e.g.
