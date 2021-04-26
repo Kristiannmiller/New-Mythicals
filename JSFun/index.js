@@ -211,7 +211,6 @@ const nationalParksPrompts = {
     }, []);
     return result;
   },
-
   getParkActivities() {
     // Return an array of all the activities I can do
     // in a National Park. Make sure to exclude duplicates. eg:
@@ -228,7 +227,14 @@ const nationalParksPrompts = {
     //   'backpacking',
     //   'rock climbing' ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = nationalParks.reduce((activities, park) => {
+      park.activities.forEach(activity => {
+        if(!activities.includes(activity)) {
+          activities.push(activity)
+        }
+      })
+      return activities
+    }, []);
     return result;
 
     // Annotation:
