@@ -225,57 +225,31 @@ const nationalParksPrompts = {
 };
 
 
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: breweries from ./datasets/breweries
 const breweryPrompts = {
   getBeerCount() {
-    // Return the total beer count of all beers for every brewery e.g.
-    // 40
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = breweries.reduce((totalBeers, brewery) => {
+      totalBeers += brewery.beers.length
+      return totalBeers
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   getBreweryBeerCount() {
-    // Return an array of objects where each object has the name of a brewery
-    // and the count of the beers that brewery has e.g.
-    // [
-    //  { name: 'Little Machine Brew', beerCount: 12 },
-    //  { name: 'Ratio Beerworks', beerCount: 5},
-    // ...etc.
-    // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = breweries.reduce((beerCount, brewery) => {
+      beerCount.push({name: brewery.name, beerCount: brewery.beers.length})
+      return beerCount
+    }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   findHighestAbvBeer() {
-    // Return the beer which has the highest ABV of all beers
-    // e.g.
-    // { name: 'Barrel Aged Nature\'s Sweater', type: 'Barley Wine', abv: 10.9, ibu: 40 }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const beers = breweries.reduce((allBeers, brewery) => {
+      brewery.beers.forEach(beer => allBeers.push(beer))
+      return allBeers
+    }, [])
+    const result = beers.sort((a, b) => b.abv - a.abv)[0];
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
