@@ -205,23 +205,11 @@ const nationalParksPrompts = {
     return result;
   },
   getParkInEachState() {
-    // Return an array of objects where the key is the state and the value is its National Park
-    // eg: [ { Colorado: 'Rocky Mountain' },
-    // { Wyoming: 'Yellowstone' },
-    // { Montana: 'Glacier' },
-    // { Maine: 'Acadia' },
-    // { Utah: 'Zion' },
-    // { Florida: 'Everglades' } ]
-
-
     const result = nationalParks.reduce((stateParks, park) => {
       stateParks.push({[park.location]: park.name})
       return stateParks
     }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   getParkActivities() {
