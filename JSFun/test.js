@@ -448,7 +448,7 @@ describe("PROTOTYPES", () => {
       }])
     });
 
-    it.skip("studentsPerInstructor", () => {
+    it("studentsPerInstructor", () => {
       const e = turingPrompts.studentsPerInstructor();
 
       expect(e).to.deep.equal({

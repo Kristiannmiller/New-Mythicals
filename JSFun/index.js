@@ -275,8 +275,15 @@ const turingPrompts = {
     // cohort1806: 9,
     // cohort1804: 10.5
     // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    // Need to establish how many teachers per cohort
+    // Need to create an object using cohort numbers
+    // Need to assign cohort numbers to num of students over teachers
+    const result = cohorts.reduce((stats, cohort) => {
+      const cohortTitle = `cohort${cohort.cohort}`
+      const totalInstructors = instructors.filter(instructor => instructor.module === cohort.module).length
+      stats[cohortTitle] = cohort.studentCount / totalInstructors
+      return stats
+    }, {})
     return result;
 
     // Annotation:
