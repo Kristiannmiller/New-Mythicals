@@ -279,20 +279,6 @@ const turingPrompts = {
     return result;
   },
   modulesPerTeacher() {
-    // Return an object where each key is an instructor name and each value is
-    // an array of the modules they can teach based on their skills. e.g.:
-    // {
-    //     Pam: [2, 4],
-    //     Brittany: [2, 4],
-    //     Nathaniel: [2, 4],
-    //     Robbie: [4],
-    //     Leta: [2, 4],
-    //     Travis: [1, 2, 3, 4],
-    //     Louisa: [1, 2, 3, 4],
-    //     Christie: [1, 2, 3, 4],
-    //     Will: [1, 2, 3, 4]
-    //   }
-
     const result = instructors.reduce((mods, teacher) => {
       const teachableMods = []
       teacher.teaches.forEach(subject => {
@@ -306,11 +292,7 @@ const turingPrompts = {
       return mods
     }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   curriculumPerTeacher() {
     // Return an object where each key is a curriculum topic and each value is
     // an array of instructors who teach that topic e.g.:
