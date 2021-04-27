@@ -269,7 +269,11 @@ const turingPrompts = {
     //  { name: 'Robbie', studentCount: 18 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.map(instructor => {
+      const instructorStudentCount = {name: instructor.name, studentCount: 0}
+      instructorStudentCount.studentCount = cohorts.find(cohort => cohort.module === instructor.module).studentCount
+      return instructorStudentCount
+    });
     return result;
 
     // Annotation:
