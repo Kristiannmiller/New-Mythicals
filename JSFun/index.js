@@ -303,7 +303,16 @@ const turingPrompts = {
     //   recursion: [ 'Pam', 'Leta' ]
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.reduce((subjects, teacher) => {
+      teacher.teaches.forEach(subject => {
+        if(subjects[subject]) {
+          subjects[subject].push(teacher.name)
+        } else {
+          subjects[subject] = [teacher.name]
+        }
+      })
+      return subjects
+    }, {});
     return result;
 
     // Annotation:
