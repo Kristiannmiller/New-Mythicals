@@ -262,24 +262,13 @@ const breweryPrompts = {
 // DATASET: instructors, cohorts from ./datasets/turing
 const turingPrompts = {
   studentsForEachInstructor() {
-    // Return an array of instructors where each instructor is an object
-    // with a name and the count of students in their module. e.g.
-    // [
-    //  { name: 'Pam', studentCount: 21 },
-    //  { name: 'Robbie', studentCount: 18 }
-    // ]
-
     const result = instructors.map(instructor => {
       const instructorStudentCount = {name: instructor.name, studentCount: 0}
       instructorStudentCount.studentCount = cohorts.find(cohort => cohort.module === instructor.module).studentCount
       return instructorStudentCount
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   studentsPerInstructor() {
     // Return an object of how many students per teacher there are in each cohort e.g.
     // {
