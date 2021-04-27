@@ -270,14 +270,6 @@ const turingPrompts = {
     return result;
   },
   studentsPerInstructor() {
-    // Return an object of how many students per teacher there are in each cohort e.g.
-    // {
-    // cohort1806: 9,
-    // cohort1804: 10.5
-    // }
-    // Need to establish how many teachers per cohort
-    // Need to create an object using cohort numbers
-    // Need to assign cohort numbers to num of students over teachers
     const result = cohorts.reduce((stats, cohort) => {
       const cohortTitle = `cohort${cohort.cohort}`
       const totalInstructors = instructors.filter(instructor => instructor.module === cohort.module).length
@@ -285,11 +277,7 @@ const turingPrompts = {
       return stats
     }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   modulesPerTeacher() {
     // Return an object where each key is an instructor name and each value is
     // an array of the modules they can teach based on their skills. e.g.:
