@@ -253,104 +253,58 @@ const breweryPrompts = {
   }
 };
 
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DOUBLE DATASETS
+
 // =================================================================
 
 // DATASET: instructors, cohorts from ./datasets/turing
 const turingPrompts = {
   studentsForEachInstructor() {
-    // Return an array of instructors where each instructor is an object
-    // with a name and the count of students in their module. e.g.
-    // [
-    //  { name: 'Pam', studentCount: 21 },
-    //  { name: 'Robbie', studentCount: 18 }
-    // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.map(instructor => {
+      const instructorStudentCount = {name: instructor.name, studentCount: 0}
+      instructorStudentCount.studentCount = cohorts.find(cohort => cohort.module === instructor.module).studentCount
+      return instructorStudentCount
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   studentsPerInstructor() {
-    // Return an object of how many students per teacher there are in each cohort e.g.
-    // {
-    // cohort1806: 9,
-    // cohort1804: 10.5
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = cohorts.reduce((stats, cohort) => {
+      const cohortTitle = `cohort${cohort.cohort}`
+      const totalInstructors = instructors.filter(instructor => instructor.module === cohort.module).length
+      stats[cohortTitle] = cohort.studentCount / totalInstructors
+      return stats
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   modulesPerTeacher() {
-    // Return an object where each key is an instructor name and each value is
-    // an array of the modules they can teach based on their skills. e.g.:
-    // {
-    //     Pam: [2, 4],
-    //     Brittany: [2, 4],
-    //     Nathaniel: [2, 4],
-    //     Robbie: [4],
-    //     Leta: [2, 4],
-    //     Travis: [1, 2, 3, 4],
-    //     Louisa: [1, 2, 3, 4],
-    //     Christie: [1, 2, 3, 4],
-    //     Will: [1, 2, 3, 4]
-    //   }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.reduce((mods, teacher) => {
+      const teachableMods = []
+      teacher.teaches.forEach(subject => {
+        cohorts.forEach(cohort => {
+          if(cohort.curriculum.includes(subject) && !teachableMods.includes(cohort.module)) {
+            teachableMods.push(cohort.module)
+          }
+        })
+        mods[teacher.name] = teachableMods.sort()
+      })
+      return mods
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   curriculumPerTeacher() {
-    // Return an object where each key is a curriculum topic and each value is
-    // an array of instructors who teach that topic e.g.:
-    // {
-    //   html: [ 'Travis', 'Louisa' ],
-    //   css: [ 'Travis', 'Louisa' ],
-    //   javascript: [ 'Travis', 'Louisa', 'Christie', 'Will' ],
-    //   recursion: [ 'Pam', 'Leta' ]
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.reduce((subjects, teacher) => {
+      teacher.teaches.forEach(subject => {
+        if(subjects[subject]) {
+          subjects[subject].push(teacher.name)
+        } else {
+          subjects[subject] = [teacher.name]
+        }
+      })
+      return subjects
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
