@@ -293,7 +293,18 @@ const turingPrompts = {
     //     Will: [1, 2, 3, 4]
     //   }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = instructors.reduce((mods, teacher) => {
+      const teachableMods = []
+      teacher.teaches.forEach(subject => {
+        cohorts.forEach(cohort => {
+          if(cohort.curriculum.includes(subject) && !teachableMods.includes(cohort.module)) {
+            teachableMods.push(cohort.module)
+          }
+        })
+        mods[teacher.name] = teachableMods.sort()
+      })
+      return mods
+    }, {});
     return result;
 
     // Annotation:
