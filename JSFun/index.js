@@ -294,15 +294,6 @@ const turingPrompts = {
     return result;
   },
   curriculumPerTeacher() {
-    // Return an object where each key is a curriculum topic and each value is
-    // an array of instructors who teach that topic e.g.:
-    // {
-    //   html: [ 'Travis', 'Louisa' ],
-    //   css: [ 'Travis', 'Louisa' ],
-    //   javascript: [ 'Travis', 'Louisa', 'Christie', 'Will' ],
-    //   recursion: [ 'Pam', 'Leta' ]
-    // }
-
     const result = instructors.reduce((subjects, teacher) => {
       teacher.teaches.forEach(subject => {
         if(subjects[subject]) {
@@ -314,9 +305,6 @@ const turingPrompts = {
       return subjects
     }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
