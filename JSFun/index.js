@@ -308,38 +308,22 @@ const turingPrompts = {
   }
 };
 
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: bosses, sidekicks from ./datasets/bosses
 const bossPrompts = {
   bossLoyalty() {
-    // Create an array of objects that each have the name of the boss and the sum
-    // loyalty of all their sidekicks. e.g.:
-    // [
-    //   { bossName: 'Jafar', sidekickLoyalty: 3 },
-    //   { bossName: 'Ursula', sidekickLoyalty: 20 },
-    //   { bossName: 'Scar', sidekickLoyalty: 16 }
-    // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const bossNames = Object.keys(bosses)
+    const result = bossNames.map(boss => {
+      let name = boss.charAt(0).toUpperCase() + boss.slice(1)
+      let loyaltyTotal = bosses[boss].sidekicks.reduce((total, sidekick) => {
+        let loyalty = sidekicks.find(char => char.name === sidekick.name).loyaltyToBoss
+        total += loyalty
+        return total
+      }, 0)
+      return {bossName: name, sidekickLoyalty: loyaltyTotal}
+    })
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
