@@ -320,8 +320,16 @@ const bossPrompts = {
     //   { bossName: 'Ursula', sidekickLoyalty: 20 },
     //   { bossName: 'Scar', sidekickLoyalty: 16 }
     // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const bossNames = Object.keys(bosses)
+    const result = bossNames.map(boss => {
+      let name = boss.charAt(0).toUpperCase() + boss.slice(1)
+      let loyaltyTotal = bosses[boss].sidekicks.reduce((total, sidekick) => {
+        let loyalty = sidekicks.find(char => char.name === sidekick.name).loyaltyToBoss
+        total += loyalty
+        return total
+      }, 0)
+      return {bossName: name, sidekickLoyalty: loyaltyTotal}
+    })
     return result;
 
     // Annotation:
