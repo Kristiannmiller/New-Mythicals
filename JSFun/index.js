@@ -384,8 +384,8 @@ const astronomyPrompts = {
     //    "Orion",
     //    "The Little Dipper" ]
 
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const sortedStars = stars.sort((a, b) => a.visualMagnitude - b.visualMagnitude)
+    const result = sortedStars.map(star => star.constellation).filter(name => name !== "");
     return result;
 
     // Annotation:
