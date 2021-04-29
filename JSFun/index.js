@@ -530,6 +530,107 @@ const dinosaurPrompts = {
   }
 };
 
+
+
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+
+// DATASET: animals, zoos from ./datasets/animals
+const animalPrompts = {
+  findCarnivores() {
+    // return an array with all the zoos that allow Carnivores
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  asianAnimals() {
+    // return an array of zoos that can take animals from Asia
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  findHome() {
+    // make a function that takes an animal name and returns their home continent
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  weighingAnimals() {
+    // make a function that takes a quanitity and a animal name and returns their total weight
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  wolfAcceptingZoos() {
+    // return an array with the zoos that can take a Wolf
+    // remember that it has to match the type and continent
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  heaviestAnimal() {
+    // find the animal that weighs the most.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  smallestAnimalZoo() {
+    // find the zoo with the least weight allowed.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  zooAnimalsAccepted() {
+    // create a new object with the zoo name as the key and the animals allowed as the value
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+}
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -544,5 +645,6 @@ module.exports = {
   nationalParksPrompts,
   weatherPrompts,
   bookPrompts,
-  dinosaurPrompts
+  dinosaurPrompts,
+  animalPrompts
 };

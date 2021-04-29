@@ -16,6 +16,7 @@ const {
   nationalParksPrompts,
   weatherPrompts,
   bookPrompts,
+  animalPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -738,4 +739,114 @@ describe("PROTOTYPES", () => {
       }])
     })
   })
+
+  describe("Animal Prompts", () => {
+    it.skip("findCarnivores", () => {
+      const e = animalPrompts.findCarnivores();
+
+      expect(e).to.deep.equal([
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Kansas City Zoo',
+          maxWeight: 8000,
+          typesAllowed: [ 'Omnivore', 'Carnivore' ],
+          continents: [ 'Africa', 'Asia' ] },
+        { name: 'Central Park Zoo',
+          maxWeight: 7000,
+          typesAllowed: [ 'Carnivore' ],
+          continents: [ 'Africa', 'North America' ] }
+      ])
+    });
+
+    it.skip("asianAnimals", () => {
+      const e = animalPrompts.asianAnimals();
+
+      expect(e).to.deep.equal([
+        { name: 'Denver Zoo',
+          maxWeight: 10000,
+          typesAllowed: [ 'Herbivore', 'Omnivore' ],
+          continents: [ 'Africa', 'Asia', 'North America' ] },
+        { name: 'Bronx Zoo',
+          maxWeight: 5000,
+          typesAllowed: [ 'Herbivore' ],
+          continents: [ 'Africa', 'Asia', 'North America' ] },
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Kansas City Zoo',
+          maxWeight: 8000,
+          typesAllowed: [ 'Omnivore', 'Carnivore' ],
+          continents: [ 'Africa', 'Asia' ] },
+        { name: 'San Antonio Zoo',
+          maxWeight: 3000,
+          typesAllowed: [ 'Herbivore', 'Omnivore' ],
+          continents: [ 'Asia', 'North America' ]
+      }])
+    })
+
+    it.skip("findHome", () => {
+      const e = animalPrompts.findHome('Tiger');
+
+      expect(e).to.equal('Africa')
+    })
+
+    it.skip("weighingAnimals", () => {
+      const e = animalPrompts.weighingAnimals('Wolf', 6);
+
+      expect(e).to.equal(540)
+    })
+
+    it.skip("wolfAcceptingZoos", () => {
+      const e = animalPrompts.wolfAcceptingZoos();
+
+      expect(e).to.deep.equal([
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Central Park Zoo',
+          maxWeight: 7000,
+          typesAllowed: [ 'Carnivore' ],
+          continents: [ 'Africa', 'North America' ] }
+      ])
+    })
+
+    it.skip("heaviestAnimal", () => {
+      const e = animalPrompts.heaviestAnimal();
+
+      expect(e).to.deep.equal(
+        { name:'Rhino',
+          weight: 1700,
+          type: 'Herbivore',
+          home: 'Africa' }
+      )
+    })
+
+    it.skip("smallestAnimalZoo", () => {
+      const e = animalPrompts.smallestAnimalZoo();
+
+      expect(e).to.deep.equal(
+        { name: 'San Antonio Zoo',
+          maxWeight: 3000,
+          typesAllowed:['Herbivore', 'Omnivore'],
+          continents:['Asia', 'North America'] }
+      )
+    })
+
+    it.skip("zooAnimalsAccepted", () => {
+      const e = animalPrompts.zooAnimalsAccepted();
+
+      expect(e).to.deep.equal(
+        { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
+          'Bronx Zoo': [ 'Rhino', 'Monkey', 'Panda' ],
+          'San Diego Wild Animal Park': [ 'Wolf', 'Panda' ],
+          'Kansas City Zoo': [ 'Lion', 'Tiger' ],
+          'Central Park Zoo': [ 'Lion', 'Tiger', 'Wolf' ],
+          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ] }
+      )
+    })
+  });
 })
