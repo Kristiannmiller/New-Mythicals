@@ -15,6 +15,7 @@ const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
 const { animals, zoos } = require('./datasets/animals');
 const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
+const { careBears } = require('./datasets/careBears');
 
 
 // SINGLE DATASETS
@@ -964,6 +965,75 @@ const broncosPrompts = {
   },
 }
 
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: broncos from ./datasets/broncos.js
+const careBearPrompts = {
+  getBear() {
+    // I love my Care Bears but I have collected too many.
+    // Help me find my favorite ones by creating a getBear function
+    // that returns an array of bear objects contain the search.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  collectionTotals() {
+    // Create an object with a tally of how many bears belong to each collection
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  organizedBears() {
+    // Create an alphabetized array of Care Bear names
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  search() {
+    // Create a more flexible searching function that takes in 2 arguements, a key and the query.
+    // This should allow you to search through any key in the bear object
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getAppearanceCount() {
+    // Collect all the Care Bears by their appearanceCount number.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -981,5 +1051,6 @@ module.exports = {
   dinosaurPrompts,
   animalPrompts,
   beyoncePrompts,
-  broncosPrompts
+  broncosPrompts,
+  careBearPrompts
 };

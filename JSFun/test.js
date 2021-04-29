@@ -20,7 +20,8 @@ const {
   bookPrompts,
   animalPrompts,
   beyoncePrompts,
-  broncosPrompts
+  broncosPrompts,
+  careBearPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1512,4 +1513,122 @@ describe("PROTOTYPES", () => {
       ])
     });
   });
+
+  describe("Care Bear Prompts", () => {
+    it.skip("getBear", () => {
+      const e = careBearPrompts.getBear('Oopsy');
+
+      expect(e).to.deep.equal([{
+        appearanceCount: 2,
+        collection: '00s',
+        bellyBadge: 'He does not have his own Belly badge but he will often draw a yellow shooting star (or in the intro The Show Logo) on his stomach with a marker. Occasionally, he also draws other things on his belly as well.',
+        furColor: 'Light green',
+        gender: 'Male',
+        name: 'Oopsy Bear',
+        nationality: 'Care-a-Lot, Kingdom of Caring' }
+      ])
+    });
+
+    it.skip("collectionTotals", () => {
+      const e = careBearPrompts.collectionTotals();
+
+      expect(e).to.deep.equal({
+        Original: 10,
+        '90s': 16,
+        '00s': 20,
+        '10s': 3,
+        Other: 3
+      })
+    });
+    it.skip("organizedBears", () => {
+      const e = careBearPrompts.organizedBears();
+
+      expect(e.map(bear => bear.name)).to.deep.equal([
+        'All My Heart Bear', 'Always There Bear',
+        'America Cares Bear', 'Amigo Bear',
+        'Baby Hugs Bear', 'Baby Tugs Bear',
+        'Bashful Heart Bear', 'Bedtime Bear',
+        'Best Friend Bear', 'Birthday Bear',
+        'Champ Bear', 'Cheer Bear',
+        'Daydream Bear', 'Do Your Best Bear',
+        'Forest Friend Bear', 'Friend Bear',
+        'Funshine Bear', 'Good Luck Bear',
+        'Grams Bear', 'Great Giving Bear',
+        'Grumpy Bear', 'Harmony Bear',
+        'Heartsong Bear', 'Helpful Heart Bear',
+        'I Love You Bear', 'Laugh-a-Lot Bear',
+        'Love-a-Lot Bear', 'Me Bear',
+        'Messy Bear', 'Oopsy Bear',
+        'Perfetct Panda', 'Piece of Heart Bear',
+        'Pink Power Bear', 'Play-a-Lot Bear',
+        'Polite Panda', 'Sea Friend Bear',
+        'Secret Bear', 'Share Bear',
+        'Shine Bright Bear', 'Smart Heart Bear',
+        'Superstar Bear', 'Surprise Bear',
+        'Sweet Dreams Bear', 'Sweet Sakura Bear',
+        'Take Care Bear', 'Tenderheart Bear',
+        'Thanks-a-Lot Bear', 'Too Loud Bear',
+        'True Heart Bear', 'Wish Bear',
+        'Wonderheart Bear', 'Work of Heart Bear'
+      ])
+    });
+    it.skip("search", () => {
+      const e = careBearPrompts.search('furColor', 'Fuchsia');
+
+      expect(e).to.deep.equal([ { appearanceCount: 2,
+        collection: '00s',
+        bellyBadge: 'Sunrise inside a violet heart',
+        furColor: 'Fuchsia',
+        gender: 'Female',
+        name: 'Shine Bright Bear',
+        nationality: 'Care-a-Lot, Kingdom of Caring' }
+      ])
+    });
+
+    it.skip("getAppearanceCount", () => {
+      const e = careBearPrompts.getAppearanceCount();
+
+      expect(e).to.deep.equal({
+        '1': [
+          'Forest Friend Bear',  'I Love You Bear',
+          'Sea Friend Bear',     'Take Care Bear',
+          'America Cares Bear',  'Smart Heart Bear',
+          'Helpful Heart Bear',  'All My Heart Bear',
+          'Heartsong Bear',      'Play-a-Lot Bear',
+          'Superstar Bear',      'Always There Bear',
+          'Pink Power Bear',     'Sweet Sakura Bear',
+          'Great Giving Bear',   'Wonderheart Bear',
+          'Piece of Heart Bear', 'Me Bear',
+          'Messy Bear',          'Too Loud Bear'
+        ],
+        '2': [
+          'Daydream Bear',
+          'Grams Bear',
+          'Perfetct Panda',
+          'Bashful Heart Bear',
+          'Do Your Best Bear',
+          'Thanks-a-Lot Bear',
+          'Amigo Bear',
+          'Oopsy Bear',
+          'Shine Bright Bear',
+          'Work of Heart Bear',
+          'Sweet Dreams Bear'
+        ],
+        '3': [ 'Baby Tugs Bear', 'Polite Panda', 'Best Friend Bear' ],
+        '4': [
+          'Birthday Bear',
+          'Secret Bear',
+          'Surprise Bear',
+          'True Heart Bear'
+        ],
+        '5': [ 'Grumpy Bear', 'Baby Hugs Bear', 'Share Bear', 'Laugh-a-Lot Bear' ],
+        '6': [ 'Harmony Bear' ],
+        '7': [ 'Cheer Bear', 'Friend Bear', 'Good Luck Bear', 'Wish Bear' ],
+        '8': [ 'Funshine Bear', 'Tenderheart Bear' ],
+        '9': [ 'Love-a-Lot Bear', 'Champ Bear' ],
+        '10': [ 'Bedtime Bear' ]
+      })
+    });
+  });
+
 })
