@@ -346,8 +346,16 @@ const astronomyPrompts = {
     //     lightYearsFromEarth: 640,
     //     color: 'red' }
     // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const constellationNames = Object.keys(constellations)
+    const result = stars.filter(star => {
+      let included = false
+      constellationNames.forEach(constellation => {
+        if(constellations[constellation].stars.includes(star.name)) {
+          included = true
+        }
+      })
+      return included
+    });
     return result;
 
     // Annotation:
