@@ -14,6 +14,7 @@ const { weapons, characters } = require('./datasets/ultima');
 const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
 const { animals, zoos } = require('./datasets/animals');
 const { beyonce } = require('./datasets/beyonce');
+const { broncos } = require('./datasets/broncos');
 
 
 // SINGLE DATASETS
@@ -619,8 +620,7 @@ const animalPrompts = {
 
     // Annotation:
     // Write your annotation here as a comment
-  },
-
+  }
 }
 
 
@@ -838,7 +838,130 @@ const beyoncePrompts = {
     // Annotation:
     // Write your annotation here as a comment
   },
+}
 
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: broncos from ./datasets/broncos.js
+const broncosPrompts = {
+  highestRatedPlayer() {
+    // return the name of the player with the highest rating
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  playerNames() {
+    // return an array of the names of each player
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  adjustRatings() {
+    // decrease injured players rating by 5,
+    //decrease questionable players rating by 1,
+    //and increase all other players rating by 2
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  offensiveTotal() {
+    // return the total number of 'offense' players
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  defensiveTotal() {
+    // return the total number of 'defense' players
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  separateTeams() {
+    // create an object with the keys 'offense' and 'defense' and let their values equal the total number of players on their respective side.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  offenseRatings() {
+    // create an array of offense players sorted by rating; high-low
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  cornerbackRatings() {
+    // create an array of cornerbacks, 'CB', sorted by rating; high-low
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  injuredPlayers() {
+    // create an array of players on 'injured' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  questionablePlayers() {
+    // create an array of players on 'questionable' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  activePlayers() {
+    // return the length of broncos players that are not on 'injured' or 'questionable' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
 }
 
 module.exports = {
@@ -857,5 +980,6 @@ module.exports = {
   bookPrompts,
   dinosaurPrompts,
   animalPrompts,
-  beyoncePrompts
+  beyoncePrompts,
+  broncosPrompts
 };
