@@ -12,6 +12,10 @@ const { bosses, sidekicks } = require('./datasets/bosses');
 const { constellations, stars } = require('./datasets/astronomy');
 const { weapons, characters } = require('./datasets/ultima');
 const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
+const { animals, zoos } = require('./datasets/animals');
+const { beyonce } = require('./datasets/beyonce');
+const { broncos } = require('./datasets/broncos');
+const { careBears } = require('./datasets/careBears');
 
 
 // SINGLE DATASETS
@@ -530,6 +534,506 @@ const dinosaurPrompts = {
   }
 };
 
+// =================================================================
+
+// IRON FE DATASETS
+
+// =================================================================
+
+
+// DATASET: animals, zoos from ./datasets/animals
+const animalPrompts = {
+  findCarnivores() {
+    // return an array with all the zoos that allow Carnivores
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  asianAnimals() {
+    // return an array of zoos that can take animals from Asia
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  findHome() {
+    // make a function that takes an animal name and returns their home continent
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  weighingAnimals() {
+    // make a function that takes a quanitity and a animal name and returns their total weight
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  wolfAcceptingZoos() {
+    // return an array with the zoos that can take a Wolf
+    // remember that it has to match the type and continent
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  heaviestAnimal() {
+    // find the animal that weighs the most.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  smallestAnimalZoo() {
+    // find the zoo with the least weight allowed.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  zooAnimalsAccepted() {
+    // create a new object with the zoo name as the key and the animals allowed as the value
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  }
+}
+
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: beyonce from ./datasets/beyonce.js
+const beyoncePrompts = {
+  beyonceHits() {
+    // return an array of all the hits
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  fierceRatings() {
+    // create an array with a list of all of Beyonce's fierceness ratings
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  noBodySuit() {
+    // give me a song where Beyonce is not wearing a bodysuit
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  bodySuits() {
+    // give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  highFierce() {
+    // create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  whereIsNicki() {
+    // find a song where Nicki Minaj is part of the group
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  soloSongs() {
+    // create an array with all Beyonce's songs that were not with a group
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  post2006Movies() {
+    // create an array with all of the movies Beyonce made in 2006 and after
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  groupHitSongs() {
+    // find all of the group hit songs
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  blondeSong() {
+    // find a hit song where Beyonce's hair is blonde
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  sorry() {
+    // find the hit song sorry
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  superFierce() {
+    // find all hit songs where Beyonce's fierceness rating is 10
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  avgFierceness() {
+    // get the average fierceness value for all of her hit songs
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatingSum() {
+    // sum up Beyonces rating value for all of her movies
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatingAvg() {
+    // get the average rating value for all of her movies
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  fierceObject() {
+    // create an object where the properties are song names and the value is an object which contains that fierceness
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatings() {
+    // create an object where the properties are movie names and the value is an object which contains that rating and average rating
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  dancersSum() {
+    // sum up the total number of dancers in all of the hit song videos
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  allHairstyles() {
+    // create an array of beyonces hairstyles without repeats
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  hairstyleTotals() {
+    // create an object list with beyonces hairstyles with a tally of each
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: broncos from ./datasets/broncos.js
+const broncosPrompts = {
+  highestRatedPlayer() {
+    // return the name of the player with the highest rating
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  playerNames() {
+    // return an array of the names of each player
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  adjustRatings() {
+    // decrease injured players rating by 5,
+    //decrease questionable players rating by 1,
+    //and increase all other players rating by 2
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  offensiveTotal() {
+    // return the total number of 'offense' players
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  defensiveTotal() {
+    // return the total number of 'defense' players
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  separateTeams() {
+    // create an object with the keys 'offense' and 'defense' and let their values equal the total number of players on their respective side.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  offenseRatings() {
+    // create an array of offense players sorted by rating; high-low
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  cornerbackRatings() {
+    // create an array of cornerbacks, 'CB', sorted by rating; high-low
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  injuredPlayers() {
+    // create an array of players on 'injured' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  questionablePlayers() {
+    // create an array of players on 'questionable' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  activePlayers() {
+    // return the length of broncos players that are not on 'injured' or 'questionable' status
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: broncos from ./datasets/broncos.js
+const careBearPrompts = {
+  getBear() {
+    // I love my Care Bears but I have collected too many.
+    // Help me find my favorite ones by creating a getBear function
+    // that returns an array of bear objects contain the search.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  collectionTotals() {
+    // Create an object with a tally of how many bears belong to each collection
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  organizedBears() {
+    // Create an alphabetized array of Care Bear names
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  search() {
+    // Create a more flexible searching function that takes in 2 arguements, a key and the query.
+    // This should allow you to search through any key in the bear object
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getAppearanceCount() {
+    // Collect all the Care Bears by their appearanceCount number.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -544,5 +1048,9 @@ module.exports = {
   nationalParksPrompts,
   weatherPrompts,
   bookPrompts,
-  dinosaurPrompts
+  dinosaurPrompts,
+  animalPrompts,
+  beyoncePrompts,
+  broncosPrompts,
+  careBearPrompts
 };

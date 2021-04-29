@@ -1,5 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
+const { broncos } = require('./datasets/broncos');
+
 
 const {
   breweryPrompts,
@@ -16,6 +18,10 @@ const {
   nationalParksPrompts,
   weatherPrompts,
   bookPrompts,
+  animalPrompts,
+  beyoncePrompts,
+  broncosPrompts,
+  careBearPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -738,4 +744,891 @@ describe("PROTOTYPES", () => {
       }])
     })
   })
+
+  describe("Animal Prompts", () => {
+    it.skip("findCarnivores", () => {
+      const e = animalPrompts.findCarnivores();
+
+      expect(e).to.deep.equal([
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Kansas City Zoo',
+          maxWeight: 8000,
+          typesAllowed: [ 'Omnivore', 'Carnivore' ],
+          continents: [ 'Africa', 'Asia' ] },
+        { name: 'Central Park Zoo',
+          maxWeight: 7000,
+          typesAllowed: [ 'Carnivore' ],
+          continents: [ 'Africa', 'North America' ] }
+      ])
+    });
+
+    it.skip("asianAnimals", () => {
+      const e = animalPrompts.asianAnimals();
+
+      expect(e).to.deep.equal([
+        { name: 'Denver Zoo',
+          maxWeight: 10000,
+          typesAllowed: [ 'Herbivore', 'Omnivore' ],
+          continents: [ 'Africa', 'Asia', 'North America' ] },
+        { name: 'Bronx Zoo',
+          maxWeight: 5000,
+          typesAllowed: [ 'Herbivore' ],
+          continents: [ 'Africa', 'Asia', 'North America' ] },
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Kansas City Zoo',
+          maxWeight: 8000,
+          typesAllowed: [ 'Omnivore', 'Carnivore' ],
+          continents: [ 'Africa', 'Asia' ] },
+        { name: 'San Antonio Zoo',
+          maxWeight: 3000,
+          typesAllowed: [ 'Herbivore', 'Omnivore' ],
+          continents: [ 'Asia', 'North America' ]
+      }])
+    })
+
+    it.skip("findHome", () => {
+      const e = animalPrompts.findHome('Tiger');
+
+      expect(e).to.equal('Africa')
+    })
+
+    it.skip("weighingAnimals", () => {
+      const e = animalPrompts.weighingAnimals('Wolf', 6);
+
+      expect(e).to.equal(540)
+    })
+
+    it.skip("wolfAcceptingZoos", () => {
+      const e = animalPrompts.wolfAcceptingZoos();
+
+      expect(e).to.deep.equal([
+        { name: 'San Diego Wild Animal Park',
+          maxWeight: 7500,
+          typesAllowed: [ 'Herbivore', 'Carnivore' ],
+          continents: [ 'Asia', 'North America' ] },
+        { name: 'Central Park Zoo',
+          maxWeight: 7000,
+          typesAllowed: [ 'Carnivore' ],
+          continents: [ 'Africa', 'North America' ] }
+      ])
+    })
+
+    it.skip("heaviestAnimal", () => {
+      const e = animalPrompts.heaviestAnimal();
+
+      expect(e).to.deep.equal(
+        { name:'Rhino',
+          weight: 1700,
+          type: 'Herbivore',
+          home: 'Africa' }
+      )
+    })
+
+    it.skip("smallestAnimalZoo", () => {
+      const e = animalPrompts.smallestAnimalZoo();
+
+      expect(e).to.deep.equal(
+        { name: 'San Antonio Zoo',
+          maxWeight: 3000,
+          typesAllowed:['Herbivore', 'Omnivore'],
+          continents:['Asia', 'North America'] }
+      )
+    })
+
+    it.skip("zooAnimalsAccepted", () => {
+      const e = animalPrompts.zooAnimalsAccepted();
+
+      expect(e).to.deep.equal(
+        { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
+          'Bronx Zoo': [ 'Rhino', 'Monkey', 'Panda' ],
+          'San Diego Wild Animal Park': [ 'Wolf', 'Panda' ],
+          'Kansas City Zoo': [ 'Lion', 'Tiger' ],
+          'Central Park Zoo': [ 'Lion', 'Tiger', 'Wolf' ],
+          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ] }
+      )
+    })
+  });
+
+  describe("Beyonce Prompts", () => {
+    it.skip("beyonceHits", () => {
+      const e = beyoncePrompts.beyonceHits();
+
+      expect(e).to.deep.equal([
+          'bootylicious',
+          'singleLadies',
+          'letMeUpgradeYou',
+          'sorry',
+          'sayMyName',
+          'feelingMyself'
+      ])
+    });
+
+    it.skip("fierceRatings", () => {
+      const e = beyoncePrompts.fierceRatings();
+
+      expect(e).to.deep.equal([ 7, 10, 10, 10, 7, 9 ])
+    });
+
+    it.skip("noBodySuit", () => {
+      const e = beyoncePrompts.noBodySuit();
+
+      expect(e).to.deep.equal({
+        title: 'bootylicious',
+        group: true,
+        groupName: 'destinysChild',
+        hair: [ 'straight', 'blonde', 'pink tips' ],
+        signatureLook: 'fedora with yellow feather',
+        videoTheme: 'dressing room dance',
+        bestLine: 'Move your body up and down, make your booty touch the ground',
+        fierceness: 7,
+        formation: false,
+        dancers: 20
+      })
+    });
+
+    it.skip("bodySuits", () => {
+      const e = beyoncePrompts.bodySuits();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("highFierce", () => {
+      const e = beyoncePrompts.highFierce();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("whereIsNicki", () => {
+      const e = beyoncePrompts.whereIsNicki();
+
+      expect(e).to.deep.equal(
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      )
+    });
+
+    it.skip("soloSongs", () => {
+      const e = beyoncePrompts.soloSongs();
+
+      expect(e).to.deep.equal(
+        [
+          {
+            title: 'singleLadies',
+            group: false,
+            groupName: 'none',
+            hair: [ 'honey brown', 'half up, half down' ],
+            signatureLook: 'black bodysuit and legs for days',
+            videoTheme: 'single ladies dance',
+            bestLine: "if you like it then you should've put a ring on it",
+            fierceness: 10,
+            formation: true,
+            dancers: 2
+          },
+          {
+            title: 'letMeUpgradeYou',
+            group: false,
+            groupName: 'none',
+            hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+            signatureLook: 'flapper dress and bodysuit',
+            videoTheme: 'decadence, water, gold beads and pearls',
+            bestLine: 'I could do for you what Martin did for the people',
+            fierceness: 10,
+            formation: true,
+            dancers: 5
+          },
+          {
+            title: 'sorry',
+            group: false,
+            groupName: 'none',
+            hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+            signatureLook: 'braided crown with gold bikini top',
+            videoTheme: 'party bus and Serena Williams in bodysuit',
+            bestLine: 'Boi bye',
+            fierceness: 10,
+            formation: false,
+            dancers: 1
+          }
+        ]
+      )
+    });
+
+    it.skip("post2006Movies", () => {
+      const e = beyoncePrompts.post2006Movies();
+
+      expect(e).to.deep.equal([
+          { title: 'Dreamgirls', year: 2006, rating: 7 },
+          { title: 'Obsessed', year: 2009, rating: 6 },
+          { title: 'Cadillac Records', year: 2008, rating: 8 },
+          { title: 'Life is But a Dream', year: 2013, rating: 6 },
+          { title: 'The Pink Panther', year: 2006, rating: 4 },
+          { title: 'Epic', year: 2013, rating: 7 }
+      ])
+    });
+
+    it.skip("groupHitSongs", () => {
+      const e = beyoncePrompts.groupHitSongs();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'bootylicious',
+          group: true,
+          groupName: 'destinysChild',
+          hair: [ 'straight', 'blonde', 'pink tips' ],
+          signatureLook: 'fedora with yellow feather',
+          videoTheme: 'dressing room dance',
+          bestLine: 'Move your body up and down, make your booty touch the ground',
+          fierceness: 7,
+          formation: false,
+          dancers: 20
+        },
+        {
+          title: 'sayMyName',
+          group: true,
+          groupName: 'destinysChild',
+          hair: [ 'blonde', 'curly', 'braid', 'pony tail' ],
+          signatureLook: 'none',
+          videoTheme: 'color blocked scenes with group',
+          bestLine: 'say my name, say my name',
+          fierceness: 7,
+          formation: true,
+          dancers: 6
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("blondeSong", () => {
+      const e = beyoncePrompts.blondeSong();
+
+      expect(e).to.deep.equal({
+        title: 'bootylicious',
+        group: true,
+        groupName: 'destinysChild',
+        hair: [ 'straight', 'blonde', 'pink tips' ],
+        signatureLook: 'fedora with yellow feather',
+        videoTheme: 'dressing room dance',
+        bestLine: 'Move your body up and down, make your booty touch the ground',
+        fierceness: 7,
+        formation: false,
+        dancers: 20
+      })
+    });
+
+    it.skip("sorry", () => {
+      const e = beyoncePrompts.sorry();
+
+      expect(e).to.deep.equal({
+        title: 'sorry',
+        group: false,
+        groupName: 'none',
+        hair: ['braids', 'bun', 'blonde', 'waves', 'bob'],
+        signatureLook: 'braided crown with gold bikini top',
+        videoTheme: 'party bus and Serena Williams in bodysuit',
+        bestLine: 'Boi bye',
+        fierceness: 10,
+        formation: false,
+        dancers: 1
+      })
+    });
+
+    it.skip("superFierce", () => {
+      const e = beyoncePrompts.superFierce();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        }
+      ])
+    });
+
+    it.skip("avgFierceness", () => {
+      const e = beyoncePrompts.avgFierceness();
+
+      expect(e).to.equal(8.833333333333334)
+    });
+
+    it.skip("movieRatingSum", () => {
+      const e = beyoncePrompts.movieRatingSum();
+
+      expect(e).to.equal(48)
+    });
+
+    it.skip("movieRatingAvg", () => {
+      const e = beyoncePrompts.movieRatingAvg();
+
+      expect(e).to.equal(6)
+    });
+
+    it.skip("fierceObject", () => {
+      const e = beyoncePrompts.fierceObject();
+
+      expect(e).to.deep.equal({
+        bootylicious: 7,
+        singleLadies: 10,
+        letMeUpgradeYou: 10,
+        sorry: 10,
+        sayMyName: 7,
+        feelingMyself: 9
+      })
+    });
+
+    it.skip("movieRatings", () => {
+      const e = beyoncePrompts.movieRatings();
+
+      expect(e).to.deep.equal({
+        "Austin Power's Goldmember": { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Dreamgirls: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Obsessed: { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'Cadillac Records': { rating: 8, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'Life is But a Dream': { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'The Pink Panther': { rating: 4, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Epic: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'The Fighting Temptations': { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' }
+      })
+    });
+
+    it.skip("dancersSum", () => {
+      const e = beyoncePrompts.dancersSum();
+
+      expect(e).to.equal(34)
+    });
+
+    it.skip("allHairstyles", () => {
+      const e = beyoncePrompts.allHairstyles();
+
+      expect(e).to.deep.equal([
+        'straight',           'blonde',
+        'pink tips',          'honey brown',
+        'half up, half down', 'beaded bun',
+        'wet hair',           'waves',
+        'braids',             'bun',
+        'bob',                'curly',
+        'braid',              'pony tail',
+        'wavy'
+      ])
+    });
+
+    it.skip("hairstyleTotals", () => {
+      const e = beyoncePrompts.hairstyleTotals();
+
+      expect(e).to.equal({
+        straight: 1,
+        blonde: 4,
+        'pink tips': 1,
+        'honey brown': 2,
+        'half up, half down': 1,
+        'beaded bun': 1,
+        'wet hair': 1,
+        waves: 2,
+        braids: 1,
+        bun: 1,
+        bob: 1,
+        curly: 1,
+        braid: 1,
+        'pony tail': 1,
+        wavy: 1
+      })
+    });
+  })
+
+  describe("Broncos Prompts", () => {
+    it.skip("highestRatedPlayer", () => {
+      const e = broncosPrompts.highestRatedPlayer();
+
+      expect(e).to.equal('Von Miller')
+    });
+    it.skip("playerNames", () => {
+      const e = broncosPrompts.playerNames();
+
+      expect(e).to.deep.equal([
+        'Kevin Hogan',      'Royce Freeman',
+        'DaeSean Hamilton', 'Will Parks',
+        'Tim Patrick',      'Sam Jones',
+        'Courtland Sutton', 'Jake Butt',
+        'Todd Davis',       'Elijah Wilkinson',
+        'Ronald Leary',     'Phillip Lindsay',
+        'Nico Falah',       'Joe Flacco',
+        'Connor McGovern',  'Josey Jewell',
+        'Troy Fumagalli',   'Dymonte Thomas',
+        'Devontae Booker',  'Garett Bolles',
+        'Derek Wolfe',      'Kareem Jackson',
+        'Shelby Harris',    'Andy Janovich',
+        'Adam Gotsis',      'JaWuan James',
+        'Isaac Yiadom',     'Bradley Chubb',
+        'Von Miller',       'Will Parks',
+        'Shamarko Thomas',  'Justin Simmons',
+        'Chris Harris Jr.'
+      ])
+    });
+    it.skip("adjustRatings", () => {
+      expect(broncos.map(bronco => bronco.rating)).to.deep.equal([
+        72, 77, 85, 77, 79, 78, 90, 78, 88,
+        84, 79, 88, 81, 90, 86, 80, 80, 79,
+        79, 88, 83, 83, 89, 71, 80, 82, 82,
+        82, 95, 84, 87, 79, 88
+      ])
+
+      broncosPrompts.adjustRatings();
+
+      expect(broncos.map(bronco => bronco.rating)).to.deep.equal([
+        74, 79, 87, 72, 81, 80, 92, 77, 90,
+        86, 81, 87, 76, 92, 88, 82, 82, 81,
+        81, 90, 85, 85, 91, 73, 82, 84, 81,
+        84, 97, 86, 82, 81, 90
+      ]);
+    });
+
+    it.skip("offensiveTotal", () => {
+      const e = broncosPrompts.offensiveTotal();
+
+      expect(e).to.equal(18)
+    });
+    it.skip("defensiveTotal", () => {
+      const e = broncosPrompts.defensiveTotal();
+
+      expect(e).to.equal(15)
+    });
+    it.skip("separateTeams", () => {
+      const e = broncosPrompts.separateTeams();
+
+      expect(e).to.deep.equal({
+        offense: [
+          'Kevin Hogan',      'Royce Freeman',
+          'DaeSean Hamilton', 'Tim Patrick',
+          'Sam Jones',        'Courtland Sutton',
+          'Jake Butt',        'Elijah Wilkinson',
+          'Ronald Leary',     'Phillip Lindsay',
+          'Nico Falah',       'Joe Flacco',
+          'Connor McGovern',  'Troy Fumagalli',
+          'Devontae Booker',  'Garett Bolles',
+          'Andy Janovich',    'JaWuan James'
+        ],
+        defense: [
+          'Will Parks',       'Todd Davis',
+          'Josey Jewell',     'Dymonte Thomas',
+          'Derek Wolfe',      'Kareem Jackson',
+          'Shelby Harris',    'Adam Gotsis',
+          'Isaac Yiadom',     'Bradley Chubb',
+          'Von Miller',       'Will Parks',
+          'Shamarko Thomas',  'Justin Simmons',
+          'Chris Harris Jr.'
+        ]
+      })
+    });
+
+    it.skip("offenseRatings", () => {
+      const e = broncosPrompts.offenseRatings();
+
+      expect(e.map(player => player.name)).to.deep.equal([
+        'Courtland Sutton',
+        'Joe Flacco',
+        'Phillip Lindsay',
+        'Garett Bolles',
+        'Connor McGovern',
+        'DaeSean Hamilton',
+        'Elijah Wilkinson',
+        'JaWuan James',
+        'Nico Falah',
+        'Troy Fumagalli',
+        'Tim Patrick',
+        'Ronald Leary',
+        'Devontae Booker',
+        'Sam Jones',
+        'Jake Butt',
+        'Royce Freeman',
+        'Kevin Hogan',
+        'Andy Janovich',
+      ])
+    });
+    it.skip("cornerbackRatings", () => {
+      const e = broncosPrompts.cornerbackRatings();
+
+      expect(e).to.deep.equal([
+        {
+          name: 'Chris Harris Jr.',
+          pos: 'CB',
+          status: 'active',
+          side: 'defense',
+          rating: 88
+        },
+        {
+          name: 'Kareem Jackson',
+          pos: 'CB',
+          status: 'active',
+          side: 'defense',
+          rating: 83
+        },
+        {
+          name: 'Isaac Yiadom',
+          pos: 'CB',
+          status: 'questionable',
+          side: 'defense',
+          rating: 82
+        }
+      ])
+    });
+    it.skip("injuredPlayers", () => {
+      const e = broncosPrompts.injuredPlayers();
+
+      expect(e).to.deep.equal([
+        {
+          name: 'Will Parks',
+          pos: 'FS',
+          status: 'injured',
+          side: 'defense',
+          rating: 77
+        },
+        {
+          name: 'Nico Falah',
+          pos: 'LG',
+          status: 'injured',
+          side: 'offense',
+          rating: 81
+        },
+        {
+          name: 'Shamarko Thomas',
+          pos: 'FS',
+          status: 'injured',
+          side: 'defense',
+          rating: 87
+        }
+      ])
+    });
+    it.skip("questionablePlayers", () => {
+      const e = broncosPrompts.questionablePlayers();
+
+      expect(e).to.deep.equal([
+        {
+          name: 'Jake Butt',
+          pos: 'TE',
+          status: 'questionable',
+          side: 'offense',
+          rating: 78
+        },
+        {
+          name: 'Phillip Lindsay',
+          pos: 'RB',
+          status: 'questionable',
+          side: 'offense',
+          rating: 88
+        },
+        {
+          name: 'Isaac Yiadom',
+          pos: 'CB',
+          status: 'questionable',
+          side: 'defense',
+          rating: 82
+        }
+      ])
+    });
+    it.skip("activePlayers", () => {
+      const e = broncosPrompts.activePlayers();
+
+      expect(e.map(player => player.name)).to.deep.equal([
+        'Kevin Hogan',
+        'Royce Freeman',
+        'DaeSean Hamilton',
+        'Tim Patrick',
+        'Sam Jones',
+        'Courtland Sutton',
+        'Todd Davis',
+        'Elijah Wilkinson',
+        'Ronald Leary',
+        'Joe Flacco',
+        'Connor McGovern',
+        'Josey Jewell',
+        'Troy Fumagalli',
+        'Dymonte Thomas',
+        'Devontae Booker',
+        'Garett Bolles',
+        'Derek Wolfe',
+        'Kareem Jackson',
+        'Shelby Harris',
+        'Andy Janovich',
+        'Adam Gotsis',
+        'JaWuan James',
+        'Bradley Chubb',
+        'Von Miller',
+        'Will Parks',
+        'Justin Simmons',
+        'Chris Harris Jr.',
+      ])
+    });
+  });
+
+  describe("Care Bear Prompts", () => {
+    it.skip("getBear", () => {
+      const e = careBearPrompts.getBear('Oopsy');
+
+      expect(e).to.deep.equal([{
+        appearanceCount: 2,
+        collection: '00s',
+        bellyBadge: 'He does not have his own Belly badge but he will often draw a yellow shooting star (or in the intro The Show Logo) on his stomach with a marker. Occasionally, he also draws other things on his belly as well.',
+        furColor: 'Light green',
+        gender: 'Male',
+        name: 'Oopsy Bear',
+        nationality: 'Care-a-Lot, Kingdom of Caring' }
+      ])
+    });
+
+    it.skip("collectionTotals", () => {
+      const e = careBearPrompts.collectionTotals();
+
+      expect(e).to.deep.equal({
+        Original: 10,
+        '90s': 16,
+        '00s': 20,
+        '10s': 3,
+        Other: 3
+      })
+    });
+    it.skip("organizedBears", () => {
+      const e = careBearPrompts.organizedBears();
+
+      expect(e.map(bear => bear.name)).to.deep.equal([
+        'All My Heart Bear', 'Always There Bear',
+        'America Cares Bear', 'Amigo Bear',
+        'Baby Hugs Bear', 'Baby Tugs Bear',
+        'Bashful Heart Bear', 'Bedtime Bear',
+        'Best Friend Bear', 'Birthday Bear',
+        'Champ Bear', 'Cheer Bear',
+        'Daydream Bear', 'Do Your Best Bear',
+        'Forest Friend Bear', 'Friend Bear',
+        'Funshine Bear', 'Good Luck Bear',
+        'Grams Bear', 'Great Giving Bear',
+        'Grumpy Bear', 'Harmony Bear',
+        'Heartsong Bear', 'Helpful Heart Bear',
+        'I Love You Bear', 'Laugh-a-Lot Bear',
+        'Love-a-Lot Bear', 'Me Bear',
+        'Messy Bear', 'Oopsy Bear',
+        'Perfetct Panda', 'Piece of Heart Bear',
+        'Pink Power Bear', 'Play-a-Lot Bear',
+        'Polite Panda', 'Sea Friend Bear',
+        'Secret Bear', 'Share Bear',
+        'Shine Bright Bear', 'Smart Heart Bear',
+        'Superstar Bear', 'Surprise Bear',
+        'Sweet Dreams Bear', 'Sweet Sakura Bear',
+        'Take Care Bear', 'Tenderheart Bear',
+        'Thanks-a-Lot Bear', 'Too Loud Bear',
+        'True Heart Bear', 'Wish Bear',
+        'Wonderheart Bear', 'Work of Heart Bear'
+      ])
+    });
+    it.skip("search", () => {
+      const e = careBearPrompts.search('furColor', 'Fuchsia');
+
+      expect(e).to.deep.equal([ { appearanceCount: 2,
+        collection: '00s',
+        bellyBadge: 'Sunrise inside a violet heart',
+        furColor: 'Fuchsia',
+        gender: 'Female',
+        name: 'Shine Bright Bear',
+        nationality: 'Care-a-Lot, Kingdom of Caring' }
+      ])
+    });
+
+    it.skip("getAppearanceCount", () => {
+      const e = careBearPrompts.getAppearanceCount();
+
+      expect(e).to.deep.equal({
+        '1': [
+          'Forest Friend Bear',  'I Love You Bear',
+          'Sea Friend Bear',     'Take Care Bear',
+          'America Cares Bear',  'Smart Heart Bear',
+          'Helpful Heart Bear',  'All My Heart Bear',
+          'Heartsong Bear',      'Play-a-Lot Bear',
+          'Superstar Bear',      'Always There Bear',
+          'Pink Power Bear',     'Sweet Sakura Bear',
+          'Great Giving Bear',   'Wonderheart Bear',
+          'Piece of Heart Bear', 'Me Bear',
+          'Messy Bear',          'Too Loud Bear'
+        ],
+        '2': [
+          'Daydream Bear',
+          'Grams Bear',
+          'Perfetct Panda',
+          'Bashful Heart Bear',
+          'Do Your Best Bear',
+          'Thanks-a-Lot Bear',
+          'Amigo Bear',
+          'Oopsy Bear',
+          'Shine Bright Bear',
+          'Work of Heart Bear',
+          'Sweet Dreams Bear'
+        ],
+        '3': [ 'Baby Tugs Bear', 'Polite Panda', 'Best Friend Bear' ],
+        '4': [
+          'Birthday Bear',
+          'Secret Bear',
+          'Surprise Bear',
+          'True Heart Bear'
+        ],
+        '5': [ 'Grumpy Bear', 'Baby Hugs Bear', 'Share Bear', 'Laugh-a-Lot Bear' ],
+        '6': [ 'Harmony Bear' ],
+        '7': [ 'Cheer Bear', 'Friend Bear', 'Good Luck Bear', 'Wish Bear' ],
+        '8': [ 'Funshine Bear', 'Tenderheart Bear' ],
+        '9': [ 'Love-a-Lot Bear', 'Champ Bear' ],
+        '10': [ 'Bedtime Bear' ]
+      })
+    });
+  });
+
 })
