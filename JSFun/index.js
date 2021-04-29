@@ -12,6 +12,8 @@ const { bosses, sidekicks } = require('./datasets/bosses');
 const { constellations, stars } = require('./datasets/astronomy');
 const { weapons, characters } = require('./datasets/ultima');
 const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
+const { animals, zoos } = require('./datasets/animals');
+const { beyonce } = require('./datasets/beyonce');
 
 
 // SINGLE DATASETS
@@ -530,21 +532,11 @@ const dinosaurPrompts = {
   }
 };
 
+// =================================================================
 
+// IRON FE DATASETS
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 
 // DATASET: animals, zoos from ./datasets/animals
@@ -631,6 +623,224 @@ const animalPrompts = {
 
 }
 
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: beyonce from ./datasets/beyonce.js
+const beyoncePrompts = {
+  beyonceHits() {
+    // return an array of all the hits
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  fierceRatings() {
+    // create an array with a list of all of Beyonce's fierceness ratings
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  noBodySuit() {
+    // give me a song where Beyonce is not wearing a bodysuit
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  bodySuits() {
+    // give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  highFierce() {
+    // create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  whereIsNicki() {
+    // find a song where Nicki Minaj is part of the group
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  soloSongs() {
+    // create an array with all Beyonce's songs that were not with a group
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  post2006Movies() {
+    // create an array with all of the movies Beyonce made in 2006 and after
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  groupHitSongs() {
+    // find all of the group hit songs
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  blondeSong() {
+    // find a hit song where Beyonce's hair is blonde
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  sorry() {
+    // find the hit song sorry
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  superFierce() {
+    // find all hit songs where Beyonce's fierceness rating is 10
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  avgFierceness() {
+    // get the average fierceness value for all of her hit songs
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatingSum() {
+    // sum up Beyonces rating value for all of her movies
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatingAvg() {
+    // get the average rating value for all of her movies
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  fierceObject() {
+    // create an object where the properties are song names and the value is an object which contains that fierceness
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  movieRatings() {
+    // create an object where the properties are movie names and the value is an object which contains that rating and average rating
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  dancersSum() {
+    // sum up the total number of dancers in all of the hit song videos
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  allHairstyles() {
+    // create an array of beyonces hairstyles without repeats
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+  hairstyleTotals() {
+    // create an object list with beyonces hairstyles with a tally of each
+
+    const result = 'REPLACE WITH YOUR RESULT HERE';
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+
+}
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -646,5 +856,6 @@ module.exports = {
   weatherPrompts,
   bookPrompts,
   dinosaurPrompts,
-  animalPrompts
+  animalPrompts,
+  beyoncePrompts
 };

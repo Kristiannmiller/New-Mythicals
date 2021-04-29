@@ -16,7 +16,8 @@ const {
   nationalParksPrompts,
   weatherPrompts,
   bookPrompts,
-  animalPrompts
+  animalPrompts,
+  beyoncePrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -849,4 +850,438 @@ describe("PROTOTYPES", () => {
       )
     })
   });
+
+  describe("Beyonce Prompts", () => {
+    it.skip("beyonceHits", () => {
+      const e = beyoncePrompts.beyonceHits();
+
+      expect(e).to.deep.equal([
+          'bootylicious',
+          'singleLadies',
+          'letMeUpgradeYou',
+          'sorry',
+          'sayMyName',
+          'feelingMyself'
+      ])
+    });
+
+    it.skip("fierceRatings", () => {
+      const e = beyoncePrompts.fierceRatings();
+
+      expect(e).to.deep.equal([ 7, 10, 10, 10, 7, 9 ])
+    });
+
+    it.skip("noBodySuit", () => {
+      const e = beyoncePrompts.noBodySuit();
+
+      expect(e).to.deep.equal({
+        title: 'bootylicious',
+        group: true,
+        groupName: 'destinysChild',
+        hair: [ 'straight', 'blonde', 'pink tips' ],
+        signatureLook: 'fedora with yellow feather',
+        videoTheme: 'dressing room dance',
+        bestLine: 'Move your body up and down, make your booty touch the ground',
+        fierceness: 7,
+        formation: false,
+        dancers: 20
+      })
+    });
+
+    it.skip("bodySuits", () => {
+      const e = beyoncePrompts.bodySuits();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("highFierce", () => {
+      const e = beyoncePrompts.highFierce();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("whereIsNicki", () => {
+      const e = beyoncePrompts.whereIsNicki();
+
+      expect(e).to.deep.equal(
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      )
+    });
+
+    it.skip("soloSongs", () => {
+      const e = beyoncePrompts.soloSongs();
+
+      expect(e).to.deep.equal(
+        [
+          {
+            title: 'singleLadies',
+            group: false,
+            groupName: 'none',
+            hair: [ 'honey brown', 'half up, half down' ],
+            signatureLook: 'black bodysuit and legs for days',
+            videoTheme: 'single ladies dance',
+            bestLine: "if you like it then you should've put a ring on it",
+            fierceness: 10,
+            formation: true,
+            dancers: 2
+          },
+          {
+            title: 'letMeUpgradeYou',
+            group: false,
+            groupName: 'none',
+            hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+            signatureLook: 'flapper dress and bodysuit',
+            videoTheme: 'decadence, water, gold beads and pearls',
+            bestLine: 'I could do for you what Martin did for the people',
+            fierceness: 10,
+            formation: true,
+            dancers: 5
+          },
+          {
+            title: 'sorry',
+            group: false,
+            groupName: 'none',
+            hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+            signatureLook: 'braided crown with gold bikini top',
+            videoTheme: 'party bus and Serena Williams in bodysuit',
+            bestLine: 'Boi bye',
+            fierceness: 10,
+            formation: false,
+            dancers: 1
+          }
+        ]
+      )
+    });
+
+    it.skip("post2006Movies", () => {
+      const e = beyoncePrompts.post2006Movies();
+
+      expect(e).to.deep.equal([
+          { title: 'Dreamgirls', year: 2006, rating: 7 },
+          { title: 'Obsessed', year: 2009, rating: 6 },
+          { title: 'Cadillac Records', year: 2008, rating: 8 },
+          { title: 'Life is But a Dream', year: 2013, rating: 6 },
+          { title: 'The Pink Panther', year: 2006, rating: 4 },
+          { title: 'Epic', year: 2013, rating: 7 }
+      ])
+    });
+
+    it.skip("groupHitSongs", () => {
+      const e = beyoncePrompts.groupHitSongs();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'bootylicious',
+          group: true,
+          groupName: 'destinysChild',
+          hair: [ 'straight', 'blonde', 'pink tips' ],
+          signatureLook: 'fedora with yellow feather',
+          videoTheme: 'dressing room dance',
+          bestLine: 'Move your body up and down, make your booty touch the ground',
+          fierceness: 7,
+          formation: false,
+          dancers: 20
+        },
+        {
+          title: 'sayMyName',
+          group: true,
+          groupName: 'destinysChild',
+          hair: [ 'blonde', 'curly', 'braid', 'pony tail' ],
+          signatureLook: 'none',
+          videoTheme: 'color blocked scenes with group',
+          bestLine: 'say my name, say my name',
+          fierceness: 7,
+          formation: true,
+          dancers: 6
+        },
+        {
+          title: 'feelingMyself',
+          group: true,
+          groupName: 'Nicki Minaj featuring Beyonce',
+          hair: [ 'blonde', 'wavy' ],
+          signatureLook: 'sporty bodysuit',
+          videoTheme: 'Coachella music festival',
+          bestLine: 'Im felling myself',
+          fierceness: 9,
+          formation: false,
+          dancers: 0
+        }
+      ])
+    });
+
+    it.skip("blondeSong", () => {
+      const e = beyoncePrompts.blondeSong();
+
+      expect(e).to.deep.equal({
+        title: 'bootylicious',
+        group: true,
+        groupName: 'destinysChild',
+        hair: [ 'straight', 'blonde', 'pink tips' ],
+        signatureLook: 'fedora with yellow feather',
+        videoTheme: 'dressing room dance',
+        bestLine: 'Move your body up and down, make your booty touch the ground',
+        fierceness: 7,
+        formation: false,
+        dancers: 20
+      })
+    });
+
+    it.skip("sorry", () => {
+      const e = beyoncePrompts.sorry();
+
+      expect(e).to.deep.equal({
+        title: 'sorry',
+        group: false,
+        groupName: 'none',
+        hair: ['braids', 'bun', 'blonde', 'waves', 'bob'],
+        signatureLook: 'braided crown with gold bikini top',
+        videoTheme: 'party bus and Serena Williams in bodysuit',
+        bestLine: 'Boi bye',
+        fierceness: 10,
+        formation: false,
+        dancers: 1
+      })
+    });
+
+    it.skip("superFierce", () => {
+      const e = beyoncePrompts.superFierce();
+
+      expect(e).to.deep.equal([
+        {
+          title: 'singleLadies',
+          group: false,
+          groupName: 'none',
+          hair: [ 'honey brown', 'half up, half down' ],
+          signatureLook: 'black bodysuit and legs for days',
+          videoTheme: 'single ladies dance',
+          bestLine: "if you like it then you should've put a ring on it",
+          fierceness: 10,
+          formation: true,
+          dancers: 2
+        },
+        {
+          title: 'letMeUpgradeYou',
+          group: false,
+          groupName: 'none',
+          hair: [ 'beaded bun', 'wet hair', 'honey brown', 'waves' ],
+          signatureLook: 'flapper dress and bodysuit',
+          videoTheme: 'decadence, water, gold beads and pearls',
+          bestLine: 'I could do for you what Martin did for the people',
+          fierceness: 10,
+          formation: true,
+          dancers: 5
+        },
+        {
+          title: 'sorry',
+          group: false,
+          groupName: 'none',
+          hair: [ 'braids', 'bun', 'blonde', 'waves', 'bob' ],
+          signatureLook: 'braided crown with gold bikini top',
+          videoTheme: 'party bus and Serena Williams in bodysuit',
+          bestLine: 'Boi bye',
+          fierceness: 10,
+          formation: false,
+          dancers: 1
+        }
+      ])
+    });
+
+    it.skip("avgFierceness", () => {
+      const e = beyoncePrompts.avgFierceness();
+
+      expect(e).to.equal(8.833333333333334)
+    });
+
+    it.skip("movieRatingSum", () => {
+      const e = beyoncePrompts.movieRatingSum();
+
+      expect(e).to.equal(48)
+    });
+
+    it.skip("movieRatingAvg", () => {
+      const e = beyoncePrompts.movieRatingAvg();
+
+      expect(e).to.equal(6)
+    });
+
+    it.skip("fierceObject", () => {
+      const e = beyoncePrompts.fierceObject();
+
+      expect(e).to.deep.equal({
+        bootylicious: 7,
+        singleLadies: 10,
+        letMeUpgradeYou: 10,
+        sorry: 10,
+        sayMyName: 7,
+        feelingMyself: 9
+      })
+    });
+
+    it.skip("movieRatings", () => {
+      const e = beyoncePrompts.movieRatings();
+
+      expect(e).to.deep.equal({
+        "Austin Power's Goldmember": { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Dreamgirls: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Obsessed: { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'Cadillac Records': { rating: 8, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'Life is But a Dream': { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'The Pink Panther': { rating: 4, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        Epic: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
+        'The Fighting Temptations': { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' }
+      })
+    });
+
+    it.skip("dancersSum", () => {
+      const e = beyoncePrompts.dancersSum();
+
+      expect(e).to.equal(34)
+    });
+
+    it.skip("allHairstyles", () => {
+      const e = beyoncePrompts.allHairstyles();
+
+      expect(e).to.deep.equal([
+        'straight',           'blonde',
+        'pink tips',          'honey brown',
+        'half up, half down', 'beaded bun',
+        'wet hair',           'waves',
+        'braids',             'bun',
+        'bob',                'curly',
+        'braid',              'pony tail',
+        'wavy'
+      ])
+    });
+
+    it("hairstyleTotals", () => {
+      const e = beyoncePrompts.hairstyleTotals();
+
+      expect(e).to.equal({
+        straight: 1,
+        blonde: 4,
+        'pink tips': 1,
+        'honey brown': 2,
+        'half up, half down': 1,
+        'beaded bun': 1,
+        'wet hair': 1,
+        waves: 2,
+        braids: 1,
+        bun: 1,
+        bob: 1,
+        curly: 1,
+        braid: 1,
+        'pony tail': 1,
+        wavy: 1
+      })
+    });
+  })
 })
