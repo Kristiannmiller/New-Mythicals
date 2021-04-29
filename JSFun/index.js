@@ -371,25 +371,9 @@ const astronomyPrompts = {
   },
 
   constellationsStarsExistIn() {
-    // Return an array of the names of the constellations that the brightest stars are part of e.g.
-
-    //  [ "Canis Major",
-    //    "Carina",
-    //    "Boötes",
-    //    "Auriga",
-    //    "Orion",
-    //    "Lyra",
-    //    "Canis Minor",
-    //    "The Plow",
-    //    "Orion",
-    //    "The Little Dipper" ]
-
     const sortedStars = stars.sort((a, b) => a.visualMagnitude - b.visualMagnitude)
     const result = sortedStars.map(star => star.constellation).filter(name => name !== "");
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
