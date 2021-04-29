@@ -346,16 +346,6 @@ const astronomyPrompts = {
     return result;
   },
   starsByColor() {
-    // Return an object with keys of the different colors of the stars,
-    // whose values are arrays containing the star objects that match e.g.
-    // {
-    //   blue: [{obj}, {obj}, {obj}, {obj}, {obj}],
-    //   white: [{obj}, {obj}],
-    //   yellow: [{obj}, {obj}],
-    //   orange: [{obj}],
-    //   red: [{obj}]
-    // }
-
     const result = stars.reduce((colors, star) => {
       if(colors[star.color]) {
         colors[star.color].push(star)
@@ -365,11 +355,7 @@ const astronomyPrompts = {
       return colors
     }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   constellationsStarsExistIn() {
     const sortedStars = stars.sort((a, b) => a.visualMagnitude - b.visualMagnitude)
     const result = sortedStars.map(star => star.constellation).filter(name => name !== "");
