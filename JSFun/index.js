@@ -327,85 +327,39 @@ const bossPrompts = {
   }
 };
 
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: constellations, stars } from ./datasets/astronomy
 const astronomyPrompts = {
+
   starsInConstellations() {
-    // Return an array of all the stars that appear in any of the constellations
-    // listed in the constellations object e.g.
-    // [
-    //   { name: 'Rigel',
-    //     visualMagnitude: 0.13,
-    //     constellation: 'Orion',
-    //     lightYearsFromEarth: 860,
-    //     color: 'blue' },
-    //   { name: 'Betelgeuse',
-    //     visualMagnitude: 0.5,
-    //     constellation: 'Orion',
-    //     lightYearsFromEarth: 640,
-    //     color: 'red' }
-    // ]
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const constellationNames = Object.keys(constellations)
+    const result = stars.filter(star => {
+      let included = false
+      constellationNames.forEach(constellation => {
+        if(constellations[constellation].stars.includes(star.name)) {
+          included = true
+        }
+      })
+      return included
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   starsByColor() {
-    // Return an object with keys of the different colors of the stars,
-    // whose values are arrays containing the star objects that match e.g.
-    // {
-    //   blue: [{obj}, {obj}, {obj}, {obj}, {obj}],
-    //   white: [{obj}, {obj}],
-    //   yellow: [{obj}, {obj}],
-    //   orange: [{obj}],
-    //   red: [{obj}]
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = stars.reduce((colors, star) => {
+      if(colors[star.color]) {
+        colors[star.color].push(star)
+      } else {
+        colors[star.color] = [star]
+      }
+      return colors
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   constellationsStarsExistIn() {
-    // Return an array of the names of the constellations that the brightest stars are part of e.g.
-
-    //  [ "Canis Major",
-    //    "Carina",
-    //    "Boötes",
-    //    "Auriga",
-    //    "Orion",
-    //    "Lyra",
-    //    "Canis Minor",
-    //    "The Plow",
-    //    "Orion",
-    //    "The Little Dipper" ]
-
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const sortedStars = stars.sort((a, b) => a.visualMagnitude - b.visualMagnitude)
+    const result = sortedStars.map(star => star.constellation).filter(name => name !== "");
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
