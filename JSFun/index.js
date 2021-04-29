@@ -331,21 +331,8 @@ const bossPrompts = {
 
 // DATASET: constellations, stars } from ./datasets/astronomy
 const astronomyPrompts = {
+  
   starsInConstellations() {
-    // Return an array of all the stars that appear in any of the constellations
-    // listed in the constellations object e.g.
-    // [
-    //   { name: 'Rigel',
-    //     visualMagnitude: 0.13,
-    //     constellation: 'Orion',
-    //     lightYearsFromEarth: 860,
-    //     color: 'blue' },
-    //   { name: 'Betelgeuse',
-    //     visualMagnitude: 0.5,
-    //     constellation: 'Orion',
-    //     lightYearsFromEarth: 640,
-    //     color: 'red' }
-    // ]
     const constellationNames = Object.keys(constellations)
     const result = stars.filter(star => {
       let included = false
@@ -357,11 +344,7 @@ const astronomyPrompts = {
       return included
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-
   starsByColor() {
     // Return an object with keys of the different colors of the stars,
     // whose values are arrays containing the star objects that match e.g.
