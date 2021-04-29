@@ -331,7 +331,7 @@ const bossPrompts = {
 
 // DATASET: constellations, stars } from ./datasets/astronomy
 const astronomyPrompts = {
-  
+
   starsInConstellations() {
     const constellationNames = Object.keys(constellations)
     const result = stars.filter(star => {
@@ -356,7 +356,14 @@ const astronomyPrompts = {
     //   red: [{obj}]
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = stars.reduce((colors, star) => {
+      if(colors[star.color]) {
+        colors[star.color].push(star)
+      } else {
+        colors[star.color] = [star]
+      }
+      return colors
+    }, {});
     return result;
 
     // Annotation:
