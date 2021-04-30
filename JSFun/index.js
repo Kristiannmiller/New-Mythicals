@@ -372,10 +372,6 @@ const astronomyPrompts = {
 // DATASET: charaters, weapons from ./datasets/ultima
 const ultimaPrompts = {
   totalDamage() {
-
-    // Return the sum of the amount of damage for all the weapons that our characters can use
-    // Answer => 113
-
     const result = characters.reduce((damageTotal, character) => {
       character.weapons.forEach(weapon => {
         damageTotal += weapons[weapon].damage
@@ -383,9 +379,6 @@ const ultimaPrompts = {
       return damageTotal
     }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   charactersByTotal() {
