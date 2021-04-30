@@ -367,46 +367,33 @@ const astronomyPrompts = {
   }
 };
 
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: charaters, weapons from ./datasets/ultima
 const ultimaPrompts = {
   totalDamage() {
-
-    // Return the sum of the amount of damage for all the weapons that our characters can use
-    // Answer => 113
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = characters.reduce((damageTotal, character) => {
+      character.weapons.forEach(weapon => {
+        damageTotal += weapons[weapon].damage
+      })
+      return damageTotal
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   charactersByTotal() {
-
-    // Return the sum damage and total range for each character as an object.
-    // ex: [ { Avatar: { damage: 27, range: 24 }, { Iolo: {...}, ...}
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = characters.map(character => {
+      let damageTotal = character.weapons.reduce((total, weapon) => {
+        total += weapons[weapon].damage
+        return total
+      }, 0)
+      let rangeTotal = character.weapons.reduce((total, weapon) => {
+        total += weapons[weapon].range
+        return total
+      }, 0)
+      return {[character.name]: {damage: damageTotal, range: rangeTotal}}
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 };
 
