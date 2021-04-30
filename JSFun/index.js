@@ -376,7 +376,12 @@ const ultimaPrompts = {
     // Return the sum of the amount of damage for all the weapons that our characters can use
     // Answer => 113
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = characters.reduce((damageTotal, character) => {
+      character.weapons.forEach(weapon => {
+        damageTotal += weapons[weapon].damage
+      })
+      return damageTotal
+    }, 0);
     return result;
 
     // Annotation:
