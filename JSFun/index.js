@@ -382,10 +382,6 @@ const ultimaPrompts = {
   },
 
   charactersByTotal() {
-
-    // Return the sum damage and total range for each character as an object.
-    // ex: [ { Avatar: { damage: 27, range: 24 }, { Iolo: {...}, ...}
-
     const result = characters.map(character => {
       let damageTotal = character.weapons.reduce((total, weapon) => {
         total += weapons[weapon].damage
@@ -398,9 +394,6 @@ const ultimaPrompts = {
       return {[character.name]: {damage: damageTotal, range: rangeTotal}}
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 };
 
