@@ -430,29 +430,6 @@ const dinosaurPrompts = {
   },
 
   uncastActors() {
-    /*
-    Return an array of objects that contain the names of humans who have not been cast in a Jurassic Park movie (yet), their nationality, and their imdbStarMeterRating. The object in the array should be sorted alphabetically by nationality.
-    e.g.
-      [{
-        name: 'Justin Duncan',
-        nationality: 'Alien',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Karin Ohman',
-        nationality: 'Chinese',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Tom Wilhoit',
-        nationality: 'Kiwi',
-        imdbStarMeterRating: 1
-      }, {
-        name: 'Jeo D',
-        nationality: 'Martian',
-        imdbStarMeterRating: 0
-      }]
-    */
     let fullCastList = movies.reduce((allCast, movie) => {
       movie.cast.forEach(person => {
         if(!allCast.includes(person)) allCast.push(person)
@@ -466,9 +443,6 @@ const dinosaurPrompts = {
       return {name: actor, nationality: humans[actor].nationality, imdbStarMeterRating: humans[actor].imdbStarMeterRating}
     });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   actorsAgesInMovies() {
