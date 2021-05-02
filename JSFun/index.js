@@ -446,19 +446,6 @@ const dinosaurPrompts = {
   },
 
   actorsAgesInMovies() {
-    /*
-    Return an array of objects for each human and the age(s) they were in the movie(s) they were cast in, as an array of age(s). Only include humans who were cast in at least one movie.
-    e.g.
-    [ { name: 'Sam Neill', ages: [ 46, 54 ] },
-      { name: 'Laura Dern', ages: [ 26, 34 ] },
-      { name: 'Jeff Goldblum', ages: [ 41, 45, 63, 66 ] },
-      { name: 'Richard Attenborough', ages: [ 70, 74, 92, 95 ] },
-      { name: 'Ariana Richards', ages: [ 14, 18 ] },
-      { name: 'Joseph Mazello', ages: [ 10, 14 ] },
-      { name: 'BD Wong', ages: [ 33, 55, 58 ] },
-      { name: 'Chris Pratt', ages: [ 36, 39 ] },
-      { name: 'Bryce Dallas Howard', ages: [ 34, 37 ] } ]
-    */
     let fullCastList = movies.reduce((allCast, movie) => {
       movie.cast.forEach(person => {
         if(!allCast.includes(person)) allCast.push(person)
@@ -473,9 +460,6 @@ const dinosaurPrompts = {
       return castAges
     }, [...fullCastList]);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
