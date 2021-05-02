@@ -667,7 +667,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("averageAgePerMovie", () => {
+    it("averageAgePerMovie", () => {
       const e = dinosaurPrompts.averageAgePerMovie();
 
       expect(e).to.deep.equal({

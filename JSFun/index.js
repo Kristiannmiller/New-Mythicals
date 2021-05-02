@@ -439,7 +439,18 @@ const dinosaurPrompts = {
       }
     */
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = movies.reduce((avgAgeObj, movie) => {
+      let avgAge = movie.cast.reduce((total, person) => {
+        total += movie.yearReleased - humans[person].yearBorn
+        return total
+      }, 0) / movie.cast.length
+      if(avgAgeObj[movie.director]) {
+        avgAgeObj[movie.director][movie.title] = Math.floor(avgAge)
+      } else {
+        avgAgeObj[movie.director] = {[movie.title]: Math.floor(avgAge)}
+      }
+      return avgAgeObj
+    }, {});
     return result;
 
     // Annotation:
