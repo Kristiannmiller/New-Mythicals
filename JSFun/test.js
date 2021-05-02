@@ -690,25 +690,12 @@ describe("PROTOTYPES", () => {
     it("uncastActors", () => {
       const e = dinosaurPrompts.uncastActors();
 
-      expect(e).to.deep.equal([{
-        name: 'Justin Duncan',
-        nationality: 'Alien',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Karin Ohman',
-        nationality: 'Chinese',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Tom Wilhoit',
-        nationality: 'Kiwi',
-        imdbStarMeterRating: 1
-      }, {
-        name: 'Jeo D',
-        nationality: 'Martian',
-        imdbStarMeterRating: 0
-      }])
+      expect(e).to.deep.equal([
+        { name: 'Tom Wilhoit', nationality: 'Kiwi', imdbStarMeterRating: 1 },
+        { name: 'Jeo D', nationality: 'Martian', imdbStarMeterRating: 0 },
+        { name: 'Justin Duncan', nationality: 'Alien', imdbStarMeterRating: 0 },
+        { name: 'Karin Ohman', nationality: 'Chinese', imdbStarMeterRating: 0 }
+      ])
     });
 
     it.skip("actorsAgesInMovies", () => {

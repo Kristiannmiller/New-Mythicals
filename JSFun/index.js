@@ -453,8 +453,18 @@ const dinosaurPrompts = {
         imdbStarMeterRating: 0
       }]
     */
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    let fullCastList = movies.reduce((allCast, movie) => {
+      movie.cast.forEach(person => {
+        if(!allCast.includes(person)) allCast.push(person)
+      })
+      return allCast
+    }, [])
+    let unusedActors = Object.keys(humans).filter(human => {
+      return !fullCastList.includes(human)
+    })
+    const result = unusedActors.map(actor => {
+      return {name: actor, nationality: humans[actor].nationality, imdbStarMeterRating: humans[actor].imdbStarMeterRating}
+    });
     return result;
 
     // Annotation:
