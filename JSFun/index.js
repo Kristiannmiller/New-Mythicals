@@ -402,16 +402,6 @@ const ultimaPrompts = {
 // DATASET: dinosaurs, humans, movies from ./datasets/dinosaurs
 const dinosaurPrompts = {
   countAwesomeDinosaurs() {
-    // Return an object where each key is a movie title and each value is the
-    // number of awesome dinosaurs in that movie. e.g.:
-    // {
-    //   'Jurassic Park': 5,
-    //   'The Lost World: Jurassic Park': 8,
-    //   'Jurassic Park III': 9,
-    //   'Jurassic World': 11,
-    //   'Jurassic World: Fallen Kingdom': 18
-    // }
-
     const result = movies.reduce((awesomeDinosObj, movie) => {
       let awesomeDinoCount = movie.dinos.reduce((total, dino) => {
         if(dinosaurs[dino].isAwesome) total++
@@ -421,9 +411,6 @@ const dinosaurPrompts = {
       return awesomeDinosObj
     }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   averageAgePerMovie() {
