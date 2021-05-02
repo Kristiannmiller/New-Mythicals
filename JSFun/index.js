@@ -412,7 +412,14 @@ const dinosaurPrompts = {
     //   'Jurassic World: Fallen Kingdom': 18
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = movies.reduce((awesomeDinosObj, movie) => {
+      let awesomeDinoCount = movie.dinos.reduce((total, dino) => {
+        if(dinosaurs[dino].isAwesome) total++
+        return total
+      }, 0)
+      awesomeDinosObj[movie.title] = awesomeDinoCount
+      return awesomeDinosObj
+    }, {});
     return result;
 
     // Annotation:
