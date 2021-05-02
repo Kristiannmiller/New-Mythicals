@@ -397,127 +397,69 @@ const ultimaPrompts = {
   },
 };
 
-
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
-
+// =================================================================
 
 // DATASET: dinosaurs, humans, movies from ./datasets/dinosaurs
 const dinosaurPrompts = {
   countAwesomeDinosaurs() {
-    // Return an object where each key is a movie title and each value is the
-    // number of awesome dinosaurs in that movie. e.g.:
-    // {
-    //   'Jurassic Park': 5,
-    //   'The Lost World: Jurassic Park': 8,
-    //   'Jurassic Park III': 9,
-    //   'Jurassic World': 11,
-    //   'Jurassic World: Fallen Kingdom': 18
-    // }
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = movies.reduce((awesomeDinosObj, movie) => {
+      let awesomeDinoCount = movie.dinos.reduce((total, dino) => {
+        if(dinosaurs[dino].isAwesome) total++
+        return total
+      }, 0)
+      awesomeDinosObj[movie.title] = awesomeDinoCount
+      return awesomeDinosObj
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   averageAgePerMovie() {
-    /* Return an object where each key is a movie director's name and each value is
-        an object whose key is a movie's title and whose value is the average age
-        of the cast on the release year of that movie.
-      e.g.:
-      {
-        'Steven Spielberg':
-          {
-            'Jurassic Park': 34,
-            'The Lost World: Jurassic Park': 37
-          },
-        'Joe Johnston':
-          {
-            'Jurassic Park III': 44
-          },
-        'Colin Trevorrow':
-          {
-            'Jurassic World': 56
-           },
-        'J. A. Bayona':
-          {
-            'Jurassic World: Fallen Kingdom': 59
-          }
+    const result = movies.reduce((avgAgeObj, movie) => {
+      let avgAge = movie.cast.reduce((total, person) => {
+        total += movie.yearReleased - humans[person].yearBorn
+        return total
+      }, 0) / movie.cast.length
+      if(avgAgeObj[movie.director]) {
+        avgAgeObj[movie.director][movie.title] = Math.floor(avgAge)
+      } else {
+        avgAgeObj[movie.director] = {[movie.title]: Math.floor(avgAge)}
       }
-    */
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+      return avgAgeObj
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   uncastActors() {
-    /*
-    Return an array of objects that contain the names of humans who have not been cast in a Jurassic Park movie (yet), their nationality, and their imdbStarMeterRating. The object in the array should be sorted alphabetically by nationality.
-    e.g.
-      [{
-        name: 'Justin Duncan',
-        nationality: 'Alien',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Karin Ohman',
-        nationality: 'Chinese',
-        imdbStarMeterRating: 0
-      },
-      {
-        name: 'Tom Wilhoit',
-        nationality: 'Kiwi',
-        imdbStarMeterRating: 1
-      }, {
-        name: 'Jeo D',
-        nationality: 'Martian',
-        imdbStarMeterRating: 0
-      }]
-    */
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    let fullCastList = movies.reduce((allCast, movie) => {
+      movie.cast.forEach(person => {
+        if(!allCast.includes(person)) allCast.push(person)
+      })
+      return allCast
+    }, [])
+    let unusedActors = Object.keys(humans).filter(human => {
+      return !fullCastList.includes(human)
+    })
+    const result = unusedActors.map(actor => {
+      return {name: actor, nationality: humans[actor].nationality, imdbStarMeterRating: humans[actor].imdbStarMeterRating}
+    });
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   actorsAgesInMovies() {
-    /*
-    Return an array of objects for each human and the age(s) they were in the movie(s) they were cast in, as an array of age(s). Only include humans who were cast in at least one movie.
-    e.g.
-    [ { name: 'Sam Neill', ages: [ 46, 54 ] },
-      { name: 'Laura Dern', ages: [ 26, 34 ] },
-      { name: 'Jeff Goldblum', ages: [ 41, 45, 63, 66 ] },
-      { name: 'Richard Attenborough', ages: [ 70, 74, 92, 95 ] },
-      { name: 'Ariana Richards', ages: [ 14, 18 ] },
-      { name: 'Joseph Mazello', ages: [ 10, 14 ] },
-      { name: 'BD Wong', ages: [ 33, 55, 58 ] },
-      { name: 'Chris Pratt', ages: [ 36, 39 ] },
-      { name: 'Bryce Dallas Howard', ages: [ 34, 37 ] } ]
-    */
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    let fullCastList = movies.reduce((allCast, movie) => {
+      movie.cast.forEach(person => {
+        if(!allCast.includes(person)) allCast.push(person)
+      })
+      return allCast
+    }, []).map(human => {return {name: human, ages: []}})
+    const result = movies.reduce((castAges, movie) => {
+      movie.cast.forEach(member => {
+        let age = movie.yearReleased - humans[member].yearBorn
+        castAges.find(a => a.name === member).ages.push(age)
+      })
+      return castAges
+    }, [...fullCastList]);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 };
 
