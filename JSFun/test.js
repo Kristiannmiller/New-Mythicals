@@ -791,7 +791,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal(540)
     })
 
-    it.skip("wolfAcceptingZoos", () => {
+    it("wolfAcceptingZoos", () => {
       const e = animalPrompts.wolfAcceptingZoos();
 
       expect(e).to.deep.equal([
