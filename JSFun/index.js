@@ -481,10 +481,10 @@ const animalPrompts = {
     return result;
   },
 
-  findHome() {
+  findHome(name) {
     // make a function that takes an animal name and returns their home continent
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = animals.find(animal => animal.name === name).home;
     return result;
 
     // Annotation:

@@ -779,7 +779,7 @@ describe("PROTOTYPES", () => {
       }])
     })
 
-    it.skip("findHome", () => {
+    it("findHome", () => {
       const e = animalPrompts.findHome('Tiger');
 
       expect(e).to.equal('Africa')
