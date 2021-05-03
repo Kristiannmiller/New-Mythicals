@@ -477,13 +477,8 @@ const animalPrompts = {
   },
 
   asianAnimals() {
-    // return an array of zoos that can take animals from Asia
-
     const result = zoos.filter(zoo => zoo.continents.includes('Asia'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   findHome() {
