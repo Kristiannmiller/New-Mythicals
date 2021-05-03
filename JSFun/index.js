@@ -474,7 +474,7 @@ const animalPrompts = {
   findCarnivores() {
     // return an array with all the zoos that allow Carnivores
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.filter(zoo => zoo.typesAllowed.includes('Carnivore'));
     return result;
 
     // Annotation:
