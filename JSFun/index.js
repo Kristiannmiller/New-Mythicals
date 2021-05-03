@@ -492,14 +492,8 @@ const animalPrompts = {
   },
 
   wolfAcceptingZoos() {
-    // return an array with the zoos that can take a Wolf
-    // remember that it has to match the type and continent
-
     const result = this.findCarnivores().filter(zoo => zoo.continents.includes('North America'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   heaviestAnimal() {
