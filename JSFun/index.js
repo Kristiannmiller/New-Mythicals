@@ -479,7 +479,7 @@ const animalPrompts = {
   asianAnimals() {
     // return an array of zoos that can take animals from Asia
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.filter(zoo => zoo.continents.includes('Asia'));
     return result;
 
     // Annotation:

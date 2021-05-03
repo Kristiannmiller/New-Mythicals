@@ -752,7 +752,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("asianAnimals", () => {
+    it("asianAnimals", () => {
       const e = animalPrompts.asianAnimals();
 
       expect(e).to.deep.equal([
