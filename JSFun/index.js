@@ -472,13 +472,8 @@ const dinosaurPrompts = {
 // DATASET: animals, zoos from ./datasets/animals
 const animalPrompts = {
   findCarnivores() {
-    // return an array with all the zoos that allow Carnivores
-
     const result = zoos.filter(zoo => zoo.typesAllowed.includes('Carnivore'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   asianAnimals() {
