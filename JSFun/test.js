@@ -785,7 +785,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal('Africa')
     })
 
-    it.skip("weighingAnimals", () => {
+    it("weighingAnimals", () => {
       const e = animalPrompts.weighingAnimals('Wolf', 6);
 
       expect(e).to.equal(540)

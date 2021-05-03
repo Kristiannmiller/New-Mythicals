@@ -486,10 +486,10 @@ const animalPrompts = {
     return result;
   },
 
-  weighingAnimals() {
+  weighingAnimals(name, total) {
     // make a function that takes a quanitity and a animal name and returns their total weight
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = animals.find(animal => animal.name === name).weight * total;
     return result;
 
     // Annotation:
