@@ -469,7 +469,6 @@ const dinosaurPrompts = {
 
 // =================================================================
 
-
 // DATASET: animals, zoos from ./datasets/animals
 const animalPrompts = {
   findCarnivores() {
