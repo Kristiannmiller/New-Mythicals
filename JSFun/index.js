@@ -16,6 +16,7 @@ const { animals, zoos } = require('./datasets/animals');
 const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
 const { careBears } = require('./datasets/careBears');
+const { queens } = require('./datasets/queens');
 
 
 // SINGLE DATASETS
@@ -881,7 +882,7 @@ const broncosPrompts = {
 
 
 
-// DATASET: broncos from ./datasets/broncos.js
+// DATASET: careBears from ./datasets/carebears.js
 const careBearPrompts = {
   getBear() {
     // I love my Care Bears but I have collected too many.
@@ -936,6 +937,79 @@ const careBearPrompts = {
 }
 
 
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: queens from ./datasets/queens.js
+const queenPrompts = {
+  sortQueenNames() {
+    // Write a function that returns an array of queen names in alphabetical order.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  findMissCon() {
+    // Write a fuction that returns the name of Miss Congeniality
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  generateStringById(id) {
+    // Write a fuction that takes in an id and returns
+    // the string "[Queen's Name] placed
+    // [fifth, eleventh, ect...] in Season [Season number]
+    // of RuPaul's Drag Race."
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getQueenQuotes() {
+    // 4. Write a function that returns an an object where the keys are first names of each queen and the value is their quote. ie:
+    // { Alaska: "Alaksa's Quote",
+    //   Roxxy: "Roxxy's Quote",
+    //   Detox: "Detox's Quote"}
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getTopThreeQueens() {
+    // 5. Write a functions that returns an object of the top three finishers ie:
+    // { firstPlace: name,
+    // secondPlace: name,
+    // thirdPlace: name }
+    // Extension: Make sure the object is in that exact order
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -954,5 +1028,6 @@ module.exports = {
   animalPrompts,
   beyoncePrompts,
   broncosPrompts,
-  careBearPrompts
+  careBearPrompts,
+  queenPrompts
 };

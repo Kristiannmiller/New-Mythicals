@@ -21,7 +21,8 @@ const {
   animalPrompts,
   beyoncePrompts,
   broncosPrompts,
-  careBearPrompts
+  careBearPrompts,
+  queenPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1617,5 +1618,68 @@ describe("PROTOTYPES", () => {
       })
     });
   });
+
+  describe("queen Prompts", () => {
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([
+        'Alaska Thunderfuck 5000',
+        'Alyssa Edwards',
+        'Coco Montrese',
+        'Detox Icunt',
+        'Honey Mahogany',
+        'Ivy Winters',
+        'Jade Jolie',
+        'Jinkx Monsoon',
+        'Lineysha Sparx',
+        'Monica Beverly Hillz',
+        'Penny Tration',
+        'Roxxy Andrews',
+        'Serena Cha Cha',
+        'Vivienne Pinay'
+      ])
+    });
+    it.skip("findMissCon", () => {
+      const e = queenPrompts.findMissCon();
+
+      expect(e).to.equal('Ivy Winters')
+    });
+    it.skip("generateStringById", () => {
+      const e = queenPrompts.generateStringById(62);
+
+      expect(e).to.equal(`Alaska Thunderfuck 5000 placed fourth in Season 5 of RuPaul's Drag Race.`)
+    });
+    it.skip("getQueenQuotes", () => {
+      const e = queenPrompts.getQueenQuotes();
+
+      expect(e).to.deep.equal({
+        'Lineysha Sparx': "Don't worry, she thinks she's fashion but... She dresses like a Dracula",
+        'Vivienne Pinay': 'Vivienne is all about glamour. My beauty is everything.',
+        'Monica Beverly Hillz': "I'm Monica Beverly Hillz with a z.",
+        'Coco Montrese': "I'm not joking bitch!",
+        'Ivy Winters': 'Hey ladies! Oh my god!',
+        'Roxxy Andrews': 'When life pulls you down, put on a shiny sequence gown',
+        'Detox Icunt': 'I have HAD IT... officially!',
+        'Alyssa Edwards': 'BACKROLLS?!?!',
+        'Serena Cha Cha': "Does it bother you I keep saying I'm 21?!",
+        'Honey Mahogany': 'Hey sisters!',
+        'Penny Tration': 'Hello boys!',
+        'Jade Jolie': 'Serving up fish, tuna on a platter.',
+        'Jinkx Monsoon': "I am Seattle's premiere Jewish narcoleptic drag queen, thank you.",
+        'Alaska Thunderfuck 5000': "I'll send you 10,000 dollars via PayPal if you let me stay in this competition"
+      })
+    });
+    it.skip("getTopThreeQueens", () => {
+      const e = queenPrompts.getTopThreeQueens();
+
+      expect(e).to.deep.equal({
+        thirdPlace: 'Roxxy Andrews',
+        firstPlace: 'Jinkx Monsoon',
+        secondPlace: 'Alaska Thunderfuck 5000'
+      })
+    });
+  });
+
 
 })
