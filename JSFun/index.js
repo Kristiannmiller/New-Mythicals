@@ -504,13 +504,8 @@ const animalPrompts = {
   },
 
   smallestAnimalZoo() {
-    // find the zoo with the least weight allowed.
-
     const result = zoos.sort((a,b) => a.maxWeight - b.maxWeight)[0];
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   zooAnimalsAccepted() {
