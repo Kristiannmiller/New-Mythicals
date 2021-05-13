@@ -12,6 +12,7 @@ const { bosses, sidekicks } = require('./datasets/bosses');
 const { constellations, stars } = require('./datasets/astronomy');
 const { weapons, characters } = require('./datasets/ultima');
 const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
+const { students, houseHeads, hogwarts } = require('./datasets/harryPotter');
 const { animals, zoos } = require('./datasets/animals');
 const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
@@ -1010,6 +1011,106 @@ const queenPrompts = {
 }
 
 
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: harryPotter from ./datasets/harryPotter.js
+const harryPotterPrompts = {
+  filterHouseHead() {
+    // Create a function where you can put the name of a house head
+    // and get back the student objects that in that house
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  filterHouseStudents() {
+    //Can you make the array send back only the names of the students?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  housePoints() {
+    //How many house points have been added to the house cups overall?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  ravenclawPoints() {
+    //How many house points have the Ravenclaw folks added to their cup?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  kickOutSlytherins() {
+    //For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  missingStudents() {
+    //Check to see if any students are missing from class
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Dumbledore just defeated Grindelwald and obtained the elder wand! Create an array of all his wands
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -1029,5 +1130,6 @@ module.exports = {
   beyoncePrompts,
   broncosPrompts,
   careBearPrompts,
-  queenPrompts
+  queenPrompts,
+  harryPotterPrompts
 };

@@ -22,7 +22,8 @@ const {
   beyoncePrompts,
   broncosPrompts,
   careBearPrompts,
-  queenPrompts
+  queenPrompts,
+  harryPotterPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1678,6 +1679,58 @@ describe("PROTOTYPES", () => {
         firstPlace: 'Jinkx Monsoon',
         secondPlace: 'Alaska Thunderfuck 5000'
       })
+    });
+  });
+  describe("Harry Potter Prompts", () => {
+    it.skip("filterHouseHead", () => {
+      const e = queenPrompts.filterHouseHead('McGonagall');
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("filterHouseStudents", () => {
+      const e = queenPrompts.filterHouseStudents('McGonagall');
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("housePoints", () => {
+      const e = queenPrompts.housePoints();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("ravenclawPoints", () => {
+      const e = queenPrompts.ravenclawPoints();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("kickOutSlytherins", () => {
+      const e = queenPrompts.kickOutSlytherins();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
     });
   });
 
