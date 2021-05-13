@@ -819,7 +819,7 @@ describe("PROTOTYPES", () => {
       )
     })
 
-    it.skip("smallestAnimalZoo", () => {
+    it("smallestAnimalZoo", () => {
       const e = animalPrompts.smallestAnimalZoo();
 
       expect(e).to.deep.equal(
