@@ -501,7 +501,7 @@ const animalPrompts = {
   heaviestAnimal() {
     // find the animal that weighs the most.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = animals.sort((a,b) => b.weight - a.weight)[0];
     return result;
 
     // Annotation:

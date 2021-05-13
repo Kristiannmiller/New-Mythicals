@@ -808,7 +808,7 @@ describe("PROTOTYPES", () => {
       ])
     })
 
-    it.skip("heaviestAnimal", () => {
+    it("heaviestAnimal", () => {
       const e = animalPrompts.heaviestAnimal();
 
       expect(e).to.deep.equal(
