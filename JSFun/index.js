@@ -520,9 +520,6 @@ const animalPrompts = {
       return acc
     }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 }
 
