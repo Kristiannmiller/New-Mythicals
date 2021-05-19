@@ -12,10 +12,12 @@ const { bosses, sidekicks } = require('./datasets/bosses');
 const { constellations, stars } = require('./datasets/astronomy');
 const { weapons, characters } = require('./datasets/ultima');
 const { dinosaurs, humans, movies } = require('./datasets/dinosaurs');
+const { students, houseHeads, hogwarts } = require('./datasets/harryPotter');
 const { animals, zoos } = require('./datasets/animals');
 const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
 const { careBears } = require('./datasets/careBears');
+const { queens } = require('./datasets/queens');
 
 
 // SINGLE DATASETS
@@ -469,87 +471,55 @@ const dinosaurPrompts = {
 
 // =================================================================
 
-
 // DATASET: animals, zoos from ./datasets/animals
 const animalPrompts = {
   findCarnivores() {
-    // return an array with all the zoos that allow Carnivores
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.filter(zoo => zoo.typesAllowed.includes('Carnivore'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   asianAnimals() {
-    // return an array of zoos that can take animals from Asia
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.filter(zoo => zoo.continents.includes('Asia'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
-  findHome() {
-    // make a function that takes an animal name and returns their home continent
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+  findHome(name) {
+    const result = animals.find(animal => animal.name === name).home;
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
-  weighingAnimals() {
-    // make a function that takes a quanitity and a animal name and returns their total weight
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+  weighingAnimals(name, total) {
+    const result = animals.find(animal => animal.name === name).weight * total;
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   wolfAcceptingZoos() {
-    // return an array with the zoos that can take a Wolf
-    // remember that it has to match the type and continent
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = this.findCarnivores().filter(zoo => zoo.continents.includes('North America'));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   heaviestAnimal() {
-    // find the animal that weighs the most.
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = animals.sort((a,b) => b.weight - a.weight)[0];
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   smallestAnimalZoo() {
-    // find the zoo with the least weight allowed.
-
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.sort((a,b) => a.maxWeight - b.maxWeight)[0];
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   zooAnimalsAccepted() {
     // create a new object with the zoo name as the key and the animals allowed as the value
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.reduce((acc, zoo) => {
+      let animalsAllowed = animals.filter(animal => {
+        return zoo.typesAllowed.includes(animal.type) && zoo.continents.includes(animal.home)
+      }).map(animal => animal.name)
+      if(!acc[zoo.name]) {
+        acc[zoo.name] = animalsAllowed
+      }
+      return acc
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   }
 }
 
@@ -908,7 +878,7 @@ const broncosPrompts = {
 
 
 
-// DATASET: broncos from ./datasets/broncos.js
+// DATASET: careBears from ./datasets/carebears.js
 const careBearPrompts = {
   getBear() {
     // I love my Care Bears but I have collected too many.
@@ -963,6 +933,179 @@ const careBearPrompts = {
 }
 
 
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: queens from ./datasets/queens.js
+const queenPrompts = {
+  sortQueenNames() {
+    // Write a function that returns an array of queen names in alphabetical order.
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  findMissCon() {
+    // Write a fuction that returns the name of Miss Congeniality
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  generateStringById(id) {
+    // Write a fuction that takes in an id and returns
+    // the string "[Queen's Name] placed
+    // [fifth, eleventh, ect...] in Season [Season number]
+    // of RuPaul's Drag Race."
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getQueenQuotes() {
+    // 4. Write a function that returns an an object where the keys are first names of each queen and the value is their quote. ie:
+    // { Alaska: "Alaksa's Quote",
+    //   Roxxy: "Roxxy's Quote",
+    //   Detox: "Detox's Quote"}
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  getTopThreeQueens() {
+    // 5. Write a functions that returns an object of the top three finishers ie:
+    // { firstPlace: name,
+    // secondPlace: name,
+    // thirdPlace: name }
+    // Extension: Make sure the object is in that exact order
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
+
+
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+
+
+
+// DATASET: harryPotter from ./datasets/harryPotter.js
+const harryPotterPrompts = {
+  filterHouseHead() {
+    // Create a function where you can put the name of a house head
+    // and get back the student objects that in that house
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  filterHouseStudents() {
+    //Can you make the array send back only the names of the students?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  housePoints() {
+    //How many house points have been added to the house cups overall?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  ravenclawPoints() {
+    //How many house points have the Ravenclaw folks added to their cup?
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  kickOutSlytherins() {
+    //For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  missingStudents() {
+    //Check to see if any students are missing from class
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Dumbledore just defeated Grindelwald and obtained the elder wand! Create an array of all his wands
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+  sortQueenNames() {
+    //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
+
+    const result = 'REPLACE WITH YOUR RESULT HERE'
+    return result;
+
+    // Annotation:
+    // Write your annotation here as a comment
+  },
+}
+
+
 module.exports = {
   breweryPrompts,
   turingPrompts,
@@ -981,5 +1124,7 @@ module.exports = {
   animalPrompts,
   beyoncePrompts,
   broncosPrompts,
-  careBearPrompts
+  careBearPrompts,
+  queenPrompts,
+  harryPotterPrompts
 };

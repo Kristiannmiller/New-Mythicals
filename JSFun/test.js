@@ -21,7 +21,9 @@ const {
   animalPrompts,
   beyoncePrompts,
   broncosPrompts,
-  careBearPrompts
+  careBearPrompts,
+  queenPrompts,
+  harryPotterPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -733,7 +735,7 @@ describe("PROTOTYPES", () => {
   })
 
   describe("Animal Prompts", () => {
-    it.skip("findCarnivores", () => {
+    it("findCarnivores", () => {
       const e = animalPrompts.findCarnivores();
 
       expect(e).to.deep.equal([
@@ -752,7 +754,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("asianAnimals", () => {
+    it("asianAnimals", () => {
       const e = animalPrompts.asianAnimals();
 
       expect(e).to.deep.equal([
@@ -779,19 +781,19 @@ describe("PROTOTYPES", () => {
       }])
     })
 
-    it.skip("findHome", () => {
+    it("findHome", () => {
       const e = animalPrompts.findHome('Tiger');
 
       expect(e).to.equal('Africa')
     })
 
-    it.skip("weighingAnimals", () => {
+    it("weighingAnimals", () => {
       const e = animalPrompts.weighingAnimals('Wolf', 6);
 
       expect(e).to.equal(540)
     })
 
-    it.skip("wolfAcceptingZoos", () => {
+    it("wolfAcceptingZoos", () => {
       const e = animalPrompts.wolfAcceptingZoos();
 
       expect(e).to.deep.equal([
@@ -806,7 +808,7 @@ describe("PROTOTYPES", () => {
       ])
     })
 
-    it.skip("heaviestAnimal", () => {
+    it("heaviestAnimal", () => {
       const e = animalPrompts.heaviestAnimal();
 
       expect(e).to.deep.equal(
@@ -817,7 +819,7 @@ describe("PROTOTYPES", () => {
       )
     })
 
-    it.skip("smallestAnimalZoo", () => {
+    it("smallestAnimalZoo", () => {
       const e = animalPrompts.smallestAnimalZoo();
 
       expect(e).to.deep.equal(
@@ -828,16 +830,18 @@ describe("PROTOTYPES", () => {
       )
     })
 
-    it.skip("zooAnimalsAccepted", () => {
+    it("zooAnimalsAccepted", () => {
       const e = animalPrompts.zooAnimalsAccepted();
 
       expect(e).to.deep.equal(
-        { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
-          'Bronx Zoo': [ 'Rhino', 'Monkey', 'Panda' ],
-          'San Diego Wild Animal Park': [ 'Wolf', 'Panda' ],
-          'Kansas City Zoo': [ 'Lion', 'Tiger' ],
-          'Central Park Zoo': [ 'Lion', 'Tiger', 'Wolf' ],
-          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ] }
+        {
+          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ],
+          'Bronx Zoo': [ 'Rhino', 'Panda', 'Monkey' ],
+          'Central Park Zoo': [ 'Tiger', 'Lion', 'Wolf' ],
+          'San Diego Wild Animal Park': [ 'Panda', 'Wolf' ],
+          'Kansas City Zoo': [ 'Tiger', 'Lion' ],
+          'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Panda', 'Monkey' ]
+        }
       )
     })
   });
@@ -1617,5 +1621,120 @@ describe("PROTOTYPES", () => {
       })
     });
   });
+
+  describe("queen Prompts", () => {
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([
+        'Alaska Thunderfuck 5000',
+        'Alyssa Edwards',
+        'Coco Montrese',
+        'Detox Icunt',
+        'Honey Mahogany',
+        'Ivy Winters',
+        'Jade Jolie',
+        'Jinkx Monsoon',
+        'Lineysha Sparx',
+        'Monica Beverly Hillz',
+        'Penny Tration',
+        'Roxxy Andrews',
+        'Serena Cha Cha',
+        'Vivienne Pinay'
+      ])
+    });
+    it.skip("findMissCon", () => {
+      const e = queenPrompts.findMissCon();
+
+      expect(e).to.equal('Ivy Winters')
+    });
+    it.skip("generateStringById", () => {
+      const e = queenPrompts.generateStringById(62);
+
+      expect(e).to.equal(`Alaska Thunderfuck 5000 placed fourth in Season 5 of RuPaul's Drag Race.`)
+    });
+    it.skip("getQueenQuotes", () => {
+      const e = queenPrompts.getQueenQuotes();
+
+      expect(e).to.deep.equal({
+        'Lineysha Sparx': "Don't worry, she thinks she's fashion but... She dresses like a Dracula",
+        'Vivienne Pinay': 'Vivienne is all about glamour. My beauty is everything.',
+        'Monica Beverly Hillz': "I'm Monica Beverly Hillz with a z.",
+        'Coco Montrese': "I'm not joking bitch!",
+        'Ivy Winters': 'Hey ladies! Oh my god!',
+        'Roxxy Andrews': 'When life pulls you down, put on a shiny sequence gown',
+        'Detox Icunt': 'I have HAD IT... officially!',
+        'Alyssa Edwards': 'BACKROLLS?!?!',
+        'Serena Cha Cha': "Does it bother you I keep saying I'm 21?!",
+        'Honey Mahogany': 'Hey sisters!',
+        'Penny Tration': 'Hello boys!',
+        'Jade Jolie': 'Serving up fish, tuna on a platter.',
+        'Jinkx Monsoon': "I am Seattle's premiere Jewish narcoleptic drag queen, thank you.",
+        'Alaska Thunderfuck 5000': "I'll send you 10,000 dollars via PayPal if you let me stay in this competition"
+      })
+    });
+    it.skip("getTopThreeQueens", () => {
+      const e = queenPrompts.getTopThreeQueens();
+
+      expect(e).to.deep.equal({
+        thirdPlace: 'Roxxy Andrews',
+        firstPlace: 'Jinkx Monsoon',
+        secondPlace: 'Alaska Thunderfuck 5000'
+      })
+    });
+  });
+  describe("Harry Potter Prompts", () => {
+    it.skip("filterHouseHead", () => {
+      const e = queenPrompts.filterHouseHead('McGonagall');
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("filterHouseStudents", () => {
+      const e = queenPrompts.filterHouseStudents('McGonagall');
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("housePoints", () => {
+      const e = queenPrompts.housePoints();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("ravenclawPoints", () => {
+      const e = queenPrompts.ravenclawPoints();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("kickOutSlytherins", () => {
+      const e = queenPrompts.kickOutSlytherins();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortQueenNames", () => {
+      const e = queenPrompts.sortQueenNames();
+
+      expect(e).to.deep.equal([])
+    });
+  });
+
 
 })
