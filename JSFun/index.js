@@ -510,7 +510,15 @@ const animalPrompts = {
 
   zooAnimalsAccepted() {
     // create a new object with the zoo name as the key and the animals allowed as the value
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = zoos.reduce((acc, zoo) => {
+      let animalsAllowed = animals.filter(animal => {
+        return zoo.typesAllowed.includes(animal.type) && zoo.continents.includes(animal.home)
+      }).map(animal => animal.name)
+      if(!acc[zoo.name]) {
+        acc[zoo.name] = animalsAllowed
+      }
+      return acc
+    }, {})
     return result;
 
     // Annotation:

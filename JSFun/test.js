@@ -830,16 +830,18 @@ describe("PROTOTYPES", () => {
       )
     })
 
-    it.skip("zooAnimalsAccepted", () => {
+    it("zooAnimalsAccepted", () => {
       const e = animalPrompts.zooAnimalsAccepted();
 
       expect(e).to.deep.equal(
-        { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
-          'Bronx Zoo': [ 'Rhino', 'Monkey', 'Panda' ],
-          'San Diego Wild Animal Park': [ 'Wolf', 'Panda' ],
-          'Kansas City Zoo': [ 'Lion', 'Tiger' ],
-          'Central Park Zoo': [ 'Lion', 'Tiger', 'Wolf' ],
-          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ] }
+        {
+          'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ],
+          'Bronx Zoo': [ 'Rhino', 'Panda', 'Monkey' ],
+          'Central Park Zoo': [ 'Tiger', 'Lion', 'Wolf' ],
+          'San Diego Wild Animal Park': [ 'Panda', 'Wolf' ],
+          'Kansas City Zoo': [ 'Tiger', 'Lion' ],
+          'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Panda', 'Monkey' ]
+        }
       )
     })
   });
