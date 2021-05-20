@@ -847,7 +847,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("Beyonce Prompts", () => {
-    it.skip("beyonceHits", () => {
+    it("beyonceHits", () => {
       const e = beyoncePrompts.beyonceHits();
 
       expect(e).to.deep.equal([
@@ -860,13 +860,13 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("fierceRatings", () => {
+    it("fierceRatings", () => {
       const e = beyoncePrompts.fierceRatings();
 
       expect(e).to.deep.equal([ 7, 10, 10, 10, 7, 9 ])
     });
 
-    it.skip("noBodySuit", () => {
+    it("noBodySuit", () => {
       const e = beyoncePrompts.noBodySuit();
 
       expect(e).to.deep.equal({
@@ -883,7 +883,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("bodySuits", () => {
+    it("bodySuits", () => {
       const e = beyoncePrompts.bodySuits();
 
       expect(e).to.deep.equal([
@@ -938,7 +938,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("highFierce", () => {
+    it("highFierce", () => {
       const e = beyoncePrompts.highFierce();
 
       expect(e).to.deep.equal([
@@ -993,7 +993,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("whereIsNicki", () => {
+    it("whereIsNicki", () => {
       const e = beyoncePrompts.whereIsNicki();
 
       expect(e).to.deep.equal(
@@ -1012,7 +1012,7 @@ describe("PROTOTYPES", () => {
       )
     });
 
-    it.skip("soloSongs", () => {
+    it("soloSongs", () => {
       const e = beyoncePrompts.soloSongs();
 
       expect(e).to.deep.equal(
@@ -1057,7 +1057,7 @@ describe("PROTOTYPES", () => {
       )
     });
 
-    it.skip("post2006Movies", () => {
+    it("post2006Movies", () => {
       const e = beyoncePrompts.post2006Movies();
 
       expect(e).to.deep.equal([
@@ -1070,7 +1070,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("groupHitSongs", () => {
+    it("groupHitSongs", () => {
       const e = beyoncePrompts.groupHitSongs();
 
       expect(e).to.deep.equal([
@@ -1113,7 +1113,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("blondeSong", () => {
+    it("blondeSong", () => {
       const e = beyoncePrompts.blondeSong();
 
       expect(e).to.deep.equal({
@@ -1130,7 +1130,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("sorry", () => {
+    it("sorry", () => {
       const e = beyoncePrompts.sorry();
 
       expect(e).to.deep.equal({
@@ -1147,7 +1147,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("superFierce", () => {
+    it("superFierce", () => {
       const e = beyoncePrompts.superFierce();
 
       expect(e).to.deep.equal([
@@ -1190,25 +1190,25 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("avgFierceness", () => {
+    it("avgFierceness", () => {
       const e = beyoncePrompts.avgFierceness();
 
       expect(e).to.equal(8.833333333333334)
     });
 
-    it.skip("movieRatingSum", () => {
+    it("movieRatingSum", () => {
       const e = beyoncePrompts.movieRatingSum();
 
       expect(e).to.equal(48)
     });
 
-    it.skip("movieRatingAvg", () => {
+    it("movieRatingAvg", () => {
       const e = beyoncePrompts.movieRatingAvg();
 
       expect(e).to.equal(6)
     });
 
-    it.skip("fierceObject", () => {
+    it("fierceObject", () => {
       const e = beyoncePrompts.fierceObject();
 
       expect(e).to.deep.equal({
@@ -1221,28 +1221,28 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("movieRatings", () => {
+    it("movieRatings", () => {
       const e = beyoncePrompts.movieRatings();
 
       expect(e).to.deep.equal({
-        "Austin Power's Goldmember": { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Dreamgirls: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Obsessed: { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'Cadillac Records': { rating: 8, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'Life is But a Dream': { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'The Pink Panther': { rating: 4, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Epic: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'The Fighting Temptations': { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' }
+        "Austin Power's Goldmember": { rating: 5, averageRating: 6 },
+        Dreamgirls: { rating: 7, averageRating: 6 },
+        Obsessed: { rating: 6, averageRating: 6 },
+        'Cadillac Records': { rating: 8, averageRating: 6 },
+        'Life is But a Dream': { rating: 6, averageRating: 6 },
+        'The Pink Panther': { rating: 4, averageRating: 6 },
+        Epic: { rating: 7, averageRating: 6 },
+        'The Fighting Temptations': { rating: 5, averageRating: 6 }
       })
     });
 
-    it.skip("dancersSum", () => {
+    it("dancersSum", () => {
       const e = beyoncePrompts.dancersSum();
 
       expect(e).to.equal(34)
     });
 
-    it.skip("allHairstyles", () => {
+    it("allHairstyles", () => {
       const e = beyoncePrompts.allHairstyles();
 
       expect(e).to.deep.equal([
@@ -1257,10 +1257,10 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("hairstyleTotals", () => {
+    it("hairstyleTotals", () => {
       const e = beyoncePrompts.hairstyleTotals();
 
-      expect(e).to.equal({
+      expect(e).to.deep.equal({
         straight: 1,
         blonde: 4,
         'pink tips': 1,

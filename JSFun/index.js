@@ -523,220 +523,175 @@ const animalPrompts = {
   }
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: beyonce from ./datasets/beyonce.js
 const beyoncePrompts = {
   beyonceHits() {
     // return an array of all the hits
-
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = beyonce.hits.map(hit => hit.title)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   fierceRatings() {
     // create an array with a list of all of Beyonce's fierceness ratings
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.map(hit => hit.fierceness);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   noBodySuit() {
     // give me a song where Beyonce is not wearing a bodysuit
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => !hit.signatureLook.includes("bodysuit"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   bodySuits() {
     // give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.signatureLook.includes("bodysuit") || hit.videoTheme.includes("bodysuit"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   highFierce() {
     // create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.fierceness >= 8);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   whereIsNicki() {
     // find a song where Nicki Minaj is part of the group
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.groupName.includes("Nicki Minaj"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   soloSongs() {
     // create an array with all Beyonce's songs that were not with a group
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => !hit.group);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   post2006Movies() {
     // create an array with all of the movies Beyonce made in 2006 and after
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.filter(movie => movie.year >= 2006);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   groupHitSongs() {
     // find all of the group hit songs
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.group);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   blondeSong() {
     // find a hit song where Beyonce's hair is blonde
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.hair.includes("blonde"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   sorry() {
     // find the hit song sorry
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.title === "sorry");
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   superFierce() {
     // find all hit songs where Beyonce's fierceness rating is 10
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.fierceness === 10);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   avgFierceness() {
     // get the average fierceness value for all of her hit songs
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc += hit.fierceness
+      return acc
+    }, 0) / beyonce.hits.length
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   movieRatingSum() {
     // sum up Beyonces rating value for all of her movies
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.reduce((acc, movie) => {
+      acc += movie.rating
+      return acc
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   movieRatingAvg() {
     // get the average rating value for all of her movies
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.reduce((acc, movie) => {
+      acc += movie.rating
+      return acc
+    }, 0) / beyonce.movies.length
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   fierceObject() {
     // create an object where the properties are song names and the value is an object which contains that fierceness
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc[hit.title] = hit.fierceness
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   movieRatings() {
     // create an object where the properties are movie names and the value is an object which contains that rating and average rating
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.reduce((acc, movie) => {
+      acc[movie.title] = {rating: movie.rating, averageRating: this.movieRatingAvg()}
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   dancersSum() {
     // sum up the total number of dancers in all of the hit song videos
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc += hit.dancers
+      return acc
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   allHairstyles() {
     // create an array of beyonces hairstyles without repeats
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      hit.hair.forEach(style => {
+        if(!acc.includes(style)) acc.push(style)
+      })
+      return acc
+    }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   hairstyleTotals() {
     // create an object list with beyonces hairstyles with a tally of each
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      hit.hair.forEach(style => {
+        acc[style] ? acc[style]++ : acc[style] = 1
+      })
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 
