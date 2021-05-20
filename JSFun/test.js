@@ -1257,10 +1257,10 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("hairstyleTotals", () => {
+    it("hairstyleTotals", () => {
       const e = beyoncePrompts.hairstyleTotals();
 
-      expect(e).to.equal({
+      expect(e).to.deep.equal({
         straight: 1,
         blonde: 4,
         'pink tips': 1,

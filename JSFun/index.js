@@ -685,11 +685,13 @@ const beyoncePrompts = {
   hairstyleTotals() {
     // create an object list with beyonces hairstyles with a tally of each
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      hit.hair.forEach(style => {
+        acc[style] ? acc[style]++ : acc[style] = 1
+      })
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 
