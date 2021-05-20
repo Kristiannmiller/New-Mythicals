@@ -606,11 +606,8 @@ const beyoncePrompts = {
   superFierce() {
     // find all hit songs where Beyonce's fierceness rating is 10
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.fierceness === 10);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   avgFierceness() {

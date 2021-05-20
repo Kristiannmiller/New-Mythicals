@@ -1147,7 +1147,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("superFierce", () => {
+    it("superFierce", () => {
       const e = beyoncePrompts.superFierce();
 
       expect(e).to.deep.equal([
