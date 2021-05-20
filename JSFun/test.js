@@ -860,13 +860,13 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("fierceRatings", () => {
+    it("fierceRatings", () => {
       const e = beyoncePrompts.fierceRatings();
 
       expect(e).to.deep.equal([ 7, 10, 10, 10, 7, 9 ])
     });
 
-    it.skip("noBodySuit", () => {
+    it("noBodySuit", () => {
       const e = beyoncePrompts.noBodySuit();
 
       expect(e).to.deep.equal({

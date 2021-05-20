@@ -543,11 +543,8 @@ const beyoncePrompts = {
   noBodySuit() {
     // give me a song where Beyonce is not wearing a bodysuit
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => !hit.signatureLook.includes("bodysuit"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   bodySuits() {
