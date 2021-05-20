@@ -536,11 +536,8 @@ const beyoncePrompts = {
   fierceRatings() {
     // create an array with a list of all of Beyonce's fierceness ratings
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.map(hit => hit.fierceness);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   noBodySuit() {
