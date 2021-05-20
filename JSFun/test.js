@@ -1190,7 +1190,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("avgFierceness", () => {
+    it("avgFierceness", () => {
       const e = beyoncePrompts.avgFierceness();
 
       expect(e).to.equal(8.833333333333334)

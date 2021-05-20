@@ -613,11 +613,11 @@ const beyoncePrompts = {
   avgFierceness() {
     // get the average fierceness value for all of her hit songs
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc += hit.fierceness
+      return acc
+    }, 0) / beyonce.hits.length
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   movieRatingSum() {
