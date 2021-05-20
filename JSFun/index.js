@@ -633,11 +633,11 @@ const beyoncePrompts = {
   movieRatingAvg() {
     // get the average rating value for all of her movies
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.reduce((acc, movie) => {
+      acc += movie.rating
+      return acc
+    }, 0) / beyonce.movies.length
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   fierceObject() {

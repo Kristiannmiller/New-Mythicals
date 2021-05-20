@@ -1202,7 +1202,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal(48)
     });
 
-    it.skip("movieRatingAvg", () => {
+    it("movieRatingAvg", () => {
       const e = beyoncePrompts.movieRatingAvg();
 
       expect(e).to.equal(6)
