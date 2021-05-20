@@ -938,7 +938,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("highFierce", () => {
+    it("highFierce", () => {
       const e = beyoncePrompts.highFierce();
 
       expect(e).to.deep.equal([

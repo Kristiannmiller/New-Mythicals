@@ -557,11 +557,8 @@ const beyoncePrompts = {
   highFierce() {
     // create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.fierceness >= 8);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   whereIsNicki() {
