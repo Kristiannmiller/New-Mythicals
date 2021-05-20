@@ -571,11 +571,8 @@ const beyoncePrompts = {
   soloSongs() {
     // create an array with all Beyonce's songs that were not with a group
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => !hit.group);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   post2006Movies() {

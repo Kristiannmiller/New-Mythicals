@@ -1012,7 +1012,7 @@ describe("PROTOTYPES", () => {
       )
     });
 
-    it.skip("soloSongs", () => {
+    it("soloSongs", () => {
       const e = beyoncePrompts.soloSongs();
 
       expect(e).to.deep.equal(
