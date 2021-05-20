@@ -550,11 +550,8 @@ const beyoncePrompts = {
   bodySuits() {
     // give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.signatureLook.includes("bodysuit") || hit.videoTheme.includes("bodysuit"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   highFierce() {

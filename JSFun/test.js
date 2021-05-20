@@ -883,7 +883,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("bodySuits", () => {
+    it("bodySuits", () => {
       const e = beyoncePrompts.bodySuits();
 
       expect(e).to.deep.equal([
