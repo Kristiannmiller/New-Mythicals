@@ -542,7 +542,7 @@ const beyoncePrompts = {
   beyonceHits() {
     // return an array of all the hits
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = beyonce.hits.map(hit => hit.title)
     return result;
 
     // Annotation:

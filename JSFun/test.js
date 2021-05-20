@@ -847,7 +847,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("Beyonce Prompts", () => {
-    it.skip("beyonceHits", () => {
+    it("beyonceHits", () => {
       const e = beyoncePrompts.beyonceHits();
 
       expect(e).to.deep.equal([
