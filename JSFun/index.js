@@ -673,11 +673,13 @@ const beyoncePrompts = {
   allHairstyles() {
     // create an array of beyonces hairstyles without repeats
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      hit.hair.forEach(style => {
+        if(!acc.includes(style)) acc.push(style)
+      })
+      return acc
+    }, []);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   hairstyleTotals() {

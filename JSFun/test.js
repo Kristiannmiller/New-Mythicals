@@ -1242,7 +1242,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal(34)
     });
 
-    it.skip("allHairstyles", () => {
+    it("allHairstyles", () => {
       const e = beyoncePrompts.allHairstyles();
 
       expect(e).to.deep.equal([
