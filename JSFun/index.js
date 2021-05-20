@@ -585,11 +585,8 @@ const beyoncePrompts = {
   groupHitSongs() {
     // find all of the group hit songs
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.filter(hit => hit.group);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   blondeSong() {

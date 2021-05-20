@@ -1070,7 +1070,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("groupHitSongs", () => {
+    it("groupHitSongs", () => {
       const e = beyoncePrompts.groupHitSongs();
 
       expect(e).to.deep.equal([
