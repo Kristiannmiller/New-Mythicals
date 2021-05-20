@@ -1057,7 +1057,7 @@ describe("PROTOTYPES", () => {
       )
     });
 
-    it.skip("post2006Movies", () => {
+    it("post2006Movies", () => {
       const e = beyoncePrompts.post2006Movies();
 
       expect(e).to.deep.equal([

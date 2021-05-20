@@ -578,11 +578,8 @@ const beyoncePrompts = {
   post2006Movies() {
     // create an array with all of the movies Beyonce made in 2006 and after
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.filter(movie => movie.year >= 2006);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   groupHitSongs() {
