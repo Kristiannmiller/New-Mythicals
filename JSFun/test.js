@@ -1130,7 +1130,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("sorry", () => {
+    it("sorry", () => {
       const e = beyoncePrompts.sorry();
 
       expect(e).to.deep.equal({

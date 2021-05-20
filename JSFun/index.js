@@ -599,11 +599,8 @@ const beyoncePrompts = {
   sorry() {
     // find the hit song sorry
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.title === "sorry");
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   superFierce() {
