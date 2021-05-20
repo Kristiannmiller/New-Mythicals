@@ -653,11 +653,11 @@ const beyoncePrompts = {
   movieRatings() {
     // create an object where the properties are movie names and the value is an object which contains that rating and average rating
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.movies.reduce((acc, movie) => {
+      acc[movie.title] = {rating: movie.rating, averageRating: this.movieRatingAvg()}
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   dancersSum() {

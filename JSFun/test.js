@@ -1221,18 +1221,18 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("movieRatings", () => {
+    it("movieRatings", () => {
       const e = beyoncePrompts.movieRatings();
 
       expect(e).to.deep.equal({
-        "Austin Power's Goldmember": { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Dreamgirls: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Obsessed: { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'Cadillac Records': { rating: 8, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'Life is But a Dream': { rating: 6, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'The Pink Panther': { rating: 4, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        Epic: { rating: 7, averageRating: 'REPLACE WITH YOUR RESULT HERE' },
-        'The Fighting Temptations': { rating: 5, averageRating: 'REPLACE WITH YOUR RESULT HERE' }
+        "Austin Power's Goldmember": { rating: 5, averageRating: 6 },
+        Dreamgirls: { rating: 7, averageRating: 6 },
+        Obsessed: { rating: 6, averageRating: 6 },
+        'Cadillac Records': { rating: 8, averageRating: 6 },
+        'Life is But a Dream': { rating: 6, averageRating: 6 },
+        'The Pink Panther': { rating: 4, averageRating: 6 },
+        Epic: { rating: 7, averageRating: 6 },
+        'The Fighting Temptations': { rating: 5, averageRating: 6 }
       })
     });
 
