@@ -663,11 +663,11 @@ const beyoncePrompts = {
   dancersSum() {
     // sum up the total number of dancers in all of the hit song videos
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc += hit.dancers
+      return acc
+    }, 0);
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   allHairstyles() {

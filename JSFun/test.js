@@ -1236,7 +1236,7 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("dancersSum", () => {
+    it("dancersSum", () => {
       const e = beyoncePrompts.dancersSum();
 
       expect(e).to.equal(34)
