@@ -1196,7 +1196,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal(8.833333333333334)
     });
 
-    it.skip("movieRatingSum", () => {
+    it("movieRatingSum", () => {
       const e = beyoncePrompts.movieRatingSum();
 
       expect(e).to.equal(48)
