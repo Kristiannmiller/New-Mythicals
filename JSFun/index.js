@@ -564,11 +564,8 @@ const beyoncePrompts = {
   whereIsNicki() {
     // find a song where Nicki Minaj is part of the group
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.groupName.includes("Nicki Minaj"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   soloSongs() {

@@ -993,7 +993,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("whereIsNicki", () => {
+    it("whereIsNicki", () => {
       const e = beyoncePrompts.whereIsNicki();
 
       expect(e).to.deep.equal(
