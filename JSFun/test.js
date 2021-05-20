@@ -1113,7 +1113,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("blondeSong", () => {
+    it("blondeSong", () => {
       const e = beyoncePrompts.blondeSong();
 
       expect(e).to.deep.equal({

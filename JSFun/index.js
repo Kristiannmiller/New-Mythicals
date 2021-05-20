@@ -592,11 +592,8 @@ const beyoncePrompts = {
   blondeSong() {
     // find a hit song where Beyonce's hair is blonde
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.find(hit => hit.hair.includes("blonde"));
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   sorry() {
