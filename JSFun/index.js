@@ -643,11 +643,11 @@ const beyoncePrompts = {
   fierceObject() {
     // create an object where the properties are song names and the value is an object which contains that fierceness
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = beyonce.hits.reduce((acc, hit) => {
+      acc[hit.title] = hit.fierceness
+      return acc
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   movieRatings() {

@@ -1208,7 +1208,7 @@ describe("PROTOTYPES", () => {
       expect(e).to.equal(6)
     });
 
-    it.skip("fierceObject", () => {
+    it("fierceObject", () => {
       const e = beyoncePrompts.fierceObject();
 
       expect(e).to.deep.equal({
