@@ -716,13 +716,17 @@ const broncosPrompts = {
     // decrease injured players rating by 5,
     //decrease questionable players rating by 1,
     //and increase all other players rating by 2
-
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const result = broncos.forEach(player => {
+      if(player.status === 'injured') {
+        player.rating -= 5
+      } else if(player.status === 'questionable') {
+        player.rating -= 1
+      } else {
+        player.rating += 2
+      }
+    })
   },
+  
   offensiveTotal() {
     // return the total number of 'offense' players
 
