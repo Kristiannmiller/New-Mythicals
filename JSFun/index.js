@@ -695,30 +695,15 @@ const beyoncePrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: broncos from ./datasets/broncos.js
 const broncosPrompts = {
   highestRatedPlayer() {
     // return the name of the player with the highest rating
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.sort((a, b) => b.rating - a.rating)[0].name
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   playerNames() {

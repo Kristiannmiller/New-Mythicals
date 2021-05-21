@@ -1281,7 +1281,7 @@ describe("PROTOTYPES", () => {
   })
 
   describe("Broncos Prompts", () => {
-    it.skip("highestRatedPlayer", () => {
+    it("highestRatedPlayer", () => {
       const e = broncosPrompts.highestRatedPlayer();
 
       expect(e).to.equal('Von Miller')
