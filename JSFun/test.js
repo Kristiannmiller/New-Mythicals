@@ -1332,7 +1332,7 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(18)
     });
-    it.skip("defensiveTotal", () => {
+    it("defensiveTotal", () => {
       const e = broncosPrompts.defensiveTotal();
 
       expect(e).to.equal(15)

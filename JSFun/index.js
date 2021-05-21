@@ -740,11 +740,11 @@ const broncosPrompts = {
   defensiveTotal() {
     // return the total number of 'defense' players
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.reduce((acc, player) => {
+      if(player.side === 'defense') acc++
+      return acc
+    }, 0)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   separateTeams() {
