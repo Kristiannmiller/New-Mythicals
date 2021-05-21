@@ -750,11 +750,11 @@ const broncosPrompts = {
   separateTeams() {
     // create an object with the keys 'offense' and 'defense' and let their values equal the total number of players on their respective side.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.reduce((acc, player) => {
+      player.side === 'offense' ? acc.offense.push(player.name) : acc.defense.push(player.name)
+      return acc
+    }, {offense: [], defense: []})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   offenseRatings() {

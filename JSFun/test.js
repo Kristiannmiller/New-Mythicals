@@ -1337,30 +1337,30 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(15)
     });
-    it.skip("separateTeams", () => {
+    it("separateTeams", () => {
       const e = broncosPrompts.separateTeams();
 
       expect(e).to.deep.equal({
         offense: [
-          'Kevin Hogan',      'Royce Freeman',
-          'DaeSean Hamilton', 'Tim Patrick',
-          'Sam Jones',        'Courtland Sutton',
-          'Jake Butt',        'Elijah Wilkinson',
-          'Ronald Leary',     'Phillip Lindsay',
-          'Nico Falah',       'Joe Flacco',
-          'Connor McGovern',  'Troy Fumagalli',
-          'Devontae Booker',  'Garett Bolles',
-          'Andy Janovich',    'JaWuan James'
+          'Courtland Sutton', 'Joe Flacco',
+          'Phillip Lindsay',  'Garett Bolles',
+          'Connor McGovern',  'DaeSean Hamilton',
+          'Elijah Wilkinson', 'JaWuan James',
+          'Nico Falah',       'Troy Fumagalli',
+          'Tim Patrick',      'Ronald Leary',
+          'Devontae Booker',  'Sam Jones',
+          'Jake Butt',        'Royce Freeman',
+          'Kevin Hogan',      'Andy Janovich'
         ],
         defense: [
-          'Will Parks',       'Todd Davis',
-          'Josey Jewell',     'Dymonte Thomas',
-          'Derek Wolfe',      'Kareem Jackson',
-          'Shelby Harris',    'Adam Gotsis',
-          'Isaac Yiadom',     'Bradley Chubb',
-          'Von Miller',       'Will Parks',
-          'Shamarko Thomas',  'Justin Simmons',
-          'Chris Harris Jr.'
+          'Von Miller',      'Shelby Harris',
+          'Todd Davis',      'Chris Harris Jr.',
+          'Shamarko Thomas', 'Will Parks',
+          'Derek Wolfe',     'Kareem Jackson',
+          'Isaac Yiadom',    'Bradley Chubb',
+          'Josey Jewell',    'Adam Gotsis',
+          'Dymonte Thomas',  'Justin Simmons',
+          'Will Parks'
         ]
       })
     });
