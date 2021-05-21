@@ -726,15 +726,15 @@ const broncosPrompts = {
       }
     })
   },
-  
+
   offensiveTotal() {
     // return the total number of 'offense' players
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.reduce((acc, player) => {
+      if(player.side === 'offense') acc++
+      return acc
+    }, 0)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   defensiveTotal() {

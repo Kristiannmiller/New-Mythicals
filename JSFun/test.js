@@ -1327,7 +1327,7 @@ describe("PROTOTYPES", () => {
       ]);
     });
 
-    it.skip("offensiveTotal", () => {
+    it("offensiveTotal", () => {
       const e = broncosPrompts.offensiveTotal();
 
       expect(e).to.equal(18)
