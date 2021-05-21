@@ -709,11 +709,8 @@ const broncosPrompts = {
   playerNames() {
     // return an array of the names of each player
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.map(player => player.name)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   adjustRatings() {
     // decrease injured players rating by 5,
