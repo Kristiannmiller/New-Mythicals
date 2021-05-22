@@ -767,11 +767,8 @@ const broncosPrompts = {
   cornerbackRatings() {
     // create an array of cornerbacks, 'CB', sorted by rating; high-low
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.filter(player => player.pos === 'CB').sort((a,b) => b.rating - a.rating)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   injuredPlayers() {
     // create an array of players on 'injured' status

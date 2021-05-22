@@ -1380,7 +1380,7 @@ describe("PROTOTYPES", () => {
         'Kevin Hogan',      'Andy Janovich'
       ])
     });
-    it.skip("cornerbackRatings", () => {
+    it("cornerbackRatings", () => {
       const e = broncosPrompts.cornerbackRatings();
 
       expect(e).to.deep.equal([
@@ -1389,21 +1389,21 @@ describe("PROTOTYPES", () => {
           pos: 'CB',
           status: 'active',
           side: 'defense',
-          rating: 88
+          rating: 90
         },
         {
           name: 'Kareem Jackson',
           pos: 'CB',
           status: 'active',
           side: 'defense',
-          rating: 83
+          rating: 85
         },
         {
           name: 'Isaac Yiadom',
           pos: 'CB',
           status: 'questionable',
           side: 'defense',
-          rating: 82
+          rating: 81
         }
       ])
     });
