@@ -1461,37 +1461,24 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("activePlayers", () => {
+    it("activePlayers", () => {
       const e = broncosPrompts.activePlayers();
 
       expect(e.map(player => player.name)).to.deep.equal([
-        'Kevin Hogan',
-        'Royce Freeman',
-        'DaeSean Hamilton',
-        'Tim Patrick',
-        'Sam Jones',
-        'Courtland Sutton',
-        'Todd Davis',
-        'Elijah Wilkinson',
-        'Ronald Leary',
-        'Joe Flacco',
-        'Connor McGovern',
-        'Josey Jewell',
-        'Troy Fumagalli',
-        'Dymonte Thomas',
-        'Devontae Booker',
-        'Garett Bolles',
-        'Derek Wolfe',
-        'Kareem Jackson',
-        'Shelby Harris',
-        'Andy Janovich',
-        'Adam Gotsis',
-        'JaWuan James',
-        'Bradley Chubb',
-        'Von Miller',
-        'Will Parks',
-        'Justin Simmons',
-        'Chris Harris Jr.',
+        'Von Miller',       'Courtland Sutton',
+        'Joe Flacco',       'Shelby Harris',
+        'Todd Davis',       'Garett Bolles',
+        'Chris Harris Jr.', 'Connor McGovern',
+        'DaeSean Hamilton', 'Elijah Wilkinson',
+        'Will Parks',       'Derek Wolfe',
+        'Kareem Jackson',   'JaWuan James',
+        'Bradley Chubb',    'Josey Jewell',
+        'Troy Fumagalli',   'Adam Gotsis',
+        'Tim Patrick',      'Ronald Leary',
+        'Dymonte Thomas',   'Devontae Booker',
+        'Justin Simmons',   'Sam Jones',
+        'Royce Freeman',    'Kevin Hogan',
+        'Andy Janovich'
       ])
     });
   });
