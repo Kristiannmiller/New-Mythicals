@@ -1365,28 +1365,19 @@ describe("PROTOTYPES", () => {
       })
     });
 
-    it.skip("offenseRatings", () => {
+    it("offenseRatings", () => {
       const e = broncosPrompts.offenseRatings();
 
       expect(e.map(player => player.name)).to.deep.equal([
-        'Courtland Sutton',
-        'Joe Flacco',
-        'Phillip Lindsay',
-        'Garett Bolles',
-        'Connor McGovern',
-        'DaeSean Hamilton',
-        'Elijah Wilkinson',
-        'JaWuan James',
-        'Nico Falah',
-        'Troy Fumagalli',
-        'Tim Patrick',
-        'Ronald Leary',
-        'Devontae Booker',
-        'Sam Jones',
-        'Jake Butt',
-        'Royce Freeman',
-        'Kevin Hogan',
-        'Andy Janovich',
+        'Courtland Sutton', 'Joe Flacco',
+        'Garett Bolles',    'Connor McGovern',
+        'Phillip Lindsay',  'DaeSean Hamilton',
+        'Elijah Wilkinson', 'JaWuan James',
+        'Troy Fumagalli',   'Tim Patrick',
+        'Ronald Leary',     'Devontae Booker',
+        'Sam Jones',        'Royce Freeman',
+        'Jake Butt',        'Nico Falah',
+        'Kevin Hogan',      'Andy Janovich'
       ])
     });
     it.skip("cornerbackRatings", () => {

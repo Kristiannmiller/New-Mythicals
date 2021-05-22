@@ -760,11 +760,8 @@ const broncosPrompts = {
   offenseRatings() {
     // create an array of offense players sorted by rating; high-low
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.filter(player => player.side === 'offense').sort((a,b) => b.rating - a.rating)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   cornerbackRatings() {
