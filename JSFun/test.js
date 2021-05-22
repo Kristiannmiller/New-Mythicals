@@ -1434,30 +1434,30 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("questionablePlayers", () => {
+    it("questionablePlayers", () => {
       const e = broncosPrompts.questionablePlayers();
 
       expect(e).to.deep.equal([
-        {
-          name: 'Jake Butt',
-          pos: 'TE',
-          status: 'questionable',
-          side: 'offense',
-          rating: 78
-        },
         {
           name: 'Phillip Lindsay',
           pos: 'RB',
           status: 'questionable',
           side: 'offense',
-          rating: 88
+          rating: 87
         },
         {
           name: 'Isaac Yiadom',
           pos: 'CB',
           status: 'questionable',
           side: 'defense',
-          rating: 82
+          rating: 81
+        },
+        {
+          name: 'Jake Butt',
+          pos: 'TE',
+          status: 'questionable',
+          side: 'offense',
+          rating: 77
         }
       ])
     });

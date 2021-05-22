@@ -779,11 +779,8 @@ const broncosPrompts = {
   questionablePlayers() {
     // create an array of players on 'questionable' status
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.filter(player => player.status === 'questionable')
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   activePlayers() {
     // return the length of broncos players that are not on 'injured' or 'questionable' status
