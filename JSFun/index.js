@@ -773,11 +773,8 @@ const broncosPrompts = {
   injuredPlayers() {
     // create an array of players on 'injured' status
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = broncos.filter(player => player.status === 'injured')
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   questionablePlayers() {
     // create an array of players on 'questionable' status

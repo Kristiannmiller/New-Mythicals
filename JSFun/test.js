@@ -1407,30 +1407,30 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("injuredPlayers", () => {
+    it("injuredPlayers", () => {
       const e = broncosPrompts.injuredPlayers();
 
       expect(e).to.deep.equal([
         {
-          name: 'Will Parks',
+          name: 'Shamarko Thomas',
           pos: 'FS',
           status: 'injured',
           side: 'defense',
-          rating: 77
+          rating: 82
         },
         {
           name: 'Nico Falah',
           pos: 'LG',
           status: 'injured',
           side: 'offense',
-          rating: 81
+          rating: 76
         },
         {
-          name: 'Shamarko Thomas',
+          name: 'Will Parks',
           pos: 'FS',
           status: 'injured',
           side: 'defense',
-          rating: 87
+          rating: 72
         }
       ])
     });
