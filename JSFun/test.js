@@ -1281,115 +1281,106 @@ describe("PROTOTYPES", () => {
   })
 
   describe("Broncos Prompts", () => {
-    it.skip("highestRatedPlayer", () => {
+    it("highestRatedPlayer", () => {
       const e = broncosPrompts.highestRatedPlayer();
 
       expect(e).to.equal('Von Miller')
     });
-    it.skip("playerNames", () => {
+    it("playerNames", () => {
       const e = broncosPrompts.playerNames();
 
       expect(e).to.deep.equal([
-        'Kevin Hogan',      'Royce Freeman',
-        'DaeSean Hamilton', 'Will Parks',
-        'Tim Patrick',      'Sam Jones',
-        'Courtland Sutton', 'Jake Butt',
-        'Todd Davis',       'Elijah Wilkinson',
-        'Ronald Leary',     'Phillip Lindsay',
-        'Nico Falah',       'Joe Flacco',
-        'Connor McGovern',  'Josey Jewell',
-        'Troy Fumagalli',   'Dymonte Thomas',
-        'Devontae Booker',  'Garett Bolles',
-        'Derek Wolfe',      'Kareem Jackson',
-        'Shelby Harris',    'Andy Janovich',
-        'Adam Gotsis',      'JaWuan James',
+        'Von Miller',       'Courtland Sutton',
+        'Joe Flacco',       'Shelby Harris',
+        'Todd Davis',       'Phillip Lindsay',
+        'Garett Bolles',    'Chris Harris Jr.',
+        'Shamarko Thomas',  'Connor McGovern',
+        'DaeSean Hamilton', 'Elijah Wilkinson',
+        'Will Parks',       'Derek Wolfe',
+        'Kareem Jackson',   'JaWuan James',
         'Isaac Yiadom',     'Bradley Chubb',
-        'Von Miller',       'Will Parks',
-        'Shamarko Thomas',  'Justin Simmons',
-        'Chris Harris Jr.'
+        'Nico Falah',       'Josey Jewell',
+        'Troy Fumagalli',   'Adam Gotsis',
+        'Tim Patrick',      'Ronald Leary',
+        'Dymonte Thomas',   'Devontae Booker',
+        'Justin Simmons',   'Sam Jones',
+        'Jake Butt',        'Royce Freeman',
+        'Will Parks',       'Kevin Hogan',
+        'Andy Janovich'
       ])
     });
-    it.skip("adjustRatings", () => {
+    it("adjustRatings", () => {
       expect(broncos.map(bronco => bronco.rating)).to.deep.equal([
-        72, 77, 85, 77, 79, 78, 90, 78, 88,
-        84, 79, 88, 81, 90, 86, 80, 80, 79,
-        79, 88, 83, 83, 89, 71, 80, 82, 82,
-        82, 95, 84, 87, 79, 88
+        95, 90, 90, 89, 88, 88, 88, 88, 87,
+        86, 85, 84, 84, 83, 83, 82, 82, 82,
+        81, 80, 80, 80, 79, 79, 79, 79, 79,
+        78, 78, 77, 77, 72, 71
       ])
 
       broncosPrompts.adjustRatings();
 
       expect(broncos.map(bronco => bronco.rating)).to.deep.equal([
-        74, 79, 87, 72, 81, 80, 92, 77, 90,
-        86, 81, 87, 76, 92, 88, 82, 82, 81,
-        81, 90, 85, 85, 91, 73, 82, 84, 81,
-        84, 97, 86, 82, 81, 90
+        97, 92, 92, 91, 90, 87, 90, 90, 82,
+        88, 87, 86, 86, 85, 85, 84, 81, 84,
+        76, 82, 82, 82, 81, 81, 81, 81, 81,
+        80, 77, 79, 72, 74, 73
       ]);
     });
 
-    it.skip("offensiveTotal", () => {
+    it("offensiveTotal", () => {
       const e = broncosPrompts.offensiveTotal();
 
       expect(e).to.equal(18)
     });
-    it.skip("defensiveTotal", () => {
+    it("defensiveTotal", () => {
       const e = broncosPrompts.defensiveTotal();
 
       expect(e).to.equal(15)
     });
-    it.skip("separateTeams", () => {
+    it("separateTeams", () => {
       const e = broncosPrompts.separateTeams();
 
       expect(e).to.deep.equal({
         offense: [
-          'Kevin Hogan',      'Royce Freeman',
-          'DaeSean Hamilton', 'Tim Patrick',
-          'Sam Jones',        'Courtland Sutton',
-          'Jake Butt',        'Elijah Wilkinson',
-          'Ronald Leary',     'Phillip Lindsay',
-          'Nico Falah',       'Joe Flacco',
-          'Connor McGovern',  'Troy Fumagalli',
-          'Devontae Booker',  'Garett Bolles',
-          'Andy Janovich',    'JaWuan James'
+          'Courtland Sutton', 'Joe Flacco',
+          'Phillip Lindsay',  'Garett Bolles',
+          'Connor McGovern',  'DaeSean Hamilton',
+          'Elijah Wilkinson', 'JaWuan James',
+          'Nico Falah',       'Troy Fumagalli',
+          'Tim Patrick',      'Ronald Leary',
+          'Devontae Booker',  'Sam Jones',
+          'Jake Butt',        'Royce Freeman',
+          'Kevin Hogan',      'Andy Janovich'
         ],
         defense: [
-          'Will Parks',       'Todd Davis',
-          'Josey Jewell',     'Dymonte Thomas',
-          'Derek Wolfe',      'Kareem Jackson',
-          'Shelby Harris',    'Adam Gotsis',
-          'Isaac Yiadom',     'Bradley Chubb',
-          'Von Miller',       'Will Parks',
-          'Shamarko Thomas',  'Justin Simmons',
-          'Chris Harris Jr.'
+          'Von Miller',      'Shelby Harris',
+          'Todd Davis',      'Chris Harris Jr.',
+          'Shamarko Thomas', 'Will Parks',
+          'Derek Wolfe',     'Kareem Jackson',
+          'Isaac Yiadom',    'Bradley Chubb',
+          'Josey Jewell',    'Adam Gotsis',
+          'Dymonte Thomas',  'Justin Simmons',
+          'Will Parks'
         ]
       })
     });
 
-    it.skip("offenseRatings", () => {
+    it("offenseRatings", () => {
       const e = broncosPrompts.offenseRatings();
 
       expect(e.map(player => player.name)).to.deep.equal([
-        'Courtland Sutton',
-        'Joe Flacco',
-        'Phillip Lindsay',
-        'Garett Bolles',
-        'Connor McGovern',
-        'DaeSean Hamilton',
-        'Elijah Wilkinson',
-        'JaWuan James',
-        'Nico Falah',
-        'Troy Fumagalli',
-        'Tim Patrick',
-        'Ronald Leary',
-        'Devontae Booker',
-        'Sam Jones',
-        'Jake Butt',
-        'Royce Freeman',
-        'Kevin Hogan',
-        'Andy Janovich',
+        'Courtland Sutton', 'Joe Flacco',
+        'Garett Bolles',    'Connor McGovern',
+        'Phillip Lindsay',  'DaeSean Hamilton',
+        'Elijah Wilkinson', 'JaWuan James',
+        'Troy Fumagalli',   'Tim Patrick',
+        'Ronald Leary',     'Devontae Booker',
+        'Sam Jones',        'Royce Freeman',
+        'Jake Butt',        'Nico Falah',
+        'Kevin Hogan',      'Andy Janovich'
       ])
     });
-    it.skip("cornerbackRatings", () => {
+    it("cornerbackRatings", () => {
       const e = broncosPrompts.cornerbackRatings();
 
       expect(e).to.deep.equal([
@@ -1398,109 +1389,96 @@ describe("PROTOTYPES", () => {
           pos: 'CB',
           status: 'active',
           side: 'defense',
-          rating: 88
+          rating: 90
         },
         {
           name: 'Kareem Jackson',
           pos: 'CB',
           status: 'active',
           side: 'defense',
-          rating: 83
+          rating: 85
         },
         {
           name: 'Isaac Yiadom',
           pos: 'CB',
           status: 'questionable',
           side: 'defense',
-          rating: 82
+          rating: 81
         }
       ])
     });
-    it.skip("injuredPlayers", () => {
+    it("injuredPlayers", () => {
       const e = broncosPrompts.injuredPlayers();
 
       expect(e).to.deep.equal([
         {
-          name: 'Will Parks',
+          name: 'Shamarko Thomas',
           pos: 'FS',
           status: 'injured',
           side: 'defense',
-          rating: 77
+          rating: 82
         },
         {
           name: 'Nico Falah',
           pos: 'LG',
           status: 'injured',
           side: 'offense',
-          rating: 81
+          rating: 76
         },
         {
-          name: 'Shamarko Thomas',
+          name: 'Will Parks',
           pos: 'FS',
           status: 'injured',
           side: 'defense',
-          rating: 87
+          rating: 72
         }
       ])
     });
-    it.skip("questionablePlayers", () => {
+    it("questionablePlayers", () => {
       const e = broncosPrompts.questionablePlayers();
 
       expect(e).to.deep.equal([
-        {
-          name: 'Jake Butt',
-          pos: 'TE',
-          status: 'questionable',
-          side: 'offense',
-          rating: 78
-        },
         {
           name: 'Phillip Lindsay',
           pos: 'RB',
           status: 'questionable',
           side: 'offense',
-          rating: 88
+          rating: 87
         },
         {
           name: 'Isaac Yiadom',
           pos: 'CB',
           status: 'questionable',
           side: 'defense',
-          rating: 82
+          rating: 81
+        },
+        {
+          name: 'Jake Butt',
+          pos: 'TE',
+          status: 'questionable',
+          side: 'offense',
+          rating: 77
         }
       ])
     });
-    it.skip("activePlayers", () => {
+    it("activePlayers", () => {
       const e = broncosPrompts.activePlayers();
 
       expect(e.map(player => player.name)).to.deep.equal([
-        'Kevin Hogan',
-        'Royce Freeman',
-        'DaeSean Hamilton',
-        'Tim Patrick',
-        'Sam Jones',
-        'Courtland Sutton',
-        'Todd Davis',
-        'Elijah Wilkinson',
-        'Ronald Leary',
-        'Joe Flacco',
-        'Connor McGovern',
-        'Josey Jewell',
-        'Troy Fumagalli',
-        'Dymonte Thomas',
-        'Devontae Booker',
-        'Garett Bolles',
-        'Derek Wolfe',
-        'Kareem Jackson',
-        'Shelby Harris',
-        'Andy Janovich',
-        'Adam Gotsis',
-        'JaWuan James',
-        'Bradley Chubb',
-        'Von Miller',
-        'Will Parks',
-        'Justin Simmons',
-        'Chris Harris Jr.',
+        'Von Miller',       'Courtland Sutton',
+        'Joe Flacco',       'Shelby Harris',
+        'Todd Davis',       'Garett Bolles',
+        'Chris Harris Jr.', 'Connor McGovern',
+        'DaeSean Hamilton', 'Elijah Wilkinson',
+        'Will Parks',       'Derek Wolfe',
+        'Kareem Jackson',   'JaWuan James',
+        'Bradley Chubb',    'Josey Jewell',
+        'Troy Fumagalli',   'Adam Gotsis',
+        'Tim Patrick',      'Ronald Leary',
+        'Dymonte Thomas',   'Devontae Booker',
+        'Justin Simmons',   'Sam Jones',
+        'Royce Freeman',    'Kevin Hogan',
+        'Andy Janovich'
       ])
     });
   });
