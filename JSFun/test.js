@@ -1484,7 +1484,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("Care Bear Prompts", () => {
-    it.skip("getBear", () => {
+    it("getBear", () => {
       const e = careBearPrompts.getBear('Oopsy');
 
       expect(e).to.deep.equal([{
@@ -1498,7 +1498,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("collectionTotals", () => {
+    it("collectionTotals", () => {
       const e = careBearPrompts.collectionTotals();
 
       expect(e).to.deep.equal({
@@ -1509,10 +1509,10 @@ describe("PROTOTYPES", () => {
         Other: 3
       })
     });
-    it.skip("organizedBears", () => {
+    it("organizedBears", () => {
       const e = careBearPrompts.organizedBears();
 
-      expect(e.map(bear => bear.name)).to.deep.equal([
+      expect(e).to.deep.equal([
         'All My Heart Bear', 'Always There Bear',
         'America Cares Bear', 'Amigo Bear',
         'Baby Hugs Bear', 'Baby Tugs Bear',
@@ -1541,7 +1541,7 @@ describe("PROTOTYPES", () => {
         'Wonderheart Bear', 'Work of Heart Bear'
       ])
     });
-    it.skip("search", () => {
+    it("search", () => {
       const e = careBearPrompts.search('furColor', 'Fuchsia');
 
       expect(e).to.deep.equal([ { appearanceCount: 2,
@@ -1554,7 +1554,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("getAppearanceCount", () => {
+    it("getAppearanceCount", () => {
       const e = careBearPrompts.getAppearanceCount();
 
       expect(e).to.deep.equal({

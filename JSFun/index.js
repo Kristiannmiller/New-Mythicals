@@ -790,71 +790,52 @@ const broncosPrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: careBears from ./datasets/carebears.js
 const careBearPrompts = {
-  getBear() {
+  getBear(search) {
     // I love my Care Bears but I have collected too many.
     // Help me find my favorite ones by creating a getBear function
     // that returns an array of bear objects contain the search.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.filter(bear => bear.name.includes(search))
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   collectionTotals() {
     // Create an object with a tally of how many bears belong to each collection
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.reduce((collections, bear) => {
+      collections[bear.collection] ? collections[bear.collection]++ : collections[bear.collection] = 1
+      return collections
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   organizedBears() {
     // Create an alphabetized array of Care Bear names
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const result = careBears.bears.map(bear => bear.name)
+    return result.sort();
   },
-  search() {
+  search(key, value) {
     // Create a more flexible searching function that takes in 2 arguements, a key and the query.
     // This should allow you to search through any key in the bear object
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.filter(bear => {
+      return bear[key].includes(value)
+    })
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   getAppearanceCount() {
     // Collect all the Care Bears by their appearanceCount number.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.reduce((appearances, bear) => {
+      appearances[bear.appearanceCount] ? appearances[bear.appearanceCount].push(bear.name) : appearances[bear.appearanceCount] = [bear.name]
+      return appearances
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 
