@@ -1554,7 +1554,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("getAppearanceCount", () => {
+    it("getAppearanceCount", () => {
       const e = careBearPrompts.getAppearanceCount();
 
       expect(e).to.deep.equal({

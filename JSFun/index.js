@@ -831,11 +831,11 @@ const careBearPrompts = {
   getAppearanceCount() {
     // Collect all the Care Bears by their appearanceCount number.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.reduce((appearances, bear) => {
+      appearances[bear.appearanceCount] ? appearances[bear.appearanceCount].push(bear.name) : appearances[bear.appearanceCount] = [bear.name]
+      return appearances
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 
