@@ -806,11 +806,11 @@ const careBearPrompts = {
   collectionTotals() {
     // Create an object with a tally of how many bears belong to each collection
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.reduce((collections, bear) => {
+      collections[bear.collection] ? collections[bear.collection]++ : collections[bear.collection] = 1
+      return collections
+    }, {});
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   organizedBears() {

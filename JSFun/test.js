@@ -1498,7 +1498,7 @@ describe("PROTOTYPES", () => {
       ])
     });
 
-    it.skip("collectionTotals", () => {
+    it("collectionTotals", () => {
       const e = careBearPrompts.collectionTotals();
 
       expect(e).to.deep.equal({
