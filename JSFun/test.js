@@ -1509,10 +1509,10 @@ describe("PROTOTYPES", () => {
         Other: 3
       })
     });
-    it.skip("organizedBears", () => {
+    it("organizedBears", () => {
       const e = careBearPrompts.organizedBears();
 
-      expect(e.map(bear => bear.name)).to.deep.equal([
+      expect(e).to.deep.equal([
         'All My Heart Bear', 'Always There Bear',
         'America Cares Bear', 'Amigo Bear',
         'Baby Hugs Bear', 'Baby Tugs Bear',

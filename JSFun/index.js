@@ -816,8 +816,8 @@ const careBearPrompts = {
   organizedBears() {
     // Create an alphabetized array of Care Bear names
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
+    const result = careBears.bears.map(bear => bear.name)
+    return result.sort();
 
     // Annotation:
     // Write your annotation here as a comment
