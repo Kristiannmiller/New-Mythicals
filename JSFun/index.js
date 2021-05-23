@@ -790,32 +790,17 @@ const broncosPrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: careBears from ./datasets/carebears.js
 const careBearPrompts = {
-  getBear() {
+  getBear(search) {
     // I love my Care Bears but I have collected too many.
     // Help me find my favorite ones by creating a getBear function
     // that returns an array of bear objects contain the search.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.filter(bear => bear.name.includes(search))
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 
   collectionTotals() {

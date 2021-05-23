@@ -1484,7 +1484,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("Care Bear Prompts", () => {
-    it.skip("getBear", () => {
+    it("getBear", () => {
       const e = careBearPrompts.getBear('Oopsy');
 
       expect(e).to.deep.equal([{
