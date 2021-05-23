@@ -1541,7 +1541,7 @@ describe("PROTOTYPES", () => {
         'Wonderheart Bear', 'Work of Heart Bear'
       ])
     });
-    it.skip("search", () => {
+    it("search", () => {
       const e = careBearPrompts.search('furColor', 'Fuchsia');
 
       expect(e).to.deep.equal([ { appearanceCount: 2,

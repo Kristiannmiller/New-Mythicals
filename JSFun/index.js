@@ -818,19 +818,15 @@ const careBearPrompts = {
 
     const result = careBears.bears.map(bear => bear.name)
     return result.sort();
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
-  search() {
+  search(key, value) {
     // Create a more flexible searching function that takes in 2 arguements, a key and the query.
     // This should allow you to search through any key in the bear object
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = careBears.bears.filter(bear => {
+      return bear[key].includes(value)
+    })
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   getAppearanceCount() {
     // Collect all the Care Bears by their appearanceCount number.
