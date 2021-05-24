@@ -1621,7 +1621,7 @@ describe("PROTOTYPES", () => {
         'Vivienne Pinay'
       ])
     });
-    it.skip("findMissCon", () => {
+    it("findMissCon", () => {
       const e = queenPrompts.findMissCon();
 
       expect(e).to.equal('Ivy Winters')

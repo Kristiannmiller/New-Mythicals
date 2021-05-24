@@ -852,11 +852,8 @@ const queenPrompts = {
   findMissCon() {
     // Write a fuction that returns the name of Miss Congeniality
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.find(queen => queen.missCongeniality).name
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   generateStringById(id) {
     // Write a fuction that takes in an id and returns
