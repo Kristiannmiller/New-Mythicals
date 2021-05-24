@@ -839,30 +839,15 @@ const careBearPrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: queens from ./datasets/queens.js
 const queenPrompts = {
   sortQueenNames() {
     // Write a function that returns an array of queen names in alphabetical order.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.map(queen => queen.name).sort()
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   findMissCon() {
     // Write a fuction that returns the name of Miss Congeniality

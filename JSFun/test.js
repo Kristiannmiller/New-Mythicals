@@ -1601,7 +1601,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("queen Prompts", () => {
-    it.skip("sortQueenNames", () => {
+    it("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();
 
       expect(e).to.deep.equal([
