@@ -1626,10 +1626,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal('Ivy Winters')
     });
-    it.skip("generateStringById", () => {
+    it("generateStringById", () => {
       const e = queenPrompts.generateStringById(62);
 
-      expect(e).to.equal(`Alaska Thunderfuck 5000 placed fourth in Season 5 of RuPaul's Drag Race.`)
+      expect(e).to.equal(`Alaska Thunderfuck 5000 placed second in Season 5 of RuPaul's Drag Race.`)
     });
     it.skip("getQueenQuotes", () => {
       const e = queenPrompts.getQueenQuotes();

@@ -860,12 +860,9 @@ const queenPrompts = {
     // the string "[Queen's Name] placed
     // [fifth, eleventh, ect...] in Season [Season number]
     // of RuPaul's Drag Race."
-
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const numbers = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'nineth', 'tenth', 'eleventh', 'twelveth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth']
+    const result = queens.find(queen => queen.id === id)
+    return `${result.name} placed ${numbers[result.seasons[0].place - 1]} in Season ${result.seasons[0].seasonNumber} of RuPaul's Drag Race.`
   },
   getQueenQuotes() {
     // 4. Write a function that returns an an object where the keys are first names of each queen and the value is their quote. ie:
