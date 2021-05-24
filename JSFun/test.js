@@ -1631,7 +1631,7 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(`Alaska Thunderfuck 5000 placed second in Season 5 of RuPaul's Drag Race.`)
     });
-    it.skip("getQueenQuotes", () => {
+    it("getQueenQuotes", () => {
       const e = queenPrompts.getQueenQuotes();
 
       expect(e).to.deep.equal({

@@ -870,11 +870,11 @@ const queenPrompts = {
     //   Roxxy: "Roxxy's Quote",
     //   Detox: "Detox's Quote"}
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.reduce((acc, queen) => {
+      acc[queen.name] = queen.quote
+      return acc
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   getTopThreeQueens() {
     // 5. Write a functions that returns an object of the top three finishers ie:
