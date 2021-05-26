@@ -839,51 +839,30 @@ const careBearPrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: queens from ./datasets/queens.js
 const queenPrompts = {
   sortQueenNames() {
     // Write a function that returns an array of queen names in alphabetical order.
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.map(queen => queen.name).sort()
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   findMissCon() {
     // Write a fuction that returns the name of Miss Congeniality
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.find(queen => queen.missCongeniality).name
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   generateStringById(id) {
     // Write a fuction that takes in an id and returns
     // the string "[Queen's Name] placed
     // [fifth, eleventh, ect...] in Season [Season number]
     // of RuPaul's Drag Race."
-
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const numbers = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'nineth', 'tenth', 'eleventh', 'twelveth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth']
+    const result = queens.find(queen => queen.id === id)
+    return `${result.name} placed ${numbers[result.seasons[0].place - 1]} in Season ${result.seasons[0].seasonNumber} of RuPaul's Drag Race.`
   },
   getQueenQuotes() {
     // 4. Write a function that returns an an object where the keys are first names of each queen and the value is their quote. ie:
@@ -891,11 +870,11 @@ const queenPrompts = {
     //   Roxxy: "Roxxy's Quote",
     //   Detox: "Detox's Quote"}
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.reduce((acc, queen) => {
+      acc[queen.name] = queen.quote
+      return acc
+    }, {})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   getTopThreeQueens() {
     // 5. Write a functions that returns an object of the top three finishers ie:
@@ -904,11 +883,13 @@ const queenPrompts = {
     // thirdPlace: name }
     // Extension: Make sure the object is in that exact order
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.reduce((topThree, queen) => {
+      if(queen.seasons[0].place === 1) topThree.firstPlace = queen.name
+      if(queen.seasons[0].place === 2) topThree.secondPlace = queen.name
+      if(queen.seasons[0].place === 3) topThree.thirdPlace = queen.name
+      return topThree
+    }, {thirdPlace: "", firstPlace:"", secondPlace:""})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 

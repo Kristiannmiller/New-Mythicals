@@ -1601,7 +1601,7 @@ describe("PROTOTYPES", () => {
   });
 
   describe("queen Prompts", () => {
-    it.skip("sortQueenNames", () => {
+    it("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();
 
       expect(e).to.deep.equal([
@@ -1621,17 +1621,17 @@ describe("PROTOTYPES", () => {
         'Vivienne Pinay'
       ])
     });
-    it.skip("findMissCon", () => {
+    it("findMissCon", () => {
       const e = queenPrompts.findMissCon();
 
       expect(e).to.equal('Ivy Winters')
     });
-    it.skip("generateStringById", () => {
+    it("generateStringById", () => {
       const e = queenPrompts.generateStringById(62);
 
-      expect(e).to.equal(`Alaska Thunderfuck 5000 placed fourth in Season 5 of RuPaul's Drag Race.`)
+      expect(e).to.equal(`Alaska Thunderfuck 5000 placed second in Season 5 of RuPaul's Drag Race.`)
     });
-    it.skip("getQueenQuotes", () => {
+    it("getQueenQuotes", () => {
       const e = queenPrompts.getQueenQuotes();
 
       expect(e).to.deep.equal({
@@ -1651,7 +1651,7 @@ describe("PROTOTYPES", () => {
         'Alaska Thunderfuck 5000': "I'll send you 10,000 dollars via PayPal if you let me stay in this competition"
       })
     });
-    it.skip("getTopThreeQueens", () => {
+    it("getTopThreeQueens", () => {
       const e = queenPrompts.getTopThreeQueens();
 
       expect(e).to.deep.equal({
