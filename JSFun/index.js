@@ -883,11 +883,13 @@ const queenPrompts = {
     // thirdPlace: name }
     // Extension: Make sure the object is in that exact order
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = queens.reduce((topThree, queen) => {
+      if(queen.seasons[0].place === 1) topThree.firstPlace = queen.name
+      if(queen.seasons[0].place === 2) topThree.secondPlace = queen.name
+      if(queen.seasons[0].place === 3) topThree.thirdPlace = queen.name
+      return topThree
+    }, {thirdPlace: "", firstPlace:"", secondPlace:""})
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 

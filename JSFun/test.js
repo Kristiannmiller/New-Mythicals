@@ -1651,7 +1651,7 @@ describe("PROTOTYPES", () => {
         'Alaska Thunderfuck 5000': "I'll send you 10,000 dollars via PayPal if you let me stay in this competition"
       })
     });
-    it.skip("getTopThreeQueens", () => {
+    it("getTopThreeQueens", () => {
       const e = queenPrompts.getTopThreeQueens();
 
       expect(e).to.deep.equal({
