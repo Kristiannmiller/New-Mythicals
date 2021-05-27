@@ -904,15 +904,11 @@ const harryPotterPrompts = {
     const result = students.filter(student => student.house === houseHeads[houseHead])
     return result;
   },
-  filterHouseStudents() {
+  filterHouseStudents(houseHead) {
     //Can you make the array send back only the names of the students?
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    console.log(result)
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const result = students.filter(student => student.house === houseHeads[houseHead])
+    return result.map(student => student.name);
   },
   housePoints() {
     //How many house points have been added to the house cups overall?

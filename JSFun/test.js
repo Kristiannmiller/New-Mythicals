@@ -1689,10 +1689,10 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("filterHouseStudents", () => {
-      const e = queenPrompts.filterHouseStudents('McGonagall');
+    it("filterHouseStudents", () => {
+      const e = harryPotterPrompts.filterHouseStudents('McGonagall');
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([ 'Hermione', 'Harry', 'Ron' ])
     });
     it.skip("housePoints", () => {
       const e = queenPrompts.housePoints();
