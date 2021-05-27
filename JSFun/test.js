@@ -1662,10 +1662,32 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Harry Potter Prompts", () => {
-    it.skip("filterHouseHead", () => {
-      const e = queenPrompts.filterHouseHead('McGonagall');
+    it("filterHouseHead", () => {
+      const e = harryPotterPrompts.filterHouseHead('McGonagall');
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ]
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ]
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ]
+        }
+      ])
     });
     it.skip("filterHouseStudents", () => {
       const e = queenPrompts.filterHouseStudents('McGonagall');

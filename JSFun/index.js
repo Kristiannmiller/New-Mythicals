@@ -893,36 +893,22 @@ const queenPrompts = {
   },
 }
 
-
-
-
-
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-
-
-
-
+// =================================================================
 
 // DATASET: harryPotter from ./datasets/harryPotter.js
 const harryPotterPrompts = {
-  filterHouseHead() {
+  filterHouseHead(houseHead) {
     // Create a function where you can put the name of a house head
     // and get back the student objects that in that house
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = students.filter(student => student.house === houseHeads[houseHead])
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   filterHouseStudents() {
     //Can you make the array send back only the names of the students?
 
     const result = 'REPLACE WITH YOUR RESULT HERE'
+    console.log(result)
     return result;
 
     // Annotation:
