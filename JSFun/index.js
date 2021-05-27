@@ -922,11 +922,11 @@ const harryPotterPrompts = {
   ravenclawPoints() {
     //How many house points have the Ravenclaw folks added to their cup?
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = students.reduce((acc, student) => {
+      if(student.house === 'Ravenclaw') acc += student.pointsForHouse
+      return acc
+    }, 0)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   kickOutSlytherins() {
     //For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false

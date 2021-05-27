@@ -1699,10 +1699,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal(175)
     });
-    it.skip("ravenclawPoints", () => {
-      const e = queenPrompts.ravenclawPoints();
+    it("ravenclawPoints", () => {
+      const e = harryPotterPrompts.ravenclawPoints();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(35)
     });
     it.skip("kickOutSlytherins", () => {
       const e = queenPrompts.kickOutSlytherins();
