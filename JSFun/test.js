@@ -1694,10 +1694,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal([ 'Hermione', 'Harry', 'Ron' ])
     });
-    it.skip("housePoints", () => {
-      const e = queenPrompts.housePoints();
+    it("housePoints", () => {
+      const e = harryPotterPrompts.housePoints();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(175)
     });
     it.skip("ravenclawPoints", () => {
       const e = queenPrompts.ravenclawPoints();

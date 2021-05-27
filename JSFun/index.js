@@ -913,11 +913,11 @@ const harryPotterPrompts = {
   housePoints() {
     //How many house points have been added to the house cups overall?
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = students.reduce((acc, student) => {
+      acc += student.pointsForHouse
+      return acc
+    }, 0)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   ravenclawPoints() {
     //How many house points have the Ravenclaw folks added to their cup?
