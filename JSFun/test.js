@@ -1,6 +1,8 @@
 const chai = require("chai");
 const expect = chai.expect;
 const { broncos } = require('./datasets/broncos');
+const { students } = require('./datasets/harryPotter');
+const { hogwarts } = require('./datasets/harryPotter');
 
 
 const {
@@ -1662,57 +1664,216 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Harry Potter Prompts", () => {
-    it.skip("filterHouseHead", () => {
-      const e = queenPrompts.filterHouseHead('McGonagall');
+    it("filterHouseHead", () => {
+      const e = harryPotterPrompts.filterHouseHead('McGonagall');
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ]
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ]
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ]
+        }
+      ])
     });
-    it.skip("filterHouseStudents", () => {
-      const e = queenPrompts.filterHouseStudents('McGonagall');
+    it("filterHouseStudents", () => {
+      const e = harryPotterPrompts.filterHouseStudents('McGonagall');
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([ 'Hermione', 'Harry', 'Ron' ])
     });
-    it.skip("housePoints", () => {
-      const e = queenPrompts.housePoints();
+    it("housePoints", () => {
+      const e = harryPotterPrompts.housePoints();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(175)
     });
-    it.skip("ravenclawPoints", () => {
-      const e = queenPrompts.ravenclawPoints();
+    it("ravenclawPoints", () => {
+      const e = harryPotterPrompts.ravenclawPoints();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(35)
     });
-    it.skip("kickOutSlytherins", () => {
-      const e = queenPrompts.kickOutSlytherins();
+    it("kickOutSlytherins", () => {
+      expect(students).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ]
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ]
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ]
+        },
+        {
+          name: 'Luna',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 15,
+          personality: [ 'whimsical', 'quiet', 'dependable' ]
+        },
+        {
+          name: 'Cedric',
+          gender: 'male',
+          house: 'Hufflepuff',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'just', 'modest' ]
+        },
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ]
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ]
+        },
+        {
+          name: 'Cho',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'loyal', 'intelligent', 'extrovert' ]
+        }
+      ])
 
-      expect(e).to.deep.equal([])
+      harryPotterPrompts.kickOutSlytherins();
+
+      expect(students).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Luna',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 15,
+          personality: [ 'whimsical', 'quiet', 'dependable' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Cedric',
+          gender: 'male',
+          house: 'Hufflepuff',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'just', 'modest' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Cho',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'loyal', 'intelligent', 'extrovert' ],
+          currentlyAttending: true
+        }
+      ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("missingStudents", () => {
+      const e = harryPotterPrompts.missingStudents();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ],
+          currentlyAttending: false
+        }
+      ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledorWands", () => {
+      const e = harryPotterPrompts.dumbledorWands();
 
-      expect(e).to.deep.equal([])
+      expect(hogwarts.currentHeadmaster.wand).to.deep.equal([
+         '15 inch Elder Thestral tail hair core',
+         'Elder Wand'
+       ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledoreLivingFamily", () => {
+      const e = harryPotterPrompts.dumbledoreLivingFamily();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal('Aberforth')
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledoreDeadFamily", () => {
+      const e = harryPotterPrompts.dumbledoreDeadFamily();
 
-      expect(e).to.deep.equal([])
-    });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
-
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(['Percival', 'Kendra', 'Ariana'])
     });
   });
-
-
 })
