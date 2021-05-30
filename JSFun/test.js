@@ -2,6 +2,7 @@ const chai = require("chai");
 const expect = chai.expect;
 const { broncos } = require('./datasets/broncos');
 const { students } = require('./datasets/harryPotter');
+const { hogwarts } = require('./datasets/harryPotter');
 
 
 const {
@@ -1856,10 +1857,13 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledorWands", () => {
+      const e = harryPotterPrompts.dumbledorWands();
 
-      expect(e).to.deep.equal([])
+      expect(hogwarts.currentHeadmaster.wand).to.deep.equal([
+         '15 inch Elder Thestral tail hair core',
+         'Elder Wand'
+       ])
     });
     it.skip("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();

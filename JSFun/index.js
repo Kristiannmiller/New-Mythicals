@@ -940,14 +940,10 @@ const harryPotterPrompts = {
     const result = students.filter(student => !student.currentlyAttending)
     return result;
   },
-  sortQueenNames() {
+  dumbledorWands() {
     //Dumbledore just defeated Grindelwald and obtained the elder wand! Create an array of all his wands
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    hogwarts.currentHeadmaster.wand = [hogwarts.currentHeadmaster.wand, 'Elder Wand']
   },
   sortQueenNames() {
     //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
