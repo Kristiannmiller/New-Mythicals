@@ -1834,10 +1834,27 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("missingStudents", () => {
+      const e = harryPotterPrompts.missingStudents();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ],
+          currentlyAttending: false
+        }
+      ])
     });
     it.skip("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();

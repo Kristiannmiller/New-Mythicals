@@ -937,11 +937,8 @@ const harryPotterPrompts = {
   missingStudents() {
     //Check to see if any students are missing from class
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const result = students.filter(student => !student.currentlyAttending)
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
   sortQueenNames() {
     //Dumbledore just defeated Grindelwald and obtained the elder wand! Create an array of all his wands
