@@ -1870,17 +1870,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal('Aberforth')
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledoreDeadFamily", () => {
+      const e = harryPotterPrompts.dumbledoreDeadFamily();
 
-      expect(e).to.deep.equal([])
-    });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
-
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal(['Percival', 'Kendra', 'Ariana'])
     });
   });
-
-
 })

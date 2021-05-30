@@ -952,14 +952,13 @@ const harryPotterPrompts = {
     const relationship = Object.keys(result)[0]
     return result[relationship];
   },
-  sortQueenNames() {
+  dumbledoreDeadFamily() {
     //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
+    const deceased = hogwarts.currentHeadmaster.family.filter(person => !person.alive)
+    const relationship = deceased.map(person => Object.keys(person)[0])
+    const result = deceased.map((person, index) => person[relationship[index]])
     return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
   },
 }
 
