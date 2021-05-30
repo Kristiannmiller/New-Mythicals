@@ -1865,10 +1865,10 @@ describe("PROTOTYPES", () => {
          'Elder Wand'
        ])
     });
-    it.skip("sortQueenNames", () => {
-      const e = queenPrompts.sortQueenNames();
+    it("dumbledoreLivingFamily", () => {
+      const e = harryPotterPrompts.dumbledoreLivingFamily();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal('Aberforth')
     });
     it.skip("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();

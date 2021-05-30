@@ -945,14 +945,12 @@ const harryPotterPrompts = {
 
     hogwarts.currentHeadmaster.wand = [hogwarts.currentHeadmaster.wand, 'Elder Wand']
   },
-  sortQueenNames() {
+  dumbledoreLivingFamily() {
     //Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
 
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    const result = hogwarts.currentHeadmaster.family.find(person => person.alive)
+    const relationship = Object.keys(result)[0]
+    return result[relationship];
   },
   sortQueenNames() {
     //Which of them are dead? RETURN JUST THE NAMES, not an array of objects
