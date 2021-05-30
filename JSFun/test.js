@@ -1,6 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
 const { broncos } = require('./datasets/broncos');
+const { students } = require('./datasets/harryPotter');
 
 
 const {
@@ -1704,10 +1705,134 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal(35)
     });
-    it.skip("kickOutSlytherins", () => {
-      const e = queenPrompts.kickOutSlytherins();
+    it("kickOutSlytherins", () => {
+      expect(students).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ]
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ]
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ]
+        },
+        {
+          name: 'Luna',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 15,
+          personality: [ 'whimsical', 'quiet', 'dependable' ]
+        },
+        {
+          name: 'Cedric',
+          gender: 'male',
+          house: 'Hufflepuff',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'just', 'modest' ]
+        },
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ]
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ]
+        },
+        {
+          name: 'Cho',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'loyal', 'intelligent', 'extrovert' ]
+        }
+      ])
 
-      expect(e).to.deep.equal([])
+      harryPotterPrompts.kickOutSlytherins();
+
+      expect(students).to.deep.equal([
+        {
+          name: 'Hermione',
+          gender: 'female',
+          house: 'Gryffindor',
+          pointsForHouse: 50,
+          personality: [ 'logical', 'kind', 'just', 'book worm' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Harry',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: 35,
+          personality: [ 'brave', 'loyal', 'selfless', 'courage' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Ron',
+          gender: 'male',
+          house: 'Gryffindor',
+          pointsForHouse: -5,
+          personality: [ 'stubborn', 'strategist', 'loyal', 'passionate' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Luna',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 15,
+          personality: [ 'whimsical', 'quiet', 'dependable' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Cedric',
+          gender: 'male',
+          house: 'Hufflepuff',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'just', 'modest' ],
+          currentlyAttending: true
+        },
+        {
+          name: 'Draco',
+          gender: 'male',
+          house: 'Slytherin',
+          pointsForHouse: 30,
+          personality: [ 'cunning', 'arrogant', 'jealous' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Pansy',
+          gender: 'female',
+          house: 'Slytherin',
+          pointsForHouse: 10,
+          personality: [ 'leader', 'selfish', 'team-player' ],
+          currentlyAttending: false
+        },
+        {
+          name: 'Cho',
+          gender: 'female',
+          house: 'Ravenclaw',
+          pointsForHouse: 20,
+          personality: [ 'brave', 'loyal', 'intelligent', 'extrovert' ],
+          currentlyAttending: true
+        }
+      ])
     });
     it.skip("sortQueenNames", () => {
       const e = queenPrompts.sortQueenNames();

@@ -930,12 +930,9 @@ const harryPotterPrompts = {
   },
   kickOutSlytherins() {
     //For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false
-
-    const result = 'REPLACE WITH YOUR RESULT HERE'
-    return result;
-
-    // Annotation:
-    // Write your annotation here as a comment
+    students.forEach(student => {
+      student.house === 'Slytherin' ? student.currentlyAttending = false : student.currentlyAttending = true
+    })
   },
   missingStudents() {
     //Check to see if any students are missing from class
