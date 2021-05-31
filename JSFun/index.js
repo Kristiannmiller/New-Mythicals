@@ -18,6 +18,7 @@ const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
 const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
+const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
 
 
@@ -965,7 +966,7 @@ const harryPotterPrompts = {
 
 // =================================================================
 
-// DATASET: harryPotter from ./datasets/harryPotter.js
+// DATASET: marvelComics and marvelMovies from ./datasets/marvel.js
 const marvelPrompts = {
   preMilleniumComics() {
     // return a list of comics that were written before 2000
@@ -1016,6 +1017,49 @@ const marvelPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: murder from ./datasets/murder.js
+const murderPrompts = {
+  culturallyInsensitive() {
+    //Return an array of episodes that are culturallyInsensitive
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  findMagnum() {
+    //Return the episode that includes Magnum PI
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeStars() {
+    // Return an array of objects with just the name and the guest stars for each episode
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeSynopsis() {
+    // Return an Array of Objects with the name of the episode as the key and the synopsis as the value
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  guestStars() {
+    // Return one Object with all the guest stars
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeCoStars() {
+    //return an object with the episode names as keys and the co-stars as an array
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+
 
 
 module.exports = {
@@ -1039,5 +1083,6 @@ module.exports = {
   careBearPrompts,
   queenPrompts,
   harryPotterPrompts,
-  marvelPrompts
+  marvelPrompts,
+  murderPrompts
 };

@@ -27,7 +27,8 @@ const {
   careBearPrompts,
   queenPrompts,
   harryPotterPrompts,
-  marvelPrompts
+  marvelPrompts,
+  murderPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1919,5 +1920,79 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal({})
     });
+  });
+  describe("Murder Prompts", () => {
+    it.skip("culturallyInsensitive", () => {
+      const e = murderPrompts.culturallyInsensitive();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findMagnum", () => {
+      const e = murderPrompts.findMagnum();
+
+      expect(e).to.deep.equal({
+        name: "Magnum on Ice ",
+        season: 3,
+        episode: 8,
+        synopsis: "Magnum PI crossover",
+        culturallyInsensitive: false,
+        guestStars: [
+          "John McMartin",
+          "Tom Selleck",
+          "Jessica Walter"
+        ]
+      })
+    });
+    it.skip("murderStars", () => {
+      const e = murderPrompts.murderStars();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("episodeStars", () => {
+      const e = murderPrompts.episodeStars();
+
+      expect(e).to.deep.equal([])
+      //e.g. [{name: "My Johnny Lies Over the Ocean",
+  //guestStars: [
+    //   "Vicki Lawrence",
+    //   "Leslie Nielsen",
+    //   "Jo Anne Worley"
+    // ]},
+    // {name: "Menace, Anyone?",
+    // guestStars: [
+    //     "Bryan Cranston",
+    //     "Linda Hamilton",
+    //     "David Spielberg"
+    //   ]}...
+    // ]
+    });
+    it.skip("episodeSynopsis", () => {
+      const e = murderPrompts.episodeSynopsis();
+
+      expect(e).to.deep.equal([])
+      // e.g. [{"Curse of the Daanav": "Cursed Indian ruby"}, {"Magnum on Ice ":"Magnum PI crossover"}...]
+    });
+    it.skip("guestStars", () => {
+      const e = murderPrompts.guestStars();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("episodeCoStars", () => {
+      const e = murderPrompts.episodeCoStars();
+
+      expect(e).to.deep.equal({})
+      // e.g {
+//  "Curse of the Daanav": [
+      // "Jane Badler",
+      // "Kabir Bedi",
+      // "Larry Linville"],
+//  "Magnum on Ice ": [
+        // "John McMartin",
+        // "Tom Selleck",
+        // "Jessica Walter"]
+// }
+    });
+
+
   });
 });
