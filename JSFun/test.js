@@ -28,7 +28,8 @@ const {
   queenPrompts,
   harryPotterPrompts,
   marvelPrompts,
-  murderPrompts
+  murderPrompts,
+  restaurantPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1992,7 +1993,60 @@ describe("PROTOTYPES", () => {
         // "Jessica Walter"]
 // }
     });
+  });
+  describe("Restaurant Prompts", () => {
+    it.skip("totalReviews", () => {
+      const e = restaurantPrompts.totalReviews();
 
+      expect(e).to.equal(6501)
+    });
+    it.skip("restaurantsByReviews", () => {
+      const e = restaurantPrompts.restaurantsByReviews();
 
+      expect(e).to.deep.equal({
+        'Fruition Restaurant': 788,
+        'Sushi Den': 479,
+        'Sam\'s No. 3': 1870,
+        'Pete\'s Kitchen': 236,
+        'Root Down': 972,
+        'The Capital Grille': 531,
+        Acorn: 309,
+        Panzano: 1316 })
+    });
+    it.skip("restaurantsByType", () => {
+      const e = restaurantPrompts.restaurantsByType();
+
+      expect(e).to.deep.equal({
+        'Fine Dining': [ 'Fruition Restaurant', 'Fruition Restaurant', 'Sushi Den' ],
+        'Cheap Eats': [ 'Sam\'s No. 3', 'Sam\'s No. 3', 'Pete\'s Kitchen' ],
+        Lunch: [ 'Root Down', 'Root Down', 'The Capital Grille' ],
+        Dinner: [ 'Acorn', 'Acorn', 'Panzano' ] })
+    });
+    it.skip("restaurantsByNeighborhood", () => {
+      const e = restaurantPrompts.restaurantsByNeighborhood();
+
+      expect(e).to.deep.equal({
+        'Fruition Restaurant': 'Cap Hill',
+        'Sushi Den': 'Platt Park',
+        'Sam\'s No. 3': 'LoDo',
+        'Pete\'s Kitchen': 'City Park',
+        'Root Down': 'Highlands',
+        'The Capital Grille': 'LoDo',
+        Acorn: 'RiNo',
+        Panzano: 'LoDo'
+      })
+    });
+    it.skip("neighborhoodRestaurants", () => {
+      const e = restaurantPrompts.neighborhoodRestaurants();
+
+      expect(e).to.deep.equal({
+        'Cap Hill': [ 'Fruition Restaurant' ],
+        'Platt Park': [ 'Sushi Den' ],
+        LoDo: [ 'Sam\'s No. 3', 'The Capital Grille', 'Panzano' ],
+        'City Park': [ 'Pete\'s Kitchen' ],
+        Highlands: [ 'Root Down' ],
+        RiNo: [ 'Acorn' ]
+      })
+    });
   });
 });

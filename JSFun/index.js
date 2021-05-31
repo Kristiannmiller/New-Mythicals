@@ -20,6 +20,7 @@ const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
 const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
+const { restaurants } = require('./datasets/restaurants');
 
 
 // SINGLE DATASETS
@@ -1059,6 +1060,43 @@ const murderPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: restaurants from ./datasets/restaurants.js
+const restaurantPrompts = {
+  totalReviews() {
+    //1. sum up the the total numer of restaurant reviews for all the restaurants.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByReviews() {
+    //2. Create an object where each property is the name of a restaurant and its key value is its number of reviews.
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByType() {
+    // 3. Make a new object where each key is a type of restaurant and its value is an array of the matching restaurants
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByNeighborhood() {
+    //2B Create an object where each property is the name of the restaurant
+    // and its key value is the neighborhood where its located.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  neighborhoodRestaurants() {
+    //3B Create an object where each key is the neighborhood and its value is the name of each restaurant in that neighborhood.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+
 
 
 
@@ -1084,5 +1122,6 @@ module.exports = {
   queenPrompts,
   harryPotterPrompts,
   marvelPrompts,
-  murderPrompts
+  murderPrompts,
+  restaurantPrompts
 };
