@@ -18,6 +18,7 @@ const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
 const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
+const { marvelComics, marvelMovies } = require('./datasets/marvel');
 
 
 // SINGLE DATASETS
@@ -962,6 +963,60 @@ const harryPotterPrompts = {
   },
 }
 
+// =================================================================
+
+// DATASET: harryPotter from ./datasets/harryPotter.js
+const marvelPrompts = {
+  preMilleniumComics() {
+    // return a list of comics that were written before 2000
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  stanComics() {
+    // return a list of comics that were edited by stan Lee
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  adaptedMovies() {
+    // return a list of movies that were adapted
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  captainMedia() {
+    //return an array of comics and an array of movies (concated) that feature captain America
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  ratedRMovies() {
+    // return a list of movies with an R rating
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  wellRecievedMovies() {
+    // return a list of movies with above a 8 rating on imdb
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  sortMoviesByRating() {
+    // sort the movies by their ratings
+
+    const result = 'INSERT YOUR CODE HERE'
+  },
+  charactersMovies() {
+    // create an object with each character as the key and the movies they appear in as the value
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+
 
 module.exports = {
   breweryPrompts,
@@ -983,5 +1038,6 @@ module.exports = {
   broncosPrompts,
   careBearPrompts,
   queenPrompts,
-  harryPotterPrompts
+  harryPotterPrompts,
+  marvelPrompts
 };

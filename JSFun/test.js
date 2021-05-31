@@ -3,6 +3,7 @@ const expect = chai.expect;
 const { broncos } = require('./datasets/broncos');
 const { students } = require('./datasets/harryPotter');
 const { hogwarts } = require('./datasets/harryPotter');
+const { marvelMovies } = require('./datasets/marvel');
 
 
 const {
@@ -25,7 +26,8 @@ const {
   broncosPrompts,
   careBearPrompts,
   queenPrompts,
-  harryPotterPrompts
+  harryPotterPrompts,
+  marvelPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1876,4 +1878,46 @@ describe("PROTOTYPES", () => {
       expect(e).to.deep.equal(['Percival', 'Kendra', 'Ariana'])
     });
   });
-})
+  describe("Marvel Prompts", () => {
+    it.skip("preMilleniumComics", () => {
+      const e = marvelPrompts.preMilleniumComics();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("stanComics", () => {
+      const e = marvelPrompts.stanComics();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("adaptedMovies", () => {
+      const e = marvelPrompts.adaptedMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("captainMedia", () => {
+      const e = marvelPrompts.captainMedia();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("ratedRMovies", () => {
+      const e = marvelPrompts.ratedRMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("wellRecievedMovies", () => {
+      const e = marvelPrompts.wellRecievedMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortMoviesByRating", () => {
+      marvelPrompts.sortMoviesByRating();
+
+      expect(marvelMovies).to.deep.equal([])
+    });
+    it.skip("charactersMovies", () => {
+      const e = marvelPrompts.charactersMovies();
+
+      expect(e).to.deep.equal({})
+    });
+  });
+});
