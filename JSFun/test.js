@@ -1881,10 +1881,29 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Marvel Prompts", () => {
-    it.skip("preMilleniumComics", () => {
+    it("preMilleniumComics", () => {
       const e = marvelPrompts.preMilleniumComics();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        "Incredible Hulk Vol. 1 #377 'Honey, I Shrunk the Hulk'",
+        "X-Men: Alpha Vol. 1 #1 'Beginnings...'",
+        "New Mutants Vol. 1 #98 'The Beginning of the End, Pt. 1'",
+        "Captain America Comics Vol. 1 #1 'Meet Captain America'",
+        "Amazing Fantasy Vol. 1 #15 'Spider-Man!'",
+        "The Avengers Vol. 1 #1 'The Coming of the Avengers!'",
+        "Fantastic Four Vol. 1 #1 'The Fantastic Four'",
+        "Tales of Suspense Vol. 1 #39 'Iron Man Is Born!'",
+        "Strange Tales Vol. 1 #110 'Doctor Strange Master of Black Magic'",
+        "Incredible Hulk Vol. 1 #181 'And Now..the Wolverine!'",
+        "Tales of Suspense Vol. 1 #52 'The Crimson Dynamo Strikes Again!'",
+        "Fantastic Four Vol. 1 #52 'The Black Panther!'",
+        "Tales to Astonish Vol. 1 #35 'Return of the Ant-Man'",
+        "Iron Man Vol. 1 #55 'Beware the ... Blood Brothers!'",
+        "Amazing Spider-Man Vol. 1 #2 'Duel to the Death with the Vulture!'",
+        "Marvel Feature Vol. 1 #1 'The Day of the Defenders!'",
+        "Uncanny X-Men Vol. 1 #266 'Gambit: Out of the Frying Pan'",
+        "X-Factor Vol. 1 #15 'Whose Death is it, Anyway?'"
+      ])
     });
     it.skip("stanComics", () => {
       const e = marvelPrompts.stanComics();

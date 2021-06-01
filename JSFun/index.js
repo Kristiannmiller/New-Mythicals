@@ -971,8 +971,11 @@ const harryPotterPrompts = {
 const marvelPrompts = {
   preMilleniumComics() {
     // return a list of comics that were written before 2000
-
-    const result = 'INSERT YOUR CODE HERE'
+    const comics = Object.keys(marvelComics)
+    const titles = comics.map(comic => marvelComics[comic].title)
+    const result = titles.filter((title, i) => {
+       return marvelComics[comics[i]].publishDate < 2000
+    });
     return result;
   },
   stanComics() {
