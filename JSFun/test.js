@@ -3,6 +3,7 @@ const expect = chai.expect;
 const { broncos } = require('./datasets/broncos');
 const { students } = require('./datasets/harryPotter');
 const { hogwarts } = require('./datasets/harryPotter');
+const { marvelMovies } = require('./datasets/marvel');
 
 
 const {
@@ -25,7 +26,10 @@ const {
   broncosPrompts,
   careBearPrompts,
   queenPrompts,
-  harryPotterPrompts
+  harryPotterPrompts,
+  marvelPrompts,
+  murderPrompts,
+  restaurantPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -1876,4 +1880,173 @@ describe("PROTOTYPES", () => {
       expect(e).to.deep.equal(['Percival', 'Kendra', 'Ariana'])
     });
   });
-})
+  describe("Marvel Prompts", () => {
+    it.skip("preMilleniumComics", () => {
+      const e = marvelPrompts.preMilleniumComics();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("stanComics", () => {
+      const e = marvelPrompts.stanComics();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("adaptedMovies", () => {
+      const e = marvelPrompts.adaptedMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("captainMedia", () => {
+      const e = marvelPrompts.captainMedia();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("ratedRMovies", () => {
+      const e = marvelPrompts.ratedRMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("wellRecievedMovies", () => {
+      const e = marvelPrompts.wellRecievedMovies();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("sortMoviesByRating", () => {
+      marvelPrompts.sortMoviesByRating();
+
+      expect(marvelMovies).to.deep.equal([])
+    });
+    it.skip("charactersMovies", () => {
+      const e = marvelPrompts.charactersMovies();
+
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Murder Prompts", () => {
+    it.skip("culturallyInsensitive", () => {
+      const e = murderPrompts.culturallyInsensitive();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findMagnum", () => {
+      const e = murderPrompts.findMagnum();
+
+      expect(e).to.deep.equal({
+        name: "Magnum on Ice ",
+        season: 3,
+        episode: 8,
+        synopsis: "Magnum PI crossover",
+        culturallyInsensitive: false,
+        guestStars: [
+          "John McMartin",
+          "Tom Selleck",
+          "Jessica Walter"
+        ]
+      })
+    });
+    it.skip("murderStars", () => {
+      const e = murderPrompts.murderStars();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("episodeStars", () => {
+      const e = murderPrompts.episodeStars();
+
+      expect(e).to.deep.equal([])
+      //e.g. [{name: "My Johnny Lies Over the Ocean",
+  //guestStars: [
+    //   "Vicki Lawrence",
+    //   "Leslie Nielsen",
+    //   "Jo Anne Worley"
+    // ]},
+    // {name: "Menace, Anyone?",
+    // guestStars: [
+    //     "Bryan Cranston",
+    //     "Linda Hamilton",
+    //     "David Spielberg"
+    //   ]}...
+    // ]
+    });
+    it.skip("episodeSynopsis", () => {
+      const e = murderPrompts.episodeSynopsis();
+
+      expect(e).to.deep.equal([])
+      // e.g. [{"Curse of the Daanav": "Cursed Indian ruby"}, {"Magnum on Ice ":"Magnum PI crossover"}...]
+    });
+    it.skip("guestStars", () => {
+      const e = murderPrompts.guestStars();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("episodeCoStars", () => {
+      const e = murderPrompts.episodeCoStars();
+
+      expect(e).to.deep.equal({})
+      // e.g {
+//  "Curse of the Daanav": [
+      // "Jane Badler",
+      // "Kabir Bedi",
+      // "Larry Linville"],
+//  "Magnum on Ice ": [
+        // "John McMartin",
+        // "Tom Selleck",
+        // "Jessica Walter"]
+// }
+    });
+  });
+  describe("Restaurant Prompts", () => {
+    it.skip("totalReviews", () => {
+      const e = restaurantPrompts.totalReviews();
+
+      expect(e).to.equal(6501)
+    });
+    it.skip("restaurantsByReviews", () => {
+      const e = restaurantPrompts.restaurantsByReviews();
+
+      expect(e).to.deep.equal({
+        'Fruition Restaurant': 788,
+        'Sushi Den': 479,
+        'Sam\'s No. 3': 1870,
+        'Pete\'s Kitchen': 236,
+        'Root Down': 972,
+        'The Capital Grille': 531,
+        Acorn: 309,
+        Panzano: 1316 })
+    });
+    it.skip("restaurantsByType", () => {
+      const e = restaurantPrompts.restaurantsByType();
+
+      expect(e).to.deep.equal({
+        'Fine Dining': [ 'Fruition Restaurant', 'Fruition Restaurant', 'Sushi Den' ],
+        'Cheap Eats': [ 'Sam\'s No. 3', 'Sam\'s No. 3', 'Pete\'s Kitchen' ],
+        Lunch: [ 'Root Down', 'Root Down', 'The Capital Grille' ],
+        Dinner: [ 'Acorn', 'Acorn', 'Panzano' ] })
+    });
+    it.skip("restaurantsByNeighborhood", () => {
+      const e = restaurantPrompts.restaurantsByNeighborhood();
+
+      expect(e).to.deep.equal({
+        'Fruition Restaurant': 'Cap Hill',
+        'Sushi Den': 'Platt Park',
+        'Sam\'s No. 3': 'LoDo',
+        'Pete\'s Kitchen': 'City Park',
+        'Root Down': 'Highlands',
+        'The Capital Grille': 'LoDo',
+        Acorn: 'RiNo',
+        Panzano: 'LoDo'
+      })
+    });
+    it.skip("neighborhoodRestaurants", () => {
+      const e = restaurantPrompts.neighborhoodRestaurants();
+
+      expect(e).to.deep.equal({
+        'Cap Hill': [ 'Fruition Restaurant' ],
+        'Platt Park': [ 'Sushi Den' ],
+        LoDo: [ 'Sam\'s No. 3', 'The Capital Grille', 'Panzano' ],
+        'City Park': [ 'Pete\'s Kitchen' ],
+        Highlands: [ 'Root Down' ],
+        RiNo: [ 'Acorn' ]
+      })
+    });
+  });
+});

@@ -18,6 +18,9 @@ const { beyonce } = require('./datasets/beyonce');
 const { broncos } = require('./datasets/broncos');
 const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
+const { murder } = require('./datasets/murder');
+const { marvelComics, marvelMovies } = require('./datasets/marvel');
+const { restaurants } = require('./datasets/restaurants');
 
 
 // SINGLE DATASETS
@@ -962,6 +965,140 @@ const harryPotterPrompts = {
   },
 }
 
+// =================================================================
+
+// DATASET: marvelComics and marvelMovies from ./datasets/marvel.js
+const marvelPrompts = {
+  preMilleniumComics() {
+    // return a list of comics that were written before 2000
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  stanComics() {
+    // return a list of comics that were edited by stan Lee
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  adaptedMovies() {
+    // return a list of movies that were adapted
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  captainMedia() {
+    //return an array of comics and an array of movies (concated) that feature captain America
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  ratedRMovies() {
+    // return a list of movies with an R rating
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  wellRecievedMovies() {
+    // return a list of movies with above a 8 rating on imdb
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  sortMoviesByRating() {
+    // sort the movies by their ratings
+
+    const result = 'INSERT YOUR CODE HERE'
+  },
+  charactersMovies() {
+    // create an object with each character as the key and the movies they appear in as the value
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+// =================================================================
+
+// DATASET: murder from ./datasets/murder.js
+const murderPrompts = {
+  culturallyInsensitive() {
+    //Return an array of episodes that are culturallyInsensitive
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  findMagnum() {
+    //Return the episode that includes Magnum PI
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeStars() {
+    // Return an array of objects with just the name and the guest stars for each episode
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeSynopsis() {
+    // Return an Array of Objects with the name of the episode as the key and the synopsis as the value
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  guestStars() {
+    // Return one Object with all the guest stars
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  episodeCoStars() {
+    //return an object with the episode names as keys and the co-stars as an array
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+// =================================================================
+
+// DATASET: restaurants from ./datasets/restaurants.js
+const restaurantPrompts = {
+  totalReviews() {
+    //1. sum up the the total numer of restaurant reviews for all the restaurants.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByReviews() {
+    //2. Create an object where each property is the name of a restaurant and its key value is its number of reviews.
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByType() {
+    // 3. Make a new object where each key is a type of restaurant and its value is an array of the matching restaurants
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  restaurantsByNeighborhood() {
+    //2B Create an object where each property is the name of the restaurant
+    // and its key value is the neighborhood where its located.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  neighborhoodRestaurants() {
+    //3B Create an object where each key is the neighborhood and its value is the name of each restaurant in that neighborhood.
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
+
+
+
 
 module.exports = {
   breweryPrompts,
@@ -983,5 +1120,8 @@ module.exports = {
   broncosPrompts,
   careBearPrompts,
   queenPrompts,
-  harryPotterPrompts
+  harryPotterPrompts,
+  marvelPrompts,
+  murderPrompts,
+  restaurantPrompts
 };
