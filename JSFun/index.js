@@ -1096,6 +1096,47 @@ const restaurantPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: toons and characters from ./datasets/strongBad.js
+const strongBadPrompts = {
+  halloweenToons() {
+    /* #1:  Return an object with keys of the name of each halloween toon,
+    and a value of an array of objects, where each key is a character name
+    and each value is the costume they wore in that toon (no need to include
+      Marshie, Senor Cardgage or Crack Stuntman as they do not appear in the
+      Halloween toons, also, as a note: Homsar does not appear in the first
+      Halloween toon: 'Homestarloween Party', but does appear in all others,
+      so list him with a value of "none" for that toon).*/
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  dangeresque() {
+    /* Return an object of each Dangeresque episode/film where each
+    value is an array of the characters that most likely appear in it.*/
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  performers() {
+    /* Return an object with keys of each character and values of an array
+    of all of the songs they have performed (Keep in mind, some
+    characters/groups may have songs listed in the "bands" object).*/
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  performers() {
+    /* Return an object with keys of each character and values of an array
+    of all of the songs they have performed (Keep in mind, some
+    characters/groups may have songs listed in the "bands" object).*/
+
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+};
+
 
 
 
@@ -1123,5 +1164,6 @@ module.exports = {
   harryPotterPrompts,
   marvelPrompts,
   murderPrompts,
-  restaurantPrompts
+  restaurantPrompts,
+  strongBadPrompts
 };

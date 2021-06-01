@@ -29,7 +29,8 @@ const {
   harryPotterPrompts,
   marvelPrompts,
   murderPrompts,
-  restaurantPrompts
+  restaurantPrompts,
+  strongBadPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -2049,4 +2050,65 @@ describe("PROTOTYPES", () => {
       })
     });
   });
+  describe("Strong Bad Prompts", () => {
+    it.skip("halloweenToons", () => {
+      const e = strongBadPrompts.halloweenToons();
+
+      expect(e).to.deep.equal({})
+      // let halloweenCostumes = {
+//   'Homestarloween Party': [
+//       { 'Homestar Runner': 'Kurt Cobain' },
+//       { 'Strong Bad': 'Carmen Miranda' },
+//       { 'The Cheat': 'Garfield' },
+//       { 'Strong Mad': 'Slim Goodbody' },
+//       { 'Strong Sad': 'Gorbachev' },
+//       { 'Pom Pom': 'Stay-Puft Marshmallow Man' },
+//       { 'Marzipan': 'Jeannie' },
+//       { 'Coach Z': 'Flavor Flav' },
+//       { 'Bubs': 'Rerun' },
+//       { 'The King of Town': 'Cap\'n Crunch' },
+//       { 'The Poopsmith': 'Tron' },
+//       { 'Homsar': 'none' }
+//    ],
+
+//    'The House That Gave Sucky Treats': [
+//      { 'Homestar Runner': 'The Greatest American Hero' },
+//      { 'Strong Bad': 'Carmen Sandiego' },
+//      ...
+//    ]
+//    ...
+// }
+
+    });
+    it.skip("dangeresque", () => {
+      const e = strongBadPrompts.dangeresque();
+
+      expect(e).to.deep.equal({})
+      // let dangeresque = {
+//   'Dangeresque 0: The Prequel Begins': [ 'none' ],
+//   'Dangeresque 1: Dangeresque, Too?': [ 'Dangeresque', 'Cutesy Buttons', 'Renaldo', 'Baron Darin Diamonocle' ],
+//   ...
+// }
+    });
+    it.skip("performers", () => {
+      const e = strongBadPrompts.performers();
+
+      expect(e).to.deep.equal({})
+      // let performers = {
+//   'All characters': [ 'Loading Screens' ],
+//   'The Cheat': [ 'Where You Goin\' 2?', 'Rap Song', 'Everybody to the Limit', 'The Cheat Theme Song', 'Cool Tapes', 'Rockin\' the Spot', 'Doley-O', 'Limozeen Is Not Very Nice', 'My Face (Please Don\'t Put Needles In It)' ],
+//   ...
+// }
+    });
+    it.skip("performers", () => {
+      const e = strongBadPrompts.performers();
+
+      expect(e).to.deep.equal({})
+      // let performers = {
+//   'All characters': [ 'Loading Screens' ],
+//   'The Cheat': [ 'Where You Goin\' 2?', 'Rap Song', 'Everybody to the Limit', 'The Cheat Theme Song', 'Cool Tapes', 'Rockin\' the Spot', 'Doley-O', 'Limozeen Is Not Very Nice', 'My Face (Please Don\'t Put Needles In It)' ],
+//   ...
+// }
+    });
+
 });
