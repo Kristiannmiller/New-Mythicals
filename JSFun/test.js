@@ -1921,10 +1921,24 @@ describe("PROTOTYPES", () => {
         'defenders'
       ])
     });
-    it.skip("adaptedMovies", () => {
+    it("adaptedMovies", () => {
       const e = marvelPrompts.adaptedMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Captain America: Civil War',
+        'Logan',
+        'The Avengers',
+        'Thor Ragnarok',
+        'Black Panther',
+        'Doctor Strange',
+        'Ant-Man',
+        'Captain Marvel',
+        'Spider-Man: Homecoming',
+        'X2',
+        'Deadpool',
+        'Guardians of the Galaxy',
+        'Avengers: Infinity War'
+      ])
     });
     it.skip("captainMedia", () => {
       const e = marvelPrompts.captainMedia();

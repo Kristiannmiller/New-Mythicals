@@ -983,13 +983,13 @@ const marvelPrompts = {
     const comics = Object.keys(marvelComics)
     const hasEditors = comics.filter(comic => marvelComics[comic].editors)
     const result = hasEditors.filter(comic => marvelComics[comic].editors.includes('Stan Lee'))
-    console.log(result)
     return result;
   },
   adaptedMovies() {
     // return a list of movies that were adapted
 
-    const result = 'INSERT YOUR CODE HERE'
+    const movies = Object.keys(marvelMovies)
+    const result = movies.map(movie => marvelMovies[movie].title)
     return result;
   },
   captainMedia() {
