@@ -980,8 +980,10 @@ const marvelPrompts = {
   },
   stanComics() {
     // return a list of comics that were edited by stan Lee
-
-    const result = 'INSERT YOUR CODE HERE'
+    const comics = Object.keys(marvelComics)
+    const hasEditors = comics.filter(comic => marvelComics[comic].editors)
+    const result = hasEditors.filter(comic => marvelComics[comic].editors.includes('Stan Lee'))
+    console.log(result)
     return result;
   },
   adaptedMovies() {

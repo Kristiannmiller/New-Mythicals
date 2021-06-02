@@ -1905,10 +1905,21 @@ describe("PROTOTYPES", () => {
         "X-Factor Vol. 1 #15 'Whose Death is it, Anyway?'"
       ])
     });
-    it.skip("stanComics", () => {
+    it("stanComics", () => {
       const e = marvelPrompts.stanComics();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'amazingFantasy',
+        'avengers',
+        'fantasticFour',
+        'ironMan',
+        'strangeTales',
+        'blackWidow',
+        'blackPanther',
+        'talesToAstonish',
+        'amazingSpiderman',
+        'defenders'
+      ])
     });
     it.skip("adaptedMovies", () => {
       const e = marvelPrompts.adaptedMovies();
