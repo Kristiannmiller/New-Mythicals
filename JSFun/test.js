@@ -1940,10 +1940,224 @@ describe("PROTOTYPES", () => {
         'Avengers: Infinity War'
       ])
     });
-    it.skip("captainMedia", () => {
+    it("captainMedia", () => {
       const e = marvelPrompts.captainMedia();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          title: 'Captain America: Civil War',
+          releaseYear: 2016,
+          directors: [ 'Joe Russo', 'Anthony Russo' ],
+          rating: 'PG13',
+          stars: [
+            'Chris Evans',
+            'Robert Downey Jr.',
+            'Sebtastian Stan',
+            'Paul Rudd',
+            'Elizabeth Olsen',
+            'Paul Bettany',
+            'Jeremy Renner',
+            'Scarlett Johansson',
+            'Anthony Mackie',
+            'Tom Holland'
+          ],
+          imdbRating: 7.8,
+          characters: [
+            'Iron Man',
+            'Captain America',
+            'Bucky Barnes',
+            'Scarlet Witch',
+            'Spider-Man',
+            'Vision',
+            'Ant-Man',
+            'Hawkeye',
+            'Black Widow',
+            'Falcon'
+          ],
+          basedOn: [ 'Civil War' ],
+          link: 'https://www.imdb.com/title/tt3498820/',
+          img: 'https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg',
+          id: 1,
+          favorite: false
+        },
+        {
+          title: 'The Avengers',
+          releaseYear: 2012,
+          directors: [ 'Joss Whedon' ],
+          rating: 'PG13',
+          stars: [
+            'Chris Evans',
+            'Robert Downey Jr.',
+            'Scarlett Johansson',
+            'Chris Hemsworth',
+            'Samuel L. Jackson',
+            'Tom Hiddleston',
+            'Mark Ruffalo',
+            'Jeremy Renner'
+          ],
+          imdbRating: 8.1,
+          characters: [
+            'Captain America',
+            'Iron Man',
+            'Black Widow',
+            'Thor',
+            'Nick Fury',
+            'Loki',
+            'Hulk',
+            'Hawkeye'
+          ],
+          basedOn: [ 'The New Avengers' ],
+          link: 'https://www.imdb.com/title/tt0848228/?ref_=nv_sr_1',
+          img: 'https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg',
+          id: 3,
+          favorite: false
+        },
+        {
+          title: 'Avengers: Infinity War',
+          releaseYear: 2018,
+          directors: [ 'Anthony Russo', 'Joe Russo' ],
+          rating: 'PG13',
+          stars: [
+            'Robert Downey Jr.', 'Chris Hemsworth',
+            'Chris Evans',       'Josh Brolin',
+            'Mark Ruffalo',      'Scarlett Johansson',
+            'Don Cheadle',       'Benedict Cumberbatch',
+            'Tom Holland',       'Chadwick Boseman',
+            'Zoe Saldana',       'Tom Hiddleston',
+            'Anthony Mackie',    'Karen Gillian',
+            'Chris Pratt',       'Dave Bautista',
+            'Sebastian Stan',    'Elizabeth Olsen',
+            'Bradley Cooper',    'Samuel L. Jackson',
+            'Jeremy Renner'
+          ],
+          imdbRating: 8.5,
+          characters: [
+            'Iron Man',       'Captain America',
+            'Thor',           'Thanos',
+            'Hulk',           'Black Widow',
+            'War Machine',    'Doctor Strange',
+            'Spider-Man',     'Black Panther',
+            'Gamora',         'Loki',
+            'Falcon',         'Gamora',
+            'Star-Lord',      'Drax',
+            'Bucky Barnes',   'Scarlet Witch',
+            'Rocket Raccoon', 'Nick Fury',
+            'Hawkeye'
+          ],
+          basedOn: [ 'The Infinity Gauntlet' ],
+          link: 'https://www.imdb.com/title/tt4154756/',
+          img: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+          id: 13,
+          favorite: false
+        },
+        {
+          title: "Captain America Vol. 5 #1 'Out of Time: Part 1'",
+          publishDate: 2005,
+          writers: [ 'Ed Brubaker' ],
+          pencillers: [ 'Steve Epting' ],
+          inkers: [ 'Steve Epting' ],
+          letterers: [ 'Randy Gentile' ],
+          colorists: [ "Frank D'Armata" ],
+          editors: [ 'Tom Brevoort', 'Andy Schmidt', 'Nicole Wiley', 'Molly Lazer' ],
+          characters: [ 'Captain America', 'Bucky Barnes' ],
+          adapted: false,
+          summary: "Steve deals with the repurcussions of the Avengers disbanding and a cybernetic assassin breaks into Red Skull's apartment to kill him and steal his Cosmic Cube.",
+          link: 'https://marvel.fandom.com/wiki/File:Captain_America_Vol_5_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/9d/Captain_America_Vol_5_1.jpg/revision/latest/scale-to-width-down/312?cb=20181116202236',
+          id: 27,
+          favorite: false
+        },
+        {
+          title: 'Civil War',
+          publishDate: 2006,
+          writers: [ 'Mark Millar' ],
+          pencillers: [ 'Steve McNiven' ],
+          inkers: [ 'Dexter Vines' ],
+          letterers: [ 'Chris Eliopoulos' ],
+          colorists: [ 'Morry Hollowell' ],
+          editors: [
+            'Molly Lazer',
+            'Aubrey Sitterson',
+            'Andy Schmidt',
+            'Tom Brevoort'
+          ],
+          characters: [
+            'Iron Man',
+            'Spider-Man',
+            'Doctor Strange',
+            'Luke Cage',
+            'Mister Fantastic',
+            'Henry Pym',
+            'Captain America',
+            'Black Panther'
+          ],
+          adapted: true,
+          summary: 'After a huge number of civilian lives lost, the government tries to enact The Superhero Registration Act, an authoritarian law where all heroes will have to register with the government. Some heroes, like Iron Man, are in favor of the law while others, like Captain America, are not.',
+          link: 'https://marvel.fandom.com/wiki/Civil_War_(Event)',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/0/0f/Civil_War_Vol_1_1_Turner_Variant.jpg/revision/latest?cb=20070524065830',
+          id: 15,
+          favorite: false
+        },
+        {
+          title: 'House of M',
+          publishDate: 2005,
+          writers: [ 'Brian Michael Bendis' ],
+          pencillers: [ 'Oliver Coipel' ],
+          inkers: [ 'Tim Townsend' ],
+          letterers: null,
+          colorists: [ "Frank D'Armata" ],
+          editors: null,
+          characters: [
+            'Scarlet Witch',
+            'Quicksilver',
+            'Magneto',
+            'Professor Xavier',
+            'Captain America',
+            'Emma Frost',
+            'Doctor Strange'
+          ],
+          adapted: false,
+          summary: 'Mutant Scarlet Witch suffers a breakdown and cannot control her powers. The Avengers quarrel on how to help her, some of them think there is no other way than to kill her, while others think they could control her magic. When they try to talk to her, she alters the reality of Earth and the lives of the heroes in it.',
+          link: 'https://marvel.fandom.com/wiki/Earth-58163',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/6/67/Family_Magnus_%28Earth-58163%29_from_House_of_M_Vol_1_6_001.jpg/revision/latest/scale-to-width-down/700?cb=20061206101145',
+          id: 16,
+          favorite: false
+        },
+        {
+          title: 'Captain Marvel Vol. 7 #1',
+          publishDate: 2012,
+          writers: [ 'Kelly Sue DeConnick' ],
+          pencillers: [ 'Dexter Soy' ],
+          inkers: [ 'Dexter Soy' ],
+          letterers: [ 'Joe Caramagna' ],
+          colorists: [ 'Dexter Soy' ],
+          editors: [ 'Stephen Wacker' ],
+          characters: [ 'Captain Marvel', 'Captain America' ],
+          adapted: true,
+          summary: 'The first appearance of Carol Danvers as Captain Marvel, ace pilot and legendary avenger.',
+          link: 'https://marvel.fandom.com/wiki/File:Captain_Marvel_Vol_1_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/92/Captain_Marvel_Vol_1_1.jpg/revision/latest/scale-to-width-down/317?cb=20080816201429',
+          id: 25,
+          favorite: false
+        },
+        {
+          title: "Captain America Comics Vol. 1 #1 'Meet Captain America'",
+          publishDate: 1941,
+          writers: [ 'Joe Simon', 'Jack Kirby' ],
+          pencillers: [ 'Joe Simon', 'Jack Kirby' ],
+          inkers: [ 'Al Liederman' ],
+          letterers: null,
+          colorists: null,
+          editors: [ 'Joe Simon' ],
+          characters: [ 'Captain America' ],
+          adapted: true,
+          summary: 'A young soldier is given serum to become bigger, faster, and stronger than a normal human. The doctor who gave it to him calls him Captain America and tells him his duty is to protect America from nazi forces.',
+          link: 'https://marvel.fandom.com/wiki/File:Captain_America_Comics_Vol_1_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/9f/Captain_America_Comics_Vol_1_1.jpg/revision/latest/scale-to-width-down/337?cb=20180404011756',
+          id: 26,
+          favorite: false
+        }
+      ])
     });
     it.skip("ratedRMovies", () => {
       const e = marvelPrompts.ratedRMovies();

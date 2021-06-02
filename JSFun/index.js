@@ -994,8 +994,11 @@ const marvelPrompts = {
   },
   captainMedia() {
     //return an array of comics and an array of movies (concated) that feature captain America
-
-    const result = 'INSERT YOUR CODE HERE'
+    const captainMovTitles = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].characters.includes('Captain America'))
+    const captainComTitles = Object.keys(marvelComics).filter(comic => marvelComics[comic].characters.includes('Captain America'))
+    const captainMovies = captainMovTitles.map(movie => marvelMovies[movie])
+    const captainComics = captainComTitles.map(comic => marvelComics[comic])
+    const result = [...captainMovies, ...captainComics]
     return result;
   },
   ratedRMovies() {
