@@ -1882,45 +1882,408 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Marvel Prompts", () => {
-    it.skip("preMilleniumComics", () => {
+    it("preMilleniumComics", () => {
       const e = marvelPrompts.preMilleniumComics();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        "Incredible Hulk Vol. 1 #377 'Honey, I Shrunk the Hulk'",
+        "X-Men: Alpha Vol. 1 #1 'Beginnings...'",
+        "New Mutants Vol. 1 #98 'The Beginning of the End, Pt. 1'",
+        "Captain America Comics Vol. 1 #1 'Meet Captain America'",
+        "Amazing Fantasy Vol. 1 #15 'Spider-Man!'",
+        "The Avengers Vol. 1 #1 'The Coming of the Avengers!'",
+        "Fantastic Four Vol. 1 #1 'The Fantastic Four'",
+        "Tales of Suspense Vol. 1 #39 'Iron Man Is Born!'",
+        "Strange Tales Vol. 1 #110 'Doctor Strange Master of Black Magic'",
+        "Incredible Hulk Vol. 1 #181 'And Now..the Wolverine!'",
+        "Tales of Suspense Vol. 1 #52 'The Crimson Dynamo Strikes Again!'",
+        "Fantastic Four Vol. 1 #52 'The Black Panther!'",
+        "Tales to Astonish Vol. 1 #35 'Return of the Ant-Man'",
+        "Iron Man Vol. 1 #55 'Beware the ... Blood Brothers!'",
+        "Amazing Spider-Man Vol. 1 #2 'Duel to the Death with the Vulture!'",
+        "Marvel Feature Vol. 1 #1 'The Day of the Defenders!'",
+        "Uncanny X-Men Vol. 1 #266 'Gambit: Out of the Frying Pan'",
+        "X-Factor Vol. 1 #15 'Whose Death is it, Anyway?'"
+      ])
     });
-    it.skip("stanComics", () => {
+    it("stanComics", () => {
       const e = marvelPrompts.stanComics();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'amazingFantasy',
+        'avengers',
+        'fantasticFour',
+        'ironMan',
+        'strangeTales',
+        'blackWidow',
+        'blackPanther',
+        'talesToAstonish',
+        'amazingSpiderman',
+        'defenders'
+      ])
     });
-    it.skip("adaptedMovies", () => {
+    it("adaptedMovies", () => {
       const e = marvelPrompts.adaptedMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Captain America: Civil War',
+        'Logan',
+        'The Avengers',
+        'Thor Ragnarok',
+        'Black Panther',
+        'Doctor Strange',
+        'Ant-Man',
+        'Captain Marvel',
+        'Spider-Man: Homecoming',
+        'X2',
+        'Deadpool',
+        'Guardians of the Galaxy',
+        'Avengers: Infinity War'
+      ])
     });
-    it.skip("captainMedia", () => {
+    it("captainMedia", () => {
       const e = marvelPrompts.captainMedia();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          title: 'Captain America: Civil War',
+          releaseYear: 2016,
+          directors: [ 'Joe Russo', 'Anthony Russo' ],
+          rating: 'PG13',
+          stars: [
+            'Chris Evans',
+            'Robert Downey Jr.',
+            'Sebtastian Stan',
+            'Paul Rudd',
+            'Elizabeth Olsen',
+            'Paul Bettany',
+            'Jeremy Renner',
+            'Scarlett Johansson',
+            'Anthony Mackie',
+            'Tom Holland'
+          ],
+          imdbRating: 7.8,
+          characters: [
+            'Iron Man',
+            'Captain America',
+            'Bucky Barnes',
+            'Scarlet Witch',
+            'Spider-Man',
+            'Vision',
+            'Ant-Man',
+            'Hawkeye',
+            'Black Widow',
+            'Falcon'
+          ],
+          basedOn: [ 'Civil War' ],
+          link: 'https://www.imdb.com/title/tt3498820/',
+          img: 'https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg',
+          id: 1,
+          favorite: false
+        },
+        {
+          title: 'The Avengers',
+          releaseYear: 2012,
+          directors: [ 'Joss Whedon' ],
+          rating: 'PG13',
+          stars: [
+            'Chris Evans',
+            'Robert Downey Jr.',
+            'Scarlett Johansson',
+            'Chris Hemsworth',
+            'Samuel L. Jackson',
+            'Tom Hiddleston',
+            'Mark Ruffalo',
+            'Jeremy Renner'
+          ],
+          imdbRating: 8.1,
+          characters: [
+            'Captain America',
+            'Iron Man',
+            'Black Widow',
+            'Thor',
+            'Nick Fury',
+            'Loki',
+            'Hulk',
+            'Hawkeye'
+          ],
+          basedOn: [ 'The New Avengers' ],
+          link: 'https://www.imdb.com/title/tt0848228/?ref_=nv_sr_1',
+          img: 'https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg',
+          id: 3,
+          favorite: false
+        },
+        {
+          title: 'Avengers: Infinity War',
+          releaseYear: 2018,
+          directors: [ 'Anthony Russo', 'Joe Russo' ],
+          rating: 'PG13',
+          stars: [
+            'Robert Downey Jr.', 'Chris Hemsworth',
+            'Chris Evans',       'Josh Brolin',
+            'Mark Ruffalo',      'Scarlett Johansson',
+            'Don Cheadle',       'Benedict Cumberbatch',
+            'Tom Holland',       'Chadwick Boseman',
+            'Zoe Saldana',       'Tom Hiddleston',
+            'Anthony Mackie',    'Karen Gillian',
+            'Chris Pratt',       'Dave Bautista',
+            'Sebastian Stan',    'Elizabeth Olsen',
+            'Bradley Cooper',    'Samuel L. Jackson',
+            'Jeremy Renner'
+          ],
+          imdbRating: 8.5,
+          characters: [
+            'Iron Man',       'Captain America',
+            'Thor',           'Thanos',
+            'Hulk',           'Black Widow',
+            'War Machine',    'Doctor Strange',
+            'Spider-Man',     'Black Panther',
+            'Gamora',         'Loki',
+            'Falcon',         'Gamora',
+            'Star-Lord',      'Drax',
+            'Bucky Barnes',   'Scarlet Witch',
+            'Rocket Raccoon', 'Nick Fury',
+            'Hawkeye'
+          ],
+          basedOn: [ 'The Infinity Gauntlet' ],
+          link: 'https://www.imdb.com/title/tt4154756/',
+          img: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg',
+          id: 13,
+          favorite: false
+        },
+        {
+          title: "Captain America Vol. 5 #1 'Out of Time: Part 1'",
+          publishDate: 2005,
+          writers: [ 'Ed Brubaker' ],
+          pencillers: [ 'Steve Epting' ],
+          inkers: [ 'Steve Epting' ],
+          letterers: [ 'Randy Gentile' ],
+          colorists: [ "Frank D'Armata" ],
+          editors: [ 'Tom Brevoort', 'Andy Schmidt', 'Nicole Wiley', 'Molly Lazer' ],
+          characters: [ 'Captain America', 'Bucky Barnes' ],
+          adapted: false,
+          summary: "Steve deals with the repurcussions of the Avengers disbanding and a cybernetic assassin breaks into Red Skull's apartment to kill him and steal his Cosmic Cube.",
+          link: 'https://marvel.fandom.com/wiki/File:Captain_America_Vol_5_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/9d/Captain_America_Vol_5_1.jpg/revision/latest/scale-to-width-down/312?cb=20181116202236',
+          id: 27,
+          favorite: false
+        },
+        {
+          title: 'Civil War',
+          publishDate: 2006,
+          writers: [ 'Mark Millar' ],
+          pencillers: [ 'Steve McNiven' ],
+          inkers: [ 'Dexter Vines' ],
+          letterers: [ 'Chris Eliopoulos' ],
+          colorists: [ 'Morry Hollowell' ],
+          editors: [
+            'Molly Lazer',
+            'Aubrey Sitterson',
+            'Andy Schmidt',
+            'Tom Brevoort'
+          ],
+          characters: [
+            'Iron Man',
+            'Spider-Man',
+            'Doctor Strange',
+            'Luke Cage',
+            'Mister Fantastic',
+            'Henry Pym',
+            'Captain America',
+            'Black Panther'
+          ],
+          adapted: true,
+          summary: 'After a huge number of civilian lives lost, the government tries to enact The Superhero Registration Act, an authoritarian law where all heroes will have to register with the government. Some heroes, like Iron Man, are in favor of the law while others, like Captain America, are not.',
+          link: 'https://marvel.fandom.com/wiki/Civil_War_(Event)',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/0/0f/Civil_War_Vol_1_1_Turner_Variant.jpg/revision/latest?cb=20070524065830',
+          id: 15,
+          favorite: false
+        },
+        {
+          title: 'House of M',
+          publishDate: 2005,
+          writers: [ 'Brian Michael Bendis' ],
+          pencillers: [ 'Oliver Coipel' ],
+          inkers: [ 'Tim Townsend' ],
+          letterers: null,
+          colorists: [ "Frank D'Armata" ],
+          editors: null,
+          characters: [
+            'Scarlet Witch',
+            'Quicksilver',
+            'Magneto',
+            'Professor Xavier',
+            'Captain America',
+            'Emma Frost',
+            'Doctor Strange'
+          ],
+          adapted: false,
+          summary: 'Mutant Scarlet Witch suffers a breakdown and cannot control her powers. The Avengers quarrel on how to help her, some of them think there is no other way than to kill her, while others think they could control her magic. When they try to talk to her, she alters the reality of Earth and the lives of the heroes in it.',
+          link: 'https://marvel.fandom.com/wiki/Earth-58163',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/6/67/Family_Magnus_%28Earth-58163%29_from_House_of_M_Vol_1_6_001.jpg/revision/latest/scale-to-width-down/700?cb=20061206101145',
+          id: 16,
+          favorite: false
+        },
+        {
+          title: 'Captain Marvel Vol. 7 #1',
+          publishDate: 2012,
+          writers: [ 'Kelly Sue DeConnick' ],
+          pencillers: [ 'Dexter Soy' ],
+          inkers: [ 'Dexter Soy' ],
+          letterers: [ 'Joe Caramagna' ],
+          colorists: [ 'Dexter Soy' ],
+          editors: [ 'Stephen Wacker' ],
+          characters: [ 'Captain Marvel', 'Captain America' ],
+          adapted: true,
+          summary: 'The first appearance of Carol Danvers as Captain Marvel, ace pilot and legendary avenger.',
+          link: 'https://marvel.fandom.com/wiki/File:Captain_Marvel_Vol_1_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/92/Captain_Marvel_Vol_1_1.jpg/revision/latest/scale-to-width-down/317?cb=20080816201429',
+          id: 25,
+          favorite: false
+        },
+        {
+          title: "Captain America Comics Vol. 1 #1 'Meet Captain America'",
+          publishDate: 1941,
+          writers: [ 'Joe Simon', 'Jack Kirby' ],
+          pencillers: [ 'Joe Simon', 'Jack Kirby' ],
+          inkers: [ 'Al Liederman' ],
+          letterers: null,
+          colorists: null,
+          editors: [ 'Joe Simon' ],
+          characters: [ 'Captain America' ],
+          adapted: true,
+          summary: 'A young soldier is given serum to become bigger, faster, and stronger than a normal human. The doctor who gave it to him calls him Captain America and tells him his duty is to protect America from nazi forces.',
+          link: 'https://marvel.fandom.com/wiki/File:Captain_America_Comics_Vol_1_1.jpg',
+          img: 'https://vignette.wikia.nocookie.net/marveldatabase/images/9/9f/Captain_America_Comics_Vol_1_1.jpg/revision/latest/scale-to-width-down/337?cb=20180404011756',
+          id: 26,
+          favorite: false
+        }
+      ])
     });
-    it.skip("ratedRMovies", () => {
+    it("ratedRMovies", () => {
       const e = marvelPrompts.ratedRMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([ 'Logan', 'Deadpool' ])
     });
-    it.skip("wellRecievedMovies", () => {
+    it("wellRecievedMovies", () => {
       const e = marvelPrompts.wellRecievedMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Logan',
+        'The Avengers',
+        'Guardians of the Galaxy',
+        'Avengers: Infinity War'
+      ])
     });
-    it.skip("sortMoviesByRating", () => {
-      marvelPrompts.sortMoviesByRating();
+    it("sortMoviesByRating", () => {
+      const e = marvelPrompts.sortMoviesByRating();
 
-      expect(marvelMovies).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Avengers: Infinity War',
+        'Logan',
+        'The Avengers',
+        'Guardians of the Galaxy',
+        'Deadpool',
+        'Thor Ragnarok',
+        'Captain America: Civil War',
+        'Doctor Strange',
+        'Spider-Man: Homecoming',
+        'X2',
+        'Black Panther',
+        'Ant-Man',
+        'Captain Marvel'
+      ])
     });
-    it.skip("charactersMovies", () => {
+    it("charactersMovies", () => {
       const e = marvelPrompts.charactersMovies();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        'Iron Man': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Spider-Man: Homecoming',
+          'Avengers: Infinity War'
+        ],
+        'Captain America': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        'Bucky Barnes': [ 'Captain America: Civil War', 'Avengers: Infinity War' ],
+        'Scarlet Witch': [ 'Captain America: Civil War', 'Avengers: Infinity War' ],
+        'Spider-Man': [
+          'Captain America: Civil War',
+          'Spider-Man: Homecoming',
+          'Avengers: Infinity War'
+        ],
+        Vision: [ 'Captain America: Civil War' ],
+        'Ant-Man': [ 'Captain America: Civil War', 'Ant-Man' ],
+        Hawkeye: [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        'Black Widow': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        Falcon: [ 'Captain America: Civil War', 'Ant-Man', 'Avengers: Infinity War' ],
+        Wolverine: [ 'Logan', 'X2' ],
+        'X-23': [ 'Logan' ],
+        'Professor Xavier': [ 'Logan', 'X2' ],
+        Thor: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        'Nick Fury': [ 'The Avengers', 'Captain Marvel', 'Avengers: Infinity War' ],
+        Loki: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        Hulk: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        Valkyrie: [ 'Thor Ragnarok' ],
+        Hela: [ 'Thor Ragnarok' ],
+        Surtur: [ 'Thor Ragnarok' ],
+        Grandmaster: [ 'Thor Ragnarok' ],
+        Odin: [ 'Thor Ragnarok' ],
+        Korg: [ 'Thor Ragnarok' ],
+        Miek: [ 'Thor Ragnarok' ],
+        'Black Panther': [ 'Black Panther', 'Avengers: Infinity War' ],
+        Shuri: [ 'Black Panther' ],
+        "M'Baku": [ 'Black Panther' ],
+        Okoye: [ 'Black Panther' ],
+        Killmonger: [ 'Black Panther' ],
+        Nakia: [ 'Black Panther' ],
+        'Doctor Stephen Strange': [ 'Doctor Strange' ],
+        'Ancient One': [ 'Doctor Strange' ],
+        'Karl Mordo': [ 'Doctor Strange' ],
+        Wong: [ 'Doctor Strange' ],
+        Wasp: [ 'Ant-Man' ],
+        'Hank Pym': [ 'Ant-Man' ],
+        'Yellow Jacket': [ 'Ant-Man' ],
+        'Captain Marvel': [ 'Captain Marvel' ],
+        Talos: [ 'Captain Marvel' ],
+        Korath: [ 'Captain Marvel' ],
+        'Phil Coulson': [ 'Captain Marvel' ],
+        Ronan: [ 'Captain Marvel', 'Guardians of the Galaxy' ],
+        Vulture: [ 'Spider-Man: Homecoming' ],
+        Magneto: [ 'X2' ],
+        Storm: [ 'X2' ],
+        'Jean Grey': [ 'X2' ],
+        Cyclops: [ 'X2' ],
+        Rogue: [ 'X2' ],
+        Mystique: [ 'X2' ],
+        Nightcrawler: [ 'X2' ],
+        Deadpool: [ 'Deadpool' ],
+        'Negasonic Teenage Warhead': [ 'Deadpool' ],
+        Ajax: [ 'Deadpool' ],
+        Colossus: [ 'Deadpool' ],
+        'Star-Lord': [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Gamora: [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Groot: [ 'Guardians of the Galaxy' ],
+        'Rocket Raccoon': [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Drax: [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Nebula: [ 'Guardians of the Galaxy' ],
+        Yondu: [ 'Guardians of the Galaxy' ],
+        Thanos: [ 'Avengers: Infinity War' ],
+        'War Machine': [ 'Avengers: Infinity War' ],
+        'Doctor Strange': [ 'Avengers: Infinity War' ]
+      })
     });
   });
   describe("Murder Prompts", () => {

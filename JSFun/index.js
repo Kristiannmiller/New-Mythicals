@@ -971,49 +971,71 @@ const harryPotterPrompts = {
 const marvelPrompts = {
   preMilleniumComics() {
     // return a list of comics that were written before 2000
-
-    const result = 'INSERT YOUR CODE HERE'
+    const comics = Object.keys(marvelComics)
+    const titles = comics.map(comic => marvelComics[comic].title)
+    const result = titles.filter((title, i) => {
+       return marvelComics[comics[i]].publishDate < 2000
+    });
     return result;
   },
   stanComics() {
     // return a list of comics that were edited by stan Lee
-
-    const result = 'INSERT YOUR CODE HERE'
+    const comics = Object.keys(marvelComics)
+    const hasEditors = comics.filter(comic => marvelComics[comic].editors)
+    const result = hasEditors.filter(comic => marvelComics[comic].editors.includes('Stan Lee'))
     return result;
   },
   adaptedMovies() {
     // return a list of movies that were adapted
 
-    const result = 'INSERT YOUR CODE HERE'
+    const movies = Object.keys(marvelMovies)
+    const result = movies.map(movie => marvelMovies[movie].title)
     return result;
   },
   captainMedia() {
     //return an array of comics and an array of movies (concated) that feature captain America
-
-    const result = 'INSERT YOUR CODE HERE'
+    const captainMovTitles = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].characters.includes('Captain America'))
+    const captainComTitles = Object.keys(marvelComics).filter(comic => marvelComics[comic].characters.includes('Captain America'))
+    const captainMovies = captainMovTitles.map(movie => marvelMovies[movie])
+    const captainComics = captainComTitles.map(comic => marvelComics[comic])
+    const result = [...captainMovies, ...captainComics]
     return result;
   },
   ratedRMovies() {
     // return a list of movies with an R rating
-
-    const result = 'INSERT YOUR CODE HERE'
+    const innapropriateMovies = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].rating === 'R')
+    const result = innapropriateMovies.map(movie => marvelMovies[movie].title)
     return result;
   },
   wellRecievedMovies() {
     // return a list of movies with above a 8 rating on imdb
 
-    const result = 'INSERT YOUR CODE HERE'
+    const highRateMovies = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].imdbRating > 8)
+    const result = highRateMovies.map(movie => marvelMovies[movie].title)
     return result;
   },
   sortMoviesByRating() {
     // sort the movies by their ratings
-
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(marvelMovies).sort((a,b) => marvelMovies[b].imdbRating - marvelMovies[a].imdbRating)
+    return result.map(movie => marvelMovies[movie].title)
   },
   charactersMovies() {
     // create an object with each character as the key and the movies they appear in as the value
 
-    const result = 'INSERT YOUR CODE HERE'
+    const movies = Object.keys(marvelMovies)
+    const characters = movies.reduce((chars, movie) => {
+      marvelMovies[movie].characters.forEach(char => {
+        if(!chars.includes(char)) {
+          chars.push(char)
+        }
+      })
+      return chars
+    }, [])
+    const result = characters.reduce((acc, char) => {
+      const charMovies = movies.filter(movie => marvelMovies[movie].characters.includes(char)).map(movie => marvelMovies[movie].title)
+      acc[char] = [...charMovies]
+      return acc
+    }, {})
     return result;
   },
 };
