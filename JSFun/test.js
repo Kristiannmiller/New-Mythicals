@@ -2174,10 +2174,24 @@ describe("PROTOTYPES", () => {
         'Avengers: Infinity War'
       ])
     });
-    it.skip("sortMoviesByRating", () => {
-      marvelPrompts.sortMoviesByRating();
+    it("sortMoviesByRating", () => {
+      const e = marvelPrompts.sortMoviesByRating();
 
-      expect(marvelMovies).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Avengers: Infinity War',
+        'Logan',
+        'The Avengers',
+        'Guardians of the Galaxy',
+        'Deadpool',
+        'Thor Ragnarok',
+        'Captain America: Civil War',
+        'Doctor Strange',
+        'Spider-Man: Homecoming',
+        'X2',
+        'Black Panther',
+        'Ant-Man',
+        'Captain Marvel'
+      ])
     });
     it.skip("charactersMovies", () => {
       const e = marvelPrompts.charactersMovies();

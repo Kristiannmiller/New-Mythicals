@@ -1016,8 +1016,8 @@ const marvelPrompts = {
   },
   sortMoviesByRating() {
     // sort the movies by their ratings
-
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(marvelMovies).sort((a,b) => marvelMovies[b].imdbRating - marvelMovies[a].imdbRating)
+    return result.map(movie => marvelMovies[movie].title)
   },
   charactersMovies() {
     // create an object with each character as the key and the movies they appear in as the value
