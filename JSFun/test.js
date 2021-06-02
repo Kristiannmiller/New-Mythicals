@@ -2159,15 +2159,20 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("ratedRMovies", () => {
+    it("ratedRMovies", () => {
       const e = marvelPrompts.ratedRMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([ 'Logan', 'Deadpool' ])
     });
-    it.skip("wellRecievedMovies", () => {
+    it("wellRecievedMovies", () => {
       const e = marvelPrompts.wellRecievedMovies();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Logan',
+        'The Avengers',
+        'Guardians of the Galaxy',
+        'Avengers: Infinity War'
+      ])
     });
     it.skip("sortMoviesByRating", () => {
       marvelPrompts.sortMoviesByRating();

@@ -1003,14 +1003,15 @@ const marvelPrompts = {
   },
   ratedRMovies() {
     // return a list of movies with an R rating
-
-    const result = 'INSERT YOUR CODE HERE'
+    const innapropriateMovies = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].rating === 'R')
+    const result = innapropriateMovies.map(movie => marvelMovies[movie].title)
     return result;
   },
   wellRecievedMovies() {
     // return a list of movies with above a 8 rating on imdb
 
-    const result = 'INSERT YOUR CODE HERE'
+    const highRateMovies = Object.keys(marvelMovies).filter(movie => marvelMovies[movie].imdbRating > 8)
+    const result = highRateMovies.map(movie => marvelMovies[movie].title)
     return result;
   },
   sortMoviesByRating() {
