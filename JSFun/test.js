@@ -2193,10 +2193,96 @@ describe("PROTOTYPES", () => {
         'Captain Marvel'
       ])
     });
-    it.skip("charactersMovies", () => {
+    it("charactersMovies", () => {
       const e = marvelPrompts.charactersMovies();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        'Iron Man': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Spider-Man: Homecoming',
+          'Avengers: Infinity War'
+        ],
+        'Captain America': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        'Bucky Barnes': [ 'Captain America: Civil War', 'Avengers: Infinity War' ],
+        'Scarlet Witch': [ 'Captain America: Civil War', 'Avengers: Infinity War' ],
+        'Spider-Man': [
+          'Captain America: Civil War',
+          'Spider-Man: Homecoming',
+          'Avengers: Infinity War'
+        ],
+        Vision: [ 'Captain America: Civil War' ],
+        'Ant-Man': [ 'Captain America: Civil War', 'Ant-Man' ],
+        Hawkeye: [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        'Black Widow': [
+          'Captain America: Civil War',
+          'The Avengers',
+          'Avengers: Infinity War'
+        ],
+        Falcon: [ 'Captain America: Civil War', 'Ant-Man', 'Avengers: Infinity War' ],
+        Wolverine: [ 'Logan', 'X2' ],
+        'X-23': [ 'Logan' ],
+        'Professor Xavier': [ 'Logan', 'X2' ],
+        Thor: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        'Nick Fury': [ 'The Avengers', 'Captain Marvel', 'Avengers: Infinity War' ],
+        Loki: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        Hulk: [ 'The Avengers', 'Thor Ragnarok', 'Avengers: Infinity War' ],
+        Valkyrie: [ 'Thor Ragnarok' ],
+        Hela: [ 'Thor Ragnarok' ],
+        Surtur: [ 'Thor Ragnarok' ],
+        Grandmaster: [ 'Thor Ragnarok' ],
+        Odin: [ 'Thor Ragnarok' ],
+        Korg: [ 'Thor Ragnarok' ],
+        Miek: [ 'Thor Ragnarok' ],
+        'Black Panther': [ 'Black Panther', 'Avengers: Infinity War' ],
+        Shuri: [ 'Black Panther' ],
+        "M'Baku": [ 'Black Panther' ],
+        Okoye: [ 'Black Panther' ],
+        Killmonger: [ 'Black Panther' ],
+        Nakia: [ 'Black Panther' ],
+        'Doctor Stephen Strange': [ 'Doctor Strange' ],
+        'Ancient One': [ 'Doctor Strange' ],
+        'Karl Mordo': [ 'Doctor Strange' ],
+        Wong: [ 'Doctor Strange' ],
+        Wasp: [ 'Ant-Man' ],
+        'Hank Pym': [ 'Ant-Man' ],
+        'Yellow Jacket': [ 'Ant-Man' ],
+        'Captain Marvel': [ 'Captain Marvel' ],
+        Talos: [ 'Captain Marvel' ],
+        Korath: [ 'Captain Marvel' ],
+        'Phil Coulson': [ 'Captain Marvel' ],
+        Ronan: [ 'Captain Marvel', 'Guardians of the Galaxy' ],
+        Vulture: [ 'Spider-Man: Homecoming' ],
+        Magneto: [ 'X2' ],
+        Storm: [ 'X2' ],
+        'Jean Grey': [ 'X2' ],
+        Cyclops: [ 'X2' ],
+        Rogue: [ 'X2' ],
+        Mystique: [ 'X2' ],
+        Nightcrawler: [ 'X2' ],
+        Deadpool: [ 'Deadpool' ],
+        'Negasonic Teenage Warhead': [ 'Deadpool' ],
+        Ajax: [ 'Deadpool' ],
+        Colossus: [ 'Deadpool' ],
+        'Star-Lord': [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Gamora: [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Groot: [ 'Guardians of the Galaxy' ],
+        'Rocket Raccoon': [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Drax: [ 'Guardians of the Galaxy', 'Avengers: Infinity War' ],
+        Nebula: [ 'Guardians of the Galaxy' ],
+        Yondu: [ 'Guardians of the Galaxy' ],
+        Thanos: [ 'Avengers: Infinity War' ],
+        'War Machine': [ 'Avengers: Infinity War' ],
+        'Doctor Strange': [ 'Avengers: Infinity War' ]
+      })
     });
   });
   describe("Murder Prompts", () => {

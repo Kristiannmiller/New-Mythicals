@@ -1022,7 +1022,20 @@ const marvelPrompts = {
   charactersMovies() {
     // create an object with each character as the key and the movies they appear in as the value
 
-    const result = 'INSERT YOUR CODE HERE'
+    const movies = Object.keys(marvelMovies)
+    const characters = movies.reduce((chars, movie) => {
+      marvelMovies[movie].characters.forEach(char => {
+        if(!chars.includes(char)) {
+          chars.push(char)
+        }
+      })
+      return chars
+    }, [])
+    const result = characters.reduce((acc, char) => {
+      const charMovies = movies.filter(movie => marvelMovies[movie].characters.includes(char)).map(movie => marvelMovies[movie].title)
+      acc[char] = [...charMovies]
+      return acc
+    }, {})
     return result;
   },
 };
