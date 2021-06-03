@@ -2286,10 +2286,27 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Murder Prompts", () => {
-    it.skip("culturallyInsensitive", () => {
+    it("culturallyInsensitive", () => {
       const e = murderPrompts.culturallyInsensitive();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Birds of a Feather',
+          season: 1,
+          episode: 2,
+          synopsis: 'Drag murderer suspect',
+          culturallyInsensitive: true,
+          guestStars: [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ]
+        },
+        {
+          name: 'Curse of the Daanav',
+          season: 4,
+          episode: 14,
+          synopsis: 'Cursed Indian ruby',
+          culturallyInsensitive: true,
+          guestStars: [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+        }
+      ])
     });
     it.skip("findMagnum", () => {
       const e = murderPrompts.findMagnum();

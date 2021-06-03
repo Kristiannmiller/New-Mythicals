@@ -1047,7 +1047,7 @@ const murderPrompts = {
   culturallyInsensitive() {
     //Return an array of episodes that are culturallyInsensitive
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.filter(ep => ep.culturallyInsensitive)
     return result;
   },
   findMagnum() {
