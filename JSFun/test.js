@@ -2287,12 +2287,29 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Murder Prompts", () => {
-    it.skip("culturallyInsensitive", () => {
+    it("culturallyInsensitive", () => {
       const e = murderPrompts.culturallyInsensitive();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        {
+          name: 'Birds of a Feather',
+          season: 1,
+          episode: 2,
+          synopsis: 'Drag murderer suspect',
+          culturallyInsensitive: true,
+          guestStars: [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ]
+        },
+        {
+          name: 'Curse of the Daanav',
+          season: 4,
+          episode: 14,
+          synopsis: 'Cursed Indian ruby',
+          culturallyInsensitive: true,
+          guestStars: [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+        }
+      ])
     });
-    it.skip("findMagnum", () => {
+    it("findMagnum", () => {
       const e = murderPrompts.findMagnum();
 
       expect(e).to.deep.equal({
@@ -2308,28 +2325,45 @@ describe("PROTOTYPES", () => {
         ]
       })
     });
-    it.skip("murderStars", () => {
+    it("murderStars", () => {
       const e = murderPrompts.murderStars();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Jeff Conaway',    'Gabe Kaplan',
+        'Martin Landau',   'Vicki Lawrence',
+        'Leslie Nielsen',  'Jo Anne Worley',
+        'Bryan Cranston',  'Linda Hamilton',
+        'David Spielberg', 'John McMartin',
+        'Tom Selleck',     'Jessica Walter',
+        'Jane Badler',     'Kabir Bedi',
+        'Larry Linville'
+      ])
     });
-    it.skip("episodeStars", () => {
+    it("episodeStars", () => {
       const e = murderPrompts.episodeStars();
 
-      expect(e).to.deep.equal([])
-      //e.g. [{name: "My Johnny Lies Over the Ocean",
-  //guestStars: [
-    //   "Vicki Lawrence",
-    //   "Leslie Nielsen",
-    //   "Jo Anne Worley"
-    // ]},
-    // {name: "Menace, Anyone?",
-    // guestStars: [
-    //     "Bryan Cranston",
-    //     "Linda Hamilton",
-    //     "David Spielberg"
-    //   ]}...
-    // ]
+      expect(e).to.deep.equal([
+        {
+          name: 'Birds of a Feather',
+          guestStars: [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ]
+        },
+        {
+          name: 'My Johnny Lies Over the Ocean',
+          guestStars: [ 'Vicki Lawrence', 'Leslie Nielsen', 'Jo Anne Worley' ]
+        },
+        {
+          name: 'Menace, Anyone?',
+          guestStars: [ 'Bryan Cranston', 'Linda Hamilton', 'David Spielberg' ]
+        },
+        {
+          name: 'Magnum on Ice ',
+          guestStars: [ 'John McMartin', 'Tom Selleck', 'Jessica Walter' ]
+        },
+        {
+          name: 'Curse of the Daanav',
+          guestStars: [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+        }
+      ])
     });
     it.skip("episodeSynopsis", () => {
       const e = murderPrompts.episodeSynopsis();
