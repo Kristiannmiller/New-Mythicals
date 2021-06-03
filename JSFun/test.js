@@ -2308,7 +2308,7 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("findMagnum", () => {
+    it("findMagnum", () => {
       const e = murderPrompts.findMagnum();
 
       expect(e).to.deep.equal({
@@ -2324,7 +2324,7 @@ describe("PROTOTYPES", () => {
         ]
       })
     });
-    it.skip("murderStars", () => {
+    it("murderStars", () => {
       const e = murderPrompts.murderStars();
 
       expect(e).to.deep.equal([])

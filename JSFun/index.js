@@ -1053,7 +1053,7 @@ const murderPrompts = {
   findMagnum() {
     //Return the episode that includes Magnum PI
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.find(ep => ep.synopsis.includes('Magnum'))
     return result;
   },
   episodeStars() {
