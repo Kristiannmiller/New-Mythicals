@@ -2338,23 +2338,31 @@ describe("PROTOTYPES", () => {
         'Larry Linville'
       ])
     });
-    it.skip("episodeStars", () => {
+    it("episodeStars", () => {
       const e = murderPrompts.episodeStars();
 
-      expect(e).to.deep.equal([])
-      //e.g. [{name: "My Johnny Lies Over the Ocean",
-  //guestStars: [
-    //   "Vicki Lawrence",
-    //   "Leslie Nielsen",
-    //   "Jo Anne Worley"
-    // ]},
-    // {name: "Menace, Anyone?",
-    // guestStars: [
-    //     "Bryan Cranston",
-    //     "Linda Hamilton",
-    //     "David Spielberg"
-    //   ]}...
-    // ]
+      expect(e).to.deep.equal([
+        {
+          name: 'Birds of a Feather',
+          guestStars: [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ]
+        },
+        {
+          name: 'My Johnny Lies Over the Ocean',
+          guestStars: [ 'Vicki Lawrence', 'Leslie Nielsen', 'Jo Anne Worley' ]
+        },
+        {
+          name: 'Menace, Anyone?',
+          guestStars: [ 'Bryan Cranston', 'Linda Hamilton', 'David Spielberg' ]
+        },
+        {
+          name: 'Magnum on Ice ',
+          guestStars: [ 'John McMartin', 'Tom Selleck', 'Jessica Walter' ]
+        },
+        {
+          name: 'Curse of the Daanav',
+          guestStars: [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+        }
+      ])
     });
     it.skip("episodeSynopsis", () => {
       const e = murderPrompts.episodeSynopsis();
