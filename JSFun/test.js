@@ -2327,7 +2327,16 @@ describe("PROTOTYPES", () => {
     it("murderStars", () => {
       const e = murderPrompts.murderStars();
 
-      expect(e).to.deep.equal([])
+      expect(e).to.deep.equal([
+        'Jeff Conaway',    'Gabe Kaplan',
+        'Martin Landau',   'Vicki Lawrence',
+        'Leslie Nielsen',  'Jo Anne Worley',
+        'Bryan Cranston',  'Linda Hamilton',
+        'David Spielberg', 'John McMartin',
+        'Tom Selleck',     'Jessica Walter',
+        'Jane Badler',     'Kabir Bedi',
+        'Larry Linville'
+      ])
     });
     it.skip("episodeStars", () => {
       const e = murderPrompts.episodeStars();

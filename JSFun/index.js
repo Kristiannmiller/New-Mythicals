@@ -1056,6 +1056,15 @@ const murderPrompts = {
     const result = murder.topFiveEpisodes.find(ep => ep.synopsis.includes('Magnum'))
     return result;
   },
+  murderStars() {
+    //Return an array of all stars in the top five episodes array
+
+    const result = murder.topFiveEpisodes.reduce((acc, ep) => {
+      ep.guestStars.forEach(star => acc.push(star))
+      return acc
+    }, [])
+    return result;
+  },
   episodeStars() {
     // Return an array of objects with just the name and the guest stars for each episode
 
