@@ -1170,6 +1170,111 @@ const strongBadPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: fourteeners from ./datasets/fourteeners.js
+const fourteenerPrompts = {
+  over14000() {
+    // Question: return an array of all of the peaks that are over 14000
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  class2() {
+    // Question: create an array of all of the class 2 routes within the front range
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  totalRoutes() {
+    // Question: How many routes are in the front range
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  class4() {
+    // Question: create an array containing all of the class 4 routes
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  rangeNames() {
+    // Question: Create an array of all the mountain range names
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  longsMileage() {
+    // Question: What is the total mileage for the routes on Long's Peak
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  sawatchMileage() {
+    // Question: What is the total gain for the Sawatch range
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  tallestPeaks() {
+    // Question: Create an array containing the tallest peak in each range
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  totalMileage() {
+    // Question: What is the total mileage of all of the routes?
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  totalGain() {
+    // Question: What is the total gain of all of the routes?
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  rankedPeaks() {
+    // Question : create an array of all ranked fourteeners arranged from first to 53rd
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  sortedFourteeners() {
+    // Question : create an array of all fourteeners arranged from tallest to shortest
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  peaksData() {
+    // Question: Create an object where the key is the peak and the value is an
+    // object containing the total mileage and total gain of each peak
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  rangeData() {
+    // Question: create an object with keys of each mountain range, and the
+    // value is an object that counts the number of each route in that range
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  unranked() {
+    // Question : create an array of all the unranked fourteeners
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  tallestFourteener() {
+    // Question : find the tallest fourteener
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  shortestFourteener() {
+    // Question : find the shortest fourteener
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  forestData() {
+    // Question : create an object with keys of each forest and values
+    // being number of fourteeners in that forest
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+  rangePeakData() {
+    // Question : Create an array of objects where the keys are the mountain range
+    // and the value is the number of peaks
+    const result = 'INSERT YOUR CODE HERE'
+    return result;
+  },
+}
+
 
 
 
@@ -1198,5 +1303,6 @@ module.exports = {
   marvelPrompts,
   murderPrompts,
   restaurantPrompts,
-  strongBadPrompts
+  strongBadPrompts,
+  fourteenerPrompts
 };

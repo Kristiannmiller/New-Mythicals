@@ -30,7 +30,8 @@ const {
   marvelPrompts,
   murderPrompts,
   restaurantPrompts,
-  strongBadPrompts
+  strongBadPrompts,
+  fourteenerPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -2475,7 +2476,6 @@ describe("PROTOTYPES", () => {
 //    ]
 //    ...
 // }
-
     });
     it.skip("dangeresque", () => {
       const e = strongBadPrompts.dangeresque();
@@ -2507,5 +2507,104 @@ describe("PROTOTYPES", () => {
 //   ...
 // }
     });
+  });
+  describe("Fourteener Prompts", () => {
+    it.skip("over14000", () => {
+      const e = fourteenerPrompts.over14000();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("class2", () => {
+      const e = fourteenerPrompts.class2();
+      // Example: ['south ridge', 'southwest ridge', etc...]
+      expect(e).to.deep.equal({})
+    });
+    it.skip("totalRoutes", () => {
+      const e = fourteenerPrompts.totalRoutes();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("class4", () => {
+      const e = fourteenerPrompts.class4();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("rangeNames", () => {
+      const e = fourteenerPrompts.rangeNames();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("longsMileage", () => {
+      const e = fourteenerPrompts.longsMileage();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("sawatchMileage", () => {
+      const e = fourteenerPrompts.sawatchMileage();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("tallestPeaks", () => {
+      const e = fourteenerPrompts.tallestPeaks();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("totalMileage", () => {
+      const e = fourteenerPrompts.totalMileage();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("totalGain", () => {
+      const e = fourteenerPrompts.totalGain();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("rankedPeaks", () => {
+      const e = fourteenerPrompts.rankedPeaks();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("sortedFourteeners", () => {
+      const e = fourteenerPrompts.sortedFourteeners();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("peaksData", () => {
+      const e = fourteenerPrompts.peaksData();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("rangeData", () => {
+      const e = fourteenerPrompts.rangeData();
+      // ie { tenMile: { 'class 1': 3, 'class 2': 5...etc}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("unranked", () => {
+      const e = fourteenerPrompts.unranked();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("tallestFourteener", () => {
+      const e = fourteenerPrompts.tallestFourteener();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("shortestFourteener", () => {
+      const e = fourteenerPrompts.shortestFourteener();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("forestData", () => {
+      const e = fourteenerPrompts.forestData();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("rangePeakData", () => {
+      const e = fourteenerPrompts.rangePeakData();
+
+      expect(e).to.deep.equal({})
+    });
+  });
+
 
 });
