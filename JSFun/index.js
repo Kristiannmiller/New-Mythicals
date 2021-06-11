@@ -1076,19 +1076,29 @@ const murderPrompts = {
   episodeSynopsis() {
     // Return an Array of Objects with the name of the episode as the key and the synopsis as the value
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.map(episode => {
+      return {[episode.name]: episode.synopsis}
+    })
     return result;
   },
   guestStars() {
     // Return one Object with all the guest stars
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.reduce((acc, ep) => {
+        ep.guestStars.forEach(star => {
+          if(!acc.guestStars.includes(star)) acc.guestStars.push(star)
+        })
+      return acc
+    }, {guestStars: []})
     return result;
   },
   episodeCoStars() {
     //return an object with the episode names as keys and the co-stars as an array
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.reduce((acc, ep) => {
+      acc[ep.name] = [...ep.guestStars]
+      return acc
+    }, {})
     return result;
   },
 };

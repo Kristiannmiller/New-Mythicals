@@ -2366,31 +2366,43 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("episodeSynopsis", () => {
+    it("episodeSynopsis", () => {
       const e = murderPrompts.episodeSynopsis();
 
-      expect(e).to.deep.equal([])
-      // e.g. [{"Curse of the Daanav": "Cursed Indian ruby"}, {"Magnum on Ice ":"Magnum PI crossover"}...]
+      expect(e).to.deep.equal([
+        { 'Birds of a Feather': 'Drag murderer suspect' },
+        { 'My Johnny Lies Over the Ocean': 'Mayhem at sea' },
+        { 'Menace, Anyone?': 'Tennis star scandal' },
+        { 'Magnum on Ice ': 'Magnum PI crossover' },
+        { 'Curse of the Daanav': 'Cursed Indian ruby' }
+      ])
     });
-    it.skip("guestStars", () => {
+    it("guestStars", () => {
       const e = murderPrompts.guestStars();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        guestStars: [
+          'Jeff Conaway',    'Gabe Kaplan',
+          'Martin Landau',   'Vicki Lawrence',
+          'Leslie Nielsen',  'Jo Anne Worley',
+          'Bryan Cranston',  'Linda Hamilton',
+          'David Spielberg', 'John McMartin',
+          'Tom Selleck',     'Jessica Walter',
+          'Jane Badler',     'Kabir Bedi',
+          'Larry Linville'
+        ]
+      })
     });
-    it.skip("episodeCoStars", () => {
+    it("episodeCoStars", () => {
       const e = murderPrompts.episodeCoStars();
 
-      expect(e).to.deep.equal({})
-      // e.g {
-//  "Curse of the Daanav": [
-      // "Jane Badler",
-      // "Kabir Bedi",
-      // "Larry Linville"],
-//  "Magnum on Ice ": [
-        // "John McMartin",
-        // "Tom Selleck",
-        // "Jessica Walter"]
-// }
+      expect(e).to.deep.equal({
+        'Birds of a Feather': [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ],
+        'My Johnny Lies Over the Ocean': [ 'Vicki Lawrence', 'Leslie Nielsen', 'Jo Anne Worley' ],
+        'Menace, Anyone?': [ 'Bryan Cranston', 'Linda Hamilton', 'David Spielberg' ],
+        'Magnum on Ice ': [ 'John McMartin', 'Tom Selleck', 'Jessica Walter' ],
+        'Curse of the Daanav': [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+      })
     });
   });
   describe("Restaurant Prompts", () => {
