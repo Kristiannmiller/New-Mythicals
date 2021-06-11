@@ -1095,7 +1095,10 @@ const murderPrompts = {
   episodeCoStars() {
     //return an object with the episode names as keys and the co-stars as an array
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.reduce((acc, ep) => {
+      acc[ep.name] = [...ep.guestStars]
+      return acc
+    }, {})
     return result;
   },
 };

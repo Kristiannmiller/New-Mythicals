@@ -2393,20 +2393,16 @@ describe("PROTOTYPES", () => {
         ]
       })
     });
-    it.skip("episodeCoStars", () => {
+    it("episodeCoStars", () => {
       const e = murderPrompts.episodeCoStars();
 
-      expect(e).to.deep.equal({})
-      // e.g {
-//  "Curse of the Daanav": [
-      // "Jane Badler",
-      // "Kabir Bedi",
-      // "Larry Linville"],
-//  "Magnum on Ice ": [
-        // "John McMartin",
-        // "Tom Selleck",
-        // "Jessica Walter"]
-// }
+      expect(e).to.deep.equal({
+        'Birds of a Feather': [ 'Jeff Conaway', 'Gabe Kaplan', 'Martin Landau' ],
+        'My Johnny Lies Over the Ocean': [ 'Vicki Lawrence', 'Leslie Nielsen', 'Jo Anne Worley' ],
+        'Menace, Anyone?': [ 'Bryan Cranston', 'Linda Hamilton', 'David Spielberg' ],
+        'Magnum on Ice ': [ 'John McMartin', 'Tom Selleck', 'Jessica Walter' ],
+        'Curse of the Daanav': [ 'Jane Badler', 'Kabir Bedi', 'Larry Linville' ]
+      })
     });
   });
   describe("Restaurant Prompts", () => {
