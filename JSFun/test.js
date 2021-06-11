@@ -2377,10 +2377,21 @@ describe("PROTOTYPES", () => {
         { 'Curse of the Daanav': 'Cursed Indian ruby' }
       ])
     });
-    it.skip("guestStars", () => {
+    it("guestStars", () => {
       const e = murderPrompts.guestStars();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        guestStars: [
+          'Jeff Conaway',    'Gabe Kaplan',
+          'Martin Landau',   'Vicki Lawrence',
+          'Leslie Nielsen',  'Jo Anne Worley',
+          'Bryan Cranston',  'Linda Hamilton',
+          'David Spielberg', 'John McMartin',
+          'Tom Selleck',     'Jessica Walter',
+          'Jane Badler',     'Kabir Bedi',
+          'Larry Linville'
+        ]
+      })
     });
     it.skip("episodeCoStars", () => {
       const e = murderPrompts.episodeCoStars();

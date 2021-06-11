@@ -1084,7 +1084,12 @@ const murderPrompts = {
   guestStars() {
     // Return one Object with all the guest stars
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.reduce((acc, ep) => {
+        ep.guestStars.forEach(star => {
+          if(!acc.guestStars.includes(star)) acc.guestStars.push(star)
+        })
+      return acc
+    }, {guestStars: []})
     return result;
   },
   episodeCoStars() {
