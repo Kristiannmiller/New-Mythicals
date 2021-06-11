@@ -1076,7 +1076,9 @@ const murderPrompts = {
   episodeSynopsis() {
     // Return an Array of Objects with the name of the episode as the key and the synopsis as the value
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = murder.topFiveEpisodes.map(episode => {
+      return {[episode.name]: episode.synopsis}
+    })
     return result;
   },
   guestStars() {

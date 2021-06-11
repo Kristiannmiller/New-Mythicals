@@ -2366,11 +2366,16 @@ describe("PROTOTYPES", () => {
         }
       ])
     });
-    it.skip("episodeSynopsis", () => {
+    it("episodeSynopsis", () => {
       const e = murderPrompts.episodeSynopsis();
 
-      expect(e).to.deep.equal([])
-      // e.g. [{"Curse of the Daanav": "Cursed Indian ruby"}, {"Magnum on Ice ":"Magnum PI crossover"}...]
+      expect(e).to.deep.equal([
+        { 'Birds of a Feather': 'Drag murderer suspect' },
+        { 'My Johnny Lies Over the Ocean': 'Mayhem at sea' },
+        { 'Menace, Anyone?': 'Tennis star scandal' },
+        { 'Magnum on Ice ': 'Magnum PI crossover' },
+        { 'Curse of the Daanav': 'Cursed Indian ruby' }
+      ])
     });
     it.skip("guestStars", () => {
       const e = murderPrompts.guestStars();
