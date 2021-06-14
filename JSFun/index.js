@@ -1127,7 +1127,14 @@ const restaurantPrompts = {
   restaurantsByType() {
     // 3. Make a new object where each key is a type of restaurant and its value is an array of the matching restaurants
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((acc, res) => {
+      if(!acc[res.type]) {
+        acc[res.type] = [res.name]
+      } else {
+        acc[res.type].push(res.name)
+      }
+      return acc
+    }, {})
     return result;
   },
   restaurantsByNeighborhood() {
