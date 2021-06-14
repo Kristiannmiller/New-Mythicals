@@ -2411,7 +2411,7 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(6501)
     });
-    it.skip("restaurantsByReviews", () => {
+    it("restaurantsByReviews", () => {
       const e = restaurantPrompts.restaurantsByReviews();
 
       expect(e).to.deep.equal({

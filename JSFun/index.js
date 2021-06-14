@@ -1118,7 +1118,10 @@ const restaurantPrompts = {
   },
   restaurantsByReviews() {
     //2. Create an object where each property is the name of a restaurant and its key value is its number of reviews.
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((reviews, res) => {
+      if(!reviews[res.name]) reviews[res.name] = res.number_of_reviews
+      return reviews
+    }, {})
     return result;
   },
   restaurantsByType() {
