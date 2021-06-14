@@ -2406,12 +2406,12 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Restaurant Prompts", () => {
-    it.skip("totalReviews", () => {
+    it("totalReviews", () => {
       const e = restaurantPrompts.totalReviews();
 
       expect(e).to.equal(6501)
     });
-    it.skip("restaurantsByReviews", () => {
+    it("restaurantsByReviews", () => {
       const e = restaurantPrompts.restaurantsByReviews();
 
       expect(e).to.deep.equal({
@@ -2424,16 +2424,17 @@ describe("PROTOTYPES", () => {
         Acorn: 309,
         Panzano: 1316 })
     });
-    it.skip("restaurantsByType", () => {
+    it("restaurantsByType", () => {
       const e = restaurantPrompts.restaurantsByType();
 
       expect(e).to.deep.equal({
-        'Fine Dining': [ 'Fruition Restaurant', 'Fruition Restaurant', 'Sushi Den' ],
-        'Cheap Eats': [ 'Sam\'s No. 3', 'Sam\'s No. 3', 'Pete\'s Kitchen' ],
-        Lunch: [ 'Root Down', 'Root Down', 'The Capital Grille' ],
-        Dinner: [ 'Acorn', 'Acorn', 'Panzano' ] })
+        'Fine Dining': [ 'Fruition Restaurant', 'Sushi Den' ],
+        'Cheap Eats': [ "Sam's No. 3", "Pete's Kitchen" ],
+        Lunch: [ 'Root Down', 'The Capital Grille' ],
+        Dinner: [ 'Acorn', 'Panzano' ]
+      })
     });
-    it.skip("restaurantsByNeighborhood", () => {
+    it("restaurantsByNeighborhood", () => {
       const e = restaurantPrompts.restaurantsByNeighborhood();
 
       expect(e).to.deep.equal({
@@ -2447,7 +2448,7 @@ describe("PROTOTYPES", () => {
         Panzano: 'LoDo'
       })
     });
-    it.skip("neighborhoodRestaurants", () => {
+    it("neighborhoodRestaurants", () => {
       const e = restaurantPrompts.neighborhoodRestaurants();
 
       expect(e).to.deep.equal({

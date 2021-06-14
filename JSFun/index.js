@@ -1110,31 +1110,54 @@ const restaurantPrompts = {
   totalReviews() {
     //1. sum up the the total numer of restaurant reviews for all the restaurants.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((total, res) => {
+      total += res.number_of_reviews
+      return total
+    }, 0)
     return result;
   },
   restaurantsByReviews() {
     //2. Create an object where each property is the name of a restaurant and its key value is its number of reviews.
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((reviews, res) => {
+      if(!reviews[res.name]) reviews[res.name] = res.number_of_reviews
+      return reviews
+    }, {})
     return result;
   },
   restaurantsByType() {
     // 3. Make a new object where each key is a type of restaurant and its value is an array of the matching restaurants
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((acc, res) => {
+      if(!acc[res.type]) {
+        acc[res.type] = [res.name]
+      } else {
+        acc[res.type].push(res.name)
+      }
+      return acc
+    }, {})
     return result;
   },
   restaurantsByNeighborhood() {
-    //2B Create an object where each property is the name of the restaurant
+    // 2B Create an object where each property is the name of the restaurant
     // and its key value is the neighborhood where its located.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((hoods, res) => {
+      hoods[res.name] = res.neighborhood
+      return hoods
+    }, {})
     return result;
   },
   neighborhoodRestaurants() {
     //3B Create an object where each key is the neighborhood and its value is the name of each restaurant in that neighborhood.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((hoods, res) => {
+      if(!hoods[res.neighborhood]) {
+        hoods[res.neighborhood] = [res.name]
+      } else {
+        hoods[res.neighborhood].push(res.name)
+      }
+      return hoods
+    }, {})
     return result;
   },
 };
