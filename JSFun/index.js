@@ -1110,7 +1110,10 @@ const restaurantPrompts = {
   totalReviews() {
     //1. sum up the the total numer of restaurant reviews for all the restaurants.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((total, res) => {
+      total += res.number_of_reviews
+      return total
+    }, 0)
     return result;
   },
   restaurantsByReviews() {

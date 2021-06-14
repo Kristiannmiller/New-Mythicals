@@ -2406,7 +2406,7 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Restaurant Prompts", () => {
-    it.skip("totalReviews", () => {
+    it("totalReviews", () => {
       const e = restaurantPrompts.totalReviews();
 
       expect(e).to.equal(6501)
