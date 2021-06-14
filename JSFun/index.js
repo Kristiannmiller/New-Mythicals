@@ -1150,7 +1150,14 @@ const restaurantPrompts = {
   neighborhoodRestaurants() {
     //3B Create an object where each key is the neighborhood and its value is the name of each restaurant in that neighborhood.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((hoods, res) => {
+      if(!hoods[res.neighborhood]) {
+        hoods[res.neighborhood] = [res.name]
+      } else {
+        hoods[res.neighborhood].push(res.name)
+      }
+      return hoods
+    }, {})
     return result;
   },
 };

@@ -2448,7 +2448,7 @@ describe("PROTOTYPES", () => {
         Panzano: 'LoDo'
       })
     });
-    it.skip("neighborhoodRestaurants", () => {
+    it("neighborhoodRestaurants", () => {
       const e = restaurantPrompts.neighborhoodRestaurants();
 
       expect(e).to.deep.equal({
