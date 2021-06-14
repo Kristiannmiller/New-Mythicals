@@ -1138,10 +1138,13 @@ const restaurantPrompts = {
     return result;
   },
   restaurantsByNeighborhood() {
-    //2B Create an object where each property is the name of the restaurant
+    // 2B Create an object where each property is the name of the restaurant
     // and its key value is the neighborhood where its located.
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = restaurants.reduce((hoods, res) => {
+      hoods[res.name] = res.neighborhood
+      return hoods
+    }, {})
     return result;
   },
   neighborhoodRestaurants() {

@@ -2434,7 +2434,7 @@ describe("PROTOTYPES", () => {
         Dinner: [ 'Acorn', 'Panzano' ]
       })
     });
-    it.skip("restaurantsByNeighborhood", () => {
+    it("restaurantsByNeighborhood", () => {
       const e = restaurantPrompts.restaurantsByNeighborhood();
 
       expect(e).to.deep.equal({
