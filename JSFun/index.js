@@ -20,6 +20,7 @@ const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
 const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
+const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
 
 
@@ -1174,8 +1175,20 @@ const strongBadPrompts = {
       Halloween toons, also, as a note: Homsar does not appear in the first
       Halloween toon: 'Homestarloween Party', but does appear in all others,
       so list him with a value of "none" for that toon).*/
-
-    const result = 'INSERT YOUR CODE HERE'
+    const characters = ['Homestar Runner', 'Strong Bad', 'The Cheat', 'Strong Mad', 'Strong Sad', 'Pom Pom', 'Marzipan', 'Coach Z', 'Bubs', 'The King of Town', 'The Poopsmith', 'Homsar']
+    const findCostume = (costumes, character) => {
+      characterIndex = players.findIndex(char => char.name === character)
+      return costumes.find(costume => players[characterIndex].costumes.includes(costume))
+    }
+    const result = toons.halloweenToons.reduce((acc, toon) => {
+      const costumeMatches = characters.reduce((matches, per) => {
+        const match = findCostume(toon.costumes, per) || 'none'
+        matches.push({[per]: match})
+        return matches
+      }, [])
+      acc[toon.name] = costumeMatches
+      return acc
+    }, {})
     return result;
   },
   dangeresque() {

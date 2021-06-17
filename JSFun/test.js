@@ -2462,33 +2462,222 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Strong Bad Prompts", () => {
-    it.skip("halloweenToons", () => {
+    it("halloweenToons", () => {
       const e = strongBadPrompts.halloweenToons();
 
-      expect(e).to.deep.equal({})
-      // let halloweenCostumes = {
-//   'Homestarloween Party': [
-//       { 'Homestar Runner': 'Kurt Cobain' },
-//       { 'Strong Bad': 'Carmen Miranda' },
-//       { 'The Cheat': 'Garfield' },
-//       { 'Strong Mad': 'Slim Goodbody' },
-//       { 'Strong Sad': 'Gorbachev' },
-//       { 'Pom Pom': 'Stay-Puft Marshmallow Man' },
-//       { 'Marzipan': 'Jeannie' },
-//       { 'Coach Z': 'Flavor Flav' },
-//       { 'Bubs': 'Rerun' },
-//       { 'The King of Town': 'Cap\'n Crunch' },
-//       { 'The Poopsmith': 'Tron' },
-//       { 'Homsar': 'none' }
-//    ],
-
-//    'The House That Gave Sucky Treats': [
-//      { 'Homestar Runner': 'The Greatest American Hero' },
-//      { 'Strong Bad': 'Carmen Sandiego' },
-//      ...
-//    ]
-//    ...
-// }
+      expect(e).to.deep.equal(
+        {
+          'Homestarloween Party': [
+          { 'Homestar Runner': 'Kurt Cobain' },
+          { 'Strong Bad': 'Carmen Miranda' },
+          { 'The Cheat': 'Garfield' },
+          { 'Strong Mad': 'Slim Goodbody' },
+          { 'Strong Sad': 'Gorbachev' },
+          { 'Pom Pom': 'Stay-Puft Marshmallow Man' },
+          { Marzipan: 'Jeannie' },
+          { 'Coach Z': 'Flavor Flav' },
+          { Bubs: 'Rerun' },
+          { 'The King of Town': "Cap'n Crunch" },
+          { 'The Poopsmith': 'Tron' },
+          { Homsar: 'none' }
+        ],
+        'The House That Gave Sucky Treats': [
+          { 'Homestar Runner': 'The Greatest American Hero' },
+          { 'Strong Bad': 'Carmen Sandiego' },
+          { 'The Cheat': 'Punchy' },
+          { 'Strong Mad': 'William "The Fridge" Perry' },
+          { 'Strong Sad': 'Andy Warhol' },
+          { 'Pom Pom': 'Michael Moore' },
+          { Marzipan: 'Joey Ramone' },
+          { 'Coach Z': 'Humpty Hump' },
+          { Bubs: 'Mars Blackmon' },
+          { 'The King of Town': 'Hagar the Horrible' },
+          { 'The Poopsmith': 'Laser Tag' },
+          { Homsar: 'Wimpy' }
+        ],
+        'Pumpkin Carve-nival': [
+          { 'Homestar Runner': 'Angus Young' },
+          { 'Strong Bad': 'The Bee/Homestar' },
+          { 'The Cheat': 'Russell' },
+          { 'Strong Mad': 'A Ghost' },
+          { 'Strong Sad': 'Vyvyan' },
+          { 'Pom Pom': 'Kool-Aid Man' },
+          { Marzipan: 'Left Eye Lopes' },
+          { 'Coach Z': 'Kid' },
+          { Bubs: 'Captain Lou Albano' },
+          { 'The King of Town': 'Mario' },
+          { 'The Poopsmith': 'A Sleestak' },
+          { Homsar: 'Ghost Dog' }
+        ],
+        '3 Times Halloween Funjob': [
+          { 'Homestar Runner': 'John McEnroe' },
+          { 'Strong Bad': 'Ozone' },
+          { 'The Cheat': 'Izzy' },
+          { 'Strong Mad': 'Magnum P.I.' },
+          { 'Strong Sad': 'David Byrne' },
+          { 'Pom Pom': 'Kamala the Ugandan Giant' },
+          { Marzipan: 'The Log Lady' },
+          { 'Coach Z': 'Kool Moe Dee' },
+          { Bubs: 'Mel' },
+          { 'The King of Town': 'The Hamburglar' },
+          { 'The Poopsmith': 'M. Bison' },
+          { Homsar: 'Slash' }
+        ],
+        'Halloween Fairstival': [
+          { 'Homestar Runner': 'Carl Spackler' },
+          { 'Strong Bad': 'Cesar Romero as The Joker' },
+          { 'The Cheat': 'Sigmund' },
+          { 'Strong Mad': 'Ben Wallace' },
+          { 'Strong Sad': 'David Bowie' },
+          { 'Pom Pom': "Bob's Big Boy" },
+          { Marzipan: 'Willie Nelson' },
+          { 'Coach Z': 'Tupac' },
+          { Bubs: 'One of The Three Most Important People in the World' },
+          { 'The King of Town': 'The Mayor of Halloweentown' },
+          { 'The Poopsmith': 'Lion-O' },
+          { Homsar: 'Kumar' }
+        ],
+        'Halloween Potion-ma-jig': [
+          { 'Homestar Runner': 'Moocher' },
+          { 'Strong Bad': 'Jambi the Genie' },
+          { 'The Cheat': 'Toad' },
+          { 'Strong Mad': 'Gossamer' },
+          { 'Strong Sad': 'Devo Member' },
+          { 'Pom Pom': 'Walter Sobchak' },
+          { Marzipan: 'Beaker' },
+          { 'Coach Z': 'Theo Huxtable' },
+          { Bubs: 'Apollo Creed' },
+          { 'The King of Town': 'Colonel Sanders' },
+          { 'The Poopsmith': 'Ookla the Mok' },
+          { Homsar: 'Tingle' }
+        ],
+        'Happy Hallow-day': [
+          { 'Homestar Runner': 'Teen Wolf' },
+          { 'Strong Bad': 'Father Guido Sarducci' },
+          { 'The Cheat': 'Gizmo' },
+          { 'Strong Mad': 'The Maxx' },
+          { 'Strong Sad': 'Tony Clifton' },
+          { 'Pom Pom': 'Mario Batali' },
+          { Marzipan: 'Frida Kahlo' },
+          { 'Coach Z': 'Queen Latifah' },
+          { Bubs: 'Coach McGuirk' },
+          { 'The King of Town': "The Gorton's Fisherman" },
+          { 'The Poopsmith': 'Necron 99' },
+          { Homsar: 'Ed Grimley' }
+        ],
+        'Jibblies 2': [
+          { 'Homestar Runner': 'Artie, the Strongest Man in the World' },
+          { 'Strong Bad': 'Beetlejuice' },
+          { 'The Cheat': 'Penfold' },
+          { 'Strong Mad': 'Nikolai Volkoff' },
+          { 'Strong Sad': 'The Fat Kid from The Far Side' },
+          { 'Pom Pom': 'A Cacodemon' },
+          { Marzipan: 'Prince' },
+          { 'Coach Z': 'So So Def Recordings Logo' },
+          { Bubs: 'Ross' },
+          { 'The King of Town': 'Rev. Al Sharpton' },
+          { 'The Poopsmith': 'Doc Brown' },
+          { Homsar: 'The "Noony Noony Noo" Typewriter Guy' }
+        ],
+        'Most in the Graveyard': [
+          { 'Homestar Runner': 'Yahoo Serious(ly)' },
+          {'Strong Bad': "The Planet on the Cover of The Hitchhiker's Guide to the Galaxy"},
+          { 'The Cheat': 'Drywall' },
+          { 'Strong Mad': 'A Thwomp' },
+          { 'Strong Sad': 'Sam Kinison' },
+          { 'Pom Pom': 'SCUD' },
+          { Marzipan: 'Stevie Ray Vaughan' },
+          { 'Coach Z': 'DJ Lance Rock' },
+          { Bubs: 'The Junkyard Dog' },
+          { 'The King of Town': 'Hello Kitty' },
+          { 'The Poopsmith': 'Dr. Zoidberg' },
+          { Homsar: 'Captain Caveman' }
+        ],
+        'Doomy Tales of the Macabre': [
+          { 'Homestar Runner': 'Crispin Glover as Rubin Farr' },
+          { 'Strong Bad': 'Skull Kid' },
+          { 'The Cheat': 'The Lorax' },
+          { 'Strong Mad': 'Sal' },
+          { 'Strong Sad': 'Doyle' },
+          { 'Pom Pom': 'Pooka' },
+          { Marzipan: 'Lola' },
+          { 'Coach Z': 'MC Skat Kat' },
+          { Bubs: 'Jules Winnfield' },
+          { 'The King of Town': 'Colonel Mustard' },
+          { 'The Poopsmith': 'Darunia' },
+          { Homsar: 'Little Orphan Annie' }
+        ],
+        'Which Ween Costumes': [
+          { 'Homestar Runner': 'The Alien Super-Being' },
+          { 'Strong Bad': 'Fragile Lamp' },
+          { 'The Cheat': "The Grinch's dog" },
+          { 'Strong Mad': 'The Abominable Snowman' },
+          { 'Strong Sad': 'Ralphie Parker' },
+          { 'Pom Pom': 'A Snow Globe' },
+          { Marzipan: 'Cindy Lou Who' },
+          { 'Coach Z': 'Notebook Paper' },
+          { Bubs: 'Dead Guy from Die Hard' },
+          { 'The King of Town': 'Heat Miser' },
+          { 'The Poopsmith': 'Voldar' },
+          { Homsar: 'none' }
+        ],
+        'I Killed Pom Pom': [
+          { 'Homestar Runner': 'Tobias Fünke' },
+          { 'Strong Bad': 'Mac Tonight' },
+          { 'The Cheat': 'Spaceman Spiff' },
+          { 'Strong Mad': 'Goro' },
+          { 'Strong Sad': 'Pale Man' },
+          { 'Pom Pom': 'King-Size Homer' },
+          { Marzipan: 'Tom Servo' },
+          { 'Coach Z': 'A Tribe Called Quest' },
+          { Bubs: 'Adam Yauch as MCA as Nathan Wind as Cochese' },
+          { 'The King of Town': 'Ram Man' },
+          { 'The Poopsmith': 'Mean Machine Angel' },
+          { Homsar: 'Dungeonmaster' }
+        ],
+        'The House That Gave Sucky Tricks': [
+          { 'Homestar Runner': 'H.I. McDunnough' },
+          { 'Strong Bad': 'David Lee Roth' },
+          { 'The Cheat': 'Fudgie The Whale' },
+          { 'Strong Mad': 'TiVo' },
+          { 'Strong Sad': 'Cameron Frye' },
+          { 'Pom Pom': 'Wilson' },
+          { Marzipan: 'Captain EO' },
+          { 'Coach Z': 'André 3000' },
+          { Bubs: 'Chuck Barris' },
+          { 'The King of Town': "Devil's Tower Mashed Potatoes" },
+          { 'The Poopsmith': 'Feyd-Rautha' },
+          { Homsar: 'Fidgit' }
+        ],
+        'Later That Night....': [
+          { 'Homestar Runner': 'Mr. B. Natural' },
+          { 'Strong Bad': 'No-Face' },
+          { 'The Cheat': 'The Angriest Dog in the World' },
+          { 'Strong Mad': "Monica and Rachel's Door (from Friends)" },
+          { 'Strong Sad': 'The UTZ girl' },
+          { 'Pom Pom': 'The Orange Bird' },
+          { Marzipan: 'Margot Tenebaum' },
+          { 'Coach Z': 'Kwamé' },
+          { Bubs: 'Billy Mitchell' },
+          { 'The King of Town': 'Scrubbing Bubbles' },
+          { 'The Poopsmith': 'Flaming Globes of Sigmund' },
+          { Homsar: 'Zebraman' }
+        ],
+        'Haunted Photo Booth': [
+          { 'Homestar Runner': 'Power Alley Dale Murphy' },
+          { 'Strong Bad': 'Killer BOB' },
+          { 'The Cheat': 'Maxwell' },
+          { 'Strong Mad': 'Powdered Toast Man' },
+          { 'Strong Sad': 'Hercule Poirot' },
+          { 'Pom Pom': 'Violet Beauregarde' },
+          { Marzipan: "Joanna from Chotchkie's" },
+          { 'Coach Z': 'PaRappa the Rapper' },
+          { Bubs: 'Grunkle Stan' },
+          {'The King of Town': `Alice from the "Don't Come Around Here No More" video`},
+          { 'The Poopsmith': 'Instant Martian' },
+          { Homsar: 'Greg' }
+        ]
+      })
     });
     it.skip("dangeresque", () => {
       const e = strongBadPrompts.dangeresque();
