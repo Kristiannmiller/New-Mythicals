@@ -2679,25 +2679,51 @@ describe("PROTOTYPES", () => {
         ]
       })
     });
-    it.skip("dangeresque", () => {
+    it("dangeresque", () => {
       const e = strongBadPrompts.dangeresque();
 
-      expect(e).to.deep.equal({})
-      // let dangeresque = {
-//   'Dangeresque 0: The Prequel Begins': [ 'none' ],
-//   'Dangeresque 1: Dangeresque, Too?': [ 'Dangeresque', 'Cutesy Buttons', 'Renaldo', 'Baron Darin Diamonocle' ],
-//   ...
-// }
-    });
-    it.skip("performers", () => {
-      const e = strongBadPrompts.performers();
-
-      expect(e).to.deep.equal({})
-      // let performers = {
-//   'All characters': [ 'Loading Screens' ],
-//   'The Cheat': [ 'Where You Goin\' 2?', 'Rap Song', 'Everybody to the Limit', 'The Cheat Theme Song', 'Cool Tapes', 'Rockin\' the Spot', 'Doley-O', 'Limozeen Is Not Very Nice', 'My Face (Please Don\'t Put Needles In It)' ],
-//   ...
-// }
+      expect(e).to.deep.equal({
+        'Dangeresque 0: The Prequel Begins': [ 'none' ],
+        'Dangeresque 1: Dangeresque, Too?': [
+          'Dangeresque Too',
+          'Stingy Relenque',
+          'Dangeresque',
+          'Istanbul',
+          'Szechuan Steve',
+          'Firebert',
+          'Killingyouguy',
+          'Hot Tub',
+          'Cutesy Buttons',
+          'Renaldo',
+          'Perducci'
+        ],
+        "Dangeresque II: This Time, It's Not Dangeresque 1": [
+          'Dangeresque',
+          'Cutesy Buttons',
+          'Renaldo',
+          'Baron Darin Diamonocle'
+        ],
+        'Dangeresque 3: The Criminal Projective': [ 'none' ],
+        'The Curly Fried Caper': [
+          'Dangeresque Too',
+          'Stingy Relenque',
+          'Dangeresque',
+          'Istanbul',
+          'Szechuan Steve',
+          'Firebert'
+        ],
+        'Dangeresque 4 ÷ 2 = 6': [ 'none' ],
+        'The Hot Jones Hi-Jack': [
+          'Dangeresque Too',
+          'Stingy Relenque',
+          'Dangeresque',
+          'Istanbul',
+          'Szechuan Steve',
+          'Firebert',
+          'Gunhaver'
+        ],
+        'Dangeresque: Put Em on Ice!': [ 'none' ]
+      })
     });
     it.skip("performers", () => {
       const e = strongBadPrompts.performers();

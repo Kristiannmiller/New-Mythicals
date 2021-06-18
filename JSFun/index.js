@@ -1195,15 +1195,17 @@ const strongBadPrompts = {
     /* Return an object of each Dangeresque episode/film where each
     value is an array of the characters that most likely appear in it.*/
 
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
-  },
-  performers() {
-    /* Return an object with keys of each character and values of an array
-    of all of the songs they have performed (Keep in mind, some
-    characters/groups may have songs listed in the "bands" object).*/
-
-    const result = 'INSERT YOUR CODE HERE'
+    const result = toons.dangeresque.episodesAndFilms.reduce((acc, toon) => {
+      const castList = players.reduce((cast, player) => {
+        if(player.dangeresqueApperences[toon] === true) {
+          let names = toons.dangeresque.characters.filter(char => player.aliases.includes(char))
+          names.forEach(name => cast.push(name))
+        }
+        return cast
+      }, [])
+      acc[toon] = castList.length > 1 ? castList : ['none']
+      return acc
+    }, {})
     return result;
   },
   performers() {
