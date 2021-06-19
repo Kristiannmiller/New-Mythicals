@@ -1,4 +1,4 @@
-let characters = [
+let players = [
   {
     name: 'Homestar Runner',
     quotes: [ 'Seriously', 'Homestar Runner dot net, it\'s dot com!', 'I say, monstwosity, do you has the times?' ],
@@ -385,5 +385,5 @@ let toons = {
 
   module.exports = {
     toons,
-    characters
+    players
   }

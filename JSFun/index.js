@@ -20,6 +20,7 @@ const { careBears } = require('./datasets/careBears');
 const { queens } = require('./datasets/queens');
 const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
+const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
 
 
@@ -1174,31 +1175,60 @@ const strongBadPrompts = {
       Halloween toons, also, as a note: Homsar does not appear in the first
       Halloween toon: 'Homestarloween Party', but does appear in all others,
       so list him with a value of "none" for that toon).*/
-
-    const result = 'INSERT YOUR CODE HERE'
+    const characters = ['Homestar Runner', 'Strong Bad', 'The Cheat', 'Strong Mad', 'Strong Sad', 'Pom Pom', 'Marzipan', 'Coach Z', 'Bubs', 'The King of Town', 'The Poopsmith', 'Homsar']
+    const findCostume = (costumes, character) => {
+      characterIndex = players.findIndex(char => char.name === character)
+      return costumes.find(costume => players[characterIndex].costumes.includes(costume))
+    }
+    const result = toons.halloweenToons.reduce((acc, toon) => {
+      const costumeMatches = characters.reduce((matches, per) => {
+        const match = findCostume(toon.costumes, per) || 'none'
+        matches.push({[per]: match})
+        return matches
+      }, [])
+      acc[toon.name] = costumeMatches
+      return acc
+    }, {})
     return result;
   },
   dangeresque() {
     /* Return an object of each Dangeresque episode/film where each
     value is an array of the characters that most likely appear in it.*/
 
-    const result = 'INSERT YOUR CODE HERE'
+    const result = toons.dangeresque.episodesAndFilms.reduce((acc, toon) => {
+      const castList = players.reduce((cast, player) => {
+        if(player.dangeresqueApperences[toon] === true) {
+          let names = toons.dangeresque.characters.filter(char => player.aliases.includes(char))
+          names.forEach(name => cast.push(name))
+        }
+        return cast
+      }, [])
+      acc[toon] = castList.length > 1 ? castList : ['none']
+      return acc
+    }, {})
     return result;
   },
   performers() {
     /* Return an object with keys of each character and values of an array
     of all of the songs they have performed (Keep in mind, some
     characters/groups may have songs listed in the "bands" object).*/
-
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
-  },
-  performers() {
-    /* Return an object with keys of each character and values of an array
-    of all of the songs they have performed (Keep in mind, some
-    characters/groups may have songs listed in the "bands" object).*/
-
-    const result = 'INSERT YOUR CODE HERE'
+    let result = toons.songs.reduce((acc, song) => {
+      if(typeof song.performers === 'string') {
+        acc[song.performers] ? acc[song.performers].push(song.name) : acc[song.performers] = [song.name]
+      } else {
+        song.performers.forEach(perf => acc[perf] ? acc[perf].push(song.name) : acc[perf] = [song.name])
+      }
+      return acc
+    }, {})
+    let bands = Object.keys(toons.bands).map(band => (band[0].toUpperCase() + band.slice(1)).split(/(?=[A-Z])/).join(" "))
+    let bandKeys = Object.keys(toons.bands)
+    bands.forEach((band, i) => {
+      if(result[band]) {
+        toons.bands[bandKeys[i]].songs.forEach(song => result[band].push(song))
+      } else {
+        result[band] = [...toons.bands[bandKeys[i]].songs]
+      }
+    })
     return result;
   },
 };
