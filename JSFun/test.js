@@ -2725,15 +2725,54 @@ describe("PROTOTYPES", () => {
         'Dangeresque: Put Em on Ice!': [ 'none' ]
       })
     });
-    it.skip("performers", () => {
+    it("performers", () => {
       const e = strongBadPrompts.performers();
 
-      expect(e).to.deep.equal({})
-      // let performers = {
-//   'All characters': [ 'Loading Screens' ],
-//   'The Cheat': [ 'Where You Goin\' 2?', 'Rap Song', 'Everybody to the Limit', 'The Cheat Theme Song', 'Cool Tapes', 'Rockin\' the Spot', 'Doley-O', 'Limozeen Is Not Very Nice', 'My Face (Please Don\'t Put Needles In It)' ],
-//   ...
-// }
+      expect(e).to.deep.equal({
+        'All characters': [ 'Loading Screens' ],
+        'The Cheat': [
+          "Where You Goin' 2?",
+          'Rap Song',
+          'Everybody to the Limit',
+          'The Cheat Theme Song'
+        ],
+        'Homestar Runner': [ 'One Two, One Two' ],
+        'Crack Stuntman': [ 'An Important Rap Song' ],
+        'Strong Sad': [ 'Experimental Film' ],
+        'Coach Z': [ 'Rap Song', 'Fish Eye Lens', 'These Peoples Try to Fade Me' ],
+        'Peacey P': [ 'Rap Song', 'Trudgemank' ],
+        'Tenerence Love': [ 'Rap Song' ],
+        Taranchula: [
+          'Trudgemank',
+          'Trudgemank',
+          'Moving Very Slowly',
+          'The Decoupage',
+          'Brother in a Jar'
+        ],
+        'Strong Bad': [ 'Fish Eye Lens', 'Everybody to the Limit', 'Crystal Fortress' ],
+        Brainkrieg: [ 'Decomposing Pumpkin' ],
+        Limozeen: [
+          'Nite Mamas',
+          'Brain Sister',
+          'Feed the Childrens',
+          "Because, It's Midnite",
+          "Colorin' (Outside The Lines)",
+          'Today Is Alright 4 2Nite'
+        ],
+        Sloshy: [
+          "We Don't Even Really Care About You",
+          'American Football Championship Game',
+          'Phoning This One In',
+          'B-est of B-sides'
+        ],
+        'Cool Tapes': [
+          'Cool Tapes',
+          "Rockin' the Spot",
+          'Doley-O',
+          'Limozeen Is Not Very Nice',
+          "My Face (Please Don't Put Needles In It)"
+        ]
+      })
     });
   });
   describe("Fourteener Prompts", () => {

@@ -1212,8 +1212,23 @@ const strongBadPrompts = {
     /* Return an object with keys of each character and values of an array
     of all of the songs they have performed (Keep in mind, some
     characters/groups may have songs listed in the "bands" object).*/
-
-    const result = 'INSERT YOUR CODE HERE'
+    let result = toons.songs.reduce((acc, song) => {
+      if(typeof song.performers === 'string') {
+        acc[song.performers] ? acc[song.performers].push(song.name) : acc[song.performers] = [song.name]
+      } else {
+        song.performers.forEach(perf => acc[perf] ? acc[perf].push(song.name) : acc[perf] = [song.name])
+      }
+      return acc
+    }, {})
+    let bands = Object.keys(toons.bands).map(band => (band[0].toUpperCase() + band.slice(1)).split(/(?=[A-Z])/).join(" "))
+    let bandKeys = Object.keys(toons.bands)
+    bands.forEach((band, i) => {
+      if(result[band]) {
+        toons.bands[bandKeys[i]].songs.forEach(song => result[band].push(song))
+      } else {
+        result[band] = [...toons.bands[bandKeys[i]].songs]
+      }
+    })
     return result;
   },
 };
