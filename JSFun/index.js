@@ -22,6 +22,7 @@ const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
 const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
+const { fourteeners } = require('./datasets/fourteeners');
 
 
 // SINGLE DATASETS
@@ -1239,8 +1240,13 @@ const strongBadPrompts = {
 const fourteenerPrompts = {
   over14000() {
     // Question: return an array of all of the peaks that are over 14000
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((peaks, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].elevation > 13999) peaks.push(peak)
+      })
+      return peaks
+    }, [])
+    return result ;
   },
   class2() {
     // Question: create an array of all of the class 2 routes within the front range

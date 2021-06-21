@@ -2776,10 +2776,31 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Fourteener Prompts", () => {
-    it.skip("over14000", () => {
+    it("over14000", () => {
       const e = fourteenerPrompts.over14000();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'graysPeak',     'torreysPeak',      'longsPeak',
+        'mountEvans',    'mountBierstadt',   'pikesPeak',
+        'quandaryPeak',  'mountLincoln',     'mountCameron',
+        'mountBross',    'mountDemocrat',    'mountSherman',
+        'mountElbert',   'mountMassive',     'mountHarvard',
+        'mountColumbia', 'laPlataPeak',      'mountOfTheHolyCross',
+        'mountHuron',    'missouriMountain', 'mountBelford',
+        'mountOxford',   'mountPrinceton',   'mountYale',
+        'mountAntero',   'mountShavano',     'tabeguachePeak',
+        'blancaPeak',    'ellingwoodPoint',  'littleBearPeak',
+        'mountLindsey',  'crestonePeak',     'crestoneNeedle',
+        'humboldtPeak',  'kitCarsonPeak',    'challengerPoint',
+        'culebraPeak',   'castlePeak',       'conundrumPeak',
+        'maroonPeak',    'northMaroonPeak',  'pyramidPeak',
+        'capitolPeak',   'snowmassMountain', 'uncompahgrePeak',
+        'mountWilson',   'wilsonPeak',       'elDientePeak',
+        'mountSneffels', 'mountEolus',       'northEolus',
+        'windomPeak',    'sunlightPeak',     'handiesPeak',
+        'redcloudPeak',  'sunshinePeak',     'wetterhornPeak',
+        'sanLuisPeak'
+      ])
     });
     it.skip("class2", () => {
       const e = fourteenerPrompts.class2();
