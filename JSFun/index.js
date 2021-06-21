@@ -1250,8 +1250,17 @@ const fourteenerPrompts = {
   },
   class2() {
     // Question: create an array of all of the class 2 routes within the front range
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((routes, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(fourteeners[range].peaks[peak].routes[route].difficulty === 'class 2') {
+            routes.push(route)
+          }
+        })
+      })
+      return routes
+    }, [])
+    return result ;
   },
   totalRoutes() {
     // Question: How many routes are in the front range

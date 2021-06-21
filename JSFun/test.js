@@ -2802,10 +2802,22 @@ describe("PROTOTYPES", () => {
         'sanLuisPeak'
       ])
     });
-    it.skip("class2", () => {
+    it("class2", () => {
       const e = fourteenerPrompts.class2();
       // Example: ['south ridge', 'southwest ridge', etc...]
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'southRidge', 'southWestRidge', 'southSlopes', 'westRidge', 'westRidge', 'northeastFace', 'westSlopes',
+        'northwestSlopes', 'westRidge', 'lincolnAmpitheatre', 'eastSlopes', 'westRidge',
+        'westSlopes', 'sGully', 'dollyVardenGully', 'eastSlopesMooseCreek', 'eastSlope',
+        'southwestRidge', 'westSlopesFromIowaGulch', 'southSlope', 'southeastRidge', 'eastSlopes',
+        'southwestSlopes', 'southSlopes', 'southFace', 'westSlopes', 'southeastRidge',
+        'southwestCouloir', 'northwestRidge', 'southwestRidge', 'northRidge', 'northwestSlopes',
+        'southwestSlopes', 'northRidgeFromLuluGulch', 'northwestRidge', 'westRidge', 'northwestRidge',
+        'viaMtBelford', 'eastSlopes', 'southwestSlopes', 'eastRidge', 'westSlopes',
+        'eastSlopes', 'angelOfShavano', 'viaMtShavano', 'westRidge', 'northCouloir',
+        'westRidge', 'eastRidge', 'southeastGully', 'northwestRidge', 'southRidge',
+        'eastSlopes', 'westSlopes', 'northeastRidge', 'viaRedcloudPeak', 'eastRidge'
+      ])
     });
     it.skip("totalRoutes", () => {
       const e = fourteenerPrompts.totalRoutes();
