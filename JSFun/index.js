@@ -1276,8 +1276,17 @@ const fourteenerPrompts = {
   },
   class4() {
     // Question: create an array containing all of the class 4 routes
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((routes, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(fourteeners[range].peaks[peak].routes[route].difficulty === 'class 4') {
+            routes.push(route)
+          }
+        })
+      })
+      return routes
+    }, [])
+    return result ;
   },
   rangeNames() {
     // Question: Create an array of all the mountain range names

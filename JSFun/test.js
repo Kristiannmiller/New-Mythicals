@@ -2824,10 +2824,20 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(129)
     });
-    it.skip("class4", () => {
+    it("class4", () => {
       const e = fourteenerPrompts.class4();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'westRidge',
+        'northRidge',
+        'bellCordCouloir',
+        'northeastRidge',
+        'northeastRidge',
+        'northeastRidge',
+        'northSlopes',
+        'northButtress',
+        'southFace'
+      ])
     });
     it.skip("rangeNames", () => {
       const e = fourteenerPrompts.rangeNames();
