@@ -2843,13 +2843,13 @@ describe("PROTOTYPES", () => {
       const e = fourteenerPrompts.rangeNames();
 
       expect(e).to.deep.equal([
-        'frontRange',
-        'tenMileRange',
-        'mosquitoRange',
-        'sawatchRange',
-        'sangreDeCristoRange',
-        'elkRange',
-        'sanJuanRange'
+        'Front Range',
+        'Ten Mile Range',
+        'Mosquito Range',
+        'Sawatch Range',
+        'Sangre De Cristo Range',
+        'Elk Range',
+        'San Juan Range'
       ])
     });
     it.skip("longsMileage", () => {
