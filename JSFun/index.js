@@ -1290,7 +1290,7 @@ const fourteenerPrompts = {
   },
   rangeNames() {
     // Question: Create an array of all the mountain range names
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners)
     return result;
   },
   longsMileage() {

@@ -2839,10 +2839,18 @@ describe("PROTOTYPES", () => {
         'southFace'
       ])
     });
-    it.skip("rangeNames", () => {
+    it("rangeNames", () => {
       const e = fourteenerPrompts.rangeNames();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'frontRange',
+        'tenMileRange',
+        'mosquitoRange',
+        'sawatchRange',
+        'sangreDeCristoRange',
+        'elkRange',
+        'sanJuanRange'
+      ])
     });
     it.skip("longsMileage", () => {
       const e = fourteenerPrompts.longsMileage();
