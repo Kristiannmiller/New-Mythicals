@@ -2819,10 +2819,10 @@ describe("PROTOTYPES", () => {
         'eastSlopes', 'westSlopes', 'northeastRidge', 'viaRedcloudPeak', 'eastRidge'
       ])
     });
-    it.skip("totalRoutes", () => {
+    it("totalRoutes", () => {
       const e = fourteenerPrompts.totalRoutes();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(129)
     });
     it.skip("class4", () => {
       const e = fourteenerPrompts.class4();
