@@ -2875,15 +2875,15 @@ describe("PROTOTYPES", () => {
         'Uncompahgre Peak'
       ])
     });
-    it.skip("totalMileage", () => {
+    it("totalMileage", () => {
       const e = fourteenerPrompts.totalMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(1305.9)
     });
     it.skip("totalGain", () => {
       const e = fourteenerPrompts.totalGain();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(0)
     });
     it.skip("rankedPeaks", () => {
       const e = fourteenerPrompts.rankedPeaks();

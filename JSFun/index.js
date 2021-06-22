@@ -1318,7 +1318,14 @@ const fourteenerPrompts = {
   },
   totalMileage() {
     // Question: What is the total mileage of all of the routes?
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((miles, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          miles += fourteeners[range].peaks[peak].routes[route].mileage
+        })
+      })
+      return miles
+    }, 0)
     return result;
   },
   totalGain() {
