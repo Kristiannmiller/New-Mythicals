@@ -2880,10 +2880,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(1305.9)
     });
-    it.skip("totalGain", () => {
+    it("totalGain", () => {
       const e = fourteenerPrompts.totalGain();
 
-      expect(e).to.equal(0)
+      expect(e).to.equal(542841)
     });
     it.skip("rankedPeaks", () => {
       const e = fourteenerPrompts.rankedPeaks();

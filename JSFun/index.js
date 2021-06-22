@@ -1330,7 +1330,14 @@ const fourteenerPrompts = {
   },
   totalGain() {
     // Question: What is the total gain of all of the routes?
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((gain, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          gain += fourteeners[range].peaks[peak].routes[route].gain
+        })
+      })
+      return gain
+    }, 0)
     return result;
   },
   rankedPeaks() {
