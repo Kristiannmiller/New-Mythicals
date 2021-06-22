@@ -2852,10 +2852,10 @@ describe("PROTOTYPES", () => {
         'San Juan Range'
       ])
     });
-    it.skip("longsMileage", () => {
+    it("longsMileage", () => {
       const e = fourteenerPrompts.longsMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(43.5)
     });
     it.skip("sawatchMileage", () => {
       const e = fourteenerPrompts.sawatchMileage();

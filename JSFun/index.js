@@ -1295,7 +1295,10 @@ const fourteenerPrompts = {
   },
   longsMileage() {
     // Question: What is the total mileage for the routes on Long's Peak
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners.frontRange.peaks.longsPeak.routes).reduce((miles, route) => {
+      miles += fourteeners.frontRange.peaks.longsPeak.routes[route].mileage
+      return miles
+    }, 0)
     return result;
   },
   sawatchMileage() {
