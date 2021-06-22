@@ -1303,7 +1303,12 @@ const fourteenerPrompts = {
   },
   sawatchMileage() {
     // Question: What is the total gain for the Sawatch range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners.sawatchRange.peaks).reduce((gain, peak) => {
+      Object.keys(fourteeners.sawatchRange.peaks[peak].routes).forEach(route => {
+        gain += fourteeners.sawatchRange.peaks[peak].routes[route].gain
+      })
+      return gain
+    }, 0)
     return result;
   },
   tallestPeaks() {

@@ -2857,10 +2857,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(43.5)
     });
-    it.skip("sawatchMileage", () => {
+    it("sawatchMileage", () => {
       const e = fourteenerPrompts.sawatchMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(155870)
     });
     it.skip("tallestPeaks", () => {
       const e = fourteenerPrompts.tallestPeaks();
