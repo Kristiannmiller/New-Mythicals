@@ -1342,8 +1342,17 @@ const fourteenerPrompts = {
   },
   rankedPeaks() {
     // Question : create an array of all ranked fourteeners arranged from first to 53rd
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((rated, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].rank !== 'unranked') {
+          const newPeak = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                          rank: fourteeners[range].peaks[peak].rank }
+          rated.push(newPeak)
+        }
+      })
+      return rated
+    }, []).sort((a, b) => a.rank - b.rank)
+    return result.map(peak => peak.name);
   },
   sortedFourteeners() {
     // Question : create an array of all fourteeners arranged from tallest to shortest
