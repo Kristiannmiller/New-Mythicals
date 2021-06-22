@@ -1313,7 +1313,7 @@ const fourteenerPrompts = {
   },
   tallestPeaks() {
     // Question: Create an array containing the tallest peak in each range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).map(range => fourteeners[range].highestPeak)
     return result;
   },
   totalMileage() {

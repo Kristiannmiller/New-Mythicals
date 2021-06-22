@@ -2862,10 +2862,18 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal(155870)
     });
-    it.skip("tallestPeaks", () => {
+    it("tallestPeaks", () => {
       const e = fourteenerPrompts.tallestPeaks();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        "Gray's Peak",
+        'Quandary Peak',
+        'Mt Lincoln',
+        'Mt Elbert',
+        'Blanca Peak',
+        'Castle Peak',
+        'Uncompahgre Peak'
+      ])
     });
     it.skip("totalMileage", () => {
       const e = fourteenerPrompts.totalMileage();
