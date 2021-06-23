@@ -2987,10 +2987,29 @@ describe("PROTOTYPES", () => {
         sanLuisPeak: { totalMiles: 24.5, totalGain: 7300 }
       })
     });
-    it.skip("rangeData", () => {
+    it("rangeData", () => {
       const e = fourteenerPrompts.rangeData();
-      // ie { tenMile: { 'class 1': 3, 'class 2': 5...etc}
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        frontRange: { 'class 1': 2, 'class 2': 8, 'class 3': 9, 'class 2+': 1 },
+        tenMileRange: { 'class 1': 1, 'class 2+': 1, 'class 3': 2 },
+        mosquitoRange: { 'class 2': 12, 'class 1': 1, 'class 2+': 1 },
+        sawatchRange: { 'class 1': 2, 'class 2': 26, 'class 2+': 4, 'class 3': 2 },
+        sangreDeCristoRange: {
+          'class 2+': 3,
+          'class 3': 10,
+          'class 4': 2,
+          'class 2': 5,
+          'class 5': 1
+        },
+        elkRange: { 'class 2+': 4, 'class 3': 3, 'class 4': 4 },
+        sanJuanRange: {
+          'class 2': 6,
+          'class 4': 3,
+          'class 3': 11,
+          'class 2+': 2,
+          'class 1': 3
+        }
+      })
     });
     it.skip("unranked", () => {
       const e = fourteenerPrompts.unranked();

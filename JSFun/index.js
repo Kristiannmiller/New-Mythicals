@@ -1384,7 +1384,19 @@ const fourteenerPrompts = {
   rangeData() {
     // Question: create an object with keys of each mountain range, and the
     // value is an object that counts the number of each route in that range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((rangeData, range) => {
+      rangeData[range] = Object.keys(fourteeners[range].peaks).reduce((routeData, peak) => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(routeData[fourteeners[range].peaks[peak].routes[route].difficulty]) {
+            routeData[fourteeners[range].peaks[peak].routes[route].difficulty] ++
+          } else {
+            routeData[fourteeners[range].peaks[peak].routes[route].difficulty] = 1
+          }
+        })
+        return routeData
+      }, {})
+      return rangeData
+    }, {})
     return result;
   },
   unranked() {
