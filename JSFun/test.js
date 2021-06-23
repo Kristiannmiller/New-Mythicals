@@ -2923,10 +2923,69 @@ describe("PROTOTYPES", () => {
         'San Luis Peak', 'Mount Of The Holy Cross', 'Mount Huron', 'Sunshine Peak'
       ])
     });
-    it.skip("peaksData", () => {
+    it("peaksData", () => {
       const e = fourteenerPrompts.peaksData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        graysPeak: { totalMiles: 31.75, totalGain: 13050 },
+        torreysPeak: { totalMiles: 51.25, totalGain: 23600 },
+        longsPeak: { totalMiles: 43.5, totalGain: 16300 },
+        mountEvans: { totalMiles: 22.5, totalGain: 8575 },
+        mountBierstadt: { totalMiles: 12, totalGain: 5850 },
+        pikesPeak: { totalMiles: 40, totalGain: 11800 },
+        quandaryPeak: { totalMiles: 18, totalGain: 11925 },
+        mountLincoln: { totalMiles: 17.25, totalGain: 8650 },
+        mountCameron: { totalMiles: 4.75, totalGain: 2250 },
+        mountBross: { totalMiles: 30.75, totalGain: 13750 },
+        mountDemocrat: { totalMiles: 6.5, totalGain: 4300 },
+        mountSherman: { totalMiles: 18.25, totalGain: 7350 },
+        mountElbert: { totalMiles: 39, totalGain: 18250 },
+        mountMassive: { totalMiles: 36.5, totalGain: 13250 },
+        mountHarvard: { totalMiles: 28, totalGain: 9200 },
+        mountColumbia: { totalMiles: 37, totalGain: 13850 },
+        laPlataPeak: { totalMiles: 25.75, totalGain: 13780 },
+        mountOfTheHolyCross: { totalMiles: 39.25, totalGain: 16410 },
+        mountHuron: { totalMiles: 23.9, totalGain: 11080 },
+        missouriMountain: { totalMiles: 31.25, totalGain: 13250 },
+        mountBelford: { totalMiles: 8, totalGain: 4500 },
+        mountOxford: { totalMiles: 11, totalGain: 5800 },
+        mountPrinceton: { totalMiles: 6.5, totalGain: 3200 },
+        mountYale: { totalMiles: 20, totalGain: 9300 },
+        mountAntero: { totalMiles: 16, totalGain: 5200 },
+        mountShavano: { totalMiles: 16.5, totalGain: 9200 },
+        tabeguachePeak: { totalMiles: 19, totalGain: 9600 },
+        blancaPeak: { totalMiles: 17, totalGain: 6500 },
+        ellingwoodPoint: { totalMiles: 43.6, totalGain: 13900 },
+        littleBearPeak: { totalMiles: 14, totalGain: 6200 },
+        mountLindsey: { totalMiles: 25.25, totalGain: 10900 },
+        crestonePeak: { totalMiles: 14, totalGain: 5700 },
+        crestoneNeedle: { totalMiles: 23.25, totalGain: 8800 },
+        humboldtPeak: { totalMiles: 27, totalGain: 13900 },
+        kitCarsonPeak: { totalMiles: 54.15, totalGain: 22965 },
+        challengerPoint: { totalMiles: 25.25, totalGain: 10800 },
+        culebraPeak: { totalMiles: 5, totalGain: 2700 },
+        castlePeak: { totalMiles: 40, totalGain: 13800 },
+        conundrumPeak: { totalMiles: 14.5, totalGain: 4850 },
+        maroonPeak: { totalMiles: 19.5, totalGain: 9356 },
+        northMaroonPeak: { totalMiles: 9.25, totalGain: 4500 },
+        pyramidPeak: { totalMiles: 8.25, totalGain: 4500 },
+        capitolPeak: { totalMiles: 17, totalGain: 5300 },
+        snowmassMountain: { totalMiles: 31, totalGain: 10300 },
+        uncompahgrePeak: { totalMiles: 7.5, totalGain: 3000 },
+        mountWilson: { totalMiles: 40.5, totalGain: 14400 },
+        wilsonPeak: { totalMiles: 10, totalGain: 5000 },
+        elDientePeak: { totalMiles: 32, totalGain: 12500 },
+        mountSneffels: { totalMiles: 12.5, totalGain: 5850 },
+        mountEolus: { totalMiles: 17, totalGain: 6100 },
+        northEolus: { totalMiles: 16.75, totalGain: 6000 },
+        windomPeak: { totalMiles: 17, totalGain: 6000 },
+        sunlightPeak: { totalMiles: 17, totalGain: 6000 },
+        handiesPeak: { totalMiles: 18.75, totalGain: 8950 },
+        redcloudPeak: { totalMiles: 9, totalGain: 3700 },
+        sunshinePeak: { totalMiles: 27.75, totalGain: 13200 },
+        wetterhornPeak: { totalMiles: 13.5, totalGain: 6600 },
+        sanLuisPeak: { totalMiles: 24.5, totalGain: 7300 }
+      })
     });
     it.skip("rangeData", () => {
       const e = fourteenerPrompts.rangeData();

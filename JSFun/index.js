@@ -1369,7 +1369,16 @@ const fourteenerPrompts = {
   peaksData() {
     // Question: Create an object where the key is the peak and the value is an
     // object containing the total mileage and total gain of each peak
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((peakData, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        peakData[peak] = Object.keys(fourteeners[range].peaks[peak].routes).reduce((totals, route) => {
+          totals.totalMiles += fourteeners[range].peaks[peak].routes[route].mileage
+          totals.totalGain += fourteeners[range].peaks[peak].routes[route].gain
+          return totals
+        }, { totalMiles: 0, totalGain: 0 })
+      })
+      return peakData
+    }, {})
     return result;
   },
   rangeData() {
