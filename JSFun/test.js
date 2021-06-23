@@ -2902,10 +2902,26 @@ describe("PROTOTYPES", () => {
         'Wetterhorn Peak', 'San Luis Peak', 'Mount Of The Holy Cross', 'Mount Huron', 'Sunshine Peak'
       ])
     });
-    it.skip("sortedFourteeners", () => {
+    it("sortedFourteeners", () => {
       const e = fourteenerPrompts.sortedFourteeners();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Mount Elbert', 'Mount Massive',
+        'Mount Harvard', 'Blanca Peak', 'La Plata Peak', 'Uncompahgre Peak',
+        'Crestone Peak', 'Mount Lincoln', 'Grays Peak', 'Mount Antero',
+        'Torreys Peak', 'Quandary Peak', 'Castle Peak', 'Mount Evans',
+        'Longs Peak', 'Mount Wilson', 'Mount Cameron', 'Mount Shavano',
+        'Mount Belford', 'Mount Princeton', 'Crestone Needle', 'Mount Yale',
+        'Mount Bross', 'Kit Carson Peak', 'El Diente Peak', 'Maroon Peak',
+        'Tabeguache Peak', 'Mount Oxford', 'Mount Sneffels', 'Mount Democrat',
+        'Capitol Peak', 'Pikes Peak', 'Snowmass Mountain', 'Mount Eolus',
+        'Windom Peak', 'Challenger Point', 'Mount Columbia', 'Missouri Mountain',
+        'Humboldt Peak', 'Mount Bierstadt', 'Conundrum Peak', 'Sunlight Peak',
+        'Handies Peak', 'Culebra Peak', 'Ellingwood Point', 'Mount Lindsey',
+        'North Eolus', 'Little Bear Peak', 'Mount Sherman', 'Redcloud Peak',
+        'Pyramid Peak', 'Wilson Peak', 'Wetterhorn Peak', 'North Maroon Peak',
+        'San Luis Peak', 'Mount Of The Holy Cross', 'Mount Huron', 'Sunshine Peak'
+      ])
     });
     it.skip("peaksData", () => {
       const e = fourteenerPrompts.peaksData();

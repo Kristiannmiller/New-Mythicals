@@ -1356,8 +1356,15 @@ const fourteenerPrompts = {
   },
   sortedFourteeners() {
     // Question : create an array of all fourteeners arranged from tallest to shortest
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((sorted14s, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const new14r = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                        elevation: fourteeners[range].peaks[peak].elevation }
+        sorted14s.push(new14r)
+      })
+      return sorted14s
+    }, []).sort((a,b) => b.elevation - a.elevation)
+    return result.map(peak => peak.name);
   },
   peaksData() {
     // Question: Create an object where the key is the peak and the value is an
