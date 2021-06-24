@@ -3011,10 +3011,16 @@ describe("PROTOTYPES", () => {
         }
       })
     });
-    it.skip("unranked", () => {
+    it("unranked", () => {
       const e = fourteenerPrompts.unranked();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Mount Cameron',
+        'Conundrum Peak',
+        'North Maroon Peak',
+        'El Diente Peak',
+        'North Eolus'
+      ])
     });
     it.skip("tallestFourteener", () => {
       const e = fourteenerPrompts.tallestFourteener();

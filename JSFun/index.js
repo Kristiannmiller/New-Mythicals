@@ -1401,7 +1401,14 @@ const fourteenerPrompts = {
   },
   unranked() {
     // Question : create an array of all the unranked fourteeners
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((noRankPeaks, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].rank === 'unranked') {
+          noRankPeaks.push((peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "))
+        }
+      })
+      return noRankPeaks
+    }, [])
     return result;
   },
   tallestFourteener() {
