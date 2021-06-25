@@ -1454,7 +1454,11 @@ const fourteenerPrompts = {
   rangePeakData() {
     // Question : Create an array of objects where the keys are the mountain range
     // and the value is the number of peaks
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((ranges, range) => {
+      const rangeName = (range[0].toUpperCase() + range.slice(1)).split(/(?=[A-Z])/).join(" ")
+      ranges[rangeName] = Object.keys(fourteeners[range].peaks).length
+      return ranges
+    }, {})
     return result;
   },
 }

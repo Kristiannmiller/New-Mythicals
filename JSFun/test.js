@@ -3090,10 +3090,18 @@ describe("PROTOTYPES", () => {
         Gunnison: [ 'San Luis Peak' ]
       })
     });
-    it.skip("rangePeakData", () => {
+    it("rangePeakData", () => {
       const e = fourteenerPrompts.rangePeakData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        'Front Range': 6,
+        'Ten Mile Range': 1,
+        'Mosquito Range': 5,
+        'Sawatch Range': 15,
+        'Sangre De Cristo Range': 10,
+        'Elk Range': 7,
+        'San Juan Range': 14
+      })
     });
   });
 
