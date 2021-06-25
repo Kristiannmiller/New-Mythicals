@@ -3032,10 +3032,63 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal('Sunshine Peak')
     });
-    it.skip("forestData", () => {
+    it("forestData", () => {
       const e = fourteenerPrompts.forestData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        Arapaho: [ 'Grays Peak', 'Torreys Peak', 'Mount Evans', 'Mount Bierstadt' ],
+        'Rocky Mountain National Park': [ 'Longs Peak' ],
+        Pike: [
+          'Pikes Peak',
+          'Mount Lincoln',
+          'Mount Cameron',
+          'Mount Bross',
+          'Mount Democrat',
+          'Mount Sherman'
+        ],
+        'White River': [
+          'Quandary Peak',
+          'Mount Of The Holy Cross',
+          'Castle Peak',
+          'Conundrum Peak',
+          'Maroon Peak',
+          'North Maroon Peak',
+          'Pyramid Peak',
+          'Capitol Peak',
+          'Snowmass Mountain'
+        ],
+        'San Isabel': [
+          'Mount Elbert',      'Mount Massive',
+          'Mount Harvard',     'Mount Columbia',
+          'La Plata Peak',     'Mount Huron',
+          'Missouri Mountain', 'Mount Belford',
+          'Mount Oxford',      'Mount Princeton',
+          'Mount Yale',        'Mount Antero',
+          'Mount Shavano',     'Tabeguache Peak',
+          'Mount Lindsey',     'Crestone Peak',
+          'Crestone Needle',   'Humboldt Peak'
+        ],
+        'Rio Grande': [
+          'Blanca Peak',
+          'Ellingwood Point',
+          'Little Bear Peak',
+          'Kit Carson Peak',
+          'Challenger Point'
+        ],
+        'Cielo Vista Ranch': [ 'Culebra Peak' ],
+        Uncompahgre: [ 'Uncompahgre Peak', 'Mount Sneffels', 'Wetterhorn Peak' ],
+        'San Juan': [
+          'Mount Wilson',
+          'Wilson Peak',
+          'El Diente Peak',
+          'Mount Eolus',
+          'North Eolus',
+          'Windom Peak',
+          'Sunlight Peak'
+        ],
+        'n/a': [ 'Handies Peak', 'Redcloud Peak', 'Sunshine Peak' ],
+        Gunnison: [ 'San Luis Peak' ]
+      })
     });
     it.skip("rangePeakData", () => {
       const e = fourteenerPrompts.rangePeakData();

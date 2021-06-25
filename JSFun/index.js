@@ -1438,7 +1438,17 @@ const fourteenerPrompts = {
   forestData() {
     // Question : create an object with keys of each forest and values
     // being number of fourteeners in that forest
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((forests, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const peakName = (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" ")
+        if(forests[fourteeners[range].peaks[peak].forest]) {
+          forests[fourteeners[range].peaks[peak].forest].push(peakName)
+        } else {
+          forests[fourteeners[range].peaks[peak].forest] = [peakName]
+        }
+      })
+      return forests
+    }, {})
     return result;
   },
   rangePeakData() {
