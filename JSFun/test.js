@@ -3022,10 +3022,10 @@ describe("PROTOTYPES", () => {
         'North Eolus'
       ])
     });
-    it.skip("tallestFourteener", () => {
+    it("tallestFourteener", () => {
       const e = fourteenerPrompts.tallestFourteener();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('Mount Elbert')
     });
     it.skip("shortestFourteener", () => {
       const e = fourteenerPrompts.shortestFourteener();
