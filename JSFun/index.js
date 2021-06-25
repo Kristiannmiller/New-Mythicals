@@ -22,6 +22,7 @@ const { murder } = require('./datasets/murder');
 const { marvelComics, marvelMovies } = require('./datasets/marvel');
 const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
+const { fourteeners } = require('./datasets/fourteeners');
 
 
 // SINGLE DATASETS
@@ -1239,101 +1240,225 @@ const strongBadPrompts = {
 const fourteenerPrompts = {
   over14000() {
     // Question: return an array of all of the peaks that are over 14000
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((peaks, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].elevation > 13999) peaks.push(peak)
+      })
+      return peaks
+    }, [])
+    return result ;
   },
   class2() {
     // Question: create an array of all of the class 2 routes within the front range
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((routes, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(fourteeners[range].peaks[peak].routes[route].difficulty === 'class 2') {
+            routes.push(route)
+          }
+        })
+      })
+      return routes
+    }, [])
+    return result ;
   },
   totalRoutes() {
     // Question: How many routes are in the front range
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((routes, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          routes.push(route)
+        })
+      })
+      return routes
+    }, [])
+    return result.length ;
   },
   class4() {
     // Question: create an array containing all of the class 4 routes
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((routes, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(fourteeners[range].peaks[peak].routes[route].difficulty === 'class 4') {
+            routes.push(route)
+          }
+        })
+      })
+      return routes
+    }, [])
+    return result ;
   },
   rangeNames() {
     // Question: Create an array of all the mountain range names
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).map(range => (range[0].toUpperCase() + range.slice(1)).split(/(?=[A-Z])/).join(" "))
     return result;
   },
   longsMileage() {
     // Question: What is the total mileage for the routes on Long's Peak
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners.frontRange.peaks.longsPeak.routes).reduce((miles, route) => {
+      miles += fourteeners.frontRange.peaks.longsPeak.routes[route].mileage
+      return miles
+    }, 0)
     return result;
   },
   sawatchMileage() {
     // Question: What is the total gain for the Sawatch range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners.sawatchRange.peaks).reduce((gain, peak) => {
+      Object.keys(fourteeners.sawatchRange.peaks[peak].routes).forEach(route => {
+        gain += fourteeners.sawatchRange.peaks[peak].routes[route].gain
+      })
+      return gain
+    }, 0)
     return result;
   },
   tallestPeaks() {
     // Question: Create an array containing the tallest peak in each range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).map(range => fourteeners[range].highestPeak)
     return result;
   },
   totalMileage() {
     // Question: What is the total mileage of all of the routes?
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((miles, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          miles += fourteeners[range].peaks[peak].routes[route].mileage
+        })
+      })
+      return miles
+    }, 0)
     return result;
   },
   totalGain() {
     // Question: What is the total gain of all of the routes?
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((gain, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          gain += fourteeners[range].peaks[peak].routes[route].gain
+        })
+      })
+      return gain
+    }, 0)
     return result;
   },
   rankedPeaks() {
     // Question : create an array of all ranked fourteeners arranged from first to 53rd
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((rated, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].rank !== 'unranked') {
+          const newPeak = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                          rank: fourteeners[range].peaks[peak].rank }
+          rated.push(newPeak)
+        }
+      })
+      return rated
+    }, []).sort((a, b) => a.rank - b.rank)
+    return result.map(peak => peak.name);
   },
   sortedFourteeners() {
     // Question : create an array of all fourteeners arranged from tallest to shortest
-    const result = 'INSERT YOUR CODE HERE'
-    return result;
+    const result = Object.keys(fourteeners).reduce((sorted14s, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const new14r = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                        elevation: fourteeners[range].peaks[peak].elevation }
+        sorted14s.push(new14r)
+      })
+      return sorted14s
+    }, []).sort((a,b) => b.elevation - a.elevation)
+    return result.map(peak => peak.name);
   },
   peaksData() {
     // Question: Create an object where the key is the peak and the value is an
     // object containing the total mileage and total gain of each peak
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((peakData, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        peakData[peak] = Object.keys(fourteeners[range].peaks[peak].routes).reduce((totals, route) => {
+          totals.totalMiles += fourteeners[range].peaks[peak].routes[route].mileage
+          totals.totalGain += fourteeners[range].peaks[peak].routes[route].gain
+          return totals
+        }, { totalMiles: 0, totalGain: 0 })
+      })
+      return peakData
+    }, {})
     return result;
   },
   rangeData() {
     // Question: create an object with keys of each mountain range, and the
     // value is an object that counts the number of each route in that range
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((rangeData, range) => {
+      rangeData[range] = Object.keys(fourteeners[range].peaks).reduce((routeData, peak) => {
+        Object.keys(fourteeners[range].peaks[peak].routes).forEach(route => {
+          if(routeData[fourteeners[range].peaks[peak].routes[route].difficulty]) {
+            routeData[fourteeners[range].peaks[peak].routes[route].difficulty] ++
+          } else {
+            routeData[fourteeners[range].peaks[peak].routes[route].difficulty] = 1
+          }
+        })
+        return routeData
+      }, {})
+      return rangeData
+    }, {})
     return result;
   },
   unranked() {
     // Question : create an array of all the unranked fourteeners
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((noRankPeaks, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        if(fourteeners[range].peaks[peak].rank === 'unranked') {
+          noRankPeaks.push((peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "))
+        }
+      })
+      return noRankPeaks
+    }, [])
     return result;
   },
   tallestFourteener() {
     // Question : find the tallest fourteener
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((all14rs, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const newPeak = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                        elevation: fourteeners[range].peaks[peak].elevation }
+        all14rs.push(newPeak)
+      })
+      return all14rs
+    }, []).sort((a, b) => b.elevation - a.elevation)[0].name
     return result;
   },
   shortestFourteener() {
     // Question : find the shortest fourteener
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((all14rs, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const newPeak = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                        elevation: fourteeners[range].peaks[peak].elevation }
+        all14rs.push(newPeak)
+      })
+      return all14rs
+    }, []).sort((a, b) => a.elevation - b.elevation)[0].name
     return result;
   },
   forestData() {
     // Question : create an object with keys of each forest and values
     // being number of fourteeners in that forest
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((forests, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const peakName = (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" ")
+        if(forests[fourteeners[range].peaks[peak].forest]) {
+          forests[fourteeners[range].peaks[peak].forest].push(peakName)
+        } else {
+          forests[fourteeners[range].peaks[peak].forest] = [peakName]
+        }
+      })
+      return forests
+    }, {})
     return result;
   },
   rangePeakData() {
     // Question : Create an array of objects where the keys are the mountain range
     // and the value is the number of peaks
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((ranges, range) => {
+      const rangeName = (range[0].toUpperCase() + range.slice(1)).split(/(?=[A-Z])/).join(" ")
+      ranges[rangeName] = Object.keys(fourteeners[range].peaks).length
+      return ranges
+    }, {})
     return result;
   },
 }

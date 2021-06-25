@@ -2776,100 +2776,332 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Fourteener Prompts", () => {
-    it.skip("over14000", () => {
+    it("over14000", () => {
       const e = fourteenerPrompts.over14000();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'graysPeak',     'torreysPeak',      'longsPeak',
+        'mountEvans',    'mountBierstadt',   'pikesPeak',
+        'quandaryPeak',  'mountLincoln',     'mountCameron',
+        'mountBross',    'mountDemocrat',    'mountSherman',
+        'mountElbert',   'mountMassive',     'mountHarvard',
+        'mountColumbia', 'laPlataPeak',      'mountOfTheHolyCross',
+        'mountHuron',    'missouriMountain', 'mountBelford',
+        'mountOxford',   'mountPrinceton',   'mountYale',
+        'mountAntero',   'mountShavano',     'tabeguachePeak',
+        'blancaPeak',    'ellingwoodPoint',  'littleBearPeak',
+        'mountLindsey',  'crestonePeak',     'crestoneNeedle',
+        'humboldtPeak',  'kitCarsonPeak',    'challengerPoint',
+        'culebraPeak',   'castlePeak',       'conundrumPeak',
+        'maroonPeak',    'northMaroonPeak',  'pyramidPeak',
+        'capitolPeak',   'snowmassMountain', 'uncompahgrePeak',
+        'mountWilson',   'wilsonPeak',       'elDientePeak',
+        'mountSneffels', 'mountEolus',       'northEolus',
+        'windomPeak',    'sunlightPeak',     'handiesPeak',
+        'redcloudPeak',  'sunshinePeak',     'wetterhornPeak',
+        'sanLuisPeak'
+      ])
     });
-    it.skip("class2", () => {
+    it("class2", () => {
       const e = fourteenerPrompts.class2();
       // Example: ['south ridge', 'southwest ridge', etc...]
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'southRidge', 'southWestRidge', 'southSlopes', 'westRidge', 'westRidge', 'northeastFace', 'westSlopes',
+        'northwestSlopes', 'westRidge', 'lincolnAmpitheatre', 'eastSlopes', 'westRidge',
+        'westSlopes', 'sGully', 'dollyVardenGully', 'eastSlopesMooseCreek', 'eastSlope',
+        'southwestRidge', 'westSlopesFromIowaGulch', 'southSlope', 'southeastRidge', 'eastSlopes',
+        'southwestSlopes', 'southSlopes', 'southFace', 'westSlopes', 'southeastRidge',
+        'southwestCouloir', 'northwestRidge', 'southwestRidge', 'northRidge', 'northwestSlopes',
+        'southwestSlopes', 'northRidgeFromLuluGulch', 'northwestRidge', 'westRidge', 'northwestRidge',
+        'viaMtBelford', 'eastSlopes', 'southwestSlopes', 'eastRidge', 'westSlopes',
+        'eastSlopes', 'angelOfShavano', 'viaMtShavano', 'westRidge', 'northCouloir',
+        'westRidge', 'eastRidge', 'southeastGully', 'northwestRidge', 'southRidge',
+        'eastSlopes', 'westSlopes', 'northeastRidge', 'viaRedcloudPeak', 'eastRidge'
+      ])
     });
-    it.skip("totalRoutes", () => {
+    it("totalRoutes", () => {
       const e = fourteenerPrompts.totalRoutes();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(129)
     });
-    it.skip("class4", () => {
+    it("class4", () => {
       const e = fourteenerPrompts.class4();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'westRidge',
+        'northRidge',
+        'bellCordCouloir',
+        'northeastRidge',
+        'northeastRidge',
+        'northeastRidge',
+        'northSlopes',
+        'northButtress',
+        'southFace'
+      ])
     });
-    it.skip("rangeNames", () => {
+    it("rangeNames", () => {
       const e = fourteenerPrompts.rangeNames();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Front Range',
+        'Ten Mile Range',
+        'Mosquito Range',
+        'Sawatch Range',
+        'Sangre De Cristo Range',
+        'Elk Range',
+        'San Juan Range'
+      ])
     });
-    it.skip("longsMileage", () => {
+    it("longsMileage", () => {
       const e = fourteenerPrompts.longsMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(43.5)
     });
-    it.skip("sawatchMileage", () => {
+    it("sawatchMileage", () => {
       const e = fourteenerPrompts.sawatchMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(155870)
     });
-    it.skip("tallestPeaks", () => {
+    it("tallestPeaks", () => {
       const e = fourteenerPrompts.tallestPeaks();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        "Gray's Peak",
+        'Quandary Peak',
+        'Mt Lincoln',
+        'Mt Elbert',
+        'Blanca Peak',
+        'Castle Peak',
+        'Uncompahgre Peak'
+      ])
     });
-    it.skip("totalMileage", () => {
+    it("totalMileage", () => {
       const e = fourteenerPrompts.totalMileage();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(1305.9)
     });
-    it.skip("totalGain", () => {
+    it("totalGain", () => {
       const e = fourteenerPrompts.totalGain();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal(542841)
     });
-    it.skip("rankedPeaks", () => {
+    it("rankedPeaks", () => {
       const e = fourteenerPrompts.rankedPeaks();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Mount Elbert', 'Mount Massive', 'Mount Harvard',
+        'Blanca Peak', 'La Plata Peak', 'Uncompahgre Peak', 'Crestone Peak', 'Mount Lincoln',
+        'Grays Peak', 'Mount Antero', 'Torreys Peak', 'Castle Peak', 'Quandary Peak',
+        'Mount Evans', 'Longs Peak', 'Mount Wilson', 'Mount Shavano', 'Mount Belford',
+        'Crestone Needle', 'Mount Princeton', 'Mount Yale', 'Mount Bross', 'Kit Carson Peak',
+        'Maroon Peak', 'Tabeguache Peak', 'Mount Oxford', 'Mount Sneffels', 'Mount Democrat',
+        'Capitol Peak', 'Pikes Peak', 'Snowmass Mountain', 'Mount Eolus', 'Windom Peak',
+        'Challenger Point', 'Mount Columbia', 'Missouri Mountain', 'Humboldt Peak', 'Mount Bierstadt',
+        'Sunlight Peak', 'Handies Peak', 'Culebra Peak', 'Ellingwood Point', 'Mount Lindsey',
+        'Little Bear Peak', 'Mount Sherman', 'Redcloud Peak', 'Pyramid Peak', 'Wilson Peak',
+        'Wetterhorn Peak', 'San Luis Peak', 'Mount Of The Holy Cross', 'Mount Huron', 'Sunshine Peak'
+      ])
     });
-    it.skip("sortedFourteeners", () => {
+    it("sortedFourteeners", () => {
       const e = fourteenerPrompts.sortedFourteeners();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Mount Elbert', 'Mount Massive',
+        'Mount Harvard', 'Blanca Peak', 'La Plata Peak', 'Uncompahgre Peak',
+        'Crestone Peak', 'Mount Lincoln', 'Grays Peak', 'Mount Antero',
+        'Torreys Peak', 'Quandary Peak', 'Castle Peak', 'Mount Evans',
+        'Longs Peak', 'Mount Wilson', 'Mount Cameron', 'Mount Shavano',
+        'Mount Belford', 'Mount Princeton', 'Crestone Needle', 'Mount Yale',
+        'Mount Bross', 'Kit Carson Peak', 'El Diente Peak', 'Maroon Peak',
+        'Tabeguache Peak', 'Mount Oxford', 'Mount Sneffels', 'Mount Democrat',
+        'Capitol Peak', 'Pikes Peak', 'Snowmass Mountain', 'Mount Eolus',
+        'Windom Peak', 'Challenger Point', 'Mount Columbia', 'Missouri Mountain',
+        'Humboldt Peak', 'Mount Bierstadt', 'Conundrum Peak', 'Sunlight Peak',
+        'Handies Peak', 'Culebra Peak', 'Ellingwood Point', 'Mount Lindsey',
+        'North Eolus', 'Little Bear Peak', 'Mount Sherman', 'Redcloud Peak',
+        'Pyramid Peak', 'Wilson Peak', 'Wetterhorn Peak', 'North Maroon Peak',
+        'San Luis Peak', 'Mount Of The Holy Cross', 'Mount Huron', 'Sunshine Peak'
+      ])
     });
-    it.skip("peaksData", () => {
+    it("peaksData", () => {
       const e = fourteenerPrompts.peaksData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        graysPeak: { totalMiles: 31.75, totalGain: 13050 },
+        torreysPeak: { totalMiles: 51.25, totalGain: 23600 },
+        longsPeak: { totalMiles: 43.5, totalGain: 16300 },
+        mountEvans: { totalMiles: 22.5, totalGain: 8575 },
+        mountBierstadt: { totalMiles: 12, totalGain: 5850 },
+        pikesPeak: { totalMiles: 40, totalGain: 11800 },
+        quandaryPeak: { totalMiles: 18, totalGain: 11925 },
+        mountLincoln: { totalMiles: 17.25, totalGain: 8650 },
+        mountCameron: { totalMiles: 4.75, totalGain: 2250 },
+        mountBross: { totalMiles: 30.75, totalGain: 13750 },
+        mountDemocrat: { totalMiles: 6.5, totalGain: 4300 },
+        mountSherman: { totalMiles: 18.25, totalGain: 7350 },
+        mountElbert: { totalMiles: 39, totalGain: 18250 },
+        mountMassive: { totalMiles: 36.5, totalGain: 13250 },
+        mountHarvard: { totalMiles: 28, totalGain: 9200 },
+        mountColumbia: { totalMiles: 37, totalGain: 13850 },
+        laPlataPeak: { totalMiles: 25.75, totalGain: 13780 },
+        mountOfTheHolyCross: { totalMiles: 39.25, totalGain: 16410 },
+        mountHuron: { totalMiles: 23.9, totalGain: 11080 },
+        missouriMountain: { totalMiles: 31.25, totalGain: 13250 },
+        mountBelford: { totalMiles: 8, totalGain: 4500 },
+        mountOxford: { totalMiles: 11, totalGain: 5800 },
+        mountPrinceton: { totalMiles: 6.5, totalGain: 3200 },
+        mountYale: { totalMiles: 20, totalGain: 9300 },
+        mountAntero: { totalMiles: 16, totalGain: 5200 },
+        mountShavano: { totalMiles: 16.5, totalGain: 9200 },
+        tabeguachePeak: { totalMiles: 19, totalGain: 9600 },
+        blancaPeak: { totalMiles: 17, totalGain: 6500 },
+        ellingwoodPoint: { totalMiles: 43.6, totalGain: 13900 },
+        littleBearPeak: { totalMiles: 14, totalGain: 6200 },
+        mountLindsey: { totalMiles: 25.25, totalGain: 10900 },
+        crestonePeak: { totalMiles: 14, totalGain: 5700 },
+        crestoneNeedle: { totalMiles: 23.25, totalGain: 8800 },
+        humboldtPeak: { totalMiles: 27, totalGain: 13900 },
+        kitCarsonPeak: { totalMiles: 54.15, totalGain: 22965 },
+        challengerPoint: { totalMiles: 25.25, totalGain: 10800 },
+        culebraPeak: { totalMiles: 5, totalGain: 2700 },
+        castlePeak: { totalMiles: 40, totalGain: 13800 },
+        conundrumPeak: { totalMiles: 14.5, totalGain: 4850 },
+        maroonPeak: { totalMiles: 19.5, totalGain: 9356 },
+        northMaroonPeak: { totalMiles: 9.25, totalGain: 4500 },
+        pyramidPeak: { totalMiles: 8.25, totalGain: 4500 },
+        capitolPeak: { totalMiles: 17, totalGain: 5300 },
+        snowmassMountain: { totalMiles: 31, totalGain: 10300 },
+        uncompahgrePeak: { totalMiles: 7.5, totalGain: 3000 },
+        mountWilson: { totalMiles: 40.5, totalGain: 14400 },
+        wilsonPeak: { totalMiles: 10, totalGain: 5000 },
+        elDientePeak: { totalMiles: 32, totalGain: 12500 },
+        mountSneffels: { totalMiles: 12.5, totalGain: 5850 },
+        mountEolus: { totalMiles: 17, totalGain: 6100 },
+        northEolus: { totalMiles: 16.75, totalGain: 6000 },
+        windomPeak: { totalMiles: 17, totalGain: 6000 },
+        sunlightPeak: { totalMiles: 17, totalGain: 6000 },
+        handiesPeak: { totalMiles: 18.75, totalGain: 8950 },
+        redcloudPeak: { totalMiles: 9, totalGain: 3700 },
+        sunshinePeak: { totalMiles: 27.75, totalGain: 13200 },
+        wetterhornPeak: { totalMiles: 13.5, totalGain: 6600 },
+        sanLuisPeak: { totalMiles: 24.5, totalGain: 7300 }
+      })
     });
-    it.skip("rangeData", () => {
+    it("rangeData", () => {
       const e = fourteenerPrompts.rangeData();
-      // ie { tenMile: { 'class 1': 3, 'class 2': 5...etc}
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        frontRange: { 'class 1': 2, 'class 2': 8, 'class 3': 9, 'class 2+': 1 },
+        tenMileRange: { 'class 1': 1, 'class 2+': 1, 'class 3': 2 },
+        mosquitoRange: { 'class 2': 12, 'class 1': 1, 'class 2+': 1 },
+        sawatchRange: { 'class 1': 2, 'class 2': 26, 'class 2+': 4, 'class 3': 2 },
+        sangreDeCristoRange: {
+          'class 2+': 3,
+          'class 3': 10,
+          'class 4': 2,
+          'class 2': 5,
+          'class 5': 1
+        },
+        elkRange: { 'class 2+': 4, 'class 3': 3, 'class 4': 4 },
+        sanJuanRange: {
+          'class 2': 6,
+          'class 4': 3,
+          'class 3': 11,
+          'class 2+': 2,
+          'class 1': 3
+        }
+      })
     });
-    it.skip("unranked", () => {
+    it("unranked", () => {
       const e = fourteenerPrompts.unranked();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'Mount Cameron',
+        'Conundrum Peak',
+        'North Maroon Peak',
+        'El Diente Peak',
+        'North Eolus'
+      ])
     });
-    it.skip("tallestFourteener", () => {
+    it("tallestFourteener", () => {
       const e = fourteenerPrompts.tallestFourteener();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('Mount Elbert')
     });
-    it.skip("shortestFourteener", () => {
+    it("shortestFourteener", () => {
       const e = fourteenerPrompts.shortestFourteener();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('Sunshine Peak')
     });
-    it.skip("forestData", () => {
+    it("forestData", () => {
       const e = fourteenerPrompts.forestData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        Arapaho: [ 'Grays Peak', 'Torreys Peak', 'Mount Evans', 'Mount Bierstadt' ],
+        'Rocky Mountain National Park': [ 'Longs Peak' ],
+        Pike: [
+          'Pikes Peak',
+          'Mount Lincoln',
+          'Mount Cameron',
+          'Mount Bross',
+          'Mount Democrat',
+          'Mount Sherman'
+        ],
+        'White River': [
+          'Quandary Peak',
+          'Mount Of The Holy Cross',
+          'Castle Peak',
+          'Conundrum Peak',
+          'Maroon Peak',
+          'North Maroon Peak',
+          'Pyramid Peak',
+          'Capitol Peak',
+          'Snowmass Mountain'
+        ],
+        'San Isabel': [
+          'Mount Elbert',      'Mount Massive',
+          'Mount Harvard',     'Mount Columbia',
+          'La Plata Peak',     'Mount Huron',
+          'Missouri Mountain', 'Mount Belford',
+          'Mount Oxford',      'Mount Princeton',
+          'Mount Yale',        'Mount Antero',
+          'Mount Shavano',     'Tabeguache Peak',
+          'Mount Lindsey',     'Crestone Peak',
+          'Crestone Needle',   'Humboldt Peak'
+        ],
+        'Rio Grande': [
+          'Blanca Peak',
+          'Ellingwood Point',
+          'Little Bear Peak',
+          'Kit Carson Peak',
+          'Challenger Point'
+        ],
+        'Cielo Vista Ranch': [ 'Culebra Peak' ],
+        Uncompahgre: [ 'Uncompahgre Peak', 'Mount Sneffels', 'Wetterhorn Peak' ],
+        'San Juan': [
+          'Mount Wilson',
+          'Wilson Peak',
+          'El Diente Peak',
+          'Mount Eolus',
+          'North Eolus',
+          'Windom Peak',
+          'Sunlight Peak'
+        ],
+        'n/a': [ 'Handies Peak', 'Redcloud Peak', 'Sunshine Peak' ],
+        Gunnison: [ 'San Luis Peak' ]
+      })
     });
-    it.skip("rangePeakData", () => {
+    it("rangePeakData", () => {
       const e = fourteenerPrompts.rangePeakData();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        'Front Range': 6,
+        'Ten Mile Range': 1,
+        'Mosquito Range': 5,
+        'Sawatch Range': 15,
+        'Sangre De Cristo Range': 10,
+        'Elk Range': 7,
+        'San Juan Range': 14
+      })
     });
   });
 
