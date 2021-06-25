@@ -3027,10 +3027,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal('Mount Elbert')
     });
-    it.skip("shortestFourteener", () => {
+    it("shortestFourteener", () => {
       const e = fourteenerPrompts.shortestFourteener();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('Sunshine Peak')
     });
     it.skip("forestData", () => {
       const e = fourteenerPrompts.forestData();

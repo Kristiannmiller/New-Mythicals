@@ -1425,7 +1425,14 @@ const fourteenerPrompts = {
   },
   shortestFourteener() {
     // Question : find the shortest fourteener
-    const result = 'INSERT YOUR CODE HERE'
+    const result = Object.keys(fourteeners).reduce((all14rs, range) => {
+      Object.keys(fourteeners[range].peaks).forEach(peak => {
+        const newPeak = { name: (peak[0].toUpperCase() + peak.slice(1)).split(/(?=[A-Z])/).join(" "),
+                        elevation: fourteeners[range].peaks[peak].elevation }
+        all14rs.push(newPeak)
+      })
+      return all14rs
+    }, []).sort((a, b) => a.elevation - b.elevation)[0].name
     return result;
   },
   forestData() {
