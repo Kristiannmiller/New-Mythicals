@@ -19,7 +19,7 @@ describe('Bartender', function() {
     assert.equal(bartender2.hourlyWage, 10.60);
   });
 
-  it.skip('should start with no beer orders', function() {
+  it('should start with no beer orders', function() {
     var bartender = new Bartender("Craig", 6.75);
 
     assert.deepEqual(bartender.orders, []);
