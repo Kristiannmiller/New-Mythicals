@@ -25,7 +25,7 @@ describe('Bartender', function() {
     assert.deepEqual(bartender.orders, []);
   });
 
-  it.skip('should be able to take orders', function() {
+  it('should be able to take orders', function() {
     var bartender = new Bartender("Chaz", 8.50);
 
     bartender.takeOrder("Grand Teton Brewing", "Bitch Creek", "Brown Ale", 7, 16);
