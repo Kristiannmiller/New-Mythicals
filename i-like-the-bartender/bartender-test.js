@@ -5,11 +5,11 @@ var Beer = require('./beer');
 
 describe('Bartender', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Bartender);
   });
 
-  it.skip('should have a name and a wage', function() {
+  it('should have a name and a wage', function() {
     var bartender1 = new Bartender("Brad", 7.25);
     var bartender2 = new Bartender("Chad", 10.60);
 
