@@ -8,7 +8,7 @@ class Bartender {
   }
   takeOrder(brewer, name, type, price, volume) {
     let beer = new Beer({brewer, name, type, price, volume})
-    this.orders.push(beer)
+    if(this.orders.length < 5) this.orders.push(beer)
   }
 }
 

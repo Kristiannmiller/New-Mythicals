@@ -39,7 +39,7 @@ describe('Bartender', function() {
     assert.equal(bartender.orders[0].volume, 16);
   });
 
-  it.skip('can hold a limited number of beers on a tray', function() {
+  it('can hold a limited number of beers on a tray', function() {
     var bartender = new Bartender("Chucky", 15);
 
     bartender.takeOrder("Threes Brewing", "Logical Conclusion", 'IPA', 12, 12);
