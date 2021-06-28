@@ -5,6 +5,7 @@ class Beer {
     this.type = data.type
     this.price = data.price
     this.volume = data.volume
+    this.isFlat = false
   }
 }
 

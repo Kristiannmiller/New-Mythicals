@@ -24,7 +24,7 @@ describe('Beer', function() {
     assert.equal(beer2.volume, 20)
 });
 
-it.skip('should not be flat by default', function() {
+it('should not be flat by default', function() {
   var beer = new Beer({ brewer: "Roadhouse", name: "Loose Boots", type: 'Apres IPA', price: 8, volume: 16 });
   assert.equal(beer.isFlat, false);
 });
