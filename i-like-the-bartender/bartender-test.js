@@ -57,7 +57,7 @@ describe('Bartender', function() {
     assert.equal(bartender.orders[4].name, "Earned It");
   });
 
-  it.skip('can serve the beers when the tray is full', function() {
+  it('can serve the beers when the tray is full', function() {
     var bartender = new Bartender("Mac", 9.50);
 
     bartender.takeOrder("Sierra Nevada", "Hazy Little Thing", "Pale Ale", 7, 20);
