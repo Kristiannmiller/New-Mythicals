@@ -34,7 +34,8 @@ const {
   fourteenerPrompts,
   concertPrompts,
   dungeonsPrompts,
-  denverPrompts
+  denverPrompts,
+  fakeUrlPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3289,6 +3290,23 @@ describe("PROTOTYPES", () => {
       //   ...
       // }
       expect(e).to.deep.equal({})
+    });
+  });
+  describe("Fake URL Prompts", () => {
+    it.skip("secondToLast", () => {
+      const e = fakeUrlPrompts.secondToLast();
+
+      expect(e).to.equal('unicorns')
+    });
+    it.skip("addMythical", () => {
+      const e = fakeUrlPrompts.addMythical();
+
+      expect(e).to.equal('www.fakeUrl.com/home/categories/mythical_creatures/unicorns/2')
+    });
+    it.skip("changeCreature", () => {
+      const e = fakeUrlPrompts.changeCreature();
+
+      expect(e).to.equal('www.fakeUrl.com/home/categories/werewolves/2/')
     });
   });
 });

@@ -26,6 +26,7 @@ const { fourteeners } = require('./datasets/fourteeners');
 const { artists, ticketPrice, crowd } = require('./datasets/concerts');
 const { charactersDD, weaponsDD } = require('./datasets/DandD');
 const { denver } = require('./datasets/denver');
+const { url } = require('./datasets/fakeUrl');
 
 
 // SINGLE DATASETS
@@ -1644,6 +1645,27 @@ const denverPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: url from ./datasets/fakeUrl.js
+const fakeUrlPrompts = {
+  secondToLast() {
+// return the second to last piece of information in the string
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addMythical() {
+// return the url with this string added between categories and unicorns: 'mythical_creatures'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  changeCreature() {
+// return the url with 'unicorns' replaced with 'werewolves'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
 
 
 
@@ -1679,5 +1701,6 @@ module.exports = {
   fourteenerPrompts,
   concertPrompts,
   dungeonsPrompts,
-  denverPrompts
+  denverPrompts,
+  fakeUrlPrompts
 };
