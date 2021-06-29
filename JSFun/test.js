@@ -36,7 +36,8 @@ const {
   dungeonsPrompts,
   denverPrompts,
   fakeUrlPrompts,
-  philosopherPrompts
+  philosopherPrompts,
+  phishPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3325,6 +3326,43 @@ describe("PROTOTYPES", () => {
       const e = philosopherPrompts.allInterests();
 
       expect(e).to.deep.equal({})
+    });
+  });
+  describe("Phish Prompts", () => {
+    it.skip("tourDates", () => {
+      const e = phishPrompts.tourDates();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("longShows", () => {
+      const e = phishPrompts.longShows();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("showsByVenue", () => {
+      const e = phishPrompts.showsByVenue();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("venueLatitudes", () => {
+      const e = phishPrompts.venueLatitudes();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findShowById", () => {
+      const e = phishPrompts.findShowById(1910);
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("totalDuration", () => {
+      const e = phishPrompts.totalDuration();
+
+      expect(e).to.equal(0)
+    });
+    it.skip("slashTourDates", () => {
+      const e = phishPrompts.slashTourDates();
+
+      expect(e).to.equal([])
     });
   });
 });

@@ -28,6 +28,7 @@ const { charactersDD, weaponsDD } = require('./datasets/DandD');
 const { denver } = require('./datasets/denver');
 const { url } = require('./datasets/fakeUrl');
 const { philosophers } = require('./datasets/philosophers');
+const { showData } = require('./datasets/phish');
 
 
 // SINGLE DATASETS
@@ -1689,6 +1690,48 @@ const philosopherPrompts = {
 };
 
 
+// =================================================================
+
+// DATASET: showData from ./datasets/phish.js
+const phishPrompts = {
+  tourDates() {
+// Create a list of all of the tour dates
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  longShows() {
+// Find all of the shows with a duration longer than 10000000
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  showsByVenue() {
+// Create an object that has how many shows were played at each venue
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  venueLatitudes() {
+// Create a function that returns an array of venue objects whose keys are the name of the venue and it’s latitude. There should be no repeat venues and they should be sorted by latitude
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findShowById(id) {
+// Find the show with the id of 1910
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  totalDuration() {
+// Find the total duration of all the shows in hours, minutes, and seconds (hh:mm:ss) *duration provided is in ms*
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slashTourDates() {
+// Return another list of all the tour dates, but with the dashes (-) replaced with slashes(/)
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+
 
 
 
@@ -1725,5 +1768,6 @@ module.exports = {
   dungeonsPrompts,
   denverPrompts,
   fakeUrlPrompts,
-  philosopherPrompts
+  philosopherPrompts,
+  phishPrompts
 };
