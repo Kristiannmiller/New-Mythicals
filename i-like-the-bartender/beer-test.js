@@ -3,11 +3,11 @@ var Beer = require('./beer');
 
 describe('Beer', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Beer);
   });
 
-  it.skip('should have a brewer, name, type, price, and volume', function() {
+  it('should have a brewer, name, type, price, and volume', function() {
     var beer1 = new Beer({ brewer: "Melvin", name: "2 x 4", type: 'Imperial IPA', price: 8, volume: 12 });
     var beer2 = new Beer({ brewer: "Snake River Brewing", name: "La Cerveza", type: 'Mexican Style Lager', price: 7, volume: 20 });
 
@@ -24,7 +24,7 @@ describe('Beer', function() {
     assert.equal(beer2.volume, 20)
 });
 
-it.skip('should not be flat by default', function() {
+it('should not be flat by default', function() {
   var beer = new Beer({ brewer: "Roadhouse", name: "Loose Boots", type: 'Apres IPA', price: 8, volume: 16 });
   assert.equal(beer.isFlat, false);
 });
