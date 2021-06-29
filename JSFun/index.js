@@ -1770,7 +1770,7 @@ const smashPrompts = {
     const result = 'RESULT GOES HERE'
     return result
   },
-  findCharacter(class, minJump, minSpeed, counter) {
+  findCharacter(weightClass, minJump, minSpeed, counter) {
 ///Find me a character in the middleweight class, with a jump height above 35, a run speed above 1.75, and a counter move.
     const result = 'RESULT GOES HERE'
     return result
