@@ -31,7 +31,8 @@ const {
   murderPrompts,
   restaurantPrompts,
   strongBadPrompts,
-  fourteenerPrompts
+  fourteenerPrompts,
+  concertPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3104,6 +3105,41 @@ describe("PROTOTYPES", () => {
       })
     });
   });
+  describe("Concert Prompts", () => {
+    it.skip("artistNames", () => {
+      const e = concertPrompts.artistNames();
 
+      expect(e).to.deep.equal({})
+    });
+    it.skip("findByName", () => {
+      const e = concertPrompts.findByName();
 
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addPrice", () => {
+      const e = concertPrompts.addPrice();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("getByLabel", () => {
+      const e = concertPrompts.getByLabel();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("totalCost", () => {
+      const e = concertPrompts.totalCost();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("artistsByLabel", () => {
+      const e = concertPrompts.artistsByLabel();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addCrowdSize", () => {
+      const e = concertPrompts.addCrowdSize();
+
+      expect(e).to.deep.equal({})
+    });
+  });
 });

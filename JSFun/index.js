@@ -23,6 +23,7 @@ const { marvelComics, marvelMovies } = require('./datasets/marvel');
 const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
 const { fourteeners } = require('./datasets/fourteeners');
+const { artists, ticketPrice, crowd } = require('./datasets/concerts');
 
 
 // SINGLE DATASETS
@@ -1463,6 +1464,48 @@ const fourteenerPrompts = {
   },
 }
 
+// =================================================================
+
+// DATASET: artists, ticketPrice and crowd from ./datasets/concerts.js
+const concertPrompts = {
+  artistNames() {
+    // Return an array of just the artists names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findByName() {
+    // Write a function that takes a name as a parameter and returns the first artist where the name matches .  ex. findByName('Jack Garratt')
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addPrice() {
+    // Write some code to add the appropriate ticket price to each artist.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  getByLabel() {
+    // Write a function that takes a label as a parameter and returns an array containing all the artists of that label .  ex. getByLabel('atlantic')
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  totalCost() {
+    // Write some code to determine how much it would cost to go to all to the shows
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  artistsByLabel() {
+    // Make an object containing each label as keys and all the associated artists in an array as the value.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addCrowdSize() {
+    //write some code that will add the crowdsize to each artist
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+}
+
+
 
 
 
@@ -1492,5 +1535,6 @@ module.exports = {
   murderPrompts,
   restaurantPrompts,
   strongBadPrompts,
-  fourteenerPrompts
+  fourteenerPrompts,
+  concertPrompts
 };
