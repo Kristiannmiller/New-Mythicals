@@ -24,6 +24,7 @@ const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
 const { fourteeners } = require('./datasets/fourteeners');
 const { artists, ticketPrice, crowd } = require('./datasets/concerts');
+const { charactersDD, weaponsDD } = require('./datasets/DandD');
 
 
 // SINGLE DATASETS
@@ -1505,6 +1506,48 @@ const concertPrompts = {
   },
 }
 
+// =================================================================
+
+// DATASET: artists, ticketPrice and crowd from ./datasets/concerts.js
+const dungeonsPrompts = {
+  totalWeaponDamage() {
+//  1) Return the sum of the amount of damage for all the weapons that our characters can use
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  characterStats() {
+//  2) Return the sum damage, total range, and total durability for each character as an object.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  showWeapons() {
+//  3) Write a function that takes in a character name as an input and returns the weapons it can use and its total damage and range.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  determineWinner() {
+//  4) Write a function that takes in two character names as arguments and determines who will win based on who has higher total damage along with the remaining durability.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  determineSurvival() {
+//  5) Write a function that takes two names as arguments. First name is the attacker, the second Name the defender.  Determine whether the defender will survive an attack from the attacker based on the AttackersDmg - defendersHealth.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  compareHomes() {
+// 6) Write a function that takes in two homes as arguments and returns the winner based on sum dmg and health of all the characters that belong to the home. (firstHomeDmg - secondHomeHealth) vs (secondHomeDmg - firstHomeHealth); home that has greater value is winner.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  winningChance() {
+// 7) :: EUROPEAN EXTREME :: Write a function that takes in two arguments, a fighter and the fighter's target, and determine the percent chance the fighter has of winning against that target, (by recursively or iteratively matching them against one another for at least 100 fights) and returning a string containing the result:
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+
 
 
 
@@ -1536,5 +1579,6 @@ module.exports = {
   restaurantPrompts,
   strongBadPrompts,
   fourteenerPrompts,
-  concertPrompts
+  concertPrompts,
+  dungeonsPrompts
 };

@@ -32,7 +32,8 @@ const {
   restaurantPrompts,
   strongBadPrompts,
   fourteenerPrompts,
-  concertPrompts
+  concertPrompts,
+  dungeonsPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3139,6 +3140,44 @@ describe("PROTOTYPES", () => {
     it.skip("addCrowdSize", () => {
       const e = concertPrompts.addCrowdSize();
 
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Dungeons Prompts", () => {
+    it.skip("totalWeaponDamage", () => {
+      const e = dungeonsPrompts.totalWeaponDamage();
+
+      expect(e).to.equal(431)
+    });
+    it.skip("characterStats", () => {
+      const e = dungeonsPrompts.characterStats();
+//// [ { Ben: { damage: 35, range: 58, durability: 47 } }, { Cody: {...}, ...}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("showWeapons", () => {
+      const e = dungeonsPrompts.showWeapons();
+// showWeapons('Ben') //// {weapons: [magebane, whip, axe], damage: 113, range: 34}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("determineWinner", () => {
+      const e = dungeonsPrompts.determineWinner();
+// determineWinner('Mike', 'Gray') //// 'Gray, -14'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("determineSurvival", () => {
+      const e = dungeonsPrompts.determineSurvival();
+// determineSurvival('Timf', 'Kiel')  //// 'Kiel died'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("compareHomes", () => {
+      const e = dungeonsPrompts.compareHomes();
+// forFrodo('Air', 'Earth') //// 'Earth wins'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("winningChance", () => {
+      const e = dungeonsPrompts.winningChance();
+// winningChance('Ben', 'Paul') //// 'Ben has an 94% chance of beating Paul.'
+//percentage = (wins / totalFights) * 100
       expect(e).to.deep.equal({})
     });
   });
