@@ -33,7 +33,8 @@ const {
   strongBadPrompts,
   fourteenerPrompts,
   concertPrompts,
-  dungeonsPrompts
+  dungeonsPrompts,
+  denverPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3178,6 +3179,115 @@ describe("PROTOTYPES", () => {
       const e = dungeonsPrompts.winningChance();
 // winningChance('Ben', 'Paul') //// 'Ben has an 94% chance of beating Paul.'
 //percentage = (wins / totalFights) * 100
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Denver Prompts", () => {
+    it.skip("sortBeers", () => {
+      const e = denverPrompts.sortBeers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addBeerPrices", () => {
+      const e = denverPrompts.addBeerPrices();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("findMuseum", () => {
+      const e = denverPrompts.findMuseum();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("neighborhoodEats", () => {
+      const e = denverPrompts.neighborhoodEats();
+      // {
+      //   lodo: {
+      //     name: 'lodo',
+      //     breweries: [],
+      //     restaurants: []
+      //   },
+      //  ...
+      // }
+      expect(e).to.deep.equal({})
+    });
+    it.skip("mostReviewedRestaurant", () => {
+      const e = denverPrompts.mostReviewedRestaurant();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allRestaurants", () => {
+      const e = denverPrompts.allRestaurants();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allBuildings", () => {
+      const e = denverPrompts.allBuildings();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("bigBreweries", () => {
+      const e = denverPrompts.bigBreweries();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("dinnerTime", () => {
+      const e = denverPrompts.dinnerTime();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("howManyBeers", () => {
+      const e = denverPrompts.howManyBeers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("howManyFloors", () => {
+      const e = denverPrompts.howManyFloors();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("avgIbu", () => {
+      const e = denverPrompts.avgIbu();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("beerTypes", () => {
+      const e = denverPrompts.beerTypes();
+// [ 'Pale Ale', 'Porter', 'Cream Ale', ... ]
+      expect(e).to.deep.equal({})
+    });
+    it.skip("breweryAvgs", () => {
+      const e = denverPrompts.breweryAvgs();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("tallestBuilding", () => {
+      const e = denverPrompts.tallestBuilding();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("buildingTypes", () => {
+      const e = denverPrompts.buildingTypes();
+// { commercial: 3, historical: 3... }
+      expect(e).to.deep.equal({})
+    });
+    it.skip("neighborhoodHangs", () => {
+      const e = denverPrompts.neighborhoodHangs();
+      //   LoDo: {
+      //     restaurants: [
+      //       { name: "Sam's No. 3", type: "Cheap Eats", number_of_reviews: 1870, neighborhood: "LoDo" },
+      //       { name: "The Capital Grille", type: "Lunch", number_of_reviews: 531, neighborhood: "LoDo" },
+      //       ...
+      //     ],
+      //     breweries: [
+      //       {
+      //         name: "Denver Beer Co.",
+      //         neighborhood: "LoDo",
+      //         number_of_beers: 22
+      //       }
+      //     ]
+      //   },
+      //   ...
+      // }
       expect(e).to.deep.equal({})
     });
   });

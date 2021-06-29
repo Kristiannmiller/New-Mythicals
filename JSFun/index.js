@@ -25,6 +25,7 @@ const { restaurants } = require('./datasets/restaurants');
 const { fourteeners } = require('./datasets/fourteeners');
 const { artists, ticketPrice, crowd } = require('./datasets/concerts');
 const { charactersDD, weaponsDD } = require('./datasets/DandD');
+const { denver } = require('./datasets/denver');
 
 
 // SINGLE DATASETS
@@ -1508,7 +1509,7 @@ const concertPrompts = {
 
 // =================================================================
 
-// DATASET: artists, ticketPrice and crowd from ./datasets/concerts.js
+// DATASET: charactersDD and weaponsDD from ./datasets/DandD.js
 const dungeonsPrompts = {
   totalWeaponDamage() {
 //  1) Return the sum of the amount of damage for all the weapons that our characters can use
@@ -1547,6 +1548,103 @@ const dungeonsPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: denver from ./datasets/denver.js
+const denverPrompts = {
+  sortBeers() {
+// sort all of the breweries beers in order of decreasing abv
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addBeerPrices() {
+// give each beer a random price between $4 and $10
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findMuseum() {
+// find 'the museum of nature and science'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  neighborhoodEats() {
+// Create a neighborhoods object with breweries and restaurant properties
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  mostReviewedRestaurant() {
+// which restaurant has the most reviews
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allRestaurants() {
+// create an array with all the restaurant names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allBuildings() {
+// create an array containing all commercial building names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bigBreweries() {
+// create an array with all the breweries serving more than 14 beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  dinnerTime() {
+// find all of the restaurants that have a type 'Dinner'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  howManyBeers() {
+// sum up the different number of beers served at the various breweries
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  howManyFloors() {
+// sum up the number of floors of all buildings in the buildings object
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  avgAbv() {
+// find the average abv for all the breweries which have beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  avgIbu() {
+// find the average ibu for all the breweries which have beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  beerTypes() {
+// create an array with all the different types of beer served by the different breweries without having duplicates in the array.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  breweryAvgs() {
+// create an object where the properties are brewery names and the value is an object which contains that breweries average abv and average ibu
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  tallestBuilding() {
+// find the tallest building in the buildings object (hint: .find probably will not work here.)
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  buildingTypes() {
+// create an object where the properties are the types of buildings and the values are the number of buildings of that type
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  neighborhoodHangs() {
+// create an object where each property is a neighborhood where the value is an object with two properties "breweries" and "restaurants" where each value is an array containing the brewery and restaurant objects
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+
 
 
 
@@ -1580,5 +1678,6 @@ module.exports = {
   strongBadPrompts,
   fourteenerPrompts,
   concertPrompts,
-  dungeonsPrompts
+  dungeonsPrompts,
+  denverPrompts
 };
