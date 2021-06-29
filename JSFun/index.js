@@ -27,6 +27,7 @@ const { artists, ticketPrice, crowd } = require('./datasets/concerts');
 const { charactersDD, weaponsDD } = require('./datasets/DandD');
 const { denver } = require('./datasets/denver');
 const { url } = require('./datasets/fakeUrl');
+const { philosophers } = require('./datasets/philosophers');
 
 
 // SINGLE DATASETS
@@ -1666,6 +1667,27 @@ const fakeUrlPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: philosophers from ./datasets/philosophers.js
+const philosopherPrompts = {
+  analyticPhilosophers() {
+//Return an array of the names of all the philosophers who's school is 'Analytic Philosophy'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  oldestPhilosopher() {
+//Return the age of the oldest philosopher
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allInterests() {
+//Return an array of all the main interests with no duplicates.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
 
 
 
@@ -1702,5 +1724,6 @@ module.exports = {
   concertPrompts,
   dungeonsPrompts,
   denverPrompts,
-  fakeUrlPrompts
+  fakeUrlPrompts,
+  philosopherPrompts
 };

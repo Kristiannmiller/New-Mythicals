@@ -35,7 +35,8 @@ const {
   concertPrompts,
   dungeonsPrompts,
   denverPrompts,
-  fakeUrlPrompts
+  fakeUrlPrompts,
+  philosopherPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3307,6 +3308,23 @@ describe("PROTOTYPES", () => {
       const e = fakeUrlPrompts.changeCreature();
 
       expect(e).to.equal('www.fakeUrl.com/home/categories/werewolves/2/')
+    });
+  });
+  describe("Philosopher Prompts", () => {
+    it.skip("analyticPhilosophers", () => {
+      const e = philosopherPrompts.analyticPhilosophers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("oldestPhilosopher", () => {
+      const e = philosopherPrompts.oldestPhilosopher();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allInterests", () => {
+      const e = philosopherPrompts.allInterests();
+
+      expect(e).to.deep.equal({})
     });
   });
 });
