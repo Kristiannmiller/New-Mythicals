@@ -31,7 +31,14 @@ const {
   murderPrompts,
   restaurantPrompts,
   strongBadPrompts,
-  fourteenerPrompts
+  fourteenerPrompts,
+  concertPrompts,
+  dungeonsPrompts,
+  denverPrompts,
+  fakeUrlPrompts,
+  philosopherPrompts,
+  phishPrompts,
+  smashPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3104,6 +3111,336 @@ describe("PROTOTYPES", () => {
       })
     });
   });
+  describe("Concert Prompts", () => {
+    it.skip("artistNames", () => {
+      const e = concertPrompts.artistNames();
 
+      expect(e).to.deep.equal({})
+    });
+    it.skip("findByName", () => {
+      const e = concertPrompts.findByName();
 
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addPrice", () => {
+      const e = concertPrompts.addPrice();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("getByLabel", () => {
+      const e = concertPrompts.getByLabel();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("totalCost", () => {
+      const e = concertPrompts.totalCost();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("artistsByLabel", () => {
+      const e = concertPrompts.artistsByLabel();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addCrowdSize", () => {
+      const e = concertPrompts.addCrowdSize();
+
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Dungeons Prompts", () => {
+    it.skip("totalWeaponDamage", () => {
+      const e = dungeonsPrompts.totalWeaponDamage();
+
+      expect(e).to.equal(431)
+    });
+    it.skip("characterStats", () => {
+      const e = dungeonsPrompts.characterStats();
+//// [ { Ben: { damage: 35, range: 58, durability: 47 } }, { Cody: {...}, ...}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("showWeapons", () => {
+      const e = dungeonsPrompts.showWeapons();
+// showWeapons('Ben') //// {weapons: [magebane, whip, axe], damage: 113, range: 34}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("determineWinner", () => {
+      const e = dungeonsPrompts.determineWinner();
+// determineWinner('Mike', 'Gray') //// 'Gray, -14'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("determineSurvival", () => {
+      const e = dungeonsPrompts.determineSurvival();
+// determineSurvival('Timf', 'Kiel')  //// 'Kiel died'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("compareHomes", () => {
+      const e = dungeonsPrompts.compareHomes();
+// forFrodo('Air', 'Earth') //// 'Earth wins'
+      expect(e).to.deep.equal({})
+    });
+    it.skip("winningChance", () => {
+      const e = dungeonsPrompts.winningChance();
+// winningChance('Ben', 'Paul') //// 'Ben has an 94% chance of beating Paul.'
+//percentage = (wins / totalFights) * 100
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Denver Prompts", () => {
+    it.skip("sortBeers", () => {
+      const e = denverPrompts.sortBeers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("addBeerPrices", () => {
+      const e = denverPrompts.addBeerPrices();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("findMuseum", () => {
+      const e = denverPrompts.findMuseum();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("neighborhoodEats", () => {
+      const e = denverPrompts.neighborhoodEats();
+      // {
+      //   lodo: {
+      //     name: 'lodo',
+      //     breweries: [],
+      //     restaurants: []
+      //   },
+      //  ...
+      // }
+      expect(e).to.deep.equal({})
+    });
+    it.skip("mostReviewedRestaurant", () => {
+      const e = denverPrompts.mostReviewedRestaurant();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allRestaurants", () => {
+      const e = denverPrompts.allRestaurants();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allBuildings", () => {
+      const e = denverPrompts.allBuildings();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("bigBreweries", () => {
+      const e = denverPrompts.bigBreweries();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("dinnerTime", () => {
+      const e = denverPrompts.dinnerTime();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("howManyBeers", () => {
+      const e = denverPrompts.howManyBeers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("howManyFloors", () => {
+      const e = denverPrompts.howManyFloors();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("avgIbu", () => {
+      const e = denverPrompts.avgIbu();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("beerTypes", () => {
+      const e = denverPrompts.beerTypes();
+// [ 'Pale Ale', 'Porter', 'Cream Ale', ... ]
+      expect(e).to.deep.equal({})
+    });
+    it.skip("breweryAvgs", () => {
+      const e = denverPrompts.breweryAvgs();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("tallestBuilding", () => {
+      const e = denverPrompts.tallestBuilding();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("buildingTypes", () => {
+      const e = denverPrompts.buildingTypes();
+// { commercial: 3, historical: 3... }
+      expect(e).to.deep.equal({})
+    });
+    it.skip("neighborhoodHangs", () => {
+      const e = denverPrompts.neighborhoodHangs();
+      //   LoDo: {
+      //     restaurants: [
+      //       { name: "Sam's No. 3", type: "Cheap Eats", number_of_reviews: 1870, neighborhood: "LoDo" },
+      //       { name: "The Capital Grille", type: "Lunch", number_of_reviews: 531, neighborhood: "LoDo" },
+      //       ...
+      //     ],
+      //     breweries: [
+      //       {
+      //         name: "Denver Beer Co.",
+      //         neighborhood: "LoDo",
+      //         number_of_beers: 22
+      //       }
+      //     ]
+      //   },
+      //   ...
+      // }
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Fake URL Prompts", () => {
+    it.skip("secondToLast", () => {
+      const e = fakeUrlPrompts.secondToLast();
+
+      expect(e).to.equal('unicorns')
+    });
+    it.skip("addMythical", () => {
+      const e = fakeUrlPrompts.addMythical();
+
+      expect(e).to.equal('www.fakeUrl.com/home/categories/mythical_creatures/unicorns/2')
+    });
+    it.skip("changeCreature", () => {
+      const e = fakeUrlPrompts.changeCreature();
+
+      expect(e).to.equal('www.fakeUrl.com/home/categories/werewolves/2/')
+    });
+  });
+  describe("Philosopher Prompts", () => {
+    it.skip("analyticPhilosophers", () => {
+      const e = philosopherPrompts.analyticPhilosophers();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("oldestPhilosopher", () => {
+      const e = philosopherPrompts.oldestPhilosopher();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("allInterests", () => {
+      const e = philosopherPrompts.allInterests();
+
+      expect(e).to.deep.equal({})
+    });
+  });
+  describe("Phish Prompts", () => {
+    it.skip("tourDates", () => {
+      const e = phishPrompts.tourDates();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("longShows", () => {
+      const e = phishPrompts.longShows();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("showsByVenue", () => {
+      const e = phishPrompts.showsByVenue();
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("venueLatitudes", () => {
+      const e = phishPrompts.venueLatitudes();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findShowById", () => {
+      const e = phishPrompts.findShowById(1910);
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("totalDuration", () => {
+      const e = phishPrompts.totalDuration();
+
+      expect(e).to.equal(0)
+    });
+    it.skip("slashTourDates", () => {
+      const e = phishPrompts.slashTourDates();
+
+      expect(e).to.equal([])
+    });
+  });
+  describe("Smash Bros Prompts", () => {
+    it.skip("playersByRank", () => {
+      const e = smashPrompts.playersByRank();
+// EX: [ {Bayonetta: 1}, {Cloud: 2}, {Diddy Kong: 3}...{Jigglypuff: 58} ]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("featherWeights", () => {
+      const e = smashPrompts.featherWeights();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("bigSmasher", () => {
+      const e = smashPrompts.bigSmasher();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("slowestRunners", () => {
+      const e = smashPrompts.slowestRunners();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("allCharacters", () => {
+      const e = smashPrompts.allCharacters();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("aList", () => {
+      const e = smashPrompts.aList();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("bListMs", () => {
+      const e = smashPrompts.bListMs();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findCharacter", () => {
+      const e = smashPrompts.findCharacter('Middle Weight', 36, 1.76, 'y');
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("slowTraits", () => {
+      const e = smashPrompts.slowTraits();
+// EX: {Bayonetta: ['Slow Run'], Bowser: [], Bowser Jr.: ['Slow moves']....}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("topMiddleWeights", () => {
+      const e = smashPrompts.topMiddleWeights();
+//EX: [{name: Diddy Kong, weightClass: Middleweight, rank: 3}...]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersByUniverse", () => {
+      const e = smashPrompts.charactersByUniverse();
+// EX: {Mario: [mario, bowser, luigi, peach...], Yoshi: [yoshi]}
+      expect(e).to.deep.equal([])
+    });
+    it.skip("winPercentage", () => {
+      const e = smashPrompts.winPercentage();
+// EX: [{Zero Suit Samus: 52.9%}]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersByGame", () => {
+      const e = smashPrompts.charactersByGame();
+// EX {'Smash Bros. 4': ['Bayonetta', 'Bowser'...], 'Smash Bros. Brawl: ['Bowser', 'Captain Falcon'], 'Smash Bros. Melee: ['Bowser'...], 'Smash Bros. (64): []}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("charactersBySpeed", () => {
+      const e = smashPrompts.charactersBySpeed();
+// EX: [...{name: sonic, speed: 1}, {name: fox, speed: 2}...{name: Ganondorf, speed: 58}]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersBySpeedSuperScript", () => {
+      const e = smashPrompts.charactersBySpeedSuperScript();
+// EX: [ {name: sonic, speed: 1st}, {name: fox, speed: 2nd}... {name: pikachu, speed: 12th}...]
+      expect(e).to.deep.equal([])
+    });
+  });
 });

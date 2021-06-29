@@ -23,6 +23,13 @@ const { marvelComics, marvelMovies } = require('./datasets/marvel');
 const { players, toons } = require('./datasets/strongBad');
 const { restaurants } = require('./datasets/restaurants');
 const { fourteeners } = require('./datasets/fourteeners');
+const { artists, ticketPrice, crowd } = require('./datasets/concerts');
+const { charactersDD, weaponsDD } = require('./datasets/DandD');
+const { denver } = require('./datasets/denver');
+const { url } = require('./datasets/fakeUrl');
+const { philosophers } = require('./datasets/philosophers');
+const { showData } = require('./datasets/phish');
+const { smashCharacters } = require('./datasets/smash');
 
 
 // SINGLE DATASETS
@@ -1463,6 +1470,352 @@ const fourteenerPrompts = {
   },
 }
 
+// =================================================================
+
+// DATASET: artists, ticketPrice and crowd from ./datasets/concerts.js
+const concertPrompts = {
+  artistNames() {
+    // Return an array of just the artists names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findByName() {
+    // Write a function that takes a name as a parameter and returns the first artist where the name matches .  ex. findByName('Jack Garratt')
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addPrice() {
+    // Write some code to add the appropriate ticket price to each artist.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  getByLabel() {
+    // Write a function that takes a label as a parameter and returns an array containing all the artists of that label .  ex. getByLabel('atlantic')
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  totalCost() {
+    // Write some code to determine how much it would cost to go to all to the shows
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  artistsByLabel() {
+    // Make an object containing each label as keys and all the associated artists in an array as the value.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addCrowdSize() {
+    //write some code that will add the crowdsize to each artist
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+}
+
+// =================================================================
+
+// DATASET: charactersDD and weaponsDD from ./datasets/DandD.js
+const dungeonsPrompts = {
+  totalWeaponDamage() {
+//  1) Return the sum of the amount of damage for all the weapons that our characters can use
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  characterStats() {
+//  2) Return the sum damage, total range, and total durability for each character as an object.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  showWeapons() {
+//  3) Write a function that takes in a character name as an input and returns the weapons it can use and its total damage and range.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  determineWinner() {
+//  4) Write a function that takes in two character names as arguments and determines who will win based on who has higher total damage along with the remaining durability.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  determineSurvival() {
+//  5) Write a function that takes two names as arguments. First name is the attacker, the second Name the defender.  Determine whether the defender will survive an attack from the attacker based on the AttackersDmg - defendersHealth.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  compareHomes() {
+// 6) Write a function that takes in two homes as arguments and returns the winner based on sum dmg and health of all the characters that belong to the home. (firstHomeDmg - secondHomeHealth) vs (secondHomeDmg - firstHomeHealth); home that has greater value is winner.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  winningChance() {
+// 7) :: EUROPEAN EXTREME :: Write a function that takes in two arguments, a fighter and the fighter's target, and determine the percent chance the fighter has of winning against that target, (by recursively or iteratively matching them against one another for at least 100 fights) and returning a string containing the result:
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+// =================================================================
+
+// DATASET: denver from ./datasets/denver.js
+const denverPrompts = {
+  sortBeers() {
+// sort all of the breweries beers in order of decreasing abv
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addBeerPrices() {
+// give each beer a random price between $4 and $10
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findMuseum() {
+// find 'the museum of nature and science'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  neighborhoodEats() {
+// Create a neighborhoods object with breweries and restaurant properties
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  mostReviewedRestaurant() {
+// which restaurant has the most reviews
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allRestaurants() {
+// create an array with all the restaurant names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allBuildings() {
+// create an array containing all commercial building names
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bigBreweries() {
+// create an array with all the breweries serving more than 14 beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  dinnerTime() {
+// find all of the restaurants that have a type 'Dinner'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  howManyBeers() {
+// sum up the different number of beers served at the various breweries
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  howManyFloors() {
+// sum up the number of floors of all buildings in the buildings object
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  avgAbv() {
+// find the average abv for all the breweries which have beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  avgIbu() {
+// find the average ibu for all the breweries which have beers
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  beerTypes() {
+// create an array with all the different types of beer served by the different breweries without having duplicates in the array.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  breweryAvgs() {
+// create an object where the properties are brewery names and the value is an object which contains that breweries average abv and average ibu
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  tallestBuilding() {
+// find the tallest building in the buildings object (hint: .find probably will not work here.)
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  buildingTypes() {
+// create an object where the properties are the types of buildings and the values are the number of buildings of that type
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  neighborhoodHangs() {
+// create an object where each property is a neighborhood where the value is an object with two properties "breweries" and "restaurants" where each value is an array containing the brewery and restaurant objects
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+// =================================================================
+
+// DATASET: url from ./datasets/fakeUrl.js
+const fakeUrlPrompts = {
+  secondToLast() {
+// return the second to last piece of information in the string
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  addMythical() {
+// return the url with this string added between categories and unicorns: 'mythical_creatures'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  changeCreature() {
+// return the url with 'unicorns' replaced with 'werewolves'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+// =================================================================
+
+// DATASET: philosophers from ./datasets/philosophers.js
+const philosopherPrompts = {
+  analyticPhilosophers() {
+//Return an array of the names of all the philosophers who's school is 'Analytic Philosophy'
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  oldestPhilosopher() {
+//Return the age of the oldest philosopher
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allInterests() {
+//Return an array of all the main interests with no duplicates.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+// =================================================================
+
+// DATASET: showData from ./datasets/phish.js
+const phishPrompts = {
+  tourDates() {
+// Create a list of all of the tour dates
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  longShows() {
+// Find all of the shows with a duration longer than 10000000
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  showsByVenue() {
+// Create an object that has how many shows were played at each venue
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  venueLatitudes() {
+// Create a function that returns an array of venue objects whose keys are the name of the venue and it’s latitude. There should be no repeat venues and they should be sorted by latitude
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findShowById(id) {
+// Find the show with the id of 1910
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  totalDuration() {
+// Find the total duration of all the shows in hours, minutes, and seconds (hh:mm:ss) *duration provided is in ms*
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slashTourDates() {
+// Return another list of all the tour dates, but with the dashes (-) replaced with slashes(/)
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+// =================================================================
+
+// DATASET: smashCharacters from ./datasets/smash.js
+const smashPrompts = {
+  playersByRank() {
+//Give me an array of the characters based on their rank.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  featherWeights() {
+//Give me an array of all FeatherWeight characters
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bigSmasher() {
+//Give me the name of character whose 'strongest smash' is most powerful
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slowestRunners() {
+//Give me the three slowest runners in the game in array
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allCharacters() {
+//Give me an array of all characters in the Mario universe
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  aList() {
+///Give me an array of character names in the A tier.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bListMs() {
+//Give me an array of character names in the B tier that start with the letter M.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findCharacter(weightClass, minJump, minSpeed, counter) {
+///Find me a character in the middleweight class, with a jump height above 35, a run speed above 1.75, and a counter move.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slowTraits() {
+//Give me an object where each key is a character name, and the value is an array of their cons that contain the word 'slow'.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  topMiddleWeights() {
+//Give me an array of characters who are middleweights and are in the top 10 (tier.rank).
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersByUniverse() {
+////Give me an object where each key is a universe and the value is array of names of the characters in that universe.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  winPercentage() {
+//Give me an array of characters where each character is an object where the key is the name and the value is the character's win percentage
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersByGame() {
+//Give me an object where each property is a smash game and the value is an array of character names who appear in that game
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersBySpeed() {
+//PT. 1 - Give me array of Objects where each object has 2 properties: name, and overall speed rank.  Calculate the overall speed rank by taking the average of the initial dash, run, and air speeds.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersBySpeedSuperScript() {
+//PT. 2 - Using the array you created above, map over it and add the correct superscript to each character's speed rank.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+
+
+
+
 
 
 
@@ -1492,5 +1845,12 @@ module.exports = {
   murderPrompts,
   restaurantPrompts,
   strongBadPrompts,
-  fourteenerPrompts
+  fourteenerPrompts,
+  concertPrompts,
+  dungeonsPrompts,
+  denverPrompts,
+  fakeUrlPrompts,
+  philosopherPrompts,
+  phishPrompts,
+  smashPrompts
 };
