@@ -37,7 +37,8 @@ const {
   denverPrompts,
   fakeUrlPrompts,
   philosopherPrompts,
-  phishPrompts
+  phishPrompts,
+  smashPrompts
 } = require("./index");
 
 describe("PROTOTYPES", () => {
@@ -3363,6 +3364,83 @@ describe("PROTOTYPES", () => {
       const e = phishPrompts.slashTourDates();
 
       expect(e).to.equal([])
+    });
+  });
+  describe("Smash Bros Prompts", () => {
+    it.skip("playersByRank", () => {
+      const e = smashPrompts.playersByRank();
+// EX: [ {Bayonetta: 1}, {Cloud: 2}, {Diddy Kong: 3}...{Jigglypuff: 58} ]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("featherWeights", () => {
+      const e = smashPrompts.featherWeights();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("bigSmasher", () => {
+      const e = smashPrompts.bigSmasher();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("slowestRunners", () => {
+      const e = smashPrompts.slowestRunners();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("allCharacters", () => {
+      const e = smashPrompts.allCharacters();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("aList", () => {
+      const e = smashPrompts.aList();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("bListMs", () => {
+      const e = smashPrompts.bListMs();
+
+      expect(e).to.deep.equal([])
+    });
+    it.skip("findCharacter", () => {
+      const e = smashPrompts.findCharacter('Middle Weight', 36, 1.76, 'y');
+
+      expect(e).to.deep.equal({})
+    });
+    it.skip("slowTraits", () => {
+      const e = smashPrompts.slowTraits();
+// EX: {Bayonetta: ['Slow Run'], Bowser: [], Bowser Jr.: ['Slow moves']....}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("topMiddleWeights", () => {
+      const e = smashPrompts.topMiddleWeights();
+//EX: [{name: Diddy Kong, weightClass: Middleweight, rank: 3}...]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersByUniverse", () => {
+      const e = smashPrompts.charactersByUniverse();
+// EX: {Mario: [mario, bowser, luigi, peach...], Yoshi: [yoshi]}
+      expect(e).to.deep.equal([])
+    });
+    it.skip("winPercentage", () => {
+      const e = smashPrompts.winPercentage();
+// EX: [{Zero Suit Samus: 52.9%}]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersByGame", () => {
+      const e = smashPrompts.charactersByGame();
+// EX {'Smash Bros. 4': ['Bayonetta', 'Bowser'...], 'Smash Bros. Brawl: ['Bowser', 'Captain Falcon'], 'Smash Bros. Melee: ['Bowser'...], 'Smash Bros. (64): []}
+      expect(e).to.deep.equal({})
+    });
+    it.skip("charactersBySpeed", () => {
+      const e = smashPrompts.charactersBySpeed();
+// EX: [...{name: sonic, speed: 1}, {name: fox, speed: 2}...{name: Ganondorf, speed: 58}]
+      expect(e).to.deep.equal([])
+    });
+    it.skip("charactersBySpeedSuperScript", () => {
+      const e = smashPrompts.charactersBySpeedSuperScript();
+// EX: [ {name: sonic, speed: 1st}, {name: fox, speed: 2nd}... {name: pikachu, speed: 12th}...]
+      expect(e).to.deep.equal([])
     });
   });
 });

@@ -29,6 +29,7 @@ const { denver } = require('./datasets/denver');
 const { url } = require('./datasets/fakeUrl');
 const { philosophers } = require('./datasets/philosophers');
 const { showData } = require('./datasets/phish');
+const { smashCharacters } = require('./datasets/smash');
 
 
 // SINGLE DATASETS
@@ -1689,7 +1690,6 @@ const philosopherPrompts = {
   },
 };
 
-
 // =================================================================
 
 // DATASET: showData from ./datasets/phish.js
@@ -1731,6 +1731,88 @@ const phishPrompts = {
   },
 };
 
+// =================================================================
+
+// DATASET: smashCharacters from ./datasets/smash.js
+const smashPrompts = {
+  playersByRank() {
+//Give me an array of the characters based on their rank.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  featherWeights() {
+//Give me an array of all FeatherWeight characters
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bigSmasher() {
+//Give me the name of character whose 'strongest smash' is most powerful
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slowestRunners() {
+//Give me the three slowest runners in the game in array
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  allCharacters() {
+//Give me an array of all characters in the Mario universe
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  aList() {
+///Give me an array of character names in the A tier.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  bListMs() {
+//Give me an array of character names in the B tier that start with the letter M.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  findCharacter(class, minJump, minSpeed, counter) {
+///Find me a character in the middleweight class, with a jump height above 35, a run speed above 1.75, and a counter move.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  slowTraits() {
+//Give me an object where each key is a character name, and the value is an array of their cons that contain the word 'slow'.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  topMiddleWeights() {
+//Give me an array of characters who are middleweights and are in the top 10 (tier.rank).
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersByUniverse() {
+////Give me an object where each key is a universe and the value is array of names of the characters in that universe.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  winPercentage() {
+//Give me an array of characters where each character is an object where the key is the name and the value is the character's win percentage
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersByGame() {
+//Give me an object where each property is a smash game and the value is an array of character names who appear in that game
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersBySpeed() {
+//PT. 1 - Give me array of Objects where each object has 2 properties: name, and overall speed rank.  Calculate the overall speed rank by taking the average of the initial dash, run, and air speeds.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+  charactersBySpeedSuperScript() {
+//PT. 2 - Using the array you created above, map over it and add the correct superscript to each character's speed rank.
+    const result = 'RESULT GOES HERE'
+    return result
+  },
+};
+
+
 
 
 
@@ -1769,5 +1851,6 @@ module.exports = {
   denverPrompts,
   fakeUrlPrompts,
   philosopherPrompts,
-  phishPrompts
+  phishPrompts,
+  smashPrompts
 };
