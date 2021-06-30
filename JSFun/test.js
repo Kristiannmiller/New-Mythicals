@@ -4,6 +4,7 @@ const { broncos } = require('./datasets/broncos');
 const { students } = require('./datasets/harryPotter');
 const { hogwarts } = require('./datasets/harryPotter');
 const { marvelMovies } = require('./datasets/marvel');
+const { artists } = require('./datasets/concerts');
 
 
 const {
@@ -3112,40 +3113,140 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Concert Prompts", () => {
-    it.skip("artistNames", () => {
+    it("artistNames", () => {
       const e = concertPrompts.artistNames();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'SG Lewis',       'HONNE',
+        'BORNS',          'Leisure',
+        'St. Lucia',      'Gallant',
+        'Marcus Marr',    'Penguin Prison',
+        'Future Islands', 'Roosevelt',
+        'Jack Garratt',   'Chet Faker',
+        'Sam Sparro'
+      ])
     });
-    it.skip("findByName", () => {
-      const e = concertPrompts.findByName();
+    it("findByName", () => {
+      const e = concertPrompts.findByName('Jack Garratt');
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({ name: 'Jack Garratt', label: 'capital' })
     });
-    it.skip("addPrice", () => {
+    it("addPrice", () => {
       const e = concertPrompts.addPrice();
 
-      expect(e).to.deep.equal({})
+      expect(artists).to.deep.equal([
+        { name: 'SG Lewis', label: 'atlantic', ticketPrice: 20 },
+        { name: 'HONNE', label: 'virgin', ticketPrice: 25 },
+        { name: 'BORNS', label: 'capital', ticketPrice: 30 },
+        { name: 'Leisure', label: 'capital', ticketPrice: 30 },
+        { name: 'St. Lucia', label: 'capital', ticketPrice: 30 },
+        { name: 'Gallant', label: 'capital', ticketPrice: 30 },
+        { name: 'Marcus Marr', label: 'virgin', ticketPrice: 25 },
+        { name: 'Penguin Prison', label: 'atlantic', ticketPrice: 20 },
+        { name: 'Future Islands', label: 'atlantic', ticketPrice: 20 },
+        { name: 'Roosevelt', label: 'capital', ticketPrice: 30 },
+        { name: 'Jack Garratt', label: 'capital', ticketPrice: 30 },
+        { name: 'Chet Faker', label: 'virgin', ticketPrice: 25 },
+        { name: 'Sam Sparro', label: 'virgin', ticketPrice: 25 }
+      ])
     });
-    it.skip("getByLabel", () => {
-      const e = concertPrompts.getByLabel();
+    it("getByLabel", () => {
+      const e = concertPrompts.getByLabel('atlantic');
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([ 'SG Lewis', 'Penguin Prison', 'Future Islands' ])
     });
-    it.skip("totalCost", () => {
+    it("totalCost", () => {
       const e = concertPrompts.totalCost();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('$340.00')
     });
-    it.skip("artistsByLabel", () => {
+    it("artistsByLabel", () => {
       const e = concertPrompts.artistsByLabel();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        atlantic: [ 'SG Lewis', 'Penguin Prison', 'Future Islands' ],
+        virgin: [ 'HONNE', 'Marcus Marr', 'Chet Faker', 'Sam Sparro' ],
+        capital: [ 'BORNS', 'Leisure', 'St. Lucia', 'Gallant', 'Roosevelt', 'Jack Garratt']
+      })
     });
-    it.skip("addCrowdSize", () => {
+    it("addCrowdSize", () => {
       const e = concertPrompts.addCrowdSize();
 
-      expect(e).to.deep.equal({})
+      expect(artists).to.deep.equal([
+        {
+          name: 'SG Lewis',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        { name: 'HONNE', label: 'virgin', ticketPrice: 25, crowdSize: 100 },
+        {
+          name: 'BORNS',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Leisure',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'St. Lucia',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Gallant',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Marcus Marr',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        },
+        {
+          name: 'Penguin Prison',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        {
+          name: 'Future Islands',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        {
+          name: 'Roosevelt',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Jack Garratt',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Chet Faker',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        },
+        {
+          name: 'Sam Sparro',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        }
+      ])
     });
   });
   describe("Dungeons Prompts", () => {

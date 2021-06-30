@@ -1476,39 +1476,54 @@ const fourteenerPrompts = {
 const concertPrompts = {
   artistNames() {
     // Return an array of just the artists names
-    const result = 'RESULT GOES HERE'
+    const result = artists.map(artist => artist.name)
     return result
   },
-  findByName() {
+  findByName(name) {
     // Write a function that takes a name as a parameter and returns the first artist where the name matches .  ex. findByName('Jack Garratt')
-    const result = 'RESULT GOES HERE'
+    const result = artists.find(artist => artist.name === name)
     return result
   },
   addPrice() {
     // Write some code to add the appropriate ticket price to each artist.
-    const result = 'RESULT GOES HERE'
-    return result
+    const result = artists.forEach(artist => {
+      artist.ticketPrice = ticketPrice[artist.label]
+    })
   },
-  getByLabel() {
+  getByLabel(label) {
     // Write a function that takes a label as a parameter and returns an array containing all the artists of that label .  ex. getByLabel('atlantic')
-    const result = 'RESULT GOES HERE'
+    const result = artists.reduce((acc, artist) => {
+      if(artist.label === label) acc.push(artist.name)
+      return acc
+    }, [])
     return result
   },
   totalCost() {
     // Write some code to determine how much it would cost to go to all to the shows
-    const result = 'RESULT GOES HERE'
-    return result
+    const result = artists.reduce((total, artist) => {
+      total += artist.ticketPrice
+      return total
+    }, 0)
+    return `$${result}.00`
   },
   artistsByLabel() {
     // Make an object containing each label as keys and all the associated artists in an array as the value.
-    const result = 'RESULT GOES HERE'
+    const result = artists.reduce((labels, artist) => {
+      if(!labels[artist.label]) {
+        labels[artist.label] = [artist.name]
+      } else {
+        labels[artist.label].push(artist.name)
+      }
+      return labels
+    }, {})
     return result
   },
   addCrowdSize() {
     //write some code that will add the crowdsize to each artist
-    const result = 'RESULT GOES HERE'
-    return result
-  },
+    artists.forEach(artist => {
+      artist.crowdSize = crowd[artist.label]
+    })
+  }
 }
 
 // =================================================================
