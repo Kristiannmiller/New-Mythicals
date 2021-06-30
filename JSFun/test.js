@@ -3160,10 +3160,14 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.equal('$340.00')
     });
-    it.skip("artistsByLabel", () => {
+    it("artistsByLabel", () => {
       const e = concertPrompts.artistsByLabel();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({
+        atlantic: [ 'SG Lewis', 'Penguin Prison', 'Future Islands' ],
+        virgin: [ 'HONNE', 'Marcus Marr', 'Chet Faker', 'Sam Sparro' ],
+        capital: [ 'BORNS', 'Leisure', 'St. Lucia', 'Gallant', 'Roosevelt', 'Jack Garratt']
+      })
     });
     it.skip("addCrowdSize", () => {
       const e = concertPrompts.addCrowdSize();

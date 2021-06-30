@@ -1508,7 +1508,14 @@ const concertPrompts = {
   },
   artistsByLabel() {
     // Make an object containing each label as keys and all the associated artists in an array as the value.
-    const result = 'RESULT GOES HERE'
+    const result = artists.reduce((labels, artist) => {
+      if(!labels[artist.label]) {
+        labels[artist.label] = [artist.name]
+      } else {
+        labels[artist.label].push(artist.name)
+      }
+      return labels
+    }, {})
     return result
   },
   addCrowdSize() {
