@@ -1500,8 +1500,11 @@ const concertPrompts = {
   },
   totalCost() {
     // Write some code to determine how much it would cost to go to all to the shows
-    const result = 'RESULT GOES HERE'
-    return result
+    const result = artists.reduce((total, artist) => {
+      total += artist.ticketPrice
+      return total
+    }, 0)
+    return `$${result}.00`
   },
   artistsByLabel() {
     // Make an object containing each label as keys and all the associated artists in an array as the value.

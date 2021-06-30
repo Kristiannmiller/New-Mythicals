@@ -3155,10 +3155,10 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal([ 'SG Lewis', 'Penguin Prison', 'Future Islands' ])
     });
-    it.skip("totalCost", () => {
+    it("totalCost", () => {
       const e = concertPrompts.totalCost();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.equal('$340.00')
     });
     it.skip("artistsByLabel", () => {
       const e = concertPrompts.artistsByLabel();
