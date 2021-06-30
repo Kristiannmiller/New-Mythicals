@@ -1479,9 +1479,9 @@ const concertPrompts = {
     const result = artists.map(artist => artist.name)
     return result
   },
-  findByName() {
+  findByName(name) {
     // Write a function that takes a name as a parameter and returns the first artist where the name matches .  ex. findByName('Jack Garratt')
-    const result = 'RESULT GOES HERE'
+    const result = artists.find(artist => artist.name === name)
     return result
   },
   addPrice() {

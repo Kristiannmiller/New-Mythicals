@@ -3125,10 +3125,10 @@ describe("PROTOTYPES", () => {
         'Sam Sparro'
       ])
     });
-    it.skip("findByName", () => {
-      const e = concertPrompts.findByName();
+    it("findByName", () => {
+      const e = concertPrompts.findByName('Jack Garratt');
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal({ name: 'Jack Garratt', label: 'capital' })
     });
     it.skip("addPrice", () => {
       const e = concertPrompts.addPrice();
