@@ -3150,10 +3150,10 @@ describe("PROTOTYPES", () => {
         { name: 'Sam Sparro', label: 'virgin', ticketPrice: 25 }
       ])
     });
-    it.skip("getByLabel", () => {
-      const e = concertPrompts.getByLabel();
+    it("getByLabel", () => {
+      const e = concertPrompts.getByLabel('atlantic');
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([ 'SG Lewis', 'Penguin Prison', 'Future Islands' ])
     });
     it.skip("totalCost", () => {
       const e = concertPrompts.totalCost();

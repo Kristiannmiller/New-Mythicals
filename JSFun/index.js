@@ -1490,9 +1490,12 @@ const concertPrompts = {
       artist.ticketPrice = ticketPrice[artist.label]
     })
   },
-  getByLabel() {
+  getByLabel(label) {
     // Write a function that takes a label as a parameter and returns an array containing all the artists of that label .  ex. getByLabel('atlantic')
-    const result = 'RESULT GOES HERE'
+    const result = artists.reduce((acc, artist) => {
+      if(artist.label === label) acc.push(artist.name)
+      return acc
+    }, [])
     return result
   },
   totalCost() {
