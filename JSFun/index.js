@@ -1476,7 +1476,7 @@ const fourteenerPrompts = {
 const concertPrompts = {
   artistNames() {
     // Return an array of just the artists names
-    const result = 'RESULT GOES HERE'
+    const result = artists.map(artist => artist.name)
     return result
   },
   findByName() {

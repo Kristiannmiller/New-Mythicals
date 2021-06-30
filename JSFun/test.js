@@ -3112,10 +3112,18 @@ describe("PROTOTYPES", () => {
     });
   });
   describe("Concert Prompts", () => {
-    it.skip("artistNames", () => {
+    it("artistNames", () => {
       const e = concertPrompts.artistNames();
 
-      expect(e).to.deep.equal({})
+      expect(e).to.deep.equal([
+        'SG Lewis',       'HONNE',
+        'BORNS',          'Leisure',
+        'St. Lucia',      'Gallant',
+        'Marcus Marr',    'Penguin Prison',
+        'Future Islands', 'Roosevelt',
+        'Jack Garratt',   'Chet Faker',
+        'Sam Sparro'
+      ])
     });
     it.skip("findByName", () => {
       const e = concertPrompts.findByName();
