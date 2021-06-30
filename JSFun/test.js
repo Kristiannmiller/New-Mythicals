@@ -3169,10 +3169,84 @@ describe("PROTOTYPES", () => {
         capital: [ 'BORNS', 'Leisure', 'St. Lucia', 'Gallant', 'Roosevelt', 'Jack Garratt']
       })
     });
-    it.skip("addCrowdSize", () => {
+    it("addCrowdSize", () => {
       const e = concertPrompts.addCrowdSize();
 
-      expect(e).to.deep.equal({})
+      expect(artists).to.deep.equal([
+        {
+          name: 'SG Lewis',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        { name: 'HONNE', label: 'virgin', ticketPrice: 25, crowdSize: 100 },
+        {
+          name: 'BORNS',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Leisure',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'St. Lucia',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Gallant',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Marcus Marr',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        },
+        {
+          name: 'Penguin Prison',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        {
+          name: 'Future Islands',
+          label: 'atlantic',
+          ticketPrice: 20,
+          crowdSize: 20
+        },
+        {
+          name: 'Roosevelt',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Jack Garratt',
+          label: 'capital',
+          ticketPrice: 30,
+          crowdSize: 100100000
+        },
+        {
+          name: 'Chet Faker',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        },
+        {
+          name: 'Sam Sparro',
+          label: 'virgin',
+          ticketPrice: 25,
+          crowdSize: 100
+        }
+      ])
     });
   });
   describe("Dungeons Prompts", () => {

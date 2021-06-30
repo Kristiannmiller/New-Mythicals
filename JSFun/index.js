@@ -1520,9 +1520,10 @@ const concertPrompts = {
   },
   addCrowdSize() {
     //write some code that will add the crowdsize to each artist
-    const result = 'RESULT GOES HERE'
-    return result
-  },
+    artists.forEach(artist => {
+      artist.crowdSize = crowd[artist.label]
+    })
+  }
 }
 
 // =================================================================
