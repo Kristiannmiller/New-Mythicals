@@ -4,6 +4,7 @@ const { broncos } = require('./datasets/broncos');
 const { students } = require('./datasets/harryPotter');
 const { hogwarts } = require('./datasets/harryPotter');
 const { marvelMovies } = require('./datasets/marvel');
+const { artists } = require('./datasets/concerts');
 
 
 const {
@@ -3130,10 +3131,24 @@ describe("PROTOTYPES", () => {
 
       expect(e).to.deep.equal({ name: 'Jack Garratt', label: 'capital' })
     });
-    it.skip("addPrice", () => {
+    it("addPrice", () => {
       const e = concertPrompts.addPrice();
 
-      expect(e).to.deep.equal({})
+      expect(artists).to.deep.equal([
+        { name: 'SG Lewis', label: 'atlantic', ticketPrice: 20 },
+        { name: 'HONNE', label: 'virgin', ticketPrice: 25 },
+        { name: 'BORNS', label: 'capital', ticketPrice: 30 },
+        { name: 'Leisure', label: 'capital', ticketPrice: 30 },
+        { name: 'St. Lucia', label: 'capital', ticketPrice: 30 },
+        { name: 'Gallant', label: 'capital', ticketPrice: 30 },
+        { name: 'Marcus Marr', label: 'virgin', ticketPrice: 25 },
+        { name: 'Penguin Prison', label: 'atlantic', ticketPrice: 20 },
+        { name: 'Future Islands', label: 'atlantic', ticketPrice: 20 },
+        { name: 'Roosevelt', label: 'capital', ticketPrice: 30 },
+        { name: 'Jack Garratt', label: 'capital', ticketPrice: 30 },
+        { name: 'Chet Faker', label: 'virgin', ticketPrice: 25 },
+        { name: 'Sam Sparro', label: 'virgin', ticketPrice: 25 }
+      ])
     });
     it.skip("getByLabel", () => {
       const e = concertPrompts.getByLabel();

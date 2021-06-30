@@ -1486,8 +1486,9 @@ const concertPrompts = {
   },
   addPrice() {
     // Write some code to add the appropriate ticket price to each artist.
-    const result = 'RESULT GOES HERE'
-    return result
+    const result = artists.forEach(artist => {
+      artist.ticketPrice = ticketPrice[artist.label]
+    })
   },
   getByLabel() {
     // Write a function that takes a label as a parameter and returns an array containing all the artists of that label .  ex. getByLabel('atlantic')
